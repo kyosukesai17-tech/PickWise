@@ -15,6 +15,7 @@ type TeamPanelProps = {
   title: string;
   team: (Champion | null)[];
   setTeam: React.Dispatch<React.SetStateAction<(Champion | null)[]>>;
+  selectedChampions: Champion[];
 };
 
 type TeamInputProps = {
@@ -28,6 +29,7 @@ function TeamPanel({
   title,
   team,
   setTeam,
+  selectedChampions,
 }: TeamPanelProps) {
   return (
     <div className="rounded-xl border border-slate-800 bg-slate-900/50 p-4 sm:p-6">
@@ -41,6 +43,9 @@ function TeamPanel({
             <ChampionSearch
               role={label}
               value={team[index]}
+              excludedChampions={selectedChampions.filter(
+                (champion) => champion.id !== team[index]?.id
+              )}
               onSelect={(champion) => {
                 const next = [...team];
                 next[index] = champion;
@@ -60,6 +65,10 @@ export default function TeamInput({
   enemyTeam,
   setEnemyTeam,
 }: TeamInputProps) {
+  const selectedChampions = [...allyTeam, ...enemyTeam].filter(
+    (champion): champion is Champion => champion !== null
+  );
+
   return (
     <section>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
@@ -67,12 +76,14 @@ export default function TeamInput({
           title="味方チーム"
           team={allyTeam}
           setTeam={setAllyTeam}
+          selectedChampions={selectedChampions}
         />
 
         <TeamPanel
           title="敵チーム"
           team={enemyTeam}
           setTeam={setEnemyTeam}
+          selectedChampions={selectedChampions}
         />
       </div>
     </section>

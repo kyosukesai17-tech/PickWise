@@ -1,50 +1,62 @@
 "use client";
 
 import { useState } from "react";
-import { searchChampion } from "../lib/searchChampion";
 import type { Champion } from "../types/champion";
+import { searchChampion } from "../lib/searchChampion";
+import ChampionCard from "./ChampionCard";
+import ChampionDropdown from "./ChampionDropdown";
 
 type ChampionSearchProps = {
   role: string;
   value: Champion | null;
+  excludedChampions: Champion[];
   onSelect: (champion: Champion | null) => void;
 };
 
 export default function ChampionSearch({
   role,
   value,
+  excludedChampions,
   onSelect,
 }: ChampionSearchProps) {
   const [keyword, setKeyword] = useState("");
 
-  const results = searchChampion(keyword);
+  const results =
+    keyword.trim() === ""
+      ? []
+      : searchChampion(keyword)
+          .filter(
+            (champion) =>
+              !excludedChampions.some(
+                (excluded) => excluded.id === champion.id
+              )
+          )
+          .slice(0, 10);
 
   return (
-    <>
+    <div className="relative">
       {value ? (
-        <div className="flex items-center gap-3 rounded-lg border border-yellow-500 bg-slate-900/60 px-4 py-2">
-          <span className="w-10 text-xs font-bold text-yellow-400">
-            {role}
-          </span>
+        <div className="flex items-center justify-between rounded-lg border border-yellow-500 bg-slate-900 px-3 py-2">
+          <div className="flex items-center gap-3">
+            <span className="w-10 text-xs font-bold text-yellow-400">
+              {role}
+            </span>
 
-          <span className="flex-1 text-slate-100">
-            {value.name}
-          </span>
+            <ChampionCard champion={value} size={36} />
+          </div>
 
           <button
-            onClick={() => {
-              onSelect(null);
-              setKeyword("");
-            }}
-            className="text-red-400 hover:text-red-300"
+            type="button"
+            onClick={() => onSelect(null)}
+            className="text-slate-400 transition hover:text-red-400"
           >
             ✕
           </button>
         </div>
       ) : (
         <>
-          <div className="flex items-center gap-3 rounded-lg border border-slate-700 bg-slate-900/60 px-4 py-2">
-            <span className="w-10 text-xs font-bold text-yellow-400">
+          <div className="flex items-center gap-3 rounded-lg border border-slate-700 bg-slate-800 px-3 py-2">
+            <span className="w-10 text-xs font-bold text-slate-400">
               {role}
             </span>
 
@@ -52,29 +64,20 @@ export default function ChampionSearch({
               type="text"
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
-              placeholder="チャンピオンを検索..."
-              className="flex-1 rounded-md bg-slate-800 px-3 py-2 text-sm text-white outline-none"
+              placeholder="チャンピオン名を入力"
+              className="flex-1 bg-transparent text-white outline-none placeholder:text-slate-500"
             />
           </div>
 
-          {keyword && results.length > 0 && (
-            <ul className="mt-2 rounded-md border border-slate-700 bg-slate-900">
-              {results.map((champion) => (
-                <li
-                  key={champion.id}
-                  onClick={() => {
-                    onSelect(champion);
-                    setKeyword("");
-                  }}
-                  className="cursor-pointer px-3 py-2 hover:bg-slate-800"
-                >
-                  {champion.name}
-                </li>
-              ))}
-            </ul>
-          )}
+          <ChampionDropdown
+            champions={results}
+            onSelect={(champion) => {
+              onSelect(champion);
+              setKeyword("");
+            }}
+          />
         </>
       )}
-    </>
+    </div>
   );
 }
