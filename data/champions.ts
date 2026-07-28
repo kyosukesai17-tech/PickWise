@@ -1,64 +1,64 @@
-import { Champion } from "../types/champion";
+import type { Champion } from "../types/champion";
 
 export const champions: Champion[] = [
   {
-    id: "ahri",
+    id: "Ahri",
     name: "アーリ",
+    image: "Ahri.png",
     roles: ["MID"],
-    image: "/champions/ahri.png",
   },
   {
-    id: "annie",
+    id: "Annie",
     name: "アニー",
-    roles: ["MID", "SUP"],
-    image: "/champions/annie.png",
+    image: "Annie.png",
+    roles: ["MID"],
   },
   {
-    id: "lux",
-    name: "ラックス",
-    roles: ["MID", "SUP"],
-    image: "/champions/lux.png",
-  },
-  {
-    id: "garen",
-    name: "ガレン",
-    roles: ["TOP"],
-    image: "/champions/garen.png",
-  },
-  {
-    id: "darius",
-    name: "ダリウス",
-    roles: ["TOP"],
-    image: "/champions/darius.png",
-  },
-  {
-    id: "leesin",
-    name: "リー・シン",
-    roles: ["JG"],
-    image: "/champions/leesin.png",
-  },
-  {
-    id: "vi",
-    name: "ヴァイ",
-    roles: ["JG"],
-    image: "/champions/vi.png",
-  },
-  {
-    id: "jinx",
-    name: "ジンクス",
-    roles: ["ADC"],
-    image: "/champions/jinx.png",
-  },
-  {
-    id: "ezreal",
+    id: "Ezreal",
     name: "エズリアル",
+    image: "Ezreal.png",
     roles: ["ADC"],
-    image: "/champions/ezreal.png",
   },
   {
-    id: "thresh",
+    id: "Jhin",
+    name: "ジン",
+    image: "Jhin.png",
+    roles: ["ADC"],
+  },
+  {
+    id: "Jinx",
+    name: "ジンクス",
+    image: "Jinx.png",
+    roles: ["ADC"],
+  },
+  {
+    id: "Lux",
+    name: "ラックス",
+    image: "Lux.png",
+    roles: ["MID", "SUP"],
+  },
+  {
+    id: "Thresh",
     name: "スレッシュ",
+    image: "Thresh.png",
     roles: ["SUP"],
-    image: "/champions/thresh.png",
+  },
+  {
+    id: "Vi",
+    name: "ヴァイ",
+    image: "Vi.png",
+    roles: ["JG"],
+  },
+  {
+    id: "Garen",
+    name: "ガレン",
+    image: "Garen.png",
+    roles: ["TOP"],
+  },
+  {
+    id: "Darius",
+    name: "ダリウス",
+    image: "Darius.png",
+    roles: ["TOP"],
   },
 ];

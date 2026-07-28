@@ -6,35 +6,37 @@ import type { Champion } from "../types/champion";
 
 type ChampionSearchProps = {
   role: string;
+  value: Champion | null;
+  onSelect: (champion: Champion | null) => void;
 };
 
 export default function ChampionSearch({
   role,
+  value,
+  onSelect,
 }: ChampionSearchProps) {
   const [keyword, setKeyword] = useState("");
-  const [selectedChampion, setSelectedChampion] =
-    useState<Champion | null>(null);
 
   const results = searchChampion(keyword);
 
   return (
     <>
-      {selectedChampion ? (
+      {value ? (
         <div className="flex items-center gap-3 rounded-lg border border-yellow-500 bg-slate-900/60 px-4 py-2">
           <span className="w-10 text-xs font-bold text-yellow-400">
             {role}
           </span>
 
           <span className="flex-1 text-slate-100">
-            {selectedChampion.name}
+            {value.name}
           </span>
 
           <button
             onClick={() => {
-              setSelectedChampion(null);
+              onSelect(null);
               setKeyword("");
             }}
-            className="text-red-400 transition hover:text-red-300"
+            className="text-red-400 hover:text-red-300"
           >
             ✕
           </button>
@@ -61,7 +63,7 @@ export default function ChampionSearch({
                 <li
                   key={champion.id}
                   onClick={() => {
-                    setSelectedChampion(champion);
+                    onSelect(champion);
                     setKeyword("");
                   }}
                   className="cursor-pointer px-3 py-2 hover:bg-slate-800"

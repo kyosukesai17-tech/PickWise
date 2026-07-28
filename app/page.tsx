@@ -1,20 +1,47 @@
+"use client";
+
+import { useState } from "react";
 import Header from "../components/Header";
-import RecommendationSection from "../components/RecommendationSection";
 import RoleSelector from "../components/RoleSelector";
 import TeamInput from "../components/TeamInput";
-import { searchChampion } from "../lib/searchChampion";
+import RecommendationSection from "../components/RecommendationSection";
+import type { Champion } from "../types/champion";
 
 export default function Home() {
-  const result = searchChampion("ア");
+  const [allyTeam, setAllyTeam] = useState<(Champion | null)[]>([
+    null,
+    null,
+    null,
+    null,
+    null,
+  ]);
 
-console.log(result);
+  const [enemyTeam, setEnemyTeam] = useState<(Champion | null)[]>([
+    null,
+    null,
+    null,
+    null,
+    null,
+  ]);
+
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-        <Header />
+      <Header />
+
+      <div className="mx-auto max-w-7xl space-y-6 p-6">
         <RoleSelector />
-        <TeamInput />
-        <RecommendationSection />
+
+        <TeamInput
+          allyTeam={allyTeam}
+          setAllyTeam={setAllyTeam}
+          enemyTeam={enemyTeam}
+          setEnemyTeam={setEnemyTeam}
+        />
+
+        <RecommendationSection
+          allyTeam={allyTeam}
+          enemyTeam={enemyTeam}
+        />
       </div>
     </main>
   );

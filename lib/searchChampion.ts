@@ -1,12 +1,16 @@
-import { champions } from "../data/champions";
-import { Champion } from "../types/champion";
+import { getChampions } from "./getChampions";
 
-export function searchChampion(keyword: string): Champion[] {
+export function searchChampion(keyword: string) {
   if (!keyword.trim()) {
     return [];
   }
 
-  return champions.filter((champion) =>
-    champion.name.toLowerCase().startsWith(keyword.toLowerCase())
-  );
+  const lower = keyword.toLowerCase();
+
+  return getChampions().filter((champion) => {
+    return (
+      champion.name.startsWith(keyword) ||
+      champion.id.toLowerCase().startsWith(lower)
+    );
+  });
 }
