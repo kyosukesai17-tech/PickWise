@@ -1,10 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import type { Champion } from "../types/champion";
-import { searchChampion } from "../lib/searchChampion";
+import { useMemo, useState } from "react";
+import type {
+  Champion,
+  Role,
+} from "../types/champion";
 import ChampionCard from "./ChampionCard";
 import ChampionDropdown from "./ChampionDropdown";
+import { searchChampion } from "../lib/searchChampion";
 
 type ChampionSearchProps = {
   role: string;
@@ -21,62 +24,61 @@ export default function ChampionSearch({
 }: ChampionSearchProps) {
   const [keyword, setKeyword] = useState("");
 
-  const results =
-    keyword.trim() === ""
-      ? []
-      : searchChampion(keyword)
-          .filter(
-            (champion) =>
-              !excludedChampions.some(
-                (excluded) => excluded.id === champion.id
-              )
-          )
-          .slice(0, 10);
+  const candidates = useMemo(() => {
+    return searchChampion(keyword, role as Role).filter(
+      (champion) =>
+        !excludedChampions.some(
+          (selected) => selected.id === champion.id
+        )
+    );
+  }, [keyword, excludedChampions]);
+
+  if (value) {
+    return (
+      <div className="flex items-center justify-between rounded-lg border border-slate-700 bg-slate-800 p-2">
+        <div className="flex items-center gap-3">
+          <span className="w-10 text-sm font-semibold text-slate-400">
+            {role}
+          </span>
+
+          <ChampionCard champion={value} />
+        </div>
+
+        <button
+          type="button"
+          onClick={() => onSelect(null)}
+          className="rounded bg-red-500 px-2 py-1 text-sm text-white hover:bg-red-600"
+        >
+          ×
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="relative">
-      {value ? (
-        <div className="flex items-center justify-between rounded-lg border border-yellow-500 bg-slate-900 px-3 py-2">
-          <div className="flex items-center gap-3">
-            <span className="w-10 text-xs font-bold text-yellow-400">
-              {role}
-            </span>
+      <div className="flex items-center gap-3">
+        <span className="w-10 text-sm font-semibold text-slate-400">
+          {role}
+        </span>
 
-            <ChampionCard champion={value} size={36} />
-          </div>
+        <input
+          type="text"
+          value={keyword}
+          placeholder="チャンピオン検索..."
+          onChange={(e) => setKeyword(e.target.value)}
+          className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-white outline-none focus:border-sky-500"
+        />
+      </div>
 
-          <button
-            type="button"
-            onClick={() => onSelect(null)}
-            className="text-slate-400 transition hover:text-red-400"
-          >
-            ✕
-          </button>
-        </div>
-      ) : (
-        <>
-          <div className="flex items-center gap-3 rounded-lg border border-slate-700 bg-slate-800 px-3 py-2">
-            <span className="w-10 text-xs font-bold text-slate-400">
-              {role}
-            </span>
-
-            <input
-              type="text"
-              value={keyword}
-              onChange={(e) => setKeyword(e.target.value)}
-              placeholder="チャンピオン名を入力"
-              className="flex-1 bg-transparent text-white outline-none placeholder:text-slate-500"
-            />
-          </div>
-
-          <ChampionDropdown
-            champions={results}
-            onSelect={(champion) => {
-              onSelect(champion);
-              setKeyword("");
-            }}
-          />
-        </>
+      {keyword && (
+        <ChampionDropdown
+          champions={candidates}
+          onSelect={(champion) => {
+            onSelect(champion);
+            setKeyword("");
+          }}
+        />
       )}
     </div>
   );
