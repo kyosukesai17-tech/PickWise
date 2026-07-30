@@ -1,23 +1,45 @@
-export type DamageType = "AD" | "AP" | "MIXED";
+import type {
+  Rating,
+  DamageType,
+  AttackRange,
+} from "./ratings";
 
-export type AttackRange = "MELEE" | "RANGED";
+import type { ChampionTrait } from "./traits";
 
-export interface ChampionData {
+export interface ChampionProfile {
   damageType: DamageType;
 
   range: AttackRange;
 
-  tankiness: 1 | 2 | 3 | 4 | 5;
+  tankiness: Rating;
 
-  cc: 1 | 2 | 3 | 4 | 5;
+  cc: Rating;
 
-  engage: boolean;
+  waveClear: Rating;
 
-  peel: boolean;
+  scaling: Rating;
+}
 
-  poke: boolean;
+export interface ChampionData {
+  profile: ChampionProfile;
 
-  waveClear: 1 | 2 | 3 | 4 | 5;
+  traits: ChampionTrait[];
+}
 
-  scaling: 1 | 2 | 3 | 4 | 5;
+export interface TeamAnalysis {
+  apCount: number;
+
+  adCount: number;
+
+  frontlineCount: number;
+
+  ccScore: number;
+
+  needAP: boolean;
+
+  needAD: boolean;
+
+  needTank: boolean;
+
+  needCC: boolean;
 }

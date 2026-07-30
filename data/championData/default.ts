@@ -1,21 +1,19 @@
 import type { ChampionData } from "./types";
 
 export const defaultChampionData: ChampionData = {
-  damageType: "AD",
+  profile: {
+    damageType: "AD",
 
-  range: "MELEE",
+    range: "MELEE",
 
-  tankiness: 3,
+    tankiness: 3,
 
-  cc: 1,
+    cc: 1,
 
-  engage: false,
+    waveClear: 3,
 
-  peel: false,
+    scaling: 3,
+  },
 
-  poke: false,
-
-  waveClear: 3,
-
-  scaling: 3,
+  traits: [],
 };
