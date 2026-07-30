@@ -13,11 +13,15 @@ import type {
 export function recommend(
   allyTeam: (Champion | null)[],
   enemyTeam: (Champion | null)[],
+  allyBans: (Champion | null)[],
+  enemyBans: (Champion | null)[],
   selectedRole: Role,
 ): Recommendation[] {
-  const selectedIds = [
+  const unavailableChampionIds = [
     ...allyTeam,
     ...enemyTeam,
+    ...allyBans,
+    ...enemyBans,
   ]
     .filter(
       (
@@ -25,20 +29,16 @@ export function recommend(
       ): champion is Champion =>
         champion !== null,
     )
-    .map(
-      (champion) =>
-        champion.id,
-    );
+    .map((champion) => champion.id);
+
+  const unavailableChampionIdSet =
+    new Set(unavailableChampionIds);
 
   return getChampions()
     .filter(
       (champion) =>
-        champion.roles.includes(
-          selectedRole,
-        ) &&
-        !selectedIds.includes(
-          champion.id,
-        ),
+        champion.roles.includes(selectedRole) &&
+        !unavailableChampionIdSet.has(champion.id),
     )
     .map((champion) => ({
       champion,

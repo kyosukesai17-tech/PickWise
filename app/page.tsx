@@ -1,46 +1,48 @@
 "use client";
 
 import { useState } from "react";
+
 import Header from "../components/Header";
 import RoleSelector from "../components/RoleSelector";
 import TeamInput from "../components/TeamInput";
 import RecommendationSection from "../components/RecommendationSection";
-import type { Champion, Role } from "../types/champion";
+
+import type {
+  Champion,
+  Role,
+} from "../types/champion";
+
+const createEmptyTeam = (): (Champion | null)[] => [
+  null,
+  null,
+  null,
+  null,
+  null,
+];
 
 export default function Home() {
-  const [selectedRole, setSelectedRole] = useState<Role>("MID");
+  const [selectedRole, setSelectedRole] =
+    useState<Role>("MID");
 
-  const [allyTeam, setAllyTeam] = useState<(Champion | null)[]>([
-    null,
-    null,
-    null,
-    null,
-    null,
-  ]);
+  const [allyTeam, setAllyTeam] =
+    useState<(Champion | null)[]>(
+      createEmptyTeam,
+    );
 
-  const [enemyTeam, setEnemyTeam] = useState<(Champion | null)[]>([
-    null,
-    null,
-    null,
-    null,
-    null,
-  ]);
+  const [enemyTeam, setEnemyTeam] =
+    useState<(Champion | null)[]>(
+      createEmptyTeam,
+    );
 
-  const [allyBans, setAllyBans] = useState<(Champion | null)[]>([
-    null,
-    null,
-    null,
-    null,
-    null,
-  ]);
+  const [allyBans, setAllyBans] =
+    useState<(Champion | null)[]>(
+      createEmptyTeam,
+    );
 
-  const [enemyBans, setEnemyBans] = useState<(Champion | null)[]>([
-    null,
-    null,
-    null,
-    null,
-    null,
-  ]);
+  const [enemyBans, setEnemyBans] =
+    useState<(Champion | null)[]>(
+      createEmptyTeam,
+    );
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
@@ -66,6 +68,8 @@ export default function Home() {
         <RecommendationSection
           allyTeam={allyTeam}
           enemyTeam={enemyTeam}
+          allyBans={allyBans}
+          enemyBans={enemyBans}
           selectedRole={selectedRole}
         />
       </div>

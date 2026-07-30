@@ -11,6 +11,8 @@ import type {
 type RecommendationSectionProps = {
   allyTeam: (Champion | null)[];
   enemyTeam: (Champion | null)[];
+  allyBans: (Champion | null)[];
+  enemyBans: (Champion | null)[];
   selectedRole: Role;
 };
 
@@ -22,6 +24,8 @@ type TeamNeed = {
 export default function RecommendationSection({
   allyTeam,
   enemyTeam,
+  allyBans,
+  enemyBans,
   selectedRole,
 }: RecommendationSectionProps) {
   const analysis = analyzeTeam(allyTeam);
@@ -29,6 +33,8 @@ export default function RecommendationSection({
   const recommendations = recommend(
     allyTeam,
     enemyTeam,
+    allyBans,
+    enemyBans,
     selectedRole,
   );
 
@@ -63,7 +69,7 @@ export default function RecommendationSection({
         </h2>
 
         <p className="mt-1 text-sm text-slate-400">
-          味方構成で不足している要素を基準に評価しています。
+          味方構成と敵構成を基準に評価しています。
         </p>
       </div>
 
@@ -92,7 +98,7 @@ export default function RecommendationSection({
 
       {recommendations.length === 0 ? (
         <p className="text-slate-400">
-          おすすめを表示できません。
+          選択条件に一致する候補がありません。
         </p>
       ) : (
         <div className="space-y-3">
