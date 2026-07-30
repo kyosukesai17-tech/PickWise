@@ -13,22 +13,36 @@ const teamRoles = [
 
 type TeamPanelProps = {
   title: string;
+
   team: (Champion | null)[];
   setTeam: React.Dispatch<React.SetStateAction<(Champion | null)[]>>;
+
+  bans: (Champion | null)[];
+  setBans: React.Dispatch<React.SetStateAction<(Champion | null)[]>>;
+
   selectedChampions: Champion[];
 };
 
 type TeamInputProps = {
   allyTeam: (Champion | null)[];
   setAllyTeam: React.Dispatch<React.SetStateAction<(Champion | null)[]>>;
+
   enemyTeam: (Champion | null)[];
   setEnemyTeam: React.Dispatch<React.SetStateAction<(Champion | null)[]>>;
+
+  allyBans: (Champion | null)[];
+  setAllyBans: React.Dispatch<React.SetStateAction<(Champion | null)[]>>;
+
+  enemyBans: (Champion | null)[];
+  setEnemyBans: React.Dispatch<React.SetStateAction<(Champion | null)[]>>;
 };
 
 function TeamPanel({
   title,
   team,
   setTeam,
+  bans,
+  setBans,
   selectedChampions,
 }: TeamPanelProps) {
   return (
@@ -61,21 +75,30 @@ function TeamPanel({
           ))}
         </ul>
       </div>
-
       <div className="mt-6">
         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
           Ban
         </p>
 
-        <div className="grid grid-cols-5 gap-2">
-          {Array.from({ length: 5 }).map((_, index) => (
-            <div
-              key={index}
-              className="aspect-square rounded-md border border-dashed border-slate-700 bg-slate-800/50"
-            />
+        <ul className="space-y-3">
+          {bans.map((ban, index) => (
+            <li key={index}>
+              <ChampionSearch
+                role={teamRoles[index].label}
+                value={ban}
+                excludedChampions={selectedChampions.filter(
+                  (champion) => champion.id !== ban?.id
+                )}
+                onSelect={(champion) => {
+                  const next = [...bans];
+                  next[index] = champion;
+                  setBans(next);
+                }}
+              />
+            </li>
           ))}
-        </div>
-      </div>
+        </ul>
+      </div>    
     </div>
   );
 }
@@ -85,10 +108,20 @@ export default function TeamInput({
   setAllyTeam,
   enemyTeam,
   setEnemyTeam,
+  allyBans,
+  setAllyBans,
+  enemyBans,
+  setEnemyBans,
 }: TeamInputProps) {
-  const selectedChampions = [...allyTeam, ...enemyTeam].filter(
+  const selectedPicks = [...allyTeam, ...enemyTeam].filter(
     (champion): champion is Champion => champion !== null
   );
+
+  const selectedBans = [...allyBans, ...enemyBans].filter(
+    (champion): champion is Champion => champion !== null
+  );
+
+  const selectedChampions = [...selectedPicks, ...selectedBans];
 
   return (
     <section>
@@ -97,6 +130,8 @@ export default function TeamInput({
           title="味方チーム"
           team={allyTeam}
           setTeam={setAllyTeam}
+          bans={allyBans}
+          setBans={setAllyBans}
           selectedChampions={selectedChampions}
         />
 
@@ -104,6 +139,8 @@ export default function TeamInput({
           title="敵チーム"
           team={enemyTeam}
           setTeam={setEnemyTeam}
+          bans={enemyBans}
+          setBans={setEnemyBans}
           selectedChampions={selectedChampions}
         />
       </div>

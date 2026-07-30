@@ -24,6 +24,22 @@ export default function Home() {
     null,
   ]);
 
+  const [allyBans, setAllyBans] = useState<(Champion | null)[]>([
+  null,
+  null,
+  null,
+  null,
+  null,
+]);
+
+const [enemyBans, setEnemyBans] = useState<(Champion | null)[]>([
+  null,
+  null,
+  null,
+  null,
+  null,
+]);
+
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <Header />
@@ -36,6 +52,10 @@ export default function Home() {
           setAllyTeam={setAllyTeam}
           enemyTeam={enemyTeam}
           setEnemyTeam={setEnemyTeam}
+          allyBans={allyBans}
+          setAllyBans={setAllyBans}
+          enemyBans={enemyBans}
+          setEnemyBans={setEnemyBans}
         />
 
         <RecommendationSection
