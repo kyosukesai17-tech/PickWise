@@ -1,3 +1,5 @@
+import ChampionCard from "./ChampionCard";
+import { recommend } from "../lib/recommend";
 import type { Champion } from "../types/champion";
 
 type RecommendationSectionProps = {
@@ -9,24 +11,41 @@ export default function RecommendationSection({
   allyTeam,
   enemyTeam,
 }: RecommendationSectionProps) {
-  const selectedCount =
-    allyTeam.filter(Boolean).length +
-    enemyTeam.filter(Boolean).length;
+  const recommendations = recommend(allyTeam, enemyTeam);
 
   return (
     <section className="rounded-xl border border-slate-800 bg-slate-900/50 p-6">
-      <h2 className="mb-3 text-xl font-bold text-slate-100">
+      <h2 className="mb-4 text-xl font-bold text-slate-100">
         おすすめチャンピオン
       </h2>
 
-      {selectedCount === 0 ? (
+      {recommendations.length === 0 ? (
         <p className="text-slate-400">
-          味方または敵のチャンピオンを選択してください。
+          おすすめを表示できません。
         </p>
       ) : (
-        <p className="text-slate-400">
-          おすすめエンジンは次のCommitで実装します。
-        </p>
+        <ul className="space-y-2">
+          {recommendations.slice(0, 10).map((recommendation) => (
+            <li
+              key={recommendation.champion.id}
+              className="flex items-center justify-between rounded-lg border border-slate-700 bg-slate-800 p-3"
+            >
+              <ChampionCard champion={recommendation.champion} />
+
+              <div className="text-right">
+                <p className="font-semibold text-yellow-400">
+                  {recommendation.score} pt
+                </p>
+
+                {recommendation.reasons.length > 0 && (
+                  <p className="mt-1 text-xs text-slate-400">
+                    {recommendation.reasons.join(" / ")}
+                  </p>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
       )}
     </section>
   );
