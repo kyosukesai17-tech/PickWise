@@ -12,6 +12,10 @@ import RecommendationSection from "../components/RecommendationSection";
 import { useDraftPersistence } from "../hooks/useDraftPersistence";
 
 import type {
+  DraftSnapshot,
+} from "../lib/draftShare";
+
+import type {
   Champion,
   Role,
 } from "../types/champion";
@@ -92,6 +96,30 @@ export default function Home() {
     );
   }
 
+  function importDraft(
+    draft: DraftSnapshot,
+  ) {
+    setSelectedRole(
+      draft.selectedRole,
+    );
+
+    setAllyTeam(
+      draft.allyTeam,
+    );
+
+    setEnemyTeam(
+      draft.enemyTeam,
+    );
+
+    setAllyBans(
+      draft.allyBans,
+    );
+
+    setEnemyBans(
+      draft.enemyBans,
+    );
+  }
+
   if (!isDraftLoaded) {
     return (
       <main className="flex min-h-screen items-center justify-center bg-slate-950 text-white">
@@ -121,11 +149,17 @@ export default function Home() {
         />
 
         <DraftControls
+          selectedRole={
+            selectedRole
+          }
           allyTeam={allyTeam}
           enemyTeam={enemyTeam}
           allyBans={allyBans}
           enemyBans={enemyBans}
           onReset={resetDraft}
+          onImportDraft={
+            importDraft
+          }
         />
 
         <TeamInput
