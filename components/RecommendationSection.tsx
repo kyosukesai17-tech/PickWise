@@ -28,15 +28,17 @@ export default function RecommendationSection({
   enemyBans,
   selectedRole,
 }: RecommendationSectionProps) {
-  const analysis = analyzeTeam(allyTeam);
+  const analysis =
+    analyzeTeam(allyTeam);
 
-  const recommendations = recommend(
-    allyTeam,
-    enemyTeam,
-    allyBans,
-    enemyBans,
-    selectedRole,
-  );
+  const recommendations =
+    recommend(
+      allyTeam,
+      enemyTeam,
+      allyBans,
+      enemyBans,
+      selectedRole,
+    );
 
   const teamNeeds: TeamNeed[] = [
     {
@@ -57,9 +59,19 @@ export default function RecommendationSection({
     },
   ];
 
-  const activeNeeds = teamNeeds.filter(
-    (need) => need.needed,
-  );
+  const activeNeeds =
+    teamNeeds.filter(
+      (need) => need.needed,
+    );
+
+  const registeredCount =
+    recommendations.filter(
+      (recommendation) =>
+        recommendation.isDataRegistered,
+    ).length;
+
+  const visibleRecommendations =
+    recommendations.slice(0, 10);
 
   return (
     <section className="space-y-5 rounded-xl border border-slate-800 bg-slate-900/50 p-6">
@@ -69,7 +81,7 @@ export default function RecommendationSection({
         </h2>
 
         <p className="mt-1 text-sm text-slate-400">
-          味方構成と敵構成を基準に評価しています。
+          味方構成・敵構成・対面相性を基準に評価しています。
         </p>
       </div>
 
@@ -96,20 +108,50 @@ export default function RecommendationSection({
         )}
       </div>
 
+      <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
+        <p className="text-slate-400">
+          登録済み候補
+          <span className="ml-2 font-semibold text-sky-300">
+            {registeredCount}
+          </span>
+          <span className="mx-1 text-slate-600">
+            /
+          </span>
+          <span>
+            {recommendations.length}
+          </span>
+        </p>
+
+        <div className="flex gap-2">
+          <span className="rounded-full border border-sky-500/40 bg-sky-500/10 px-2 py-1 text-xs text-sky-300">
+            登録済み
+          </span>
+
+          <span className="rounded-full border border-amber-500/40 bg-amber-500/10 px-2 py-1 text-xs text-amber-300">
+            仮データ
+          </span>
+        </div>
+      </div>
+
       {recommendations.length === 0 ? (
         <p className="text-slate-400">
           選択条件に一致する候補がありません。
         </p>
       ) : (
         <div className="space-y-3">
-          {recommendations
-            .slice(0, 10)
-            .map((recommendation, index) => (
+          {visibleRecommendations.map(
+            (
+              recommendation,
+              index,
+            ) => (
               <article
-                key={recommendation.champion.id}
+                key={
+                  recommendation
+                    .champion.id
+                }
                 className="rounded-lg border border-slate-700 bg-slate-800 p-4"
               >
-                <div className="flex items-center justify-between gap-4">
+                <div className="flex items-start justify-between gap-4">
                   <div className="flex min-w-0 items-center gap-3">
                     <span className="w-8 shrink-0 text-center font-bold text-yellow-400">
                       {index === 0
@@ -121,9 +163,28 @@ export default function RecommendationSection({
                             : `${index + 1}`}
                     </span>
 
-                    <ChampionCard
-                      champion={recommendation.champion}
-                    />
+                    <div className="space-y-2">
+                      <ChampionCard
+                        champion={
+                          recommendation
+                            .champion
+                        }
+                      />
+
+                      <span
+                        className={`inline-block rounded-full border px-2 py-1 text-xs ${
+                          recommendation
+                            .isDataRegistered
+                            ? "border-sky-500/40 bg-sky-500/10 text-sky-300"
+                            : "border-amber-500/40 bg-amber-500/10 text-amber-300"
+                        }`}
+                      >
+                        {recommendation
+                          .isDataRegistered
+                          ? "登録済み"
+                          : "仮データ"}
+                      </span>
+                    </div>
                   </div>
 
                   <span className="shrink-0 font-semibold text-yellow-400">
@@ -132,14 +193,25 @@ export default function RecommendationSection({
                 </div>
 
                 <div className="mt-4 border-t border-slate-700 pt-3">
-                  {recommendation.reasons.length === 0 ? (
+                  {!recommendation
+                    .isDataRegistered && (
+                    <p className="mb-3 rounded-md border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-sm text-amber-300">
+                      このチャンピオンは未登録のため、初期データで評価されています。
+                    </p>
+                  )}
+
+                  {recommendation.reasons
+                    .length === 0 ? (
                     <p className="text-sm text-slate-400">
                       基本スコアのみで評価されています。
                     </p>
                   ) : (
                     <ul className="space-y-2">
                       {recommendation.reasons.map(
-                        (reason, reasonIndex) => {
+                        (
+                          reason,
+                          reasonIndex,
+                        ) => {
                           const isPositive =
                             reason.score >= 0;
 
@@ -155,7 +227,9 @@ export default function RecommendationSection({
                                     : "text-rose-300"
                                 }
                               >
-                                {isPositive ? "＋" : "−"}{" "}
+                                {isPositive
+                                  ? "＋"
+                                  : "−"}{" "}
                                 {reason.text}
                               </span>
 
@@ -166,8 +240,12 @@ export default function RecommendationSection({
                                     : "text-rose-400"
                                 }`}
                               >
-                                {isPositive ? "+" : "-"}
-                                {Math.abs(reason.score)}
+                                {isPositive
+                                  ? "+"
+                                  : "-"}
+                                {Math.abs(
+                                  reason.score,
+                                )}
                               </span>
                             </li>
                           );
@@ -177,7 +255,8 @@ export default function RecommendationSection({
                   )}
                 </div>
               </article>
-            ))}
+            ),
+          )}
         </div>
       )}
     </section>

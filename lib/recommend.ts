@@ -1,3 +1,7 @@
+import {
+  championData,
+} from "../data/championData";
+
 import { getChampions } from "./getChampions";
 import { calculateScore } from "./calculateScore";
 
@@ -29,7 +33,10 @@ export function recommend(
       ): champion is Champion =>
         champion !== null,
     )
-    .map((champion) => champion.id);
+    .map(
+      (champion) =>
+        champion.id,
+    );
 
   const unavailableChampionIdSet =
     new Set(unavailableChampionIds);
@@ -44,18 +51,35 @@ export function recommend(
           champion.id,
         ),
     )
-    .map((champion) => ({
-      champion,
+    .map((champion) => {
+      const isDataRegistered =
+        championData[champion.id] !== undefined;
 
-      ...calculateScore(
-        allyTeam,
-        enemyTeam,
-        selectedRole,
+      return {
         champion,
-      ),
-    }))
-    .sort(
-      (a, b) =>
-        b.score - a.score,
-    );
+
+        ...calculateScore(
+          allyTeam,
+          enemyTeam,
+          selectedRole,
+          champion,
+        ),
+
+        isDataRegistered,
+      };
+    })
+    .sort((a, b) => {
+      if (
+        a.isDataRegistered !==
+        b.isDataRegistered
+      ) {
+        return Number(
+          b.isDataRegistered,
+        ) - Number(
+          a.isDataRegistered,
+        );
+      }
+
+      return b.score - a.score;
+    });
 }

@@ -38,4 +38,5 @@ export interface Recommendation {
   champion: Champion;
   score: number;
   reasons: RecommendationReason[];
+  isDataRegistered: boolean;
 }
