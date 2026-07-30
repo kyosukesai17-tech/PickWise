@@ -6,6 +6,11 @@ export const REASON = {
   AD: "AD",
   CC: "CC",
   SCALING: "SCALING",
+
+  ENEMY_DIVE: "ENEMY_DIVE",
+  ENEMY_MELEE: "ENEMY_MELEE",
+  ENEMY_RANGED: "ENEMY_RANGED",
+  ENEMY_FRONTLINE: "ENEMY_FRONTLINE",
 } as const;
 
 export type RecommendationReasonType =

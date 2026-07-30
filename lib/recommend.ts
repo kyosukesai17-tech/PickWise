@@ -15,23 +15,37 @@ export function recommend(
   enemyTeam: (Champion | null)[],
   selectedRole: Role,
 ): Recommendation[] {
-  const selectedIds = [...allyTeam, ...enemyTeam]
+  const selectedIds = [
+    ...allyTeam,
+    ...enemyTeam,
+  ]
     .filter(
-      (champion): champion is Champion =>
+      (
+        champion,
+      ): champion is Champion =>
         champion !== null,
     )
-    .map((champion) => champion.id);
+    .map(
+      (champion) =>
+        champion.id,
+    );
 
   return getChampions()
     .filter(
       (champion) =>
-        champion.roles.includes(selectedRole) &&
-        !selectedIds.includes(champion.id),
+        champion.roles.includes(
+          selectedRole,
+        ) &&
+        !selectedIds.includes(
+          champion.id,
+        ),
     )
     .map((champion) => ({
       champion,
+
       ...calculateScore(
         allyTeam,
+        enemyTeam,
         champion,
       ),
     }))

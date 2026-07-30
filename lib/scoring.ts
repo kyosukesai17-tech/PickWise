@@ -22,4 +22,12 @@ export const SCORE = {
   MISSING_AD: -8,
 
   MISSING_CC: -8,
+
+  VS_DIVE_PEEL: 15,
+
+  VS_MELEE_POKE: 10,
+
+  VS_RANGED_CATCH: 12,
+
+  VS_FRONTLINE_CARRY: 12,
 } as const;
