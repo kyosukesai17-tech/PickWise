@@ -14,9 +14,13 @@ export default function ChampionDataEditor() {
   const [range, setRange] =
     useState<(typeof ranges)[number]>("MELEE");
 
+  const [tankiness, setTankiness] = useState(3);
+  const [cc, setCc] = useState(3);
+  const [waveClear, setWaveClear] = useState(3);
+  const [scaling, setScaling] = useState(3);
+
   return (
     <div className="space-y-6 rounded-xl border border-slate-700 bg-slate-900 p-6">
-
       <div>
         <label className="mb-2 block text-sm font-medium">
           Champion
@@ -24,9 +28,7 @@ export default function ChampionDataEditor() {
 
         <input
           value={champion}
-          onChange={(e) =>
-            setChampion(e.target.value)
-          }
+          onChange={(e) => setChampion(e.target.value)}
           placeholder="Ahri"
           className="w-full rounded border border-slate-700 bg-slate-800 px-3 py-2"
         />
@@ -72,6 +74,32 @@ export default function ChampionDataEditor() {
         </select>
       </div>
 
+      <div className="grid grid-cols-2 gap-4">
+        <NumberInput
+          label="Tankiness"
+          value={tankiness}
+          onChange={setTankiness}
+        />
+
+        <NumberInput
+          label="CC"
+          value={cc}
+          onChange={setCc}
+        />
+
+        <NumberInput
+          label="Wave Clear"
+          value={waveClear}
+          onChange={setWaveClear}
+        />
+
+        <NumberInput
+          label="Scaling"
+          value={scaling}
+          onChange={setScaling}
+        />
+      </div>
+
       <div className="rounded-lg bg-slate-950 p-4 font-mono text-sm whitespace-pre-wrap">
 {`${champion || "Champion"}: {
   attributes: {
@@ -79,15 +107,45 @@ export default function ChampionDataEditor() {
     range: "${range}",
   },
   ratings: {
-    tankiness: 3,
-    cc: 3,
-    waveClear: 3,
-    scaling: 3,
+    tankiness: ${tankiness},
+    cc: ${cc},
+    waveClear: ${waveClear},
+    scaling: ${scaling},
   },
   traits: [],
 },`}
       </div>
+    </div>
+  );
+}
 
+type NumberInputProps = {
+  label: string;
+  value: number;
+  onChange: (value: number) => void;
+};
+
+function NumberInput({
+  label,
+  value,
+  onChange,
+}: NumberInputProps) {
+  return (
+    <div>
+      <label className="mb-2 block text-sm font-medium">
+        {label}
+      </label>
+
+      <input
+        type="number"
+        min={1}
+        max={5}
+        value={value}
+        onChange={(e) =>
+          onChange(Number(e.target.value))
+        }
+        className="w-full rounded border border-slate-700 bg-slate-800 px-3 py-2"
+      />
     </div>
   );
 }
