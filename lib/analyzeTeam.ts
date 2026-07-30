@@ -17,11 +17,18 @@ export function analyzeTeam(
   let ccScore = 0;
 
   for (const champion of team) {
+    console.log(champion);
+
     if (!champion) continue;
 
     const data =
       championData[champion.id] ??
       defaultChampionData;
+      console.log(
+  champion.id,
+  championData[champion.id],
+  data.profile.damageType
+);
 
     switch (data.profile.damageType) {
       case "AP":

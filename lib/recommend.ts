@@ -1,11 +1,14 @@
 import { getChampions } from "./getChampions";
-import type { Champion, Role } from "../types/champion";
+import { calculateScore } from "./calculateScore";
 
-export type Recommendation = {
-  champion: Champion;
-  score: number;
-  reasons: string[];
-};
+import type {
+  Champion,
+  Role,
+} from "../types/champion";
+
+import type {
+  Recommendation,
+} from "../types/recommendation";
 
 export function recommend(
   allyTeam: (Champion | null)[],
@@ -13,7 +16,10 @@ export function recommend(
   selectedRole: Role,
 ): Recommendation[] {
   const selectedIds = [...allyTeam, ...enemyTeam]
-    .filter((champion): champion is Champion => champion !== null)
+    .filter(
+      (champion): champion is Champion =>
+        champion !== null,
+    )
     .map((champion) => champion.id);
 
   return getChampions()
@@ -24,7 +30,13 @@ export function recommend(
     )
     .map((champion) => ({
       champion,
-      score: 0,
-      reasons: [],
-    }));
+      ...calculateScore(
+        allyTeam,
+        champion,
+      ),
+    }))
+    .sort(
+      (a, b) =>
+        b.score - a.score,
+    );
 }

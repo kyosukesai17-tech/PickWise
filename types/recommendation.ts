@@ -6,7 +6,6 @@ export const REASON = {
   AD: "AD",
   CC: "CC",
   SCALING: "SCALING",
-  WAVECLEAR: "WAVECLEAR",
 } as const;
 
 export type RecommendationReasonType =
@@ -14,16 +13,12 @@ export type RecommendationReasonType =
 
 export interface RecommendationReason {
   type: RecommendationReasonType;
-
   score: number;
-
   text: string;
 }
 
 export interface Recommendation {
   champion: Champion;
-
   score: number;
-
   reasons: RecommendationReason[];
 }
