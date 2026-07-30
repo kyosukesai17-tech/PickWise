@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import ChampionSelector from "./ChampionSelector";
+import type { Champion } from "../types/champion";
 
 const damageTypes = ["AD", "AP", "MIXED"] as const;
 const ranges = ["MELEE", "RANGED"] as const;
