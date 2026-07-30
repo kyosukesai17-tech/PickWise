@@ -9,48 +9,101 @@ import TeamInput from "../components/TeamInput";
 import DraftAnalysisSummary from "../components/DraftAnalysisSummary";
 import RecommendationSection from "../components/RecommendationSection";
 
+import { useDraftPersistence } from "../hooks/useDraftPersistence";
+
 import type {
   Champion,
   Role,
 } from "../types/champion";
 
-const createEmptyTeam = (): (Champion | null)[] => [
-  null,
-  null,
-  null,
-  null,
-  null,
-];
+const createEmptyTeam =
+  (): (Champion | null)[] => [
+    null,
+    null,
+    null,
+    null,
+    null,
+  ];
 
 export default function Home() {
-  const [selectedRole, setSelectedRole] =
-    useState<Role>("MID");
+  const [
+    selectedRole,
+    setSelectedRole,
+  ] = useState<Role>("MID");
 
-  const [allyTeam, setAllyTeam] =
-    useState<(Champion | null)[]>(
-      createEmptyTeam,
-    );
+  const [
+    allyTeam,
+    setAllyTeam,
+  ] = useState<
+    (Champion | null)[]
+  >(createEmptyTeam);
 
-  const [enemyTeam, setEnemyTeam] =
-    useState<(Champion | null)[]>(
-      createEmptyTeam,
-    );
+  const [
+    enemyTeam,
+    setEnemyTeam,
+  ] = useState<
+    (Champion | null)[]
+  >(createEmptyTeam);
 
-  const [allyBans, setAllyBans] =
-    useState<(Champion | null)[]>(
-      createEmptyTeam,
-    );
+  const [
+    allyBans,
+    setAllyBans,
+  ] = useState<
+    (Champion | null)[]
+  >(createEmptyTeam);
 
-  const [enemyBans, setEnemyBans] =
-    useState<(Champion | null)[]>(
-      createEmptyTeam,
-    );
+  const [
+    enemyBans,
+    setEnemyBans,
+  ] = useState<
+    (Champion | null)[]
+  >(createEmptyTeam);
+
+  const {
+    isDraftLoaded,
+  } = useDraftPersistence({
+    selectedRole,
+    allyTeam,
+    enemyTeam,
+    allyBans,
+    enemyBans,
+    setSelectedRole,
+    setAllyTeam,
+    setEnemyTeam,
+    setAllyBans,
+    setEnemyBans,
+  });
 
   function resetDraft() {
-    setAllyTeam(createEmptyTeam());
-    setEnemyTeam(createEmptyTeam());
-    setAllyBans(createEmptyTeam());
-    setEnemyBans(createEmptyTeam());
+    setAllyTeam(
+      createEmptyTeam(),
+    );
+
+    setEnemyTeam(
+      createEmptyTeam(),
+    );
+
+    setAllyBans(
+      createEmptyTeam(),
+    );
+
+    setEnemyBans(
+      createEmptyTeam(),
+    );
+  }
+
+  if (!isDraftLoaded) {
+    return (
+      <main className="flex min-h-screen items-center justify-center bg-slate-950 text-white">
+        <div className="text-center">
+          <div className="mx-auto h-8 w-8 animate-spin rounded-full border-4 border-slate-700 border-t-sky-500" />
+
+          <p className="mt-4 text-sm text-slate-400">
+            ドラフトを読み込んでいます...
+          </p>
+        </div>
+      </main>
+    );
   }
 
   return (
@@ -59,8 +112,12 @@ export default function Home() {
 
       <div className="mx-auto max-w-7xl space-y-6 p-6">
         <RoleSelector
-          selectedRole={selectedRole}
-          setSelectedRole={setSelectedRole}
+          selectedRole={
+            selectedRole
+          }
+          setSelectedRole={
+            setSelectedRole
+          }
         />
 
         <DraftControls
@@ -73,19 +130,29 @@ export default function Home() {
 
         <TeamInput
           allyTeam={allyTeam}
-          setAllyTeam={setAllyTeam}
+          setAllyTeam={
+            setAllyTeam
+          }
           enemyTeam={enemyTeam}
-          setEnemyTeam={setEnemyTeam}
+          setEnemyTeam={
+            setEnemyTeam
+          }
           allyBans={allyBans}
-          setAllyBans={setAllyBans}
+          setAllyBans={
+            setAllyBans
+          }
           enemyBans={enemyBans}
-          setEnemyBans={setEnemyBans}
+          setEnemyBans={
+            setEnemyBans
+          }
         />
 
         <DraftAnalysisSummary
           allyTeam={allyTeam}
           enemyTeam={enemyTeam}
-          selectedRole={selectedRole}
+          selectedRole={
+            selectedRole
+          }
         />
 
         <RecommendationSection
@@ -93,7 +160,9 @@ export default function Home() {
           enemyTeam={enemyTeam}
           allyBans={allyBans}
           enemyBans={enemyBans}
-          selectedRole={selectedRole}
+          selectedRole={
+            selectedRole
+          }
         />
       </div>
     </main>
