@@ -1,6 +1,7 @@
 import { analyzeTeam } from "./analyzeTeam";
 import { analyzeEnemyTeam } from "./analyzeEnemyTeam";
 import { analyzeAllySynergy } from "./analyzeAllySynergy";
+import { analyzeRoleOpponent } from "./analyzeRoleOpponent";
 
 import {
   championData,
@@ -16,11 +17,15 @@ import type {
   RecommendationReason,
 } from "../types/recommendation";
 
-import type { Champion } from "../types/champion";
+import type {
+  Champion,
+  Role,
+} from "../types/champion";
 
 export function calculateScore(
   allyTeam: (Champion | null)[],
   enemyTeam: (Champion | null)[],
+  selectedRole: Role,
   champion: Champion,
 ) {
   const allyAnalysis =
@@ -31,6 +36,12 @@ export function calculateScore(
 
   const allySynergy =
     analyzeAllySynergy(allyTeam);
+
+  const roleOpponent =
+    analyzeRoleOpponent(
+      enemyTeam,
+      selectedRole,
+    );
 
   const data =
     championData[champion.id] ??
@@ -77,12 +88,19 @@ export function calculateScore(
     );
 
   const hasPokeOrSiege =
-    hasPoke ||
-    hasSiege;
+    hasPoke || hasSiege;
 
   const hasAssassinOrCatch =
-    hasAssassin ||
-    hasCatch;
+    hasAssassin || hasCatch;
+
+  const isRanged =
+    data.attributes.range === "RANGED";
+
+  const isDurable =
+    data.ratings.tankiness >= 4;
+
+  const hasHighWaveClear =
+    data.ratings.waveClear >= 4;
 
   const canDealAP =
     data.attributes.damageType === "AP" ||
@@ -327,6 +345,97 @@ export function calculateScore(
       type: REASON.ALLY_CATCH,
       score: SCORE.ALLY_CATCH_SYNERGY,
       text: "味方のキャッチ構成と合わせやすい",
+    });
+  }
+
+  if (
+    roleOpponent.isAssassin &&
+    (hasPeel || isDurable)
+  ) {
+    score +=
+      SCORE.OPPONENT_ASSASSIN_DEFENSE;
+
+    reasons.push({
+      type: REASON.OPPONENT_ASSASSIN,
+      score:
+        SCORE.OPPONENT_ASSASSIN_DEFENSE,
+      text: "対面のアサシンに対応しやすい",
+    });
+  }
+
+  if (
+    roleOpponent.hasPokeOrSiege &&
+    (hasEngage || hasCatch)
+  ) {
+    score +=
+      SCORE.OPPONENT_POKE_ENGAGE;
+
+    reasons.push({
+      type: REASON.OPPONENT_POKE,
+      score:
+        SCORE.OPPONENT_POKE_ENGAGE,
+      text: "ポーク対面に仕掛けやすい",
+    });
+  }
+
+  if (
+    roleOpponent.hasEngage &&
+    hasPeel
+  ) {
+    score +=
+      SCORE.OPPONENT_ENGAGE_PEEL;
+
+    reasons.push({
+      type: REASON.OPPONENT_ENGAGE,
+      score:
+        SCORE.OPPONENT_ENGAGE_PEEL,
+      text: "対面の仕掛けを受け止めやすい",
+    });
+  }
+
+  if (
+    roleOpponent.isMelee &&
+    isRanged &&
+    hasPokeOrSiege
+  ) {
+    score +=
+      SCORE.OPPONENT_MELEE_RANGE;
+
+    reasons.push({
+      type: REASON.OPPONENT_MELEE,
+      score:
+        SCORE.OPPONENT_MELEE_RANGE,
+      text: "近接対面に射程差を作りやすい",
+    });
+  }
+
+  if (
+    roleOpponent.isRanged &&
+    hasAssassinOrCatch
+  ) {
+    score +=
+      SCORE.OPPONENT_RANGED_CATCH;
+
+    reasons.push({
+      type: REASON.OPPONENT_RANGED,
+      score:
+        SCORE.OPPONENT_RANGED_CATCH,
+      text: "遠距離対面に圧力をかけやすい",
+    });
+  }
+
+  if (
+    roleOpponent.hasHighWaveClear &&
+    hasHighWaveClear
+  ) {
+    score +=
+      SCORE.OPPONENT_WAVECLEAR;
+
+    reasons.push({
+      type: REASON.OPPONENT_WAVECLEAR,
+      score:
+        SCORE.OPPONENT_WAVECLEAR,
+      text: "対面のウェーブクリアに対応しやすい",
     });
   }
 

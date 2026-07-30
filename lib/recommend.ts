@@ -37,8 +37,12 @@ export function recommend(
   return getChampions()
     .filter(
       (champion) =>
-        champion.roles.includes(selectedRole) &&
-        !unavailableChampionIdSet.has(champion.id),
+        champion.roles.includes(
+          selectedRole,
+        ) &&
+        !unavailableChampionIdSet.has(
+          champion.id,
+        ),
     )
     .map((champion) => ({
       champion,
@@ -46,6 +50,7 @@ export function recommend(
       ...calculateScore(
         allyTeam,
         enemyTeam,
+        selectedRole,
         champion,
       ),
     }))
