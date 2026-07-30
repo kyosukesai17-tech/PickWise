@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import Header from "../components/Header";
 import RoleSelector from "../components/RoleSelector";
+import DraftControls from "../components/DraftControls";
 import TeamInput from "../components/TeamInput";
 import DraftAnalysisSummary from "../components/DraftAnalysisSummary";
 import RecommendationSection from "../components/RecommendationSection";
@@ -45,6 +46,13 @@ export default function Home() {
       createEmptyTeam,
     );
 
+  function resetDraft() {
+    setAllyTeam(createEmptyTeam());
+    setEnemyTeam(createEmptyTeam());
+    setAllyBans(createEmptyTeam());
+    setEnemyBans(createEmptyTeam());
+  }
+
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <Header />
@@ -53,6 +61,14 @@ export default function Home() {
         <RoleSelector
           selectedRole={selectedRole}
           setSelectedRole={setSelectedRole}
+        />
+
+        <DraftControls
+          allyTeam={allyTeam}
+          enemyTeam={enemyTeam}
+          allyBans={allyBans}
+          enemyBans={enemyBans}
+          onReset={resetDraft}
         />
 
         <TeamInput
