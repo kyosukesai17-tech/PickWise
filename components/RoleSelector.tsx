@@ -1,44 +1,31 @@
-"use client";
+import type { Role } from "../types/champion";
 
-import { useState } from "react";
+const roles: Role[] = ["TOP", "JG", "MID", "ADC", "SUP"];
 
-const roles = [
-  "トップ",
-  "ジャングル",
-  "ミッド",
-  "ADC",
-  "サポート",
-];
+type RoleSelectorProps = {
+  selectedRole: Role;
+  setSelectedRole: React.Dispatch<React.SetStateAction<Role>>;
+};
 
-export default function RoleSelector() {
-  const [selectedRole, setSelectedRole] = useState("ミッド");
-
+export default function RoleSelector({
+  selectedRole,
+  setSelectedRole,
+}: RoleSelectorProps) {
   return (
-    <section className="mb-12">
-      <h2 className="mb-6 text-center text-3xl font-bold">
-        ロール
-      </h2>
-
-      <div className="flex flex-wrap justify-center gap-3">
-        {roles.map((role) => {
-          const selected = selectedRole === role;
-
-          return (
-            <button
-              key={role}
-              onClick={() => setSelectedRole(role)}
-              className={`rounded-lg border px-6 py-3 font-semibold transition-all duration-200
-                ${
-                  selected
-                    ? "border-yellow-400 bg-yellow-400 text-slate-950"
-                    : "border-slate-700 bg-slate-900 text-white hover:border-yellow-400"
-                }`}
-            >
-              {role}
-            </button>
-          );
-        })}
-      </div>
-    </section>
+    <div className="flex flex-wrap gap-2 rounded-xl border border-slate-800 bg-slate-900/50 p-4">
+      {roles.map((role) => (
+        <button
+          key={role}
+          onClick={() => setSelectedRole(role)}
+          className={`rounded-lg px-4 py-2 font-medium transition ${
+            selectedRole === role
+              ? "bg-blue-600 text-white"
+              : "bg-slate-800 text-slate-300 hover:bg-slate-700"
+          }`}
+        >
+          {role}
+        </button>
+      ))}
+    </div>
   );
 }

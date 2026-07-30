@@ -1,5 +1,5 @@
 import { getChampions } from "./getChampions";
-import type { Champion } from "../types/champion";
+import type { Champion, Role } from "../types/champion";
 
 export type Recommendation = {
   champion: Champion;
@@ -10,13 +10,18 @@ export type Recommendation = {
 export function recommend(
   allyTeam: (Champion | null)[],
   enemyTeam: (Champion | null)[],
+  selectedRole: Role,
 ): Recommendation[] {
   const selectedIds = [...allyTeam, ...enemyTeam]
     .filter((champion): champion is Champion => champion !== null)
     .map((champion) => champion.id);
 
   return getChampions()
-    .filter((champion) => !selectedIds.includes(champion.id))
+    .filter(
+      (champion) =>
+        champion.roles.includes(selectedRole) &&
+        !selectedIds.includes(champion.id),
+    )
     .map((champion) => ({
       champion,
       score: 0,
