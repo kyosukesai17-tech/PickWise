@@ -127,11 +127,11 @@ export default function RecommendationSection({
         )}
       </div>
 
-      <div className="space-y-3 rounded-lg border border-slate-800 bg-slate-950/40 p-4">
-        <div className="flex flex-wrap items-center justify-between gap-3">
+      <div className="space-y-4 rounded-lg border border-slate-800 bg-slate-950/40 p-4">
+        <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <h3 className="text-sm font-semibold text-slate-200">
-              候補の表示設定
+              仮データを含める
             </h3>
 
             <p className="mt-1 text-xs text-slate-500">
@@ -139,56 +139,54 @@ export default function RecommendationSection({
             </p>
           </div>
 
-          <button
-            type="button"
-            role="switch"
-            aria-checked={includeTemporaryData}
-            onClick={() =>
-              setIncludeTemporaryData(
-                (current) => !current,
-              )
-            }
-            className={`relative h-7 w-12 rounded-full transition ${
-              includeTemporaryData
-                ? "bg-sky-600"
-                : "bg-slate-700"
-            }`}
-          >
+          <div className="flex items-center gap-3">
             <span
-              className={`absolute top-1 h-5 w-5 rounded-full bg-white transition ${
+              className={`text-sm font-semibold ${
                 includeTemporaryData
-                  ? "left-6"
-                  : "left-1"
+                  ? "text-sky-300"
+                  : "text-slate-500"
               }`}
-            />
-          </button>
-        </div>
+            >
+              {includeTemporaryData
+                ? "ON"
+                : "OFF"}
+            </span>
 
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <label className="flex cursor-pointer items-center gap-2 text-sm text-slate-300">
-            <input
-              type="checkbox"
-              checked={includeTemporaryData}
-              onChange={(event) =>
+            <button
+              type="button"
+              role="switch"
+              aria-label="仮データを含める"
+              aria-checked={includeTemporaryData}
+              onClick={() =>
                 setIncludeTemporaryData(
-                  event.target.checked,
+                  (current) => !current,
                 )
               }
-              className="h-4 w-4 accent-sky-500"
-            />
-
-            仮データを含める
-          </label>
-
-          <div className="flex flex-wrap gap-2 text-xs">
-            <span className="rounded-full border border-sky-500/40 bg-sky-500/10 px-2 py-1 text-sky-300">
-              登録済み {registeredCount}
-            </span>
-
-            <span className="rounded-full border border-amber-500/40 bg-amber-500/10 px-2 py-1 text-amber-300">
-              仮データ {temporaryCount}
-            </span>
+              className={`relative h-7 w-12 rounded-full transition ${
+                includeTemporaryData
+                  ? "bg-sky-600"
+                  : "bg-slate-700"
+              }`}
+            >
+              <span
+                className={`absolute top-1 h-5 w-5 rounded-full bg-white shadow transition ${
+                  includeTemporaryData
+                    ? "left-6"
+                    : "left-1"
+                }`}
+              />
+            </button>
           </div>
+        </div>
+
+        <div className="flex flex-wrap gap-2 text-xs">
+          <span className="rounded-full border border-sky-500/40 bg-sky-500/10 px-2 py-1 text-sky-300">
+            登録済み {registeredCount}
+          </span>
+
+          <span className="rounded-full border border-amber-500/40 bg-amber-500/10 px-2 py-1 text-amber-300">
+            仮データ {temporaryCount}
+          </span>
         </div>
       </div>
 
@@ -218,7 +216,7 @@ export default function RecommendationSection({
           </p>
 
           <p className="mt-1 text-sm text-slate-500">
-            「仮データを含める」を有効にすると、未登録候補も表示できます。
+            仮データの表示をONにすると、未登録候補も表示できます。
           </p>
         </div>
       ) : (
