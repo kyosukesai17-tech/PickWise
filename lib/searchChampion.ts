@@ -1,27 +1,21 @@
 import { getChampions } from "./getChampions";
 import type { Role } from "../types/champion";
 
-export function searchChampion(keyword: string, role?: Role) {
-  const lower = keyword.toLowerCase();
+export function searchChampion(
+  keyword: string,
+  role?: Role
+) {
+  const lowerKeyword = keyword.toLowerCase().trim();
 
-  const champions = getChampions();
-
-console.log("champions:", champions.length);
-console.log(champions[0]);
-
-const result = champions.filter((champion) => {
+  return getChampions().filter((champion) => {
     const matchKeyword =
-      keyword.trim() === "" ||
-      champion.name.startsWith(keyword) ||
-      champion.id.toLowerCase().startsWith(lower);
+      lowerKeyword === "" ||
+      champion.name.toLowerCase().startsWith(lowerKeyword) ||
+      champion.id.toLowerCase().startsWith(lowerKeyword);
 
-    return matchKeyword;
+    const matchRole =
+      !role || champion.roles.includes(role);
+
+    return matchKeyword && matchRole;
   });
-
-  console.log("role:", role);
-  console.log("keyword:", keyword);
-  console.log("result:", result.length);
-
-  return result;
 }
-

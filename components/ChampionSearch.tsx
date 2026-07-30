@@ -1,13 +1,13 @@
 "use client";
 
+import type { Champion, Role } from "../types/champion";
 import { useMemo, useState } from "react";
-import type { Champion } from "../types/champion";
 import ChampionCard from "./ChampionCard";
 import ChampionDropdown from "./ChampionDropdown";
 import { searchChampion } from "../lib/searchChampion";
 
 type ChampionSearchProps = {
-  role: string;
+  role: Role;
   value: Champion | null;
   excludedChampions: Champion[];
   onSelect: (champion: Champion | null) => void;
@@ -22,14 +22,13 @@ export default function ChampionSearch({
   const [keyword, setKeyword] = useState("");
 
   const candidates = useMemo(() => {
-    console.log("ChampionSearch keyword =", keyword);
-    return searchChampion(keyword).filter(
+    return searchChampion(keyword, role).filter(
       (champion) =>
         !excludedChampions.some(
           (selected) => selected.id === champion.id
         )
     );
-  }, [keyword, excludedChampions]);
+  }, [keyword, role, excludedChampions]);
 
   if (value) {
     return (
