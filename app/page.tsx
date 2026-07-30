@@ -5,6 +5,7 @@ import { useState } from "react";
 import Header from "../components/Header";
 import RoleSelector from "../components/RoleSelector";
 import TeamInput from "../components/TeamInput";
+import DraftAnalysisSummary from "../components/DraftAnalysisSummary";
 import RecommendationSection from "../components/RecommendationSection";
 
 import type {
@@ -63,6 +64,12 @@ export default function Home() {
           setAllyBans={setAllyBans}
           enemyBans={enemyBans}
           setEnemyBans={setEnemyBans}
+        />
+
+        <DraftAnalysisSummary
+          allyTeam={allyTeam}
+          enemyTeam={enemyTeam}
+          selectedRole={selectedRole}
         />
 
         <RecommendationSection
