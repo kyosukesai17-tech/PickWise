@@ -11,6 +11,11 @@ export const REASON = {
   ENEMY_MELEE: "ENEMY_MELEE",
   ENEMY_RANGED: "ENEMY_RANGED",
   ENEMY_FRONTLINE: "ENEMY_FRONTLINE",
+
+  ALLY_POKE: "ALLY_POKE",
+  ALLY_ENGAGE: "ALLY_ENGAGE",
+  ALLY_CARRY: "ALLY_CARRY",
+  ALLY_CATCH: "ALLY_CATCH",
 } as const;
 
 export type RecommendationReasonType =

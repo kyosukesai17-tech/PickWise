@@ -1,5 +1,6 @@
 import { analyzeTeam } from "./analyzeTeam";
 import { analyzeEnemyTeam } from "./analyzeEnemyTeam";
+import { analyzeAllySynergy } from "./analyzeAllySynergy";
 
 import {
   championData,
@@ -28,6 +29,9 @@ export function calculateScore(
   const enemyAnalysis =
     analyzeEnemyTeam(enemyTeam);
 
+  const allySynergy =
+    analyzeAllySynergy(allyTeam);
+
   const data =
     championData[champion.id] ??
     defaultChampionData;
@@ -37,31 +41,48 @@ export function calculateScore(
       TRAITS.FRONTLINE,
     );
 
+  const hasEngage =
+    data.traits.includes(
+      TRAITS.ENGAGE,
+    );
+
   const hasPeel =
     data.traits.includes(
       TRAITS.PEEL,
     );
 
-  const hasPokeOrSiege =
+  const hasPoke =
     data.traits.includes(
       TRAITS.POKE,
-    ) ||
+    );
+
+  const hasSiege =
     data.traits.includes(
       TRAITS.SIEGE,
     );
 
-  const hasAssassinOrCatch =
+  const hasCarry =
+    data.traits.includes(
+      TRAITS.CARRY,
+    );
+
+  const hasAssassin =
     data.traits.includes(
       TRAITS.ASSASSIN,
-    ) ||
+    );
+
+  const hasCatch =
     data.traits.includes(
       TRAITS.CATCH,
     );
 
-  const isCarry =
-    data.traits.includes(
-      TRAITS.CARRY,
-    );
+  const hasPokeOrSiege =
+    hasPoke ||
+    hasSiege;
+
+  const hasAssassinOrCatch =
+    hasAssassin ||
+    hasCatch;
 
   const canDealAP =
     data.attributes.damageType === "AP" ||
@@ -246,7 +267,7 @@ export function calculateScore(
 
   if (
     enemyAnalysis.hasMultipleFrontlines &&
-    isCarry
+    hasCarry
   ) {
     score += SCORE.VS_FRONTLINE_CARRY;
 
@@ -254,6 +275,58 @@ export function calculateScore(
       type: REASON.ENEMY_FRONTLINE,
       score: SCORE.VS_FRONTLINE_CARRY,
       text: "敵の前衛を継続的に削りやすい",
+    });
+  }
+
+  if (
+    allySynergy.hasPokeCore &&
+    hasPokeOrSiege
+  ) {
+    score += SCORE.ALLY_POKE_SYNERGY;
+
+    reasons.push({
+      type: REASON.ALLY_POKE,
+      score: SCORE.ALLY_POKE_SYNERGY,
+      text: "味方のポーク構成と相性が良い",
+    });
+  }
+
+  if (
+    allySynergy.hasEngageCore &&
+    (hasEngage || hasCarry)
+  ) {
+    score += SCORE.ALLY_ENGAGE_SYNERGY;
+
+    reasons.push({
+      type: REASON.ALLY_ENGAGE,
+      score: SCORE.ALLY_ENGAGE_SYNERGY,
+      text: "味方のエンゲージに合わせやすい",
+    });
+  }
+
+  if (
+    allySynergy.hasCarry &&
+    hasPeel
+  ) {
+    score += SCORE.ALLY_CARRY_PEEL;
+
+    reasons.push({
+      type: REASON.ALLY_CARRY,
+      score: SCORE.ALLY_CARRY_PEEL,
+      text: "味方のキャリーを守りやすい",
+    });
+  }
+
+  if (
+    allySynergy.hasCatchCore &&
+    hasAssassinOrCatch
+  ) {
+    score += SCORE.ALLY_CATCH_SYNERGY;
+
+    reasons.push({
+      type: REASON.ALLY_CATCH,
+      score: SCORE.ALLY_CATCH_SYNERGY,
+      text: "味方のキャッチ構成と合わせやすい",
     });
   }
 
