@@ -3,9 +3,11 @@ import type { ChampionData } from "./types";
 
 export const championDataAD: Record<string, ChampionData> = {
   Ahri: {
-    profile: {
+    attributes: {
       damageType: "AP",
       range: "RANGED",
+    },
+    ratings: {
       tankiness: 1,
       cc: 3,
       waveClear: 4,
@@ -18,9 +20,11 @@ export const championDataAD: Record<string, ChampionData> = {
   },
 
   Alistar: {
-    profile: {
+    attributes: {
       damageType: "AP",
       range: "MELEE",
+    },
+    ratings: {
       tankiness: 5,
       cc: 5,
       waveClear: 1,
@@ -34,9 +38,11 @@ export const championDataAD: Record<string, ChampionData> = {
   },
 
   Amumu: {
-    profile: {
+    attributes: {
       damageType: "AP",
       range: "MELEE",
+    },
+    ratings: {
       tankiness: 5,
       cc: 5,
       waveClear: 3,
@@ -49,9 +55,11 @@ export const championDataAD: Record<string, ChampionData> = {
   },
 
   Annie: {
-    profile: {
+    attributes: {
       damageType: "AP",
       range: "RANGED",
+    },
+    ratings: {
       tankiness: 1,
       cc: 4,
       waveClear: 3,
@@ -63,9 +71,11 @@ export const championDataAD: Record<string, ChampionData> = {
   },
 
   Ashe: {
-    profile: {
+    attributes: {
       damageType: "AD",
       range: "RANGED",
+    },
+    ratings: {
       tankiness: 1,
       cc: 4,
       waveClear: 3,
@@ -78,9 +88,11 @@ export const championDataAD: Record<string, ChampionData> = {
   },
 
   Blitzcrank: {
-    profile: {
+    attributes: {
       damageType: "AP",
       range: "MELEE",
+    },
+    ratings: {
       tankiness: 4,
       cc: 5,
       waveClear: 1,
@@ -93,9 +105,11 @@ export const championDataAD: Record<string, ChampionData> = {
   },
 
   Braum: {
-    profile: {
+    attributes: {
       damageType: "AP",
       range: "MELEE",
+    },
+    ratings: {
       tankiness: 5,
       cc: 4,
       waveClear: 1,
@@ -108,9 +122,11 @@ export const championDataAD: Record<string, ChampionData> = {
   },
 
   Caitlyn: {
-    profile: {
+    attributes: {
       damageType: "AD",
       range: "RANGED",
+    },
+    ratings: {
       tankiness: 1,
       cc: 2,
       waveClear: 4,

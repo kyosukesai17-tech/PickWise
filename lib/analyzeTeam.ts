@@ -17,20 +17,13 @@ export function analyzeTeam(
   let ccScore = 0;
 
   for (const champion of team) {
-    console.log(champion);
-
     if (!champion) continue;
 
     const data =
       championData[champion.id] ??
       defaultChampionData;
-      console.log(
-  champion.id,
-  championData[champion.id],
-  data.profile.damageType
-);
 
-    switch (data.profile.damageType) {
+    switch (data.attributes.damageType) {
       case "AP":
         apCount++;
         break;
@@ -45,15 +38,11 @@ export function analyzeTeam(
         break;
     }
 
-    if (
-      data.traits.includes(
-        TRAITS.FRONTLINE
-      )
-    ) {
+    if (data.traits.includes(TRAITS.FRONTLINE)) {
       frontlineCount++;
     }
 
-    ccScore += data.profile.cc;
+    ccScore += data.ratings.cc;
   }
 
   return {

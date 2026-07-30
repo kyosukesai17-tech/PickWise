@@ -1,5 +1,9 @@
 import { analyzeTeam } from "./analyzeTeam";
-import { championData, defaultChampionData } from "../data/championData";
+import {
+  championData,
+  defaultChampionData,
+} from "../data/championData";
+
 import { TRAITS } from "../data/championData/traits";
 import { SCORE } from "./scoring";
 
@@ -16,21 +20,9 @@ export function calculateScore(
 ) {
   const analysis = analyzeTeam(allyTeam);
 
-console.log(
-  champion.name,
-  analysis,
-);
-
   const data =
-  championData[champion.id] ??
-  defaultChampionData;
-
-console.log(
-  champion.id,
-  data === defaultChampionData
-    ? "DEFAULT"
-    : "FOUND"
-);
+    championData[champion.id] ??
+    defaultChampionData;
 
   let score = SCORE.BASE;
 
@@ -51,7 +43,7 @@ console.log(
 
   if (
     analysis.needCC &&
-    data.profile.cc >= 4
+    data.ratings.cc >= 4
   ) {
     score += SCORE.NEED_CC;
 
@@ -64,7 +56,7 @@ console.log(
 
   if (
     analysis.needAP &&
-    data.profile.damageType === "AP"
+    data.attributes.damageType === "AP"
   ) {
     score += SCORE.NEED_AP;
 
@@ -77,7 +69,7 @@ console.log(
 
   if (
     analysis.needAD &&
-    data.profile.damageType === "AD"
+    data.attributes.damageType === "AD"
   ) {
     score += SCORE.NEED_AD;
 
@@ -88,7 +80,7 @@ console.log(
     });
   }
 
-  if (data.profile.scaling >= 4) {
+  if (data.ratings.scaling >= 4) {
     score += SCORE.GOOD_SCALING;
 
     reasons.push({
@@ -103,4 +95,3 @@ console.log(
     reasons,
   };
 }
-
