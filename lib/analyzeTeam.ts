@@ -1,4 +1,10 @@
-import { championData, defaultChampionData } from "../data/championData";
+import {
+  championData,
+  defaultChampionData,
+} from "../data/championData";
+
+import { TRAITS } from "../data/championData/traits";
+
 import type { TeamAnalysis } from "../data/championData/types";
 import type { Champion } from "../types/champion";
 
@@ -14,9 +20,10 @@ export function analyzeTeam(
     if (!champion) continue;
 
     const data =
-      championData[champion.id] ?? defaultChampionData;
+      championData[champion.id] ??
+      defaultChampionData;
 
-    switch (data.damageType) {
+    switch (data.profile.damageType) {
       case "AP":
         apCount++;
         break;
@@ -31,11 +38,15 @@ export function analyzeTeam(
         break;
     }
 
-    if (data.traits.includes("FRONTLINE")) {
+    if (
+      data.traits.includes(
+        TRAITS.FRONTLINE
+      )
+    ) {
       frontlineCount++;
     }
 
-    ccScore += data.cc;
+    ccScore += data.profile.cc;
   }
 
   return {

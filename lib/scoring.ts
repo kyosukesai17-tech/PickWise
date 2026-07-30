@@ -1,13 +1,15 @@
 export const SCORE = {
-  AP_SHORTAGE: 20,
+  BASE: 50,
 
-  AD_SHORTAGE: 20,
+  NEED_FRONTLINE: 20,
 
-  NEED_TANK: 25,
+  NEED_AP: 15,
 
-  NEED_CC: 18,
+  NEED_AD: 15,
+
+  NEED_CC: 15,
+
+  GOOD_SCALING: 10,
 
   GOOD_WAVECLEAR: 10,
-
-  GOOD_SCALING: 8,
 } as const;
