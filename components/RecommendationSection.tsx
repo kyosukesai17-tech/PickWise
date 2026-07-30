@@ -133,20 +133,39 @@ export default function RecommendationSection({
                   ) : (
                     <ul className="space-y-2">
                       {recommendation.reasons.map(
-                        (reason, reasonIndex) => (
-                          <li
-                            key={`${reason.type}-${reasonIndex}`}
-                            className="flex items-start justify-between gap-3 text-sm"
-                          >
-                            <span className="text-emerald-300">
-                              ＋ {reason.text}
-                            </span>
+                        (reason, reasonIndex) => {
+                          const isPositive =
+                            reason.score >= 0;
 
-                            <span className="shrink-0 font-medium text-emerald-400">
-                              +{reason.score}
-                            </span>
-                          </li>
-                        ),
+                          return (
+                            <li
+                              key={`${reason.type}-${reasonIndex}`}
+                              className="flex items-start justify-between gap-3 text-sm"
+                            >
+                              <span
+                                className={
+                                  isPositive
+                                    ? "text-emerald-300"
+                                    : "text-rose-300"
+                                }
+                              >
+                                {isPositive ? "＋" : "−"}{" "}
+                                {reason.text}
+                              </span>
+
+                              <span
+                                className={`shrink-0 font-medium ${
+                                  isPositive
+                                    ? "text-emerald-400"
+                                    : "text-rose-400"
+                                }`}
+                              >
+                                {isPositive ? "+" : "-"}
+                                {Math.abs(reason.score)}
+                              </span>
+                            </li>
+                          );
+                        },
                       )}
                     </ul>
                   )}

@@ -4,12 +4,22 @@ export const SCORE = {
   NEED_FRONTLINE: 20,
 
   NEED_AP: 15,
+  NEED_AP_MIXED: 10,
 
   NEED_AD: 15,
+  NEED_AD_MIXED: 10,
 
   NEED_CC: 15,
 
   GOOD_SCALING: 10,
 
   GOOD_WAVECLEAR: 10,
+
+  MISSING_FRONTLINE: -12,
+
+  MISSING_AP: -8,
+
+  MISSING_AD: -8,
+
+  MISSING_CC: -8,
 } as const;
