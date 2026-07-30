@@ -33,28 +33,49 @@ function TeamPanel({
 }: TeamPanelProps) {
   return (
     <div className="rounded-xl border border-slate-800 bg-slate-900/50 p-4 sm:p-6">
-      <h3 className="mb-4 text-center text-lg font-semibold text-slate-200">
+      <h3 className="mb-5 text-center text-lg font-semibold text-slate-200">
         {title}
       </h3>
 
-      <ul className="space-y-3">
-        {teamRoles.map(({ label }, index) => (
-          <li key={label}>
-            <ChampionSearch
-              role={label}
-              value={team[index]}
-              excludedChampions={selectedChampions.filter(
-                (champion) => champion.id !== team[index]?.id
-              )}
-              onSelect={(champion) => {
-                const next = [...team];
-                next[index] = champion;
-                setTeam(next);
-              }}
+      <div>
+        <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
+          Pick
+        </p>
+
+        <ul className="space-y-3">
+          {teamRoles.map(({ label }, index) => (
+            <li key={label}>
+              <ChampionSearch
+                role={label}
+                value={team[index]}
+                excludedChampions={selectedChampions.filter(
+                  (champion) => champion.id !== team[index]?.id
+                )}
+                onSelect={(champion) => {
+                  const next = [...team];
+                  next[index] = champion;
+                  setTeam(next);
+                }}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="mt-6">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
+          Ban
+        </p>
+
+        <div className="grid grid-cols-5 gap-2">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <div
+              key={index}
+              className="aspect-square rounded-md border border-dashed border-slate-700 bg-slate-800/50"
             />
-          </li>
-        ))}
-      </ul>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
