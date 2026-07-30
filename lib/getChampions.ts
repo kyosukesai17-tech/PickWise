@@ -1,4 +1,5 @@
 import riotData from "../data/champions.json";
+import { championRoles } from "../data/championRoles";
 import type { Champion } from "../types/champion";
 
 type RiotChampion = {
@@ -10,11 +11,9 @@ type RiotChampion = {
   };
 };
 
-type RiotChampionData = {
+const data = riotData as {
   data: Record<string, RiotChampion>;
 };
-
-const data = riotData as RiotChampionData;
 
 export function getChampions(): Champion[] {
   return Object.values(data.data).map((champion) => ({
@@ -22,8 +21,6 @@ export function getChampions(): Champion[] {
     key: champion.key,
     name: champion.name,
     image: champion.image.full,
-
-    // 後でロールデータを追加する
-    roles: [],
+    roles: championRoles[champion.id] ?? [],
   }));
 }
