@@ -5,6 +5,7 @@ import { useState } from "react";
 import ChampionCard from "./ChampionCard";
 
 import { analyzeTeam } from "../lib/analyzeTeam";
+import { analyzeChampionSynergy } from "../lib/analyzeChampionSynergy";
 import { generateReason } from "../lib/generateReason";
 import { recommend } from "../lib/recommend";
 import { ROLE_INDEX } from "../lib/role";
@@ -105,13 +106,25 @@ export default function RecommendationSection({
   const visibleRecommendations =
     filteredRecommendations
       .slice(0, 10)
-      .map((recommendation) => ({
-        ...recommendation,
-        traitReasons: generateReason(
+      .map((recommendation) => {
+        const traitReasons = generateReason(
           enemyTeam,
           recommendation.champion,
-        ),
-      }));
+        );
+        const synergyReasons = analyzeChampionSynergy(
+          allyTeam,
+          selectedRole,
+          recommendation.champion,
+        ).reasons;
+
+        return {
+          ...recommendation,
+          matchupReasons: [
+            ...traitReasons,
+            ...synergyReasons,
+          ].slice(0, 3),
+        };
+      });
 
   return (
     <section className="space-y-5 rounded-xl border border-slate-800 bg-slate-900/50 p-6">
@@ -392,14 +405,14 @@ export default function RecommendationSection({
                     </ul>
                       )}
 
-                  {recommendation.traitReasons.length > 0 && (
+                  {recommendation.matchupReasons.length > 0 && (
                     <div className="mt-3 border-t border-slate-700 pt-3">
                       <p className="mb-2 text-xs font-semibold text-sky-300">
-                        Trait相性
+                        推薦理由
                       </p>
 
                       <ul className="space-y-2">
-                        {recommendation.traitReasons.map(
+                        {recommendation.matchupReasons.map(
                           (reason, reasonIndex) => (
                             <li
                               key={`${recommendation.champion.id}-trait-${reasonIndex}`}
