@@ -138,24 +138,4 @@ export const championDataAD: Record<string, ChampionData> = {
       TRAITS.CARRY,
     ],
   },
-
-  Lux: {
-  attributes: {
-    damageType: "AP",
-    range: "RANGED",
-  },
-
-  ratings: {
-    tankiness: 1,
-    cc: 3,
-    waveClear: 4,
-    scaling: 5,
-  },
-
-  traits: [
-    TRAITS.FRONTLINE,
-    TRAITS.ENGAGE,
-    TRAITS.PEEL
-  ],
-},
 };
