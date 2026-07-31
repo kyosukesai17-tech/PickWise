@@ -1,0 +1,1603 @@
+[
+  {
+    "id": "Aatrox",
+    "key": "266",
+    "name": "エイトロックス",
+    "image": "Aatrox.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Ahri",
+    "key": "103",
+    "name": "アーリ",
+    "image": "Ahri.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Akali",
+    "key": "84",
+    "name": "アカリ",
+    "image": "Akali.png",
+    "roles": [
+      "TOP",
+      "MID"
+    ]
+  },
+  {
+    "id": "Akshan",
+    "key": "166",
+    "name": "アクシャン",
+    "image": "Akshan.png",
+    "roles": [
+      "TOP",
+      "MID"
+    ]
+  },
+  {
+    "id": "Alistar",
+    "key": "12",
+    "name": "アリスター",
+    "image": "Alistar.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Ambessa",
+    "key": "799",
+    "name": "アンベッサ",
+    "image": "Ambessa.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Amumu",
+    "key": "32",
+    "name": "アムム",
+    "image": "Amumu.png",
+    "roles": [
+      "JG",
+      "SUP"
+    ]
+  },
+  {
+    "id": "Anivia",
+    "key": "34",
+    "name": "アニビア",
+    "image": "Anivia.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Annie",
+    "key": "1",
+    "name": "アニー",
+    "image": "Annie.png",
+    "roles": [
+      "MID",
+      "SUP"
+    ]
+  },
+  {
+    "id": "Aphelios",
+    "key": "523",
+    "name": "アフェリオス",
+    "image": "Aphelios.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Ashe",
+    "key": "22",
+    "name": "アッシュ",
+    "image": "Ashe.png",
+    "roles": [
+      "ADC",
+      "SUP"
+    ]
+  },
+  {
+    "id": "AurelionSol",
+    "key": "136",
+    "name": "オレリオン・ソル",
+    "image": "AurelionSol.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Aurora",
+    "key": "893",
+    "name": "オーロラ",
+    "image": "Aurora.png",
+    "roles": [
+      "TOP",
+      "MID"
+    ]
+  },
+  {
+    "id": "Azir",
+    "key": "268",
+    "name": "アジール",
+    "image": "Azir.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Bard",
+    "key": "432",
+    "name": "バード",
+    "image": "Bard.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Belveth",
+    "key": "200",
+    "name": "ベル＝ヴェス",
+    "image": "Belveth.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Blitzcrank",
+    "key": "53",
+    "name": "ブリッツクランク",
+    "image": "Blitzcrank.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Brand",
+    "key": "63",
+    "name": "ブランド",
+    "image": "Brand.png",
+    "roles": [
+      "MID",
+      "JG",
+      "SUP"
+    ]
+  },
+  {
+    "id": "Braum",
+    "key": "201",
+    "name": "ブラウム",
+    "image": "Braum.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Briar",
+    "key": "233",
+    "name": "ブライアー",
+    "image": "Briar.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Caitlyn",
+    "key": "51",
+    "name": "ケイトリン",
+    "image": "Caitlyn.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Camille",
+    "key": "164",
+    "name": "カミール",
+    "image": "Camille.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Cassiopeia",
+    "key": "69",
+    "name": "カシオペア",
+    "image": "Cassiopeia.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Chogath",
+    "key": "31",
+    "name": "チョ＝ガス",
+    "image": "Chogath.png",
+    "roles": [
+      "TOP",
+      "MID"
+    ]
+  },
+  {
+    "id": "Corki",
+    "key": "42",
+    "name": "コーキ",
+    "image": "Corki.png",
+    "roles": [
+      "MID",
+      "ADC"
+    ]
+  },
+  {
+    "id": "Darius",
+    "key": "122",
+    "name": "ダリウス",
+    "image": "Darius.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Diana",
+    "key": "131",
+    "name": "ダイアナ",
+    "image": "Diana.png",
+    "roles": [
+      "JG",
+      "MID"
+    ]
+  },
+  {
+    "id": "Draven",
+    "key": "119",
+    "name": "ドレイヴン",
+    "image": "Draven.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "DrMundo",
+    "key": "36",
+    "name": "ドクター・ムンド",
+    "image": "DrMundo.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Ekko",
+    "key": "245",
+    "name": "エコー",
+    "image": "Ekko.png",
+    "roles": [
+      "JG",
+      "MID"
+    ]
+  },
+  {
+    "id": "Elise",
+    "key": "60",
+    "name": "エリス",
+    "image": "Elise.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Evelynn",
+    "key": "28",
+    "name": "イブリン",
+    "image": "Evelynn.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Ezreal",
+    "key": "81",
+    "name": "エズリアル",
+    "image": "Ezreal.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Fiddlesticks",
+    "key": "9",
+    "name": "フィドルスティックス",
+    "image": "Fiddlesticks.png",
+    "roles": [
+      "JG",
+      "SUP"
+    ]
+  },
+  {
+    "id": "Fiora",
+    "key": "114",
+    "name": "フィオラ",
+    "image": "Fiora.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Fizz",
+    "key": "105",
+    "name": "フィズ",
+    "image": "Fizz.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Galio",
+    "key": "3",
+    "name": "ガリオ",
+    "image": "Galio.png",
+    "roles": [
+      "MID",
+      "SUP"
+    ]
+  },
+  {
+    "id": "Gangplank",
+    "key": "41",
+    "name": "ガングプランク",
+    "image": "Gangplank.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Garen",
+    "key": "86",
+    "name": "ガレン",
+    "image": "Garen.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Gnar",
+    "key": "150",
+    "name": "ナー",
+    "image": "Gnar.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Gragas",
+    "key": "79",
+    "name": "グラガス",
+    "image": "Gragas.png",
+    "roles": [
+      "TOP",
+      "JG",
+      "MID"
+    ]
+  },
+  {
+    "id": "Graves",
+    "key": "104",
+    "name": "グレイブス",
+    "image": "Graves.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Gwen",
+    "key": "887",
+    "name": "グウェン",
+    "image": "Gwen.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Hecarim",
+    "key": "120",
+    "name": "ヘカリム",
+    "image": "Hecarim.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Heimerdinger",
+    "key": "74",
+    "name": "ハイマーディンガー",
+    "image": "Heimerdinger.png",
+    "roles": [
+      "TOP",
+      "MID",
+      "SUP"
+    ]
+  },
+  {
+    "id": "Hwei",
+    "key": "910",
+    "name": "フェイ",
+    "image": "Hwei.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Illaoi",
+    "key": "420",
+    "name": "イラオイ",
+    "image": "Illaoi.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Irelia",
+    "key": "39",
+    "name": "イレリア",
+    "image": "Irelia.png",
+    "roles": [
+      "TOP",
+      "MID"
+    ]
+  },
+  {
+    "id": "Ivern",
+    "key": "427",
+    "name": "アイバーン",
+    "image": "Ivern.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Janna",
+    "key": "40",
+    "name": "ジャンナ",
+    "image": "Janna.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "JarvanIV",
+    "key": "59",
+    "name": "ジャーヴァンⅣ",
+    "image": "JarvanIV.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Jax",
+    "key": "24",
+    "name": "ジャックス",
+    "image": "Jax.png",
+    "roles": [
+      "TOP",
+      "JG"
+    ]
+  },
+  {
+    "id": "Jayce",
+    "key": "126",
+    "name": "ジェイス",
+    "image": "Jayce.png",
+    "roles": [
+      "TOP",
+      "MID"
+    ]
+  },
+  {
+    "id": "Jhin",
+    "key": "202",
+    "name": "ジン",
+    "image": "Jhin.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Jinx",
+    "key": "222",
+    "name": "ジンクス",
+    "image": "Jinx.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Kaisa",
+    "key": "145",
+    "name": "カイ＝サ",
+    "image": "Kaisa.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Kalista",
+    "key": "429",
+    "name": "カリスタ",
+    "image": "Kalista.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Karma",
+    "key": "43",
+    "name": "カルマ",
+    "image": "Karma.png",
+    "roles": [
+      "SUP",
+      "MID"
+    ]
+  },
+  {
+    "id": "Karthus",
+    "key": "30",
+    "name": "カーサス",
+    "image": "Karthus.png",
+    "roles": [
+      "JG",
+      "MID"
+    ]
+  },
+  {
+    "id": "Kassadin",
+    "key": "38",
+    "name": "カサディン",
+    "image": "Kassadin.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Katarina",
+    "key": "55",
+    "name": "カタリナ",
+    "image": "Katarina.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Kayle",
+    "key": "10",
+    "name": "ケイル",
+    "image": "Kayle.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Kayn",
+    "key": "141",
+    "name": "ケイン",
+    "image": "Kayn.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Kennen",
+    "key": "85",
+    "name": "ケネン",
+    "image": "Kennen.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Khazix",
+    "key": "121",
+    "name": "カ＝ジックス",
+    "image": "Khazix.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Kindred",
+    "key": "203",
+    "name": "キンドレッド",
+    "image": "Kindred.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Kled",
+    "key": "240",
+    "name": "クレッド",
+    "image": "Kled.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "KogMaw",
+    "key": "96",
+    "name": "コグ＝マウ",
+    "image": "KogMaw.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "KSante",
+    "key": "897",
+    "name": "カ・サンテ",
+    "image": "KSante.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Leblanc",
+    "key": "7",
+    "name": "ルブラン",
+    "image": "Leblanc.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "LeeSin",
+    "key": "64",
+    "name": "リー・シン",
+    "image": "LeeSin.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Leona",
+    "key": "89",
+    "name": "レオナ",
+    "image": "Leona.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Lillia",
+    "key": "876",
+    "name": "リリア",
+    "image": "Lillia.png",
+    "roles": [
+      "JG",
+      "TOP"
+    ]
+  },
+  {
+    "id": "Lissandra",
+    "key": "127",
+    "name": "リサンドラ",
+    "image": "Lissandra.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Lucian",
+    "key": "236",
+    "name": "ルシアン",
+    "image": "Lucian.png",
+    "roles": [
+      "ADC",
+      "MID"
+    ]
+  },
+  {
+    "id": "Lulu",
+    "key": "117",
+    "name": "ルル",
+    "image": "Lulu.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Lux",
+    "key": "99",
+    "name": "ラックス",
+    "image": "Lux.png",
+    "roles": [
+      "MID",
+      "SUP"
+    ]
+  },
+  {
+    "id": "Malphite",
+    "key": "54",
+    "name": "マルファイト",
+    "image": "Malphite.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Malzahar",
+    "key": "90",
+    "name": "マルザハール",
+    "image": "Malzahar.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Maokai",
+    "key": "57",
+    "name": "マオカイ",
+    "image": "Maokai.png",
+    "roles": [
+      "JG",
+      "SUP"
+    ]
+  },
+  {
+    "id": "MasterYi",
+    "key": "11",
+    "name": "マスター・イー",
+    "image": "MasterYi.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Mel",
+    "key": "800",
+    "name": "メル",
+    "image": "Mel.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Milio",
+    "key": "902",
+    "name": "ミリオ",
+    "image": "Milio.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "MissFortune",
+    "key": "21",
+    "name": "ミス・フォーチュン",
+    "image": "MissFortune.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "MonkeyKing",
+    "key": "62",
+    "name": "ウーコン",
+    "image": "MonkeyKing.png",
+    "roles": [
+      "TOP",
+      "JG"
+    ]
+  },
+  {
+    "id": "Mordekaiser",
+    "key": "82",
+    "name": "モルデカイザー",
+    "image": "Mordekaiser.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Morgana",
+    "key": "25",
+    "name": "モルガナ",
+    "image": "Morgana.png",
+    "roles": [
+      "SUP",
+      "JG"
+    ]
+  },
+  {
+    "id": "Naafiri",
+    "key": "950",
+    "name": "ナフィーリ",
+    "image": "Naafiri.png",
+    "roles": [
+      "MID",
+      "JG"
+    ]
+  },
+  {
+    "id": "Nami",
+    "key": "267",
+    "name": "ナミ",
+    "image": "Nami.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Nasus",
+    "key": "75",
+    "name": "ナサス",
+    "image": "Nasus.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Nautilus",
+    "key": "111",
+    "name": "ノーチラス",
+    "image": "Nautilus.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Neeko",
+    "key": "518",
+    "name": "ニーコ",
+    "image": "Neeko.png",
+    "roles": [
+      "MID",
+      "SUP"
+    ]
+  },
+  {
+    "id": "Nidalee",
+    "key": "76",
+    "name": "ニダリー",
+    "image": "Nidalee.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Nilah",
+    "key": "895",
+    "name": "ニーラ",
+    "image": "Nilah.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Nocturne",
+    "key": "56",
+    "name": "ノクターン",
+    "image": "Nocturne.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Nunu",
+    "key": "20",
+    "name": "ヌヌ＆ウィルンプ",
+    "image": "Nunu.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Olaf",
+    "key": "2",
+    "name": "オラフ",
+    "image": "Olaf.png",
+    "roles": [
+      "TOP",
+      "JG"
+    ]
+  },
+  {
+    "id": "Orianna",
+    "key": "61",
+    "name": "オリアナ",
+    "image": "Orianna.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Ornn",
+    "key": "516",
+    "name": "オーン",
+    "image": "Ornn.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Pantheon",
+    "key": "80",
+    "name": "パンテオン",
+    "image": "Pantheon.png",
+    "roles": [
+      "TOP",
+      "JG",
+      "SUP"
+    ]
+  },
+  {
+    "id": "Poppy",
+    "key": "78",
+    "name": "ポッピー",
+    "image": "Poppy.png",
+    "roles": [
+      "TOP",
+      "JG"
+    ]
+  },
+  {
+    "id": "Pyke",
+    "key": "555",
+    "name": "パイク",
+    "image": "Pyke.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Qiyana",
+    "key": "246",
+    "name": "キヤナ",
+    "image": "Qiyana.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Quinn",
+    "key": "133",
+    "name": "クイン",
+    "image": "Quinn.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Rakan",
+    "key": "497",
+    "name": "ラカン",
+    "image": "Rakan.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Rammus",
+    "key": "33",
+    "name": "ラムス",
+    "image": "Rammus.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "RekSai",
+    "key": "421",
+    "name": "レク＝サイ",
+    "image": "RekSai.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Rell",
+    "key": "526",
+    "name": "レル",
+    "image": "Rell.png",
+    "roles": [
+      "SUP",
+      "JG"
+    ]
+  },
+  {
+    "id": "Renata",
+    "key": "888",
+    "name": "レナータ・グラスク",
+    "image": "Renata.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Renekton",
+    "key": "58",
+    "name": "レネクトン",
+    "image": "Renekton.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Rengar",
+    "key": "107",
+    "name": "レンガー",
+    "image": "Rengar.png",
+    "roles": [
+      "JG",
+      "TOP"
+    ]
+  },
+  {
+    "id": "Riven",
+    "key": "92",
+    "name": "リヴェン",
+    "image": "Riven.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Rumble",
+    "key": "68",
+    "name": "ランブル",
+    "image": "Rumble.png",
+    "roles": [
+      "TOP",
+      "MID"
+    ]
+  },
+  {
+    "id": "Ryze",
+    "key": "13",
+    "name": "ライズ",
+    "image": "Ryze.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Samira",
+    "key": "360",
+    "name": "サミーラ",
+    "image": "Samira.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Sejuani",
+    "key": "113",
+    "name": "セジュアニ",
+    "image": "Sejuani.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Senna",
+    "key": "235",
+    "name": "セナ",
+    "image": "Senna.png",
+    "roles": [
+      "SUP",
+      "ADC"
+    ]
+  },
+  {
+    "id": "Seraphine",
+    "key": "147",
+    "name": "セラフィーン",
+    "image": "Seraphine.png",
+    "roles": [
+      "SUP",
+      "MID"
+    ]
+  },
+  {
+    "id": "Sett",
+    "key": "875",
+    "name": "セト",
+    "image": "Sett.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Shaco",
+    "key": "35",
+    "name": "シャコ",
+    "image": "Shaco.png",
+    "roles": [
+      "JG",
+      "SUP"
+    ]
+  },
+  {
+    "id": "Shen",
+    "key": "98",
+    "name": "シェン",
+    "image": "Shen.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Shyvana",
+    "key": "102",
+    "name": "シヴァーナ",
+    "image": "Shyvana.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Singed",
+    "key": "27",
+    "name": "シンジド",
+    "image": "Singed.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Sion",
+    "key": "14",
+    "name": "サイオン",
+    "image": "Sion.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Sivir",
+    "key": "15",
+    "name": "シヴィア",
+    "image": "Sivir.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Skarner",
+    "key": "72",
+    "name": "スカーナー",
+    "image": "Skarner.png",
+    "roles": [
+      "JG",
+      "TOP"
+    ]
+  },
+  {
+    "id": "Smolder",
+    "key": "901",
+    "name": "スモルダー",
+    "image": "Smolder.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Sona",
+    "key": "37",
+    "name": "ソナ",
+    "image": "Sona.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Soraka",
+    "key": "16",
+    "name": "ソラカ",
+    "image": "Soraka.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Swain",
+    "key": "50",
+    "name": "スウェイン",
+    "image": "Swain.png",
+    "roles": [
+      "MID",
+      "SUP"
+    ]
+  },
+  {
+    "id": "Sylas",
+    "key": "517",
+    "name": "サイラス",
+    "image": "Sylas.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Syndra",
+    "key": "134",
+    "name": "シンドラ",
+    "image": "Syndra.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "TahmKench",
+    "key": "223",
+    "name": "タム・ケンチ",
+    "image": "TahmKench.png",
+    "roles": [
+      "SUP",
+      "TOP"
+    ]
+  },
+  {
+    "id": "Taliyah",
+    "key": "163",
+    "name": "タリヤ",
+    "image": "Taliyah.png",
+    "roles": [
+      "MID",
+      "JG"
+    ]
+  },
+  {
+    "id": "Talon",
+    "key": "91",
+    "name": "タロン",
+    "image": "Talon.png",
+    "roles": [
+      "MID",
+      "JG"
+    ]
+  },
+  {
+    "id": "Taric",
+    "key": "44",
+    "name": "タリック",
+    "image": "Taric.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Teemo",
+    "key": "17",
+    "name": "ティーモ",
+    "image": "Teemo.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Thresh",
+    "key": "412",
+    "name": "スレッシュ",
+    "image": "Thresh.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Tristana",
+    "key": "18",
+    "name": "トリスターナ",
+    "image": "Tristana.png",
+    "roles": [
+      "ADC",
+      "MID"
+    ]
+  },
+  {
+    "id": "Trundle",
+    "key": "48",
+    "name": "トランドル",
+    "image": "Trundle.png",
+    "roles": [
+      "TOP",
+      "JG"
+    ]
+  },
+  {
+    "id": "Tryndamere",
+    "key": "23",
+    "name": "トリンダメア",
+    "image": "Tryndamere.png",
+    "roles": [
+      "TOP",
+      "MID"
+    ]
+  },
+  {
+    "id": "TwistedFate",
+    "key": "4",
+    "name": "ツイステッド・フェイト",
+    "image": "TwistedFate.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Twitch",
+    "key": "29",
+    "name": "トゥイッチ",
+    "image": "Twitch.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Udyr",
+    "key": "77",
+    "name": "ウディア",
+    "image": "Udyr.png",
+    "roles": [
+      "JG",
+      "TOP"
+    ]
+  },
+  {
+    "id": "Urgot",
+    "key": "6",
+    "name": "アーゴット",
+    "image": "Urgot.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Varus",
+    "key": "110",
+    "name": "ヴァルス",
+    "image": "Varus.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Vayne",
+    "key": "67",
+    "name": "ヴェイン",
+    "image": "Vayne.png",
+    "roles": [
+      "ADC",
+      "TOP"
+    ]
+  },
+  {
+    "id": "Veigar",
+    "key": "45",
+    "name": "ベイガー",
+    "image": "Veigar.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Velkoz",
+    "key": "161",
+    "name": "ヴェル＝コズ",
+    "image": "Velkoz.png",
+    "roles": [
+      "MID",
+      "SUP"
+    ]
+  },
+  {
+    "id": "Vex",
+    "key": "711",
+    "name": "ヴェックス",
+    "image": "Vex.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Vi",
+    "key": "254",
+    "name": "ヴァイ",
+    "image": "Vi.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Viego",
+    "key": "234",
+    "name": "ヴィエゴ",
+    "image": "Viego.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Viktor",
+    "key": "112",
+    "name": "ビクター",
+    "image": "Viktor.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Vladimir",
+    "key": "8",
+    "name": "ブラッドミア",
+    "image": "Vladimir.png",
+    "roles": [
+      "TOP",
+      "MID"
+    ]
+  },
+  {
+    "id": "Volibear",
+    "key": "106",
+    "name": "ボリベア",
+    "image": "Volibear.png",
+    "roles": [
+      "TOP",
+      "JG"
+    ]
+  },
+  {
+    "id": "Warwick",
+    "key": "19",
+    "name": "ワーウィック",
+    "image": "Warwick.png",
+    "roles": [
+      "JG",
+      "TOP"
+    ]
+  },
+  {
+    "id": "Xayah",
+    "key": "498",
+    "name": "ザヤ",
+    "image": "Xayah.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Xerath",
+    "key": "101",
+    "name": "ゼラス",
+    "image": "Xerath.png",
+    "roles": [
+      "MID",
+      "SUP"
+    ]
+  },
+  {
+    "id": "XinZhao",
+    "key": "5",
+    "name": "シン・ジャオ",
+    "image": "XinZhao.png",
+    "roles": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Yasuo",
+    "key": "157",
+    "name": "ヤスオ",
+    "image": "Yasuo.png",
+    "roles": [
+      "MID",
+      "TOP"
+    ]
+  },
+  {
+    "id": "Yone",
+    "key": "777",
+    "name": "ヨネ",
+    "image": "Yone.png",
+    "roles": [
+      "MID",
+      "TOP"
+    ]
+  },
+  {
+    "id": "Yorick",
+    "key": "83",
+    "name": "ヨリック",
+    "image": "Yorick.png",
+    "roles": [
+      "TOP"
+    ]
+  },
+  {
+    "id": "Yunara",
+    "key": "804",
+    "name": "ユナラ",
+    "image": "Yunara.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Yuumi",
+    "key": "350",
+    "name": "ユーミ",
+    "image": "Yuumi.png",
+    "roles": [
+      "SUP"
+    ]
+  },
+  {
+    "id": "Zac",
+    "key": "154",
+    "name": "ザック",
+    "image": "Zac.png",
+    "roles": [
+      "JG",
+      "TOP"
+    ]
+  },
+  {
+    "id": "Zed",
+    "key": "238",
+    "name": "ゼド",
+    "image": "Zed.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Zeri",
+    "key": "221",
+    "name": "ゼリ",
+    "image": "Zeri.png",
+    "roles": [
+      "ADC"
+    ]
+  },
+  {
+    "id": "Ziggs",
+    "key": "115",
+    "name": "ジグス",
+    "image": "Ziggs.png",
+    "roles": [
+      "MID",
+      "ADC"
+    ]
+  },
+  {
+    "id": "Zilean",
+    "key": "26",
+    "name": "ジリアン",
+    "image": "Zilean.png",
+    "roles": [
+      "SUP",
+      "MID"
+    ]
+  },
+  {
+    "id": "Zoe",
+    "key": "142",
+    "name": "ゾーイ",
+    "image": "Zoe.png",
+    "roles": [
+      "MID"
+    ]
+  },
+  {
+    "id": "Zyra",
+    "key": "143",
+    "name": "ザイラ",
+    "image": "Zyra.png",
+    "roles": [
+      "SUP",
+      "JG"
+    ]
+  }
+]
