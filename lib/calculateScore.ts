@@ -8,12 +8,7 @@ import {
   getChampionDetail,
 } from "./analyzeTraits";
 
-import {
-  championData,
-  defaultChampionData,
-} from "../data/championData";
-
-import { TRAITS } from "../data/championData/traits";
+import { TRAITS } from "../src/constants/traits";
 import { SCORE } from "./scoring";
 
 import { REASON } from "../types/recommendation";
@@ -50,49 +45,39 @@ export function calculateScore(
       selectedRole,
     );
 
-  const data =
-    championData[champion.id] ??
-    defaultChampionData;
+  const detail = getChampionDetail(champion.id);
 
   const isFrontline =
-    data.traits.includes(
-      TRAITS.FRONTLINE,
-    );
+    detail?.archetypes.includes("FRONTLINE") ?? false;
 
   const hasEngage =
-    data.traits.includes(
+    detail?.traits.includes(
       TRAITS.ENGAGE,
-    );
+    ) ?? false;
 
   const hasPeel =
-    data.traits.includes(
+    detail?.traits.includes(
       TRAITS.PEEL,
-    );
+    ) ?? false;
 
   const hasPoke =
-    data.traits.includes(
+    detail?.traits.includes(
       TRAITS.POKE,
-    );
+    ) ?? false;
 
   const hasSiege =
-    data.traits.includes(
+    detail?.traits.includes(
       TRAITS.SIEGE,
-    );
+    ) ?? false;
 
   const hasCarry =
-    data.traits.includes(
-      TRAITS.CARRY,
-    );
+    detail?.archetypes.includes("CARRY") ?? false;
 
   const hasAssassin =
-    data.traits.includes(
-      TRAITS.ASSASSIN,
-    );
+    detail?.archetypes.includes("ASSASSIN") ?? false;
 
   const hasCatch =
-    data.traits.includes(
-      TRAITS.CATCH,
-    );
+    detail?.archetypes.includes("CATCH") ?? false;
 
   const hasPokeOrSiege =
     hasPoke || hasSiege;
@@ -101,27 +86,30 @@ export function calculateScore(
     hasAssassin || hasCatch;
 
   const isRanged =
-    data.attributes.range === "RANGED";
+    detail?.rangeType === "Ranged";
 
   const isDurable =
-    data.ratings.tankiness >= 4;
+    detail !== undefined &&
+    detail.ratings.tankiness >= 4;
 
   const hasHighWaveClear =
-    data.ratings.waveClear >= 4;
+    detail !== undefined &&
+    detail.ratings.waveClear >= 4;
 
   const canDealAP =
-    data.attributes.damageType === "AP" ||
-    data.attributes.damageType === "MIXED";
+    detail?.damageType === "AP" ||
+    detail?.damageType === "Mixed";
 
   const canDealAD =
-    data.attributes.damageType === "AD" ||
-    data.attributes.damageType === "MIXED";
+    detail?.damageType === "AD" ||
+    detail?.damageType === "Mixed";
 
   let score = SCORE.BASE;
 
   const reasons: RecommendationReason[] = [];
 
   if (
+    detail &&
     allyAnalysis.needTank &&
     isFrontline
   ) {
@@ -135,8 +123,9 @@ export function calculateScore(
   }
 
   if (
+    detail &&
     allyAnalysis.needCC &&
-    data.ratings.cc >= 4
+    detail.ratings.cc >= 4
   ) {
     score += SCORE.NEED_CC;
 
@@ -152,7 +141,7 @@ export function calculateScore(
     canDealAP
   ) {
     const apScore =
-      data.attributes.damageType === "MIXED"
+      detail?.damageType === "Mixed"
         ? SCORE.NEED_AP_MIXED
         : SCORE.NEED_AP;
 
@@ -162,7 +151,7 @@ export function calculateScore(
       type: REASON.AP,
       score: apScore,
       text:
-        data.attributes.damageType === "MIXED"
+        detail?.damageType === "Mixed"
           ? "APダメージを一部補える"
           : "APダメージを補える",
     });
@@ -173,7 +162,7 @@ export function calculateScore(
     canDealAD
   ) {
     const adScore =
-      data.attributes.damageType === "MIXED"
+      detail?.damageType === "Mixed"
         ? SCORE.NEED_AD_MIXED
         : SCORE.NEED_AD;
 
@@ -183,13 +172,13 @@ export function calculateScore(
       type: REASON.AD,
       score: adScore,
       text:
-        data.attributes.damageType === "MIXED"
+        detail?.damageType === "Mixed"
           ? "ADダメージを一部補える"
           : "ADダメージを補える",
     });
   }
 
-  if (data.ratings.scaling >= 4) {
+  if (detail && detail.ratings.scaling >= 4) {
     score += SCORE.GOOD_SCALING;
 
     reasons.push({
@@ -200,6 +189,7 @@ export function calculateScore(
   }
 
   if (
+    detail &&
     allyAnalysis.needTank &&
     !isFrontline
   ) {
@@ -213,8 +203,9 @@ export function calculateScore(
   }
 
   if (
+    detail &&
     allyAnalysis.needCC &&
-    data.ratings.cc <= 2
+    detail.ratings.cc <= 2
   ) {
     score += SCORE.MISSING_CC;
 
@@ -226,6 +217,7 @@ export function calculateScore(
   }
 
   if (
+    detail &&
     allyAnalysis.needAP &&
     !canDealAP
   ) {
@@ -239,6 +231,7 @@ export function calculateScore(
   }
 
   if (
+    detail &&
     allyAnalysis.needAD &&
     !canDealAD
   ) {
@@ -446,9 +439,7 @@ export function calculateScore(
     });
   }
 
-  const allyDetail = getChampionDetail(champion.id);
-
-  if (allyDetail) {
+  if (detail) {
     const traitScore = enemyTeam.reduce((total, enemyChampion) => {
       if (!enemyChampion) {
         return total;
@@ -457,7 +448,7 @@ export function calculateScore(
       const enemyDetail = getChampionDetail(enemyChampion.id);
 
       return enemyDetail
-        ? total + analyzeTraits(enemyDetail, allyDetail)
+        ? total + analyzeTraits(enemyDetail, detail)
         : total;
     }, 0);
 
