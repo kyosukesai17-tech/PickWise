@@ -1,3 +1,5 @@
+import type { Trait } from "../constants/traits";
+
 export interface ChampionDetail {
   difficulty: number;
   class: string[];
@@ -5,4 +7,5 @@ export interface ChampionDetail {
   rangeType: "Melee" | "Ranged";
   strengths: string[];
   weaknesses: string[];
+  traits: Trait[];
 }

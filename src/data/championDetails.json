@@ -1,1 +1,92 @@
-{}
+{
+  "Ahri": {
+    "difficulty": 5,
+    "class": ["Mage", "Assassin"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["高い機動力で敵を捕まえやすい", "ピック後に安全に離脱しやすい"],
+    "weaknesses": ["チャームを外すと決定力が落ちる", "耐久力が低い"],
+    "traits": ["BURST", "CC", "MOBILITY", "ROAM"]
+  },
+  "Viktor": {
+    "difficulty": 9,
+    "class": ["Mage"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["継続的な範囲ダメージが高い", "終盤の集団戦とゾーン制御に優れる"],
+    "weaknesses": ["ブリンクを持たない", "装備と強化が揃うまで時間が必要"],
+    "traits": ["DPS", "POKE", "CC", "SCALING", "IMMOBILE"]
+  },
+  "Syndra": {
+    "difficulty": 8,
+    "class": ["Mage"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["遠距離から高い瞬間火力を出せる", "複数の敵をスタンさせられる"],
+    "weaknesses": ["ブリンクを持たない", "主要スキルを外すと脅威が大きく落ちる"],
+    "traits": ["BURST", "POKE", "CC", "SCALING", "IMMOBILE"]
+  },
+  "Orianna": {
+    "difficulty": 7,
+    "class": ["Mage", "Support"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["ボールによるゾーン制御に優れる", "集団戦で強力な範囲CCを持つ"],
+    "weaknesses": ["ブリンクを持たない", "ボール位置の管理が必要"],
+    "traits": ["DPS", "POKE", "CC", "PEEL", "SCALING"]
+  },
+  "Veigar": {
+    "difficulty": 7,
+    "class": ["Mage"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["無限に魔力を伸ばせる", "広範囲のケージで進路を制限できる"],
+    "weaknesses": ["序盤の影響力が低い", "ブリンクを持たず接近されると弱い"],
+    "traits": ["BURST", "CC", "SCALING", "IMMOBILE", "WEAK_EARLY"]
+  },
+  "Jinx": {
+    "difficulty": 6,
+    "class": ["Marksman"],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": ["集団戦で高い継続火力を出せる", "キル参加後の追撃とオブジェクト破壊が速い"],
+    "weaknesses": ["自力の移動スキルを持たない", "装備依存度が高く序盤が弱い"],
+    "traits": ["DPS", "SIEGE", "SCALING", "IMMOBILE", "WEAK_EARLY"]
+  },
+  "Ezreal": {
+    "difficulty": 7,
+    "class": ["Marksman", "Mage"],
+    "damageType": "Mixed",
+    "rangeType": "Ranged",
+    "strengths": ["長射程スキルで安全にポークできる", "移動スキルにより位置調整しやすい"],
+    "weaknesses": ["スキルショットへの依存度が高い", "ミニオン越しでは火力を通しにくい"],
+    "traits": ["POKE", "MOBILITY", "SIEGE"]
+  },
+  "Jhin": {
+    "difficulty": 6,
+    "class": ["Marksman", "Mage"],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": ["長射程から敵を拘束して仕留められる", "単発の攻撃と第四射の瞬間火力が高い"],
+    "weaknesses": ["攻撃速度が固定され継続火力に限界がある", "直接的な移動スキルを持たない"],
+    "traits": ["BURST", "POKE", "CC", "IMMOBILE"]
+  },
+  "Sivir": {
+    "difficulty": 4,
+    "class": ["Marksman"],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": ["ウェーブクリアと集団戦の範囲火力に優れる", "味方全体の移動速度を上げられる"],
+    "weaknesses": ["通常攻撃の射程が短い", "装備が揃うまで単体火力が低い"],
+    "traits": ["DPS", "SIEGE", "SCALING", "IMMOBILE", "WEAK_EARLY"]
+  },
+  "Varus": {
+    "difficulty": 2,
+    "class": ["Marksman", "Mage"],
+    "damageType": "Mixed",
+    "rangeType": "Ranged",
+    "strengths": ["長射程ポークと対タンク火力を両立できる", "アルティメットで集団戦を開始できる"],
+    "weaknesses": ["自力の移動スキルを持たない", "ビルドによって得意な戦い方が大きく変わる"],
+    "traits": ["POKE", "TANK_KILLER", "CC", "ENGAGE", "IMMOBILE"]
+  }
+}

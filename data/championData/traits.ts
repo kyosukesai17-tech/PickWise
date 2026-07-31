@@ -1,14 +1,24 @@
-export const TRAITS = {
-  FRONTLINE: "FRONTLINE",
-  ENGAGE: "ENGAGE",
-  PEEL: "PEEL",
-  POKE: "POKE",
-  CARRY: "CARRY",
-  ASSASSIN: "ASSASSIN",
-  CATCH: "CATCH",
-  SIEGE: "SIEGE",
-  SPLIT_PUSH: "SPLIT_PUSH",
-} as const;
+import {
+  TRAITS as currentTraits,
+} from "../../src/constants/traits";
+import type { Trait } from "../../src/constants/traits";
 
-export type ChampionTrait =
-  (typeof TRAITS)[keyof typeof TRAITS];
+type LegacyTraitAliases = {
+  readonly FRONTLINE: typeof currentTraits.CC;
+  readonly CARRY: typeof currentTraits.DPS;
+  readonly ASSASSIN: typeof currentTraits.BURST;
+  readonly CATCH: typeof currentTraits.CC;
+};
+
+export const TRAITS = Object.defineProperties(
+  { ...currentTraits },
+  {
+    FRONTLINE: { value: currentTraits.CC },
+    CARRY: { value: currentTraits.DPS },
+    ASSASSIN: { value: currentTraits.BURST },
+    CATCH: { value: currentTraits.CC },
+  },
+) as typeof currentTraits & LegacyTraitAliases;
+
+export type { Trait };
+export type ChampionTrait = Trait;
