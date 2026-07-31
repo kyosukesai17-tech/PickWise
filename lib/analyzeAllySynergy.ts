@@ -1,9 +1,5 @@
-import {
-  championData,
-  defaultChampionData,
-} from "../data/championData";
-
-import { TRAITS } from "../data/championData/traits";
+import { getChampionDetail } from "./analyzeTraits";
+import { TRAITS } from "../src/constants/traits";
 
 import type { Champion } from "../types/champion";
 
@@ -42,41 +38,41 @@ export function analyzeAllySynergy(
   for (const champion of team) {
     if (!champion) continue;
 
+    const detail = getChampionDetail(champion.id);
+
+    if (!detail) continue;
+
     selectedCount++;
 
-    const data =
-      championData[champion.id] ??
-      defaultChampionData;
-
-    if (data.traits.includes(TRAITS.FRONTLINE)) {
+    if (detail.archetypes.includes("FRONTLINE")) {
       frontlineCount++;
     }
 
-    if (data.traits.includes(TRAITS.ENGAGE)) {
+    if (detail.traits.includes(TRAITS.ENGAGE)) {
       engageCount++;
     }
 
-    if (data.traits.includes(TRAITS.PEEL)) {
+    if (detail.traits.includes(TRAITS.PEEL)) {
       peelCount++;
     }
 
-    if (data.traits.includes(TRAITS.POKE)) {
+    if (detail.traits.includes(TRAITS.POKE)) {
       pokeCount++;
     }
 
-    if (data.traits.includes(TRAITS.CARRY)) {
+    if (detail.archetypes.includes("CARRY")) {
       carryCount++;
     }
 
-    if (data.traits.includes(TRAITS.ASSASSIN)) {
+    if (detail.archetypes.includes("ASSASSIN")) {
       assassinCount++;
     }
 
-    if (data.traits.includes(TRAITS.CATCH)) {
+    if (detail.archetypes.includes("CATCH")) {
       catchCount++;
     }
 
-    if (data.traits.includes(TRAITS.SIEGE)) {
+    if (detail.traits.includes(TRAITS.SIEGE)) {
       siegeCount++;
     }
   }
