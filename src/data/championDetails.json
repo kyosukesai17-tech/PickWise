@@ -628,5 +628,2370 @@
     "strengths": ["味方を飲み込んで危険から救出できる", "高い耐久力とCCで前線を維持できる"],
     "weaknesses": ["遠距離からの継続的なハラスに弱い", "素早く複数の敵を拘束するのが苦手"],
     "traits": ["CC", "ENGAGE", "PEEL", "IMMOBILE"]
+  },
+  "Yasuo": {
+    "difficulty": 10,
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "MOBILITY",
+      "SCALING",
+      "SQUISHY"
+    ]
+  },
+  "Yone": {
+    "difficulty": 8,
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "damageType": "Mixed",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "MOBILITY",
+      "SPLIT_PUSH",
+      "SCALING"
+    ]
+  },
+  "Jax": {
+    "difficulty": 5,
+    "class": [
+      "Fighter"
+    ],
+    "damageType": "Mixed",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "耐久力の高い敵にもダメージを通しやすい"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "DPS",
+      "TANK_KILLER",
+      "MOBILITY",
+      "SPLIT_PUSH",
+      "SCALING"
+    ]
+  },
+  "Riven": {
+    "difficulty": 8,
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "MOBILITY",
+      "SPLIT_PUSH"
+    ]
+  },
+  "Kayn": {
+    "difficulty": 8,
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "MOBILITY",
+      "ROAM"
+    ]
+  },
+  "Khazix": {
+    "difficulty": 6,
+    "class": [
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "高い機動力で位置を調整しやすい"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "MOBILITY",
+      "ROAM",
+      "SQUISHY"
+    ]
+  },
+  "Evelynn": {
+    "difficulty": 10,
+    "class": [
+      "Assassin",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "高い機動力で位置を調整しやすい"
+    ],
+    "weaknesses": [
+      "序盤は影響力を発揮しにくい",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "MOBILITY",
+      "ROAM",
+      "WEAK_EARLY"
+    ]
+  },
+  "MasterYi": {
+    "difficulty": 4,
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "耐久力の高い敵にもダメージを通しやすい"
+    ],
+    "weaknesses": [
+      "序盤は影響力を発揮しにくい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "TANK_KILLER",
+      "MOBILITY",
+      "SCALING",
+      "WEAK_EARLY"
+    ]
+  },
+  "Sylas": {
+    "difficulty": 5,
+    "class": [
+      "Mage",
+      "Assassin"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "CC",
+      "MOBILITY",
+      "SCALING"
+    ]
+  },
+  "Leblanc": {
+    "difficulty": 9,
+    "class": [
+      "Assassin",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "POKE",
+      "MOBILITY",
+      "ROAM",
+      "SQUISHY"
+    ]
+  },
+  "Talon": {
+    "difficulty": 7,
+    "class": [
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "高い機動力で位置を調整しやすい"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "MOBILITY",
+      "ROAM",
+      "SQUISHY"
+    ]
+  },
+  "Vladimir": {
+    "difficulty": 7,
+    "class": [
+      "Mage",
+      "Fighter"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "SCALING",
+      "IMMOBILE"
+    ]
+  },
+  "Irelia": {
+    "difficulty": 5,
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "MOBILITY",
+      "SPLIT_PUSH",
+      "SCALING"
+    ]
+  },
+  "Gangplank": {
+    "difficulty": 9,
+    "class": [
+      "Fighter"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "序盤は影響力を発揮しにくい",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "POKE",
+      "SPLIT_PUSH",
+      "SCALING",
+      "WEAK_EARLY"
+    ]
+  },
+  "Jayce": {
+    "difficulty": 7,
+    "class": [
+      "Fighter",
+      "Marksman"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "POKE",
+      "SIEGE",
+      "SPLIT_PUSH"
+    ]
+  },
+  "Rengar": {
+    "difficulty": 8,
+    "class": [
+      "Assassin",
+      "Fighter"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "高い機動力で位置を調整しやすい"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "MOBILITY",
+      "ROAM",
+      "SPLIT_PUSH"
+    ]
+  },
+  "Shaco": {
+    "difficulty": 9,
+    "class": [
+      "Assassin"
+    ],
+    "damageType": "Mixed",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "高い機動力で位置を調整しやすい"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "MOBILITY",
+      "ROAM",
+      "SPLIT_PUSH",
+      "SQUISHY"
+    ]
+  },
+  "Zeri": {
+    "difficulty": 6,
+    "class": [
+      "Marksman"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "POKE",
+      "MOBILITY",
+      "SCALING",
+      "SQUISHY"
+    ]
+  },
+  "Twitch": {
+    "difficulty": 6,
+    "class": [
+      "Marksman",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "ROAM",
+      "SCALING",
+      "SQUISHY"
+    ]
+  },
+  "KogMaw": {
+    "difficulty": 6,
+    "class": [
+      "Marksman",
+      "Mage"
+    ],
+    "damageType": "Mixed",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "POKE",
+      "TANK_KILLER",
+      "SCALING",
+      "IMMOBILE"
+    ]
+  },
+  "Akshan": {
+    "difficulty": 7,
+    "class": [
+      "Marksman",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "MOBILITY",
+      "ROAM",
+      "SQUISHY"
+    ]
+  },
+  "Ambessa": {
+    "difficulty": 10,
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "ENGAGE",
+      "MOBILITY"
+    ]
+  },
+  "Anivia": {
+    "difficulty": 10,
+    "class": [
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "CC",
+      "PEEL",
+      "SCALING",
+      "IMMOBILE"
+    ]
+  },
+  "Aurora": {
+    "difficulty": 5,
+    "class": [
+      "Mage",
+      "Assassin"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "接近されると安全な位置を維持しにくい"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "MOBILITY",
+      "ROAM"
+    ]
+  },
+  "Bard": {
+    "difficulty": 9,
+    "class": [
+      "Support",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "行動妨害で敵の動きを制限できる",
+      "味方キャリーを守る手段を持つ"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "接近されると安全な位置を維持しにくい"
+    ],
+    "traits": [
+      "CC",
+      "PEEL",
+      "MOBILITY",
+      "ROAM",
+      "SCALING"
+    ]
+  },
+  "Belveth": {
+    "difficulty": 10,
+    "class": [
+      "Fighter"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "耐久力の高い敵にもダメージを通しやすい"
+    ],
+    "weaknesses": [
+      "序盤は影響力を発揮しにくい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "TANK_KILLER",
+      "MOBILITY",
+      "SCALING",
+      "WEAK_EARLY"
+    ]
+  },
+  "Brand": {
+    "difficulty": 4,
+    "class": [
+      "Mage",
+      "Support"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "POKE",
+      "CC",
+      "IMMOBILE"
+    ]
+  },
+  "Briar": {
+    "difficulty": 3,
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "CC",
+      "ENGAGE",
+      "MOBILITY"
+    ]
+  },
+  "Cassiopeia": {
+    "difficulty": 10,
+    "class": [
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "耐久力の高い敵にもダメージを通しやすい"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "TANK_KILLER",
+      "CC",
+      "SCALING",
+      "IMMOBILE"
+    ]
+  },
+  "Chogath": {
+    "difficulty": 5,
+    "class": [
+      "Tank",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "耐久力の高い敵にもダメージを通しやすい"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "TANK_KILLER",
+      "CC",
+      "ENGAGE",
+      "IMMOBILE"
+    ]
+  },
+  "Corki": {
+    "difficulty": 6,
+    "class": [
+      "Marksman",
+      "Mage"
+    ],
+    "damageType": "Mixed",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "接近されると安全な位置を維持しにくい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "POKE",
+      "MOBILITY",
+      "SIEGE"
+    ]
+  },
+  "Diana": {
+    "difficulty": 4,
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "ENGAGE",
+      "MOBILITY"
+    ]
+  },
+  "DrMundo": {
+    "difficulty": 5,
+    "class": [
+      "Tank",
+      "Fighter"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "耐久力の高い敵にもダメージを通しやすい"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "TANK_KILLER",
+      "SCALING",
+      "IMMOBILE"
+    ]
+  },
+  "Fiddlesticks": {
+    "difficulty": 9,
+    "class": [
+      "Mage",
+      "Support"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "ENGAGE",
+      "ROAM",
+      "SQUISHY"
+    ]
+  },
+  "Galio": {
+    "difficulty": 5,
+    "class": [
+      "Tank",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "ENGAGE",
+      "PEEL",
+      "ROAM"
+    ]
+  },
+  "Gnar": {
+    "difficulty": 8,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "DPS",
+      "POKE",
+      "CC",
+      "ENGAGE",
+      "MOBILITY"
+    ]
+  },
+  "Gragas": {
+    "difficulty": 5,
+    "class": [
+      "Fighter",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "ENGAGE",
+      "PEEL",
+      "MOBILITY"
+    ]
+  },
+  "Graves": {
+    "difficulty": 3,
+    "class": [
+      "Marksman"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "接近されると安全な位置を維持しにくい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "MOBILITY",
+      "SCALING"
+    ]
+  },
+  "Hecarim": {
+    "difficulty": 6,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "ENGAGE",
+      "MOBILITY",
+      "ROAM"
+    ]
+  },
+  "Heimerdinger": {
+    "difficulty": 8,
+    "class": [
+      "Mage",
+      "Support"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "耐久力が低く集中攻撃に弱い"
+    ],
+    "traits": [
+      "DPS",
+      "POKE",
+      "SIEGE",
+      "IMMOBILE",
+      "SQUISHY"
+    ]
+  },
+  "Hwei": {
+    "difficulty": 9,
+    "class": [
+      "Mage",
+      "Support"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "POKE",
+      "CC",
+      "SIEGE",
+      "SQUISHY"
+    ]
+  },
+  "Illaoi": {
+    "difficulty": 4,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "耐久力の高い敵にもダメージを通しやすい"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "TANK_KILLER",
+      "SPLIT_PUSH",
+      "IMMOBILE"
+    ]
+  },
+  "Ivern": {
+    "difficulty": 7,
+    "class": [
+      "Support",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "行動妨害で敵の動きを制限できる",
+      "味方キャリーを守る手段を持つ"
+    ],
+    "weaknesses": [
+      "序盤は影響力を発揮しにくい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "CC",
+      "PEEL",
+      "MOBILITY",
+      "SCALING",
+      "WEAK_EARLY"
+    ]
+  },
+  "Kalista": {
+    "difficulty": 7,
+    "class": [
+      "Marksman"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "自ら戦闘を開始しやすい"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "ENGAGE",
+      "MOBILITY",
+      "SQUISHY"
+    ]
+  },
+  "Karthus": {
+    "difficulty": 7,
+    "class": [
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "装備やレベルが揃うほど影響力が高まる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "耐久力が低く集中攻撃に弱い"
+    ],
+    "traits": [
+      "DPS",
+      "SCALING",
+      "IMMOBILE",
+      "SQUISHY",
+      "WEAK_EARLY"
+    ]
+  },
+  "Kayle": {
+    "difficulty": 7,
+    "class": [
+      "Mage",
+      "Marksman"
+    ],
+    "damageType": "Mixed",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "サイドレーンで継続的に圧力を出せる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "序盤は影響力を発揮しにくい"
+    ],
+    "traits": [
+      "DPS",
+      "SPLIT_PUSH",
+      "SCALING",
+      "SQUISHY",
+      "WEAK_EARLY"
+    ]
+  },
+  "Kennen": {
+    "difficulty": 4,
+    "class": [
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "ENGAGE",
+      "MOBILITY",
+      "SQUISHY"
+    ]
+  },
+  "Kled": {
+    "difficulty": 7,
+    "class": [
+      "Fighter"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "ENGAGE",
+      "MOBILITY",
+      "SPLIT_PUSH"
+    ]
+  },
+  "Lillia": {
+    "difficulty": 8,
+    "class": [
+      "Fighter",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "接近されると安全な位置を維持しにくい"
+    ],
+    "traits": [
+      "DPS",
+      "CC",
+      "ENGAGE",
+      "MOBILITY",
+      "SCALING"
+    ]
+  },
+  "Lissandra": {
+    "difficulty": 6,
+    "class": [
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "接近されると安全な位置を維持しにくい"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "ENGAGE",
+      "PEEL"
+    ]
+  },
+  "Malphite": {
+    "difficulty": 2,
+    "class": [
+      "Tank",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "ENGAGE",
+      "PEEL",
+      "IMMOBILE"
+    ]
+  },
+  "Malzahar": {
+    "difficulty": 6,
+    "class": [
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "CC",
+      "SIEGE",
+      "IMMOBILE"
+    ]
+  },
+  "Maokai": {
+    "difficulty": 3,
+    "class": [
+      "Tank",
+      "Support"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "行動妨害で敵の動きを制限できる",
+      "自ら戦闘を開始しやすい"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "CC",
+      "ENGAGE",
+      "PEEL",
+      "ROAM"
+    ]
+  },
+  "Mel": {
+    "difficulty": 5,
+    "class": [
+      "Mage",
+      "Support"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "POKE",
+      "PEEL",
+      "SIEGE",
+      "SQUISHY"
+    ]
+  },
+  "MonkeyKing": {
+    "difficulty": 3,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "CC",
+      "ENGAGE",
+      "MOBILITY"
+    ]
+  },
+  "Naafiri": {
+    "difficulty": 2,
+    "class": [
+      "Assassin",
+      "Fighter"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "高い機動力で位置を調整しやすい"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "MOBILITY",
+      "ROAM",
+      "SPLIT_PUSH"
+    ]
+  },
+  "Nasus": {
+    "difficulty": 6,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "耐久力の高い敵にもダメージを通しやすい"
+    ],
+    "weaknesses": [
+      "序盤は影響力を発揮しにくい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "TANK_KILLER",
+      "SPLIT_PUSH",
+      "SCALING",
+      "WEAK_EARLY"
+    ]
+  },
+  "Neeko": {
+    "difficulty": 5,
+    "class": [
+      "Mage",
+      "Support"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "ENGAGE",
+      "ROAM",
+      "SQUISHY"
+    ]
+  },
+  "Nidalee": {
+    "difficulty": 8,
+    "class": [
+      "Assassin",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "POKE",
+      "MOBILITY",
+      "ROAM",
+      "SQUISHY"
+    ]
+  },
+  "Nilah": {
+    "difficulty": 10,
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "自ら戦闘を開始しやすい"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "DPS",
+      "ENGAGE",
+      "MOBILITY",
+      "SCALING"
+    ]
+  },
+  "Nunu": {
+    "difficulty": 4,
+    "class": [
+      "Tank",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "ENGAGE",
+      "ROAM"
+    ]
+  },
+  "Olaf": {
+    "difficulty": 3,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "耐久力の高い敵にもダメージを通しやすい"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "TANK_KILLER",
+      "ENGAGE",
+      "IMMOBILE"
+    ]
+  },
+  "Pantheon": {
+    "difficulty": 4,
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "ENGAGE",
+      "ROAM"
+    ]
+  },
+  "Poppy": {
+    "difficulty": 6,
+    "class": [
+      "Tank",
+      "Fighter"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "行動妨害で敵の動きを制限できる",
+      "自ら戦闘を開始しやすい"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "CC",
+      "ENGAGE",
+      "PEEL",
+      "MOBILITY"
+    ]
+  },
+  "Qiyana": {
+    "difficulty": 8,
+    "class": [
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "MOBILITY",
+      "ROAM",
+      "SQUISHY"
+    ]
+  },
+  "Quinn": {
+    "difficulty": 5,
+    "class": [
+      "Marksman",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "接近されると安全な位置を維持しにくい"
+    ],
+    "traits": [
+      "BURST",
+      "POKE",
+      "MOBILITY",
+      "ROAM",
+      "SPLIT_PUSH"
+    ]
+  },
+  "Rammus": {
+    "difficulty": 5,
+    "class": [
+      "Tank"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "行動妨害で敵の動きを制限できる",
+      "自ら戦闘を開始しやすい"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "CC",
+      "ENGAGE",
+      "PEEL",
+      "MOBILITY"
+    ]
+  },
+  "RekSai": {
+    "difficulty": 3,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "ENGAGE",
+      "MOBILITY"
+    ]
+  },
+  "Rell": {
+    "difficulty": 5,
+    "class": [
+      "Tank",
+      "Support"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "行動妨害で敵の動きを制限できる",
+      "自ら戦闘を開始しやすい"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "CC",
+      "ENGAGE",
+      "PEEL",
+      "MOBILITY"
+    ]
+  },
+  "Renata": {
+    "difficulty": 8,
+    "class": [
+      "Support",
+      "Mage"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "行動妨害で敵の動きを制限できる",
+      "味方キャリーを守る手段を持つ"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "耐久力が低く集中攻撃に弱い"
+    ],
+    "traits": [
+      "CC",
+      "PEEL",
+      "SCALING",
+      "IMMOBILE",
+      "SQUISHY"
+    ]
+  },
+  "Rumble": {
+    "difficulty": 10,
+    "class": [
+      "Fighter",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "POKE",
+      "ENGAGE",
+      "IMMOBILE"
+    ]
+  },
+  "Ryze": {
+    "difficulty": 7,
+    "class": [
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "CC",
+      "SPLIT_PUSH",
+      "SCALING",
+      "IMMOBILE"
+    ]
+  },
+  "Senna": {
+    "difficulty": 7,
+    "class": [
+      "Support",
+      "Marksman"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "POKE",
+      "PEEL",
+      "SCALING",
+      "SQUISHY"
+    ]
+  },
+  "Seraphine": {
+    "difficulty": 5,
+    "class": [
+      "Support",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "遠距離から安全に敵を削れる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "接近されると安全な位置を維持しにくい"
+    ],
+    "traits": [
+      "POKE",
+      "CC",
+      "ENGAGE",
+      "PEEL",
+      "SCALING"
+    ]
+  },
+  "Sett": {
+    "difficulty": 2,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "CC",
+      "ENGAGE",
+      "IMMOBILE"
+    ]
+  },
+  "Shen": {
+    "difficulty": 4,
+    "class": [
+      "Tank"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "行動妨害で敵の動きを制限できる",
+      "自ら戦闘を開始しやすい"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "CC",
+      "ENGAGE",
+      "PEEL",
+      "ROAM",
+      "SPLIT_PUSH"
+    ]
+  },
+  "Shyvana": {
+    "difficulty": 4,
+    "class": [
+      "Fighter",
+      "Mage"
+    ],
+    "damageType": "Mixed",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "序盤は影響力を発揮しにくい",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "MOBILITY",
+      "SCALING",
+      "WEAK_EARLY"
+    ]
+  },
+  "Singed": {
+    "difficulty": 5,
+    "class": [
+      "Tank",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "DPS",
+      "CC",
+      "ENGAGE",
+      "MOBILITY",
+      "SPLIT_PUSH"
+    ]
+  },
+  "Sion": {
+    "difficulty": 5,
+    "class": [
+      "Tank",
+      "Fighter"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "ENGAGE",
+      "PEEL",
+      "IMMOBILE"
+    ]
+  },
+  "Skarner": {
+    "difficulty": 5,
+    "class": [
+      "Tank",
+      "Fighter"
+    ],
+    "damageType": "Mixed",
+    "rangeType": "Melee",
+    "strengths": [
+      "行動妨害で敵の動きを制限できる",
+      "自ら戦闘を開始しやすい"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "CC",
+      "ENGAGE",
+      "PEEL",
+      "MOBILITY"
+    ]
+  },
+  "Smolder": {
+    "difficulty": 6,
+    "class": [
+      "Marksman",
+      "Mage"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "序盤は影響力を発揮しにくい"
+    ],
+    "traits": [
+      "DPS",
+      "POKE",
+      "SCALING",
+      "SQUISHY",
+      "WEAK_EARLY"
+    ]
+  },
+  "Swain": {
+    "difficulty": 8,
+    "class": [
+      "Mage",
+      "Support"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "CC",
+      "ENGAGE",
+      "SCALING",
+      "IMMOBILE"
+    ]
+  },
+  "Taliyah": {
+    "difficulty": 5,
+    "class": [
+      "Mage",
+      "Support"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "接近されると安全な位置を維持しにくい"
+    ],
+    "traits": [
+      "BURST",
+      "POKE",
+      "CC",
+      "MOBILITY",
+      "ROAM"
+    ]
+  },
+  "Teemo": {
+    "difficulty": 6,
+    "class": [
+      "Marksman",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "POKE",
+      "SPLIT_PUSH",
+      "SCALING",
+      "SQUISHY"
+    ]
+  },
+  "Tristana": {
+    "difficulty": 4,
+    "class": [
+      "Marksman",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "接近されると安全な位置を維持しにくい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "MOBILITY",
+      "SIEGE",
+      "SCALING"
+    ]
+  },
+  "Trundle": {
+    "difficulty": 5,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "耐久力の高い敵にもダメージを通しやすい"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "TANK_KILLER",
+      "SPLIT_PUSH",
+      "IMMOBILE"
+    ]
+  },
+  "Tryndamere": {
+    "difficulty": 5,
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "高い機動力で位置を調整しやすい"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "DPS",
+      "MOBILITY",
+      "SPLIT_PUSH",
+      "SCALING"
+    ]
+  },
+  "TwistedFate": {
+    "difficulty": 9,
+    "class": [
+      "Mage",
+      "Marksman"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "ROAM",
+      "SPLIT_PUSH",
+      "IMMOBILE"
+    ]
+  },
+  "Udyr": {
+    "difficulty": 7,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "Mixed",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "DPS",
+      "CC",
+      "ENGAGE",
+      "MOBILITY"
+    ]
+  },
+  "Urgot": {
+    "difficulty": 8,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "TANK_KILLER",
+      "CC",
+      "IMMOBILE"
+    ]
+  },
+  "Velkoz": {
+    "difficulty": 8,
+    "class": [
+      "Mage",
+      "Support"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "POKE",
+      "TANK_KILLER",
+      "CC",
+      "SQUISHY"
+    ]
+  },
+  "Vex": {
+    "difficulty": 5,
+    "class": [
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "CC",
+      "ENGAGE",
+      "PEEL",
+      "IMMOBILE"
+    ]
+  },
+  "Volibear": {
+    "difficulty": 3,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "Mixed",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "CC",
+      "ENGAGE"
+    ]
+  },
+  "Warwick": {
+    "difficulty": 3,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "Mixed",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "行動妨害で敵の動きを制限できる"
+    ],
+    "weaknesses": [
+      "主要スキルの再使用待ち中は影響力が下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "DPS",
+      "CC",
+      "ENGAGE",
+      "MOBILITY"
+    ]
+  },
+  "Xerath": {
+    "difficulty": 8,
+    "class": [
+      "Mage",
+      "Support"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "耐久力が低く集中攻撃に弱い"
+    ],
+    "traits": [
+      "BURST",
+      "POKE",
+      "SIEGE",
+      "IMMOBILE",
+      "SQUISHY"
+    ]
+  },
+  "XinZhao": {
+    "difficulty": 2,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "継続戦闘で安定したダメージを出せる"
+    ],
+    "weaknesses": [
+      "主要スキルを外すと火力が大きく下がる",
+      "遠距離から継続的に削られやすい"
+    ],
+    "traits": [
+      "BURST",
+      "DPS",
+      "CC",
+      "ENGAGE",
+      "MOBILITY"
+    ]
+  },
+  "Yorick": {
+    "difficulty": 6,
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "サイドレーンで継続的に圧力を出せる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "DPS",
+      "SPLIT_PUSH",
+      "SCALING",
+      "IMMOBILE"
+    ]
+  },
+  "Yunara": {
+    "difficulty": 4,
+    "class": [
+      "Marksman"
+    ],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": [
+      "継続戦闘で安定したダメージを出せる",
+      "高い機動力で位置を調整しやすい"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "序盤は影響力を発揮しにくい"
+    ],
+    "traits": [
+      "DPS",
+      "MOBILITY",
+      "SCALING",
+      "SQUISHY",
+      "WEAK_EARLY"
+    ]
+  },
+  "Ziggs": {
+    "difficulty": 4,
+    "class": [
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "移動スキルがなく接近や離脱が難しい",
+      "耐久力が低く集中攻撃に弱い"
+    ],
+    "traits": [
+      "BURST",
+      "POKE",
+      "SIEGE",
+      "IMMOBILE",
+      "SQUISHY"
+    ]
+  },
+  "Zilean": {
+    "difficulty": 6,
+    "class": [
+      "Support",
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "行動妨害で敵の動きを制限できる",
+      "味方キャリーを守る手段を持つ"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルの再使用待ち中は影響力が下がる"
+    ],
+    "traits": [
+      "CC",
+      "PEEL",
+      "MOBILITY",
+      "SCALING",
+      "SQUISHY"
+    ]
+  },
+  "Zoe": {
+    "difficulty": 5,
+    "class": [
+      "Mage"
+    ],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": [
+      "短時間で高い瞬間火力を出せる",
+      "遠距離から安全に敵を削れる"
+    ],
+    "weaknesses": [
+      "耐久力が低く集中攻撃に弱い",
+      "主要スキルを外すと火力が大きく下がる"
+    ],
+    "traits": [
+      "BURST",
+      "POKE",
+      "CC",
+      "MOBILITY",
+      "SQUISHY"
+    ]
   }
 }
