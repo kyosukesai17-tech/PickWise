@@ -1,9 +1,5 @@
-import {
-  championData,
-  defaultChampionData,
-} from "../data/championData";
-
-import { TRAITS } from "../data/championData/traits";
+import { getChampionDetail } from "./analyzeTraits";
+import { TRAITS } from "../src/constants/traits";
 
 import type { Champion } from "../types/champion";
 
@@ -34,30 +30,30 @@ export function analyzeEnemyTeam(
   for (const champion of team) {
     if (!champion) continue;
 
+    const detail = getChampionDetail(champion.id);
+
+    if (!detail) continue;
+
     selectedCount++;
 
-    const data =
-      championData[champion.id] ??
-      defaultChampionData;
-
     const isDiveThreat =
-      data.traits.includes(TRAITS.ASSASSIN) ||
-      data.traits.includes(TRAITS.ENGAGE);
+      detail.archetypes.includes("ASSASSIN") ||
+      detail.traits.includes(TRAITS.ENGAGE);
 
     if (isDiveThreat) {
       diveThreatCount++;
     }
 
-    if (data.attributes.range === "MELEE") {
+    if (detail.rangeType === "Melee") {
       meleeCount++;
     }
 
-    if (data.attributes.range === "RANGED") {
+    if (detail.rangeType === "Ranged") {
       rangedCount++;
     }
 
     if (
-      data.traits.includes(TRAITS.FRONTLINE)
+      detail.archetypes.includes("FRONTLINE")
     ) {
       frontlineCount++;
     }

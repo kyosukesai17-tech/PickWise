@@ -6,7 +6,14 @@
     "rangeType": "Ranged",
     "strengths": ["高い機動力で敵を捕まえやすい", "ピック後に安全に離脱しやすい"],
     "weaknesses": ["チャームを外すと決定力が落ちる", "耐久力が低い"],
-    "traits": ["BURST", "CC", "MOBILITY", "ROAM"]
+    "traits": ["BURST", "CC", "MOBILITY", "ROAM"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 3,
+      "waveClear": 4,
+      "scaling": 3
+    },
+    "archetypes": ["CATCH"]
   },
   "Viktor": {
     "difficulty": 9,
@@ -15,7 +22,14 @@
     "rangeType": "Ranged",
     "strengths": ["継続的な範囲ダメージが高い", "終盤の集団戦とゾーン制御に優れる"],
     "weaknesses": ["ブリンクを持たない", "装備と強化が揃うまで時間が必要"],
-    "traits": ["DPS", "POKE", "CC", "SCALING", "IMMOBILE"]
+    "traits": ["DPS", "POKE", "CC", "SCALING", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Syndra": {
     "difficulty": 8,
@@ -24,7 +38,14 @@
     "rangeType": "Ranged",
     "strengths": ["遠距離から高い瞬間火力を出せる", "複数の敵をスタンさせられる"],
     "weaknesses": ["ブリンクを持たない", "主要スキルを外すと脅威が大きく落ちる"],
-    "traits": ["BURST", "POKE", "CC", "SCALING", "IMMOBILE"]
+    "traits": ["BURST", "POKE", "CC", "SCALING", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","CATCH"]
   },
   "Orianna": {
     "difficulty": 7,
@@ -33,7 +54,14 @@
     "rangeType": "Ranged",
     "strengths": ["ボールによるゾーン制御に優れる", "集団戦で強力な範囲CCを持つ"],
     "weaknesses": ["ブリンクを持たない", "ボール位置の管理が必要"],
-    "traits": ["DPS", "POKE", "CC", "PEEL", "SCALING"]
+    "traits": ["DPS", "POKE", "CC", "PEEL", "SCALING"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 4,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Veigar": {
     "difficulty": 7,
@@ -42,7 +70,14 @@
     "rangeType": "Ranged",
     "strengths": ["無限に魔力を伸ばせる", "広範囲のケージで進路を制限できる"],
     "weaknesses": ["序盤の影響力が低い", "ブリンクを持たず接近されると弱い"],
-    "traits": ["BURST", "CC", "SCALING", "IMMOBILE", "WEAK_EARLY"]
+    "traits": ["BURST", "CC", "SCALING", "IMMOBILE", "WEAK_EARLY"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 3,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","CATCH"]
   },
   "Jinx": {
     "difficulty": 6,
@@ -51,7 +86,14 @@
     "rangeType": "Ranged",
     "strengths": ["集団戦で高い継続火力を出せる", "キル参加後の追撃とオブジェクト破壊が速い"],
     "weaknesses": ["自力の移動スキルを持たない", "装備依存度が高く序盤が弱い"],
-    "traits": ["DPS", "SIEGE", "SCALING", "IMMOBILE", "WEAK_EARLY"]
+    "traits": ["DPS", "SIEGE", "SCALING", "IMMOBILE", "WEAK_EARLY"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Ezreal": {
     "difficulty": 7,
@@ -60,7 +102,14 @@
     "rangeType": "Ranged",
     "strengths": ["長射程スキルで安全にポークできる", "移動スキルにより位置調整しやすい"],
     "weaknesses": ["スキルショットへの依存度が高い", "ミニオン越しでは火力を通しにくい"],
-    "traits": ["POKE", "MOBILITY", "SIEGE"]
+    "traits": ["POKE", "MOBILITY", "SIEGE"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 2,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY"]
   },
   "Jhin": {
     "difficulty": 6,
@@ -69,7 +118,14 @@
     "rangeType": "Ranged",
     "strengths": ["長射程から敵を拘束して仕留められる", "単発の攻撃と第四射の瞬間火力が高い"],
     "weaknesses": ["攻撃速度が固定され継続火力に限界がある", "直接的な移動スキルを持たない"],
-    "traits": ["BURST", "POKE", "CC", "IMMOBILE"]
+    "traits": ["BURST", "POKE", "CC", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["CARRY","CATCH"]
   },
   "Sivir": {
     "difficulty": 4,
@@ -78,7 +134,14 @@
     "rangeType": "Ranged",
     "strengths": ["ウェーブクリアと集団戦の範囲火力に優れる", "味方全体の移動速度を上げられる"],
     "weaknesses": ["通常攻撃の射程が短い", "装備が揃うまで単体火力が低い"],
-    "traits": ["DPS", "SIEGE", "SCALING", "IMMOBILE", "WEAK_EARLY"]
+    "traits": ["DPS", "SIEGE", "SCALING", "IMMOBILE", "WEAK_EARLY"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Varus": {
     "difficulty": 2,
@@ -87,7 +150,14 @@
     "rangeType": "Ranged",
     "strengths": ["長射程ポークと対タンク火力を両立できる", "アルティメットで集団戦を開始できる"],
     "weaknesses": ["自力の移動スキルを持たない", "ビルドによって得意な戦い方が大きく変わる"],
-    "traits": ["POKE", "TANK_KILLER", "CC", "ENGAGE", "IMMOBILE"]
+    "traits": ["POKE", "TANK_KILLER", "CC", "ENGAGE", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY","CATCH"]
   },
   "Akali": {
     "difficulty": 7,
@@ -96,7 +166,14 @@
     "rangeType": "Melee",
     "strengths": ["高い機動力で後衛へ接近できる", "煙幕を使って戦闘を継続しやすい"],
     "weaknesses": ["ウェーブクリアと序盤の安定性に欠ける", "確定CCに弱い"],
-    "traits": ["BURST", "MOBILITY", "ROAM", "SQUISHY"]
+    "traits": ["BURST", "MOBILITY", "ROAM", "SQUISHY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "Annie": {
     "difficulty": 6,
@@ -105,7 +182,14 @@
     "rangeType": "Ranged",
     "strengths": ["対象指定を含む安定したバーストを持つ", "範囲スタンで戦闘を始められる"],
     "weaknesses": ["射程が短く接近時の危険が大きい", "移動スキルを持たない"],
-    "traits": ["BURST", "CC", "ENGAGE", "IMMOBILE"]
+    "traits": ["BURST", "CC", "ENGAGE", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["CATCH"]
   },
   "AurelionSol": {
     "difficulty": 7,
@@ -114,7 +198,14 @@
     "rangeType": "Ranged",
     "strengths": ["時間経過でスキルが大きく強化される", "集団戦で広範囲を制圧できる"],
     "weaknesses": ["序盤の主導権を取りにくい", "詠唱中に妨害されやすい"],
-    "traits": ["DPS", "CC", "SCALING", "IMMOBILE", "WEAK_EARLY"]
+    "traits": ["DPS", "CC", "SCALING", "IMMOBILE", "WEAK_EARLY"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Azir": {
     "difficulty": 9,
@@ -123,7 +214,14 @@
     "rangeType": "Ranged",
     "strengths": ["兵士による長射程の継続火力が高い", "タワーへの圧力と集団戦性能を両立する"],
     "weaknesses": ["操作難度が高い", "装備が揃うまで火力を出しにくい"],
-    "traits": ["DPS", "POKE", "SIEGE", "SCALING", "WEAK_EARLY"]
+    "traits": ["DPS", "POKE", "SIEGE", "SCALING", "WEAK_EARLY"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Ekko": {
     "difficulty": 8,
@@ -132,7 +230,14 @@
     "rangeType": "Melee",
     "strengths": ["瞬間火力と離脱性能を両立する", "サイドレーンから素早く合流できる"],
     "weaknesses": ["主要スキルを外すと火力が落ちる", "確定CCに弱い"],
-    "traits": ["BURST", "MOBILITY", "ROAM", "SCALING"]
+    "traits": ["BURST", "MOBILITY", "ROAM", "SCALING"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 2,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["ASSASSIN","CARRY"]
   },
   "Fizz": {
     "difficulty": 6,
@@ -141,7 +246,14 @@
     "rangeType": "Melee",
     "strengths": ["対象へ接近して高いバーストを出せる", "スキルで攻撃を回避しやすい"],
     "weaknesses": ["近接のため序盤に体力を削られやすい", "スキル失敗後の継続火力が低い"],
-    "traits": ["BURST", "MOBILITY", "ROAM", "SQUISHY"]
+    "traits": ["BURST", "MOBILITY", "ROAM", "SQUISHY"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN","CATCH"]
   },
   "Kassadin": {
     "difficulty": 8,
@@ -150,7 +262,14 @@
     "rangeType": "Melee",
     "strengths": ["終盤に非常に高い機動力を得る", "後衛への接近と瞬間火力に優れる"],
     "weaknesses": ["序盤のレーン主導権が弱い", "レベルと装備への依存度が高い"],
-    "traits": ["BURST", "MOBILITY", "SCALING", "WEAK_EARLY"]
+    "traits": ["BURST", "MOBILITY", "SCALING", "WEAK_EARLY"],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 3,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Katarina": {
     "difficulty": 8,
@@ -159,7 +278,14 @@
     "rangeType": "Melee",
     "strengths": ["キル獲得後に連続してスキルを使用できる", "ロームと集団戦の掃討力が高い"],
     "weaknesses": ["CCでアルティメットを止められやすい", "不利なレーンでは主導権を失いやすい"],
-    "traits": ["BURST", "DPS", "MOBILITY", "ROAM", "SQUISHY"]
+    "traits": ["BURST", "DPS", "MOBILITY", "ROAM", "SQUISHY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Lux": {
     "difficulty": 5,
@@ -168,7 +294,14 @@
     "rangeType": "Ranged",
     "strengths": ["長射程から拘束とバーストを狙える", "範囲シールドで味方を守りながらポークできる"],
     "weaknesses": ["移動スキルがなく接近されると弱い", "耐久力が低く主要スキルへの依存度が高い"],
-    "traits": ["BURST", "POKE", "CC", "PEEL", "SQUISHY"]
+    "traits": ["BURST", "POKE", "CC", "PEEL", "SQUISHY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 3,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Zed": {
     "difficulty": 7,
@@ -177,7 +310,14 @@
     "rangeType": "Melee",
     "strengths": ["後衛へ接近して単体を素早く倒せる", "影による移動とサイドレーン性能が高い"],
     "weaknesses": ["防御アイテムでバーストを軽減されやすい", "集団戦での継続火力が低い"],
-    "traits": ["BURST", "MOBILITY", "ROAM", "SPLIT_PUSH"]
+    "traits": ["BURST", "MOBILITY", "ROAM", "SPLIT_PUSH"],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "Aphelios": {
     "difficulty": 10,
@@ -186,7 +326,14 @@
     "rangeType": "Ranged",
     "strengths": ["武器の組み合わせで多様な集団戦に対応できる", "装備完成後の継続火力が高い"],
     "weaknesses": ["移動スキルを持たない", "武器管理と装備への依存度が高い"],
-    "traits": ["DPS", "SCALING", "IMMOBILE", "WEAK_EARLY"]
+    "traits": ["DPS", "SCALING", "IMMOBILE", "WEAK_EARLY"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Ashe": {
     "difficulty": 4,
@@ -195,7 +342,14 @@
     "rangeType": "Ranged",
     "strengths": ["通常攻撃のスローで敵を追跡できる", "長射程のアルティメットで戦闘を始められる"],
     "weaknesses": ["移動スキルを持たない", "瞬間火力が低い"],
-    "traits": ["DPS", "POKE", "CC", "ENGAGE", "IMMOBILE"]
+    "traits": ["DPS", "POKE", "CC", "ENGAGE", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY"]
   },
   "Caitlyn": {
     "difficulty": 6,
@@ -204,7 +358,14 @@
     "rangeType": "Ranged",
     "strengths": ["長い通常攻撃射程でレーンを支配しやすい", "罠を使ってシージとゾーン制御ができる"],
     "weaknesses": ["中盤に火力が停滞しやすい", "接近されると自衛手段が限られる"],
-    "traits": ["DPS", "POKE", "SIEGE", "SCALING"]
+    "traits": ["DPS", "POKE", "SIEGE", "SCALING"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 2,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY"]
   },
   "Draven": {
     "difficulty": 8,
@@ -213,7 +374,14 @@
     "rangeType": "Ranged",
     "strengths": ["序盤から通常攻撃の火力が非常に高い", "キル獲得時にゴールド差を広げやすい"],
     "weaknesses": ["斧の落下地点に移動を制限される", "後方へ安全に離脱する手段が少ない"],
-    "traits": ["BURST", "DPS", "SIEGE", "SQUISHY"]
+    "traits": ["BURST", "DPS", "SIEGE", "SQUISHY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 2
+    },
+    "archetypes": ["CARRY"]
   },
   "Kaisa": {
     "difficulty": 6,
@@ -222,7 +390,14 @@
     "rangeType": "Ranged",
     "strengths": ["単体への継続火力とバーストを両立する", "アルティメットで戦闘位置を調整できる"],
     "weaknesses": ["通常攻撃射程が短い", "進化条件のため装備依存度が高い"],
-    "traits": ["BURST", "DPS", "MOBILITY", "SCALING"]
+    "traits": ["BURST", "DPS", "MOBILITY", "SCALING"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Lucian": {
     "difficulty": 6,
@@ -231,7 +406,14 @@
     "rangeType": "Ranged",
     "strengths": ["短時間のコンボ火力が高い", "ダッシュで攻撃位置を調整できる"],
     "weaknesses": ["通常攻撃射程が短い", "終盤は長射程ADCに攻撃機会を作りにくい"],
-    "traits": ["BURST", "DPS", "MOBILITY"]
+    "traits": ["BURST", "DPS", "MOBILITY"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "MissFortune": {
     "difficulty": 1,
@@ -240,7 +422,14 @@
     "rangeType": "Ranged",
     "strengths": ["範囲アルティメットで集団戦へ大ダメージを与える", "跳弾によるレーンポークが強い"],
     "weaknesses": ["アルティメット中は移動できない", "自力の移動スキルを持たない"],
-    "traits": ["BURST", "DPS", "POKE", "IMMOBILE"]
+    "traits": ["BURST", "DPS", "POKE", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY"]
   },
   "Samira": {
     "difficulty": 6,
@@ -249,7 +438,14 @@
     "rangeType": "Ranged",
     "strengths": ["接近戦で高い範囲火力を出せる", "飛来物を無効化して攻撃を継続できる"],
     "weaknesses": ["通常攻撃射程が短い", "CCでコンボとアルティメットを止められやすい"],
-    "traits": ["BURST", "DPS", "MOBILITY", "SQUISHY"]
+    "traits": ["BURST", "DPS", "MOBILITY", "SQUISHY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Vayne": {
     "difficulty": 8,
@@ -258,7 +454,14 @@
     "rangeType": "Ranged",
     "strengths": ["最大体力に依存する確定ダメージを持つ", "終盤の単体継続火力と追跡性能が高い"],
     "weaknesses": ["ウェーブクリア能力が低い", "序盤の射程と集団戦への影響力が弱い"],
-    "traits": ["DPS", "TANK_KILLER", "MOBILITY", "SCALING", "WEAK_EARLY"]
+    "traits": ["DPS", "TANK_KILLER", "MOBILITY", "SCALING", "WEAK_EARLY"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Xayah": {
     "difficulty": 5,
@@ -267,7 +470,14 @@
     "rangeType": "Ranged",
     "strengths": ["羽根による範囲火力と拘束を持つ", "アルティメットで重要な攻撃を回避できる"],
     "weaknesses": ["羽根の配置が悪いと火力とCCが落ちる", "攻撃射程が比較的短い"],
-    "traits": ["DPS", "CC", "PEEL", "SCALING"]
+    "traits": ["DPS", "CC", "PEEL", "SCALING"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 4,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "LeeSin": {
     "difficulty": 6,
@@ -276,7 +486,14 @@
     "rangeType": "Melee",
     "strengths": ["高い機動力で序盤からレーンへ介入できる", "アルティメットで敵の位置を大きく動かせる"],
     "weaknesses": ["操作難度が高い", "終盤は集団戦での役割が限定されやすい"],
-    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY", "ROAM"]
+    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY", "ROAM"],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 2
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "JarvanIV": {
     "difficulty": 5,
@@ -285,7 +502,14 @@
     "rangeType": "Melee",
     "strengths": ["長距離から素早く戦闘を開始できる", "地形生成で敵の移動を制限できる"],
     "weaknesses": ["突入後に離脱しにくい", "アルティメットが味方の移動も妨げる場合がある"],
-    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY"]
+    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY"],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 2
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Vi": {
     "difficulty": 4,
@@ -294,7 +518,14 @@
     "rangeType": "Melee",
     "strengths": ["対象指定アルティメットで後衛を確実に捕まえられる", "単体へのバーストと防御低下を持つ"],
     "weaknesses": ["突入後の離脱手段が少ない", "チャージスキルを外すと接近しにくい"],
-    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY"]
+    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY"],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN","CATCH"]
   },
   "Sejuani": {
     "difficulty": 4,
@@ -303,7 +534,14 @@
     "rangeType": "Melee",
     "strengths": ["複数のCCで敵の行動を長く制限できる", "遠距離から集団戦を開始できる"],
     "weaknesses": ["単独での継続火力が低い", "近接味方が少ないとスタンを活用しにくい"],
-    "traits": ["CC", "ENGAGE", "PEEL", "MOBILITY"]
+    "traits": ["CC", "ENGAGE", "PEEL", "MOBILITY"],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 2,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE","CATCH"]
   },
   "Viego": {
     "difficulty": 5,
@@ -312,7 +550,14 @@
     "rangeType": "Melee",
     "strengths": ["キル参加後に敵の身体を奪って連戦できる", "単体への継続火力と追撃性能が高い"],
     "weaknesses": ["最初のキルを取れないと集団戦で影響を出しにくい", "CCで攻撃を止められやすい"],
-    "traits": ["BURST", "DPS", "MOBILITY", "SCALING"]
+    "traits": ["BURST", "DPS", "MOBILITY", "SCALING"],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Elise": {
     "difficulty": 9,
@@ -321,7 +566,14 @@
     "rangeType": "Ranged",
     "strengths": ["序盤から高い単体バーストを持つ", "スタンと対象指定不可でタワーダイブしやすい"],
     "weaknesses": ["終盤は火力と耐久力が不足しやすい", "スキルショットを外すとガンク性能が落ちる"],
-    "traits": ["BURST", "CC", "MOBILITY", "ROAM"]
+    "traits": ["BURST", "CC", "MOBILITY", "ROAM"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 3,
+      "scaling": 2
+    },
+    "archetypes": ["ASSASSIN","CATCH"]
   },
   "Nocturne": {
     "difficulty": 4,
@@ -330,7 +582,14 @@
     "rangeType": "Melee",
     "strengths": ["長距離アルティメットで孤立した敵へ接近できる", "敵の視界を制限して連携を崩せる"],
     "weaknesses": ["突入後に離脱しにくい", "集団行動する敵には対象を倒し切りにくい"],
-    "traits": ["BURST", "ENGAGE", "MOBILITY", "ROAM"]
+    "traits": ["BURST", "ENGAGE", "MOBILITY", "ROAM"],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 2,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "Amumu": {
     "difficulty": 3,
@@ -339,7 +598,14 @@
     "rangeType": "Melee",
     "strengths": ["広範囲のCCで集団戦を開始できる", "複数の敵へ継続的に魔法ダメージを与えられる"],
     "weaknesses": ["序盤に敵ジャングラーから侵入されやすい", "接近スキルを外すと影響力が低い"],
-    "traits": ["DPS", "CC", "ENGAGE", "PEEL", "WEAK_EARLY"]
+    "traits": ["DPS", "CC", "ENGAGE", "PEEL", "WEAK_EARLY"],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 3,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Kindred": {
     "difficulty": 4,
@@ -348,7 +614,14 @@
     "rangeType": "Ranged",
     "strengths": ["マーク獲得により射程と火力を伸ばせる", "アルティメットで味方の死亡を一時的に防げる"],
     "weaknesses": ["マーク管理が敵の動きに左右される", "序盤に遅れると射程と火力を伸ばしにくい"],
-    "traits": ["DPS", "MOBILITY", "SCALING", "SQUISHY", "WEAK_EARLY"]
+    "traits": ["DPS", "MOBILITY", "SCALING", "SQUISHY", "WEAK_EARLY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Zac": {
     "difficulty": 8,
@@ -357,7 +630,14 @@
     "rangeType": "Melee",
     "strengths": ["視界外から長距離のエンゲージができる", "複数のノックアップで敵陣を崩せる"],
     "weaknesses": ["接近スキルのチャージ中に妨害されやすい", "回復用の細胞を拾えないと耐久力が落ちる"],
-    "traits": ["CC", "ENGAGE", "PEEL", "MOBILITY"]
+    "traits": ["CC", "ENGAGE", "PEEL", "MOBILITY"],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 2,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Aatrox": {
     "difficulty": 4,
@@ -366,7 +646,14 @@
     "rangeType": "Melee",
     "strengths": ["範囲ノックアップと回復で集団戦を継続できる", "複数の敵へ高い範囲ダメージを与えられる"],
     "weaknesses": ["スキルの予備動作が長い", "回復阻害と機動力の高い敵に弱い"],
-    "traits": ["DPS", "CC", "ENGAGE", "MOBILITY"]
+    "traits": ["DPS", "CC", "ENGAGE", "MOBILITY"],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 4,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Darius": {
     "difficulty": 2,
@@ -375,7 +662,14 @@
     "rangeType": "Melee",
     "strengths": ["長期戦で出血を重ねて非常に高い火力を出せる", "確定ダメージのアルティメットで連続キルを狙える"],
     "weaknesses": ["自力の移動スキルを持たない", "遠距離から攻撃されると接近しにくい"],
-    "traits": ["DPS", "TANK_KILLER", "CC", "IMMOBILE"]
+    "traits": ["DPS", "TANK_KILLER", "CC", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 3,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Ornn": {
     "difficulty": 5,
@@ -384,7 +678,14 @@
     "rangeType": "Melee",
     "strengths": ["長距離から広範囲の集団戦を開始できる", "味方の装備を強化して終盤の価値を高める"],
     "weaknesses": ["移動スキルの使用条件が限られる", "スキルの予備動作を回避されやすい"],
-    "traits": ["CC", "ENGAGE", "PEEL", "SCALING", "IMMOBILE"]
+    "traits": ["CC", "ENGAGE", "PEEL", "SCALING", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 2,
+      "scaling": 5
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Garen": {
     "difficulty": 5,
@@ -393,7 +694,14 @@
     "rangeType": "Melee",
     "strengths": ["高い耐久力と自己回復でレーンを維持しやすい", "低体力の敵をアルティメットで処理できる"],
     "weaknesses": ["壁を越える移動スキルを持たない", "遠距離からのスローやポークに弱い"],
-    "traits": ["BURST", "DPS", "SPLIT_PUSH", "IMMOBILE"]
+    "traits": ["BURST", "DPS", "SPLIT_PUSH", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Camille": {
     "difficulty": 4,
@@ -402,7 +710,14 @@
     "rangeType": "Melee",
     "strengths": ["壁を使って長距離から敵へ接近できる", "確定ダメージで耐久力の高い敵にも対応できる"],
     "weaknesses": ["主要スキルのクールダウン中は戦闘力が落ちる", "複数相手の集団戦より単体戦を得意とする"],
-    "traits": ["BURST", "TANK_KILLER", "MOBILITY", "SPLIT_PUSH", "SCALING"]
+    "traits": ["BURST", "TANK_KILLER", "MOBILITY", "SPLIT_PUSH", "SCALING"],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 3,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","ASSASSIN","CATCH"]
   },
   "Fiora": {
     "difficulty": 3,
@@ -411,7 +726,14 @@
     "rangeType": "Melee",
     "strengths": ["最大体力依存の確定ダメージを与えられる", "一対一とスプリットプッシュに非常に強い"],
     "weaknesses": ["集団戦で複数の敵へ影響を出しにくい", "急所を攻撃できないと火力が落ちる"],
-    "traits": ["DPS", "TANK_KILLER", "MOBILITY", "SPLIT_PUSH", "SCALING"]
+    "traits": ["DPS", "TANK_KILLER", "MOBILITY", "SPLIT_PUSH", "SCALING"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 2,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Gwen": {
     "difficulty": 5,
@@ -420,7 +742,14 @@
     "rangeType": "Melee",
     "strengths": ["最大体力依存ダメージで前衛を削りやすい", "装備完成後の継続火力が高い"],
     "weaknesses": ["序盤のレーン影響力が低い", "CCが少なく味方の拘束に依存する"],
-    "traits": ["DPS", "TANK_KILLER", "SPLIT_PUSH", "SCALING", "WEAK_EARLY"]
+    "traits": ["DPS", "TANK_KILLER", "SPLIT_PUSH", "SCALING", "WEAK_EARLY"],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Renekton": {
     "difficulty": 3,
@@ -429,7 +758,14 @@
     "rangeType": "Melee",
     "strengths": ["序盤の短時間トレードとバーストが強い", "ダッシュと対象指定スタンで後衛へ圧力をかけられる"],
     "weaknesses": ["終盤は火力が伸びにくい", "怒りがない状態ではスキル性能が落ちる"],
-    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY"]
+    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY"],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 2
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "KSante": {
     "difficulty": 9,
@@ -438,7 +774,14 @@
     "rangeType": "Melee",
     "strengths": ["複数の移動阻害で味方を守れる", "敵一体を集団から分断して戦える"],
     "weaknesses": ["操作難度が高い", "アルティメット後は耐久力が低下する"],
-    "traits": ["CC", "ENGAGE", "PEEL", "MOBILITY"]
+    "traits": ["CC", "ENGAGE", "PEEL", "MOBILITY"],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 5,
+      "waveClear": 2,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Mordekaiser": {
     "difficulty": 4,
@@ -447,7 +790,14 @@
     "rangeType": "Melee",
     "strengths": ["継続ダメージと割合ダメージで前衛を倒しやすい", "アルティメットで重要な敵を集団戦から隔離できる"],
     "weaknesses": ["自力の移動スキルを持たない", "遠距離からの攻撃とスローに弱い"],
-    "traits": ["DPS", "TANK_KILLER", "CC", "IMMOBILE"]
+    "traits": ["DPS", "TANK_KILLER", "CC", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 3,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Thresh": {
     "difficulty": 7,
@@ -456,7 +806,14 @@
     "rangeType": "Ranged",
     "strengths": ["豊富なCCで敵を捕まえられる", "ランタンで味方の位置を安全に調整できる"],
     "weaknesses": ["スキルショットへの依存度が高い", "外した後は脅威が大きく下がる"],
-    "traits": ["CC", "ENGAGE", "PEEL", "ROAM"]
+    "traits": ["CC", "ENGAGE", "PEEL", "ROAM"],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 1,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE","CATCH"]
   },
   "Nautilus": {
     "difficulty": 6,
@@ -465,7 +822,14 @@
     "rangeType": "Melee",
     "strengths": ["複数のCCで対象を長時間拘束できる", "確定ノックアップから集団戦を開始しやすい"],
     "weaknesses": ["仕掛けた後に離脱しにくい", "遠距離から継続的に削られやすい"],
-    "traits": ["CC", "ENGAGE", "PEEL", "ROAM"]
+    "traits": ["CC", "ENGAGE", "PEEL", "ROAM"],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 1,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE","CATCH"]
   },
   "Leona": {
     "difficulty": 4,
@@ -474,7 +838,14 @@
     "rangeType": "Melee",
     "strengths": ["連続したCCで敵を拘束できる", "高い耐久力で強引に集団戦を始められる"],
     "weaknesses": ["離脱手段に乏しい", "遠距離からのハラスに弱い"],
-    "traits": ["CC", "ENGAGE", "PEEL", "ROAM"]
+    "traits": ["CC", "ENGAGE", "PEEL", "ROAM"],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 1,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE","CATCH"]
   },
   "Lulu": {
     "difficulty": 5,
@@ -483,7 +854,14 @@
     "rangeType": "Ranged",
     "strengths": ["変身とノックアップで味方を守りやすい", "キャリーの攻撃性能と生存力を強化できる"],
     "weaknesses": ["自身の耐久力が低い", "単独で試合を動かす力が低い"],
-    "traits": ["CC", "PEEL", "SCALING", "SQUISHY"]
+    "traits": ["CC", "PEEL", "SCALING", "SQUISHY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 4,
+      "waveClear": 1,
+      "scaling": 5
+    },
+    "archetypes": []
   },
   "Soraka": {
     "difficulty": 3,
@@ -492,7 +870,14 @@
     "rangeType": "Ranged",
     "strengths": ["継続的な回復で味方を支えられる", "グローバル回復で離れた味方も救援できる"],
     "weaknesses": ["自身が狙われると倒されやすい", "回復阻害の影響を強く受ける"],
-    "traits": ["PEEL", "SCALING", "IMMOBILE", "SQUISHY"]
+    "traits": ["PEEL", "SCALING", "IMMOBILE", "SQUISHY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 2,
+      "waveClear": 1,
+      "scaling": 5
+    },
+    "archetypes": []
   },
   "Janna": {
     "difficulty": 7,
@@ -501,7 +886,14 @@
     "rangeType": "Ranged",
     "strengths": ["ノックアップとノックバックで突進を拒否できる", "移動速度を活かして味方を支援しやすい"],
     "weaknesses": ["自身の耐久力が低い", "攻撃的な仕掛けを作りにくい"],
-    "traits": ["CC", "PEEL", "MOBILITY", "ROAM", "SQUISHY"]
+    "traits": ["CC", "PEEL", "MOBILITY", "ROAM", "SQUISHY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 4,
+      "waveClear": 1,
+      "scaling": 3
+    },
+    "archetypes": []
   },
   "Braum": {
     "difficulty": 4,
@@ -510,7 +902,14 @@
     "rangeType": "Melee",
     "strengths": ["盾で飛来物を防ぎ味方を守れる", "固有スタックによるスタンで反撃しやすい"],
     "weaknesses": ["能動的な長距離エンゲージに乏しい", "遠距離からの継続的なハラスに弱い"],
-    "traits": ["CC", "PEEL", "ENGAGE", "MOBILITY"]
+    "traits": ["CC", "PEEL", "ENGAGE", "MOBILITY"],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 4,
+      "waveClear": 1,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Rakan": {
     "difficulty": 5,
@@ -519,7 +918,14 @@
     "rangeType": "Melee",
     "strengths": ["高い機動力で素早く集団戦を開始できる", "シールドと回復で味方を支援できる"],
     "weaknesses": ["CCを受けると離脱しにくい", "スキルの再使用待ち中は耐久力が低い"],
-    "traits": ["CC", "ENGAGE", "PEEL", "MOBILITY", "ROAM"]
+    "traits": ["CC", "ENGAGE", "PEEL", "MOBILITY", "ROAM"],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 5,
+      "waveClear": 1,
+      "scaling": 3
+    },
+    "archetypes": ["CATCH"]
   },
   "Nami": {
     "difficulty": 5,
@@ -528,7 +934,14 @@
     "rangeType": "Ranged",
     "strengths": ["回復と強化でレーン戦を支えられる", "広範囲のCCで集団戦を始めたり守ったりできる"],
     "weaknesses": ["自身の耐久力が低い", "主要CCが当てにくい"],
-    "traits": ["CC", "ENGAGE", "PEEL", "SQUISHY"]
+    "traits": ["CC", "ENGAGE", "PEEL", "SQUISHY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 5,
+      "waveClear": 1,
+      "scaling": 3
+    },
+    "archetypes": []
   },
   "Milio": {
     "difficulty": 4,
@@ -537,7 +950,14 @@
     "rangeType": "Ranged",
     "strengths": ["味方の射程を伸ばして安全な攻撃を支援できる", "範囲浄化で味方のCCを解除できる"],
     "weaknesses": ["自身の耐久力が低い", "単独で敵を捕まえる力が低い"],
-    "traits": ["PEEL", "SCALING", "IMMOBILE", "SQUISHY"]
+    "traits": ["PEEL", "SCALING", "IMMOBILE", "SQUISHY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 2,
+      "waveClear": 1,
+      "scaling": 5
+    },
+    "archetypes": []
   },
   "Blitzcrank": {
     "difficulty": 4,
@@ -546,7 +966,14 @@
     "rangeType": "Melee",
     "strengths": ["長距離フックで敵を孤立させられる", "序盤から高いキルプレッシャーを持つ"],
     "weaknesses": ["フックを外すと影響力が大きく落ちる", "継続的な遠距離ハラスに弱い"],
-    "traits": ["BURST", "CC", "ENGAGE", "ROAM"]
+    "traits": ["BURST", "CC", "ENGAGE", "ROAM"],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 5,
+      "waveClear": 1,
+      "scaling": 2
+    },
+    "archetypes": ["CATCH"]
   },
   "Morgana": {
     "difficulty": 1,
@@ -555,7 +982,14 @@
     "rangeType": "Ranged",
     "strengths": ["長時間の拘束で敵を捕まえられる", "スペルシールドで味方をCCから守れる"],
     "weaknesses": ["主要な拘束スキルが当てにくい", "集団戦でアルティメットを完遂しにくい"],
-    "traits": ["CC", "PEEL", "POKE", "IMMOBILE"]
+    "traits": ["CC", "PEEL", "POKE", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["CATCH"]
   },
   "Zyra": {
     "difficulty": 7,
@@ -564,7 +998,14 @@
     "rangeType": "Ranged",
     "strengths": ["植物による継続的なハラスが強い", "広範囲CCで集団戦を制御できる"],
     "weaknesses": ["自身の耐久力が低い", "移動スキルがなく接近されると弱い"],
-    "traits": ["DPS", "POKE", "CC", "IMMOBILE", "SQUISHY"]
+    "traits": ["DPS", "POKE", "CC", "IMMOBILE", "SQUISHY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 3,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY","CATCH"]
   },
   "Karma": {
     "difficulty": 5,
@@ -573,7 +1014,14 @@
     "rangeType": "Ranged",
     "strengths": ["序盤から強い遠距離ハラスを行える", "範囲シールドと加速で味方を支援できる"],
     "weaknesses": ["終盤は火力の伸びが低い", "ハードCCの即時性に乏しい"],
-    "traits": ["POKE", "PEEL", "MOBILITY", "SIEGE"]
+    "traits": ["POKE", "PEEL", "MOBILITY", "SIEGE"],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 2,
+      "waveClear": 5,
+      "scaling": 3
+    },
+    "archetypes": []
   },
   "Sona": {
     "difficulty": 4,
@@ -582,7 +1030,14 @@
     "rangeType": "Ranged",
     "strengths": ["範囲回復と強化で集団戦を継続的に支援できる", "終盤に高い支援性能を発揮する"],
     "weaknesses": ["自身の耐久力が非常に低い", "序盤のレーン戦で圧力を受けやすい"],
-    "traits": ["POKE", "PEEL", "SCALING", "SQUISHY", "WEAK_EARLY"]
+    "traits": ["POKE", "PEEL", "SCALING", "SQUISHY", "WEAK_EARLY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 2,
+      "waveClear": 3,
+      "scaling": 5
+    },
+    "archetypes": []
   },
   "Yuumi": {
     "difficulty": 2,
@@ -591,7 +1046,14 @@
     "rangeType": "Ranged",
     "strengths": ["味方に付着して安全に支援を続けられる", "シールドと回復で味方キャリーを強化できる"],
     "weaknesses": ["単独行動時の生存力が非常に低い", "味方の性能と位置取りへの依存度が高い"],
-    "traits": ["POKE", "PEEL", "SCALING", "SQUISHY", "WEAK_EARLY"]
+    "traits": ["POKE", "PEEL", "SCALING", "SQUISHY", "WEAK_EARLY"],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 2,
+      "waveClear": 1,
+      "scaling": 5
+    },
+    "archetypes": []
   },
   "Alistar": {
     "difficulty": 7,
@@ -600,7 +1062,14 @@
     "rangeType": "Melee",
     "strengths": ["ノックアップとノックバックで集団戦を操作できる", "アルティメット中は高い耐久力を持つ"],
     "weaknesses": ["コンボ後は影響力が下がる", "遠距離からのハラスに弱い"],
-    "traits": ["CC", "ENGAGE", "PEEL", "ROAM"]
+    "traits": ["CC", "ENGAGE", "PEEL", "ROAM"],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 1,
+      "scaling": 2
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Taric": {
     "difficulty": 3,
@@ -609,7 +1078,14 @@
     "rangeType": "Melee",
     "strengths": ["範囲無敵で集団戦の大ダメージを防げる", "回復とスタンで前線を継続的に支援できる"],
     "weaknesses": ["遠距離構成に接近しにくい", "アルティメット発動までに時間がかかる"],
-    "traits": ["CC", "PEEL", "SCALING", "IMMOBILE"]
+    "traits": ["CC", "PEEL", "SCALING", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 4,
+      "waveClear": 1,
+      "scaling": 5
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Pyke": {
     "difficulty": 7,
@@ -618,7 +1094,14 @@
     "rangeType": "Melee",
     "strengths": ["高い機動力とステルスでロームしやすい", "瀕死の敵を処刑して連続キルを狙える"],
     "weaknesses": ["最大体力を増やせず耐久力が低い", "集団戦後半では敵を捕まえにくい"],
-    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY", "ROAM"]
+    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY", "ROAM"],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 4,
+      "waveClear": 1,
+      "scaling": 2
+    },
+    "archetypes": ["ASSASSIN","CATCH"]
   },
   "TahmKench": {
     "difficulty": 5,
@@ -627,7 +1110,14 @@
     "rangeType": "Melee",
     "strengths": ["味方を飲み込んで危険から救出できる", "高い耐久力とCCで前線を維持できる"],
     "weaknesses": ["遠距離からの継続的なハラスに弱い", "素早く複数の敵を拘束するのが苦手"],
-    "traits": ["CC", "ENGAGE", "PEEL", "IMMOBILE"]
+    "traits": ["CC", "ENGAGE", "PEEL", "IMMOBILE"],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 1,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE","CATCH"]
   },
   "Yasuo": {
     "difficulty": 10,
@@ -651,7 +1141,14 @@
       "MOBILITY",
       "SCALING",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Yone": {
     "difficulty": 8,
@@ -675,7 +1172,14 @@
       "MOBILITY",
       "SPLIT_PUSH",
       "SCALING"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Jax": {
     "difficulty": 5,
@@ -698,7 +1202,14 @@
       "MOBILITY",
       "SPLIT_PUSH",
       "SCALING"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Riven": {
     "difficulty": 8,
@@ -721,7 +1232,14 @@
       "DPS",
       "MOBILITY",
       "SPLIT_PUSH"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Kayn": {
     "difficulty": 8,
@@ -744,7 +1262,14 @@
       "DPS",
       "MOBILITY",
       "ROAM"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Khazix": {
     "difficulty": 6,
@@ -766,7 +1291,14 @@
       "MOBILITY",
       "ROAM",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "Evelynn": {
     "difficulty": 10,
@@ -789,7 +1321,14 @@
       "MOBILITY",
       "ROAM",
       "WEAK_EARLY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 3,
+      "scaling": 5
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "MasterYi": {
     "difficulty": 4,
@@ -813,7 +1352,14 @@
       "MOBILITY",
       "SCALING",
       "WEAK_EARLY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Sylas": {
     "difficulty": 5,
@@ -837,7 +1383,14 @@
       "CC",
       "MOBILITY",
       "SCALING"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 3,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Leblanc": {
     "difficulty": 9,
@@ -861,7 +1414,14 @@
       "MOBILITY",
       "ROAM",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "Talon": {
     "difficulty": 7,
@@ -883,7 +1443,14 @@
       "MOBILITY",
       "ROAM",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "Vladimir": {
     "difficulty": 7,
@@ -906,7 +1473,14 @@
       "DPS",
       "SCALING",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Irelia": {
     "difficulty": 5,
@@ -930,7 +1504,14 @@
       "MOBILITY",
       "SPLIT_PUSH",
       "SCALING"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Gangplank": {
     "difficulty": 9,
@@ -953,7 +1534,14 @@
       "SPLIT_PUSH",
       "SCALING",
       "WEAK_EARLY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Jayce": {
     "difficulty": 7,
@@ -976,7 +1564,14 @@
       "POKE",
       "SIEGE",
       "SPLIT_PUSH"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 3
+    },
+    "archetypes": ["CARRY"]
   },
   "Rengar": {
     "difficulty": 8,
@@ -999,7 +1594,14 @@
       "MOBILITY",
       "ROAM",
       "SPLIT_PUSH"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "Shaco": {
     "difficulty": 9,
@@ -1022,7 +1624,14 @@
       "ROAM",
       "SPLIT_PUSH",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "Zeri": {
     "difficulty": 6,
@@ -1045,7 +1654,14 @@
       "MOBILITY",
       "SCALING",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Twitch": {
     "difficulty": 6,
@@ -1069,7 +1685,14 @@
       "ROAM",
       "SCALING",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "KogMaw": {
     "difficulty": 6,
@@ -1093,7 +1716,14 @@
       "TANK_KILLER",
       "SCALING",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Akshan": {
     "difficulty": 7,
@@ -1117,7 +1747,14 @@
       "MOBILITY",
       "ROAM",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Ambessa": {
     "difficulty": 10,
@@ -1140,7 +1777,14 @@
       "DPS",
       "ENGAGE",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 2,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY","ASSASSIN"]
   },
   "Anivia": {
     "difficulty": 10,
@@ -1163,7 +1807,14 @@
       "PEEL",
       "SCALING",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 4,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Aurora": {
     "difficulty": 5,
@@ -1186,7 +1837,14 @@
       "CC",
       "MOBILITY",
       "ROAM"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "Bard": {
     "difficulty": 9,
@@ -1210,7 +1868,14 @@
       "MOBILITY",
       "ROAM",
       "SCALING"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 4,
+      "waveClear": 1,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","CATCH"]
   },
   "Belveth": {
     "difficulty": 10,
@@ -1233,7 +1898,14 @@
       "MOBILITY",
       "SCALING",
       "WEAK_EARLY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Brand": {
     "difficulty": 4,
@@ -1257,7 +1929,14 @@
       "POKE",
       "CC",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 5,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY"]
   },
   "Briar": {
     "difficulty": 3,
@@ -1281,7 +1960,14 @@
       "CC",
       "ENGAGE",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 4,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Cassiopeia": {
     "difficulty": 10,
@@ -1304,7 +1990,14 @@
       "CC",
       "SCALING",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Chogath": {
     "difficulty": 5,
@@ -1328,7 +2021,14 @@
       "CC",
       "ENGAGE",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Corki": {
     "difficulty": 6,
@@ -1352,7 +2052,14 @@
       "POKE",
       "MOBILITY",
       "SIEGE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY"]
   },
   "Diana": {
     "difficulty": 4,
@@ -1375,7 +2082,14 @@
       "DPS",
       "ENGAGE",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 2,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "DrMundo": {
     "difficulty": 5,
@@ -1398,7 +2112,14 @@
       "TANK_KILLER",
       "SCALING",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Fiddlesticks": {
     "difficulty": 9,
@@ -1422,7 +2143,14 @@
       "ENGAGE",
       "ROAM",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": []
   },
   "Galio": {
     "difficulty": 5,
@@ -1446,7 +2174,14 @@
       "ENGAGE",
       "PEEL",
       "ROAM"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 5,
+      "waveClear": 4,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Gnar": {
     "difficulty": 8,
@@ -1470,7 +2205,14 @@
       "CC",
       "ENGAGE",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 4,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Gragas": {
     "difficulty": 5,
@@ -1494,7 +2236,14 @@
       "ENGAGE",
       "PEEL",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 5,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE","CATCH"]
   },
   "Graves": {
     "difficulty": 3,
@@ -1516,7 +2265,14 @@
       "DPS",
       "MOBILITY",
       "SCALING"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Hecarim": {
     "difficulty": 6,
@@ -1540,7 +2296,14 @@
       "ENGAGE",
       "MOBILITY",
       "ROAM"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 2,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY","ASSASSIN"]
   },
   "Heimerdinger": {
     "difficulty": 8,
@@ -1564,7 +2327,14 @@
       "SIEGE",
       "IMMOBILE",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY"]
   },
   "Hwei": {
     "difficulty": 9,
@@ -1588,7 +2358,14 @@
       "CC",
       "SIEGE",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 3,
+      "waveClear": 5,
+      "scaling": 3
+    },
+    "archetypes": []
   },
   "Illaoi": {
     "difficulty": 4,
@@ -1611,7 +2388,14 @@
       "TANK_KILLER",
       "SPLIT_PUSH",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Ivern": {
     "difficulty": 7,
@@ -1635,7 +2419,14 @@
       "MOBILITY",
       "SCALING",
       "WEAK_EARLY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 4,
+      "waveClear": 1,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Kalista": {
     "difficulty": 7,
@@ -1657,7 +2448,14 @@
       "ENGAGE",
       "MOBILITY",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 2,
+      "waveClear": 4,
+      "scaling": 2
+    },
+    "archetypes": ["CARRY"]
   },
   "Karthus": {
     "difficulty": 7,
@@ -1680,7 +2478,14 @@
       "IMMOBILE",
       "SQUISHY",
       "WEAK_EARLY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Kayle": {
     "difficulty": 7,
@@ -1704,7 +2509,14 @@
       "SCALING",
       "SQUISHY",
       "WEAK_EARLY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Kennen": {
     "difficulty": 4,
@@ -1727,7 +2539,14 @@
       "ENGAGE",
       "MOBILITY",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": []
   },
   "Kled": {
     "difficulty": 7,
@@ -1750,7 +2569,14 @@
       "ENGAGE",
       "MOBILITY",
       "SPLIT_PUSH"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 2,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Lillia": {
     "difficulty": 8,
@@ -1774,7 +2600,14 @@
       "ENGAGE",
       "MOBILITY",
       "SCALING"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 4,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Lissandra": {
     "difficulty": 6,
@@ -1796,7 +2629,14 @@
       "CC",
       "ENGAGE",
       "PEEL"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 5,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["CATCH"]
   },
   "Malphite": {
     "difficulty": 2,
@@ -1820,7 +2660,14 @@
       "ENGAGE",
       "PEEL",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Malzahar": {
     "difficulty": 6,
@@ -1842,7 +2689,14 @@
       "CC",
       "SIEGE",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 5,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY","CATCH"]
   },
   "Maokai": {
     "difficulty": 3,
@@ -1865,7 +2719,14 @@
       "ENGAGE",
       "PEEL",
       "ROAM"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 2,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE","CATCH"]
   },
   "Mel": {
     "difficulty": 5,
@@ -1889,7 +2750,14 @@
       "PEEL",
       "SIEGE",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 2,
+      "waveClear": 5,
+      "scaling": 3
+    },
+    "archetypes": []
   },
   "MonkeyKing": {
     "difficulty": 3,
@@ -1913,7 +2781,14 @@
       "CC",
       "ENGAGE",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 4,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Naafiri": {
     "difficulty": 2,
@@ -1936,7 +2811,14 @@
       "MOBILITY",
       "ROAM",
       "SPLIT_PUSH"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "Nasus": {
     "difficulty": 6,
@@ -1960,7 +2842,14 @@
       "SPLIT_PUSH",
       "SCALING",
       "WEAK_EARLY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Neeko": {
     "difficulty": 5,
@@ -1984,7 +2873,14 @@
       "ENGAGE",
       "ROAM",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["CATCH"]
   },
   "Nidalee": {
     "difficulty": 8,
@@ -2008,7 +2904,14 @@
       "MOBILITY",
       "ROAM",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 3,
+      "scaling": 2
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "Nilah": {
     "difficulty": 10,
@@ -2031,7 +2934,14 @@
       "ENGAGE",
       "MOBILITY",
       "SCALING"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 2,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Nunu": {
     "difficulty": 4,
@@ -2054,7 +2964,14 @@
       "CC",
       "ENGAGE",
       "ROAM"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Olaf": {
     "difficulty": 3,
@@ -2077,7 +2994,14 @@
       "TANK_KILLER",
       "ENGAGE",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 2,
+      "waveClear": 4,
+      "scaling": 2
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Pantheon": {
     "difficulty": 4,
@@ -2100,7 +3024,14 @@
       "CC",
       "ENGAGE",
       "ROAM"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 2
+    },
+    "archetypes": ["ASSASSIN","CATCH"]
   },
   "Poppy": {
     "difficulty": 6,
@@ -2123,7 +3054,14 @@
       "ENGAGE",
       "PEEL",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 2,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE","CATCH"]
   },
   "Qiyana": {
     "difficulty": 8,
@@ -2146,7 +3084,14 @@
       "MOBILITY",
       "ROAM",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 3,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "Quinn": {
     "difficulty": 5,
@@ -2170,7 +3115,14 @@
       "MOBILITY",
       "ROAM",
       "SPLIT_PUSH"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Rammus": {
     "difficulty": 5,
@@ -2192,7 +3144,14 @@
       "ENGAGE",
       "PEEL",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 2,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "RekSai": {
     "difficulty": 3,
@@ -2215,7 +3174,14 @@
       "CC",
       "ENGAGE",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 4,
+      "waveClear": 3,
+      "scaling": 2
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Rell": {
     "difficulty": 5,
@@ -2238,7 +3204,14 @@
       "ENGAGE",
       "PEEL",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 1,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE","CATCH"]
   },
   "Renata": {
     "difficulty": 8,
@@ -2262,7 +3235,14 @@
       "SCALING",
       "IMMOBILE",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 4,
+      "waveClear": 1,
+      "scaling": 5
+    },
+    "archetypes": ["CATCH"]
   },
   "Rumble": {
     "difficulty": 10,
@@ -2285,7 +3265,14 @@
       "POKE",
       "ENGAGE",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 2,
+      "waveClear": 5,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY"]
   },
   "Ryze": {
     "difficulty": 7,
@@ -2308,7 +3295,14 @@
       "SPLIT_PUSH",
       "SCALING",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Senna": {
     "difficulty": 7,
@@ -2332,7 +3326,14 @@
       "PEEL",
       "SCALING",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 2,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Seraphine": {
     "difficulty": 5,
@@ -2356,7 +3357,14 @@
       "ENGAGE",
       "PEEL",
       "SCALING"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 5,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Sett": {
     "difficulty": 2,
@@ -2380,7 +3388,14 @@
       "CC",
       "ENGAGE",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 4,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Shen": {
     "difficulty": 4,
@@ -2403,7 +3418,14 @@
       "PEEL",
       "ROAM",
       "SPLIT_PUSH"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 5,
+      "waveClear": 2,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Shyvana": {
     "difficulty": 4,
@@ -2427,7 +3449,14 @@
       "MOBILITY",
       "SCALING",
       "WEAK_EARLY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Singed": {
     "difficulty": 5,
@@ -2451,7 +3480,14 @@
       "ENGAGE",
       "MOBILITY",
       "SPLIT_PUSH"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 4,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Sion": {
     "difficulty": 5,
@@ -2475,7 +3511,14 @@
       "ENGAGE",
       "PEEL",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE"]
   },
   "Skarner": {
     "difficulty": 5,
@@ -2498,7 +3541,14 @@
       "ENGAGE",
       "PEEL",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 5,
+      "waveClear": 2,
+      "scaling": 3
+    },
+    "archetypes": ["FRONTLINE","CATCH"]
   },
   "Smolder": {
     "difficulty": 6,
@@ -2522,7 +3572,14 @@
       "SCALING",
       "SQUISHY",
       "WEAK_EARLY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Swain": {
     "difficulty": 8,
@@ -2546,7 +3603,14 @@
       "ENGAGE",
       "SCALING",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 4,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Taliyah": {
     "difficulty": 5,
@@ -2570,7 +3634,14 @@
       "CC",
       "MOBILITY",
       "ROAM"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 5,
+      "scaling": 3
+    },
+    "archetypes": ["ASSASSIN"]
   },
   "Teemo": {
     "difficulty": 6,
@@ -2594,7 +3665,14 @@
       "SPLIT_PUSH",
       "SCALING",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Tristana": {
     "difficulty": 4,
@@ -2618,7 +3696,14 @@
       "MOBILITY",
       "SIEGE",
       "SCALING"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "Trundle": {
     "difficulty": 5,
@@ -2641,7 +3726,14 @@
       "TANK_KILLER",
       "SPLIT_PUSH",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Tryndamere": {
     "difficulty": 5,
@@ -2664,7 +3756,14 @@
       "MOBILITY",
       "SPLIT_PUSH",
       "SCALING"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 3,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY","ASSASSIN"]
   },
   "TwistedFate": {
     "difficulty": 9,
@@ -2688,7 +3787,14 @@
       "ROAM",
       "SPLIT_PUSH",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 3,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["CARRY","CATCH"]
   },
   "Udyr": {
     "difficulty": 7,
@@ -2711,7 +3817,14 @@
       "CC",
       "ENGAGE",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 4,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Urgot": {
     "difficulty": 8,
@@ -2735,7 +3848,14 @@
       "TANK_KILLER",
       "CC",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 3,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Velkoz": {
     "difficulty": 8,
@@ -2759,7 +3879,14 @@
       "TANK_KILLER",
       "CC",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 3,
+      "waveClear": 3,
+      "scaling": 4
+    },
+    "archetypes": ["CARRY"]
   },
   "Vex": {
     "difficulty": 5,
@@ -2782,7 +3909,14 @@
       "ENGAGE",
       "PEEL",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 2,
+      "cc": 5,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": []
   },
   "Volibear": {
     "difficulty": 3,
@@ -2805,7 +3939,14 @@
       "DPS",
       "CC",
       "ENGAGE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 4,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Warwick": {
     "difficulty": 3,
@@ -2828,7 +3969,14 @@
       "CC",
       "ENGAGE",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 4,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY","CATCH"]
   },
   "Xerath": {
     "difficulty": 8,
@@ -2852,7 +4000,14 @@
       "SIEGE",
       "IMMOBILE",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 3
+    },
+    "archetypes": []
   },
   "XinZhao": {
     "difficulty": 2,
@@ -2876,7 +4031,14 @@
       "CC",
       "ENGAGE",
       "MOBILITY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 4,
+      "cc": 4,
+      "waveClear": 4,
+      "scaling": 4
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Yorick": {
     "difficulty": 6,
@@ -2899,7 +4061,14 @@
       "SPLIT_PUSH",
       "SCALING",
       "IMMOBILE"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 5,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["FRONTLINE","CARRY"]
   },
   "Yunara": {
     "difficulty": 4,
@@ -2922,7 +4091,14 @@
       "SCALING",
       "SQUISHY",
       "WEAK_EARLY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 4,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Ziggs": {
     "difficulty": 4,
@@ -2945,7 +4121,14 @@
       "SIEGE",
       "IMMOBILE",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 1,
+      "waveClear": 5,
+      "scaling": 3
+    },
+    "archetypes": []
   },
   "Zilean": {
     "difficulty": 6,
@@ -2969,7 +4152,14 @@
       "MOBILITY",
       "SCALING",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 4,
+      "waveClear": 2,
+      "scaling": 5
+    },
+    "archetypes": ["CARRY"]
   },
   "Zoe": {
     "difficulty": 5,
@@ -2992,6 +4182,13 @@
       "CC",
       "MOBILITY",
       "SQUISHY"
-    ]
+    ],
+    "ratings": {
+      "tankiness": 1,
+      "cc": 3,
+      "waveClear": 3,
+      "scaling": 3
+    },
+    "archetypes": ["CATCH"]
   }
 }
