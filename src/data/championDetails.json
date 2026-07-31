@@ -268,5 +268,185 @@
     "strengths": ["羽根による範囲火力と拘束を持つ", "アルティメットで重要な攻撃を回避できる"],
     "weaknesses": ["羽根の配置が悪いと火力とCCが落ちる", "攻撃射程が比較的短い"],
     "traits": ["DPS", "CC", "PEEL", "SCALING"]
+  },
+  "LeeSin": {
+    "difficulty": 6,
+    "class": ["Fighter", "Assassin"],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": ["高い機動力で序盤からレーンへ介入できる", "アルティメットで敵の位置を大きく動かせる"],
+    "weaknesses": ["操作難度が高い", "終盤は集団戦での役割が限定されやすい"],
+    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY", "ROAM"]
+  },
+  "JarvanIV": {
+    "difficulty": 5,
+    "class": ["Fighter", "Tank"],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": ["長距離から素早く戦闘を開始できる", "地形生成で敵の移動を制限できる"],
+    "weaknesses": ["突入後に離脱しにくい", "アルティメットが味方の移動も妨げる場合がある"],
+    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY"]
+  },
+  "Vi": {
+    "difficulty": 4,
+    "class": ["Fighter", "Assassin"],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": ["対象指定アルティメットで後衛を確実に捕まえられる", "単体へのバーストと防御低下を持つ"],
+    "weaknesses": ["突入後の離脱手段が少ない", "チャージスキルを外すと接近しにくい"],
+    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY"]
+  },
+  "Sejuani": {
+    "difficulty": 4,
+    "class": ["Tank"],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": ["複数のCCで敵の行動を長く制限できる", "遠距離から集団戦を開始できる"],
+    "weaknesses": ["単独での継続火力が低い", "近接味方が少ないとスタンを活用しにくい"],
+    "traits": ["CC", "ENGAGE", "PEEL", "MOBILITY"]
+  },
+  "Viego": {
+    "difficulty": 5,
+    "class": ["Fighter", "Assassin"],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": ["キル参加後に敵の身体を奪って連戦できる", "単体への継続火力と追撃性能が高い"],
+    "weaknesses": ["最初のキルを取れないと集団戦で影響を出しにくい", "CCで攻撃を止められやすい"],
+    "traits": ["BURST", "DPS", "MOBILITY", "SCALING"]
+  },
+  "Elise": {
+    "difficulty": 9,
+    "class": ["Assassin", "Mage"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["序盤から高い単体バーストを持つ", "スタンと対象指定不可でタワーダイブしやすい"],
+    "weaknesses": ["終盤は火力と耐久力が不足しやすい", "スキルショットを外すとガンク性能が落ちる"],
+    "traits": ["BURST", "CC", "MOBILITY", "ROAM"]
+  },
+  "Nocturne": {
+    "difficulty": 4,
+    "class": ["Fighter", "Assassin"],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": ["長距離アルティメットで孤立した敵へ接近できる", "敵の視界を制限して連携を崩せる"],
+    "weaknesses": ["突入後に離脱しにくい", "集団行動する敵には対象を倒し切りにくい"],
+    "traits": ["BURST", "ENGAGE", "MOBILITY", "ROAM"]
+  },
+  "Amumu": {
+    "difficulty": 3,
+    "class": ["Tank", "Support"],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": ["広範囲のCCで集団戦を開始できる", "複数の敵へ継続的に魔法ダメージを与えられる"],
+    "weaknesses": ["序盤に敵ジャングラーから侵入されやすい", "接近スキルを外すと影響力が低い"],
+    "traits": ["DPS", "CC", "ENGAGE", "PEEL", "WEAK_EARLY"]
+  },
+  "Kindred": {
+    "difficulty": 4,
+    "class": ["Marksman"],
+    "damageType": "AD",
+    "rangeType": "Ranged",
+    "strengths": ["マーク獲得により射程と火力を伸ばせる", "アルティメットで味方の死亡を一時的に防げる"],
+    "weaknesses": ["マーク管理が敵の動きに左右される", "序盤に遅れると射程と火力を伸ばしにくい"],
+    "traits": ["DPS", "MOBILITY", "SCALING", "SQUISHY", "WEAK_EARLY"]
+  },
+  "Zac": {
+    "difficulty": 8,
+    "class": ["Tank", "Fighter"],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": ["視界外から長距離のエンゲージができる", "複数のノックアップで敵陣を崩せる"],
+    "weaknesses": ["接近スキルのチャージ中に妨害されやすい", "回復用の細胞を拾えないと耐久力が落ちる"],
+    "traits": ["CC", "ENGAGE", "PEEL", "MOBILITY"]
+  },
+  "Aatrox": {
+    "difficulty": 4,
+    "class": ["Fighter"],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": ["範囲ノックアップと回復で集団戦を継続できる", "複数の敵へ高い範囲ダメージを与えられる"],
+    "weaknesses": ["スキルの予備動作が長い", "回復阻害と機動力の高い敵に弱い"],
+    "traits": ["DPS", "CC", "ENGAGE", "MOBILITY"]
+  },
+  "Darius": {
+    "difficulty": 2,
+    "class": ["Fighter", "Tank"],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": ["長期戦で出血を重ねて非常に高い火力を出せる", "確定ダメージのアルティメットで連続キルを狙える"],
+    "weaknesses": ["自力の移動スキルを持たない", "遠距離から攻撃されると接近しにくい"],
+    "traits": ["DPS", "TANK_KILLER", "CC", "IMMOBILE"]
+  },
+  "Ornn": {
+    "difficulty": 5,
+    "class": ["Tank"],
+    "damageType": "Mixed",
+    "rangeType": "Melee",
+    "strengths": ["長距離から広範囲の集団戦を開始できる", "味方の装備を強化して終盤の価値を高める"],
+    "weaknesses": ["移動スキルの使用条件が限られる", "スキルの予備動作を回避されやすい"],
+    "traits": ["CC", "ENGAGE", "PEEL", "SCALING", "IMMOBILE"]
+  },
+  "Garen": {
+    "difficulty": 5,
+    "class": ["Fighter", "Tank"],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": ["高い耐久力と自己回復でレーンを維持しやすい", "低体力の敵をアルティメットで処理できる"],
+    "weaknesses": ["壁を越える移動スキルを持たない", "遠距離からのスローやポークに弱い"],
+    "traits": ["BURST", "DPS", "SPLIT_PUSH", "IMMOBILE"]
+  },
+  "Camille": {
+    "difficulty": 4,
+    "class": ["Fighter", "Assassin"],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": ["壁を使って長距離から敵へ接近できる", "確定ダメージで耐久力の高い敵にも対応できる"],
+    "weaknesses": ["主要スキルのクールダウン中は戦闘力が落ちる", "複数相手の集団戦より単体戦を得意とする"],
+    "traits": ["BURST", "TANK_KILLER", "MOBILITY", "SPLIT_PUSH", "SCALING"]
+  },
+  "Fiora": {
+    "difficulty": 3,
+    "class": ["Fighter", "Assassin"],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": ["最大体力依存の確定ダメージを与えられる", "一対一とスプリットプッシュに非常に強い"],
+    "weaknesses": ["集団戦で複数の敵へ影響を出しにくい", "急所を攻撃できないと火力が落ちる"],
+    "traits": ["DPS", "TANK_KILLER", "MOBILITY", "SPLIT_PUSH", "SCALING"]
+  },
+  "Gwen": {
+    "difficulty": 5,
+    "class": ["Fighter"],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": ["最大体力依存ダメージで前衛を削りやすい", "装備完成後の継続火力が高い"],
+    "weaknesses": ["序盤のレーン影響力が低い", "CCが少なく味方の拘束に依存する"],
+    "traits": ["DPS", "TANK_KILLER", "SPLIT_PUSH", "SCALING", "WEAK_EARLY"]
+  },
+  "Renekton": {
+    "difficulty": 3,
+    "class": ["Fighter", "Tank"],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": ["序盤の短時間トレードとバーストが強い", "ダッシュと対象指定スタンで後衛へ圧力をかけられる"],
+    "weaknesses": ["終盤は火力が伸びにくい", "怒りがない状態ではスキル性能が落ちる"],
+    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY"]
+  },
+  "KSante": {
+    "difficulty": 9,
+    "class": ["Tank", "Fighter"],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": ["複数の移動阻害で味方を守れる", "敵一体を集団から分断して戦える"],
+    "weaknesses": ["操作難度が高い", "アルティメット後は耐久力が低下する"],
+    "traits": ["CC", "ENGAGE", "PEEL", "MOBILITY"]
+  },
+  "Mordekaiser": {
+    "difficulty": 4,
+    "class": ["Fighter", "Mage"],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": ["継続ダメージと割合ダメージで前衛を倒しやすい", "アルティメットで重要な敵を集団戦から隔離できる"],
+    "weaknesses": ["自力の移動スキルを持たない", "遠距離からの攻撃とスローに弱い"],
+    "traits": ["DPS", "TANK_KILLER", "CC", "IMMOBILE"]
   }
 }
