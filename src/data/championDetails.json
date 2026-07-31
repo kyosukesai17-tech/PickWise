@@ -166,9 +166,9 @@
     "class": ["Mage", "Support"],
     "damageType": "AP",
     "rangeType": "Ranged",
-    "strengths": ["長射程から拘束とバーストを狙える", "ポークとシージに優れる"],
-    "weaknesses": ["移動スキルを持たない", "スキルショットへの依存度が高い"],
-    "traits": ["BURST", "POKE", "CC", "SIEGE", "IMMOBILE"]
+    "strengths": ["長射程から拘束とバーストを狙える", "範囲シールドで味方を守りながらポークできる"],
+    "weaknesses": ["移動スキルがなく接近されると弱い", "耐久力が低く主要スキルへの依存度が高い"],
+    "traits": ["BURST", "POKE", "CC", "PEEL", "SQUISHY"]
   },
   "Zed": {
     "difficulty": 7,
