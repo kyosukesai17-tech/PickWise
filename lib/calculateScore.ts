@@ -2,6 +2,7 @@ import { analyzeTeam } from "./analyzeTeam";
 import { analyzeEnemyTeam } from "./analyzeEnemyTeam";
 import { analyzeAllySynergy } from "./analyzeAllySynergy";
 import { analyzeRoleOpponent } from "./analyzeRoleOpponent";
+import { analyzeChampionSynergy } from "./analyzeChampionSynergy";
 import {
   analyzeTraits,
   getChampionDetail,
@@ -462,6 +463,14 @@ export function calculateScore(
 
     score += traitScore * TRAIT_SCORE_WEIGHT;
   }
+
+  const championSynergy = analyzeChampionSynergy(
+    allyTeam,
+    selectedRole,
+    champion,
+  );
+
+  score += championSynergy.score;
 
   return {
     score,
