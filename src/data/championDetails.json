@@ -448,5 +448,185 @@
     "strengths": ["継続ダメージと割合ダメージで前衛を倒しやすい", "アルティメットで重要な敵を集団戦から隔離できる"],
     "weaknesses": ["自力の移動スキルを持たない", "遠距離からの攻撃とスローに弱い"],
     "traits": ["DPS", "TANK_KILLER", "CC", "IMMOBILE"]
+  },
+  "Thresh": {
+    "difficulty": 7,
+    "class": ["Support", "Tank"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["豊富なCCで敵を捕まえられる", "ランタンで味方の位置を安全に調整できる"],
+    "weaknesses": ["スキルショットへの依存度が高い", "外した後は脅威が大きく下がる"],
+    "traits": ["CC", "ENGAGE", "PEEL", "ROAM"]
+  },
+  "Nautilus": {
+    "difficulty": 6,
+    "class": ["Tank", "Support"],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": ["複数のCCで対象を長時間拘束できる", "確定ノックアップから集団戦を開始しやすい"],
+    "weaknesses": ["仕掛けた後に離脱しにくい", "遠距離から継続的に削られやすい"],
+    "traits": ["CC", "ENGAGE", "PEEL", "ROAM"]
+  },
+  "Leona": {
+    "difficulty": 4,
+    "class": ["Tank", "Support"],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": ["連続したCCで敵を拘束できる", "高い耐久力で強引に集団戦を始められる"],
+    "weaknesses": ["離脱手段に乏しい", "遠距離からのハラスに弱い"],
+    "traits": ["CC", "ENGAGE", "PEEL", "ROAM"]
+  },
+  "Lulu": {
+    "difficulty": 5,
+    "class": ["Support", "Mage"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["変身とノックアップで味方を守りやすい", "キャリーの攻撃性能と生存力を強化できる"],
+    "weaknesses": ["自身の耐久力が低い", "単独で試合を動かす力が低い"],
+    "traits": ["CC", "PEEL", "SCALING", "SQUISHY"]
+  },
+  "Soraka": {
+    "difficulty": 3,
+    "class": ["Support", "Mage"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["継続的な回復で味方を支えられる", "グローバル回復で離れた味方も救援できる"],
+    "weaknesses": ["自身が狙われると倒されやすい", "回復阻害の影響を強く受ける"],
+    "traits": ["PEEL", "SCALING", "IMMOBILE", "SQUISHY"]
+  },
+  "Janna": {
+    "difficulty": 7,
+    "class": ["Support", "Mage"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["ノックアップとノックバックで突進を拒否できる", "移動速度を活かして味方を支援しやすい"],
+    "weaknesses": ["自身の耐久力が低い", "攻撃的な仕掛けを作りにくい"],
+    "traits": ["CC", "PEEL", "MOBILITY", "ROAM", "SQUISHY"]
+  },
+  "Braum": {
+    "difficulty": 4,
+    "class": ["Support", "Tank"],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": ["盾で飛来物を防ぎ味方を守れる", "固有スタックによるスタンで反撃しやすい"],
+    "weaknesses": ["能動的な長距離エンゲージに乏しい", "遠距離からの継続的なハラスに弱い"],
+    "traits": ["CC", "PEEL", "ENGAGE", "MOBILITY"]
+  },
+  "Rakan": {
+    "difficulty": 5,
+    "class": ["Support"],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": ["高い機動力で素早く集団戦を開始できる", "シールドと回復で味方を支援できる"],
+    "weaknesses": ["CCを受けると離脱しにくい", "スキルの再使用待ち中は耐久力が低い"],
+    "traits": ["CC", "ENGAGE", "PEEL", "MOBILITY", "ROAM"]
+  },
+  "Nami": {
+    "difficulty": 5,
+    "class": ["Support", "Mage"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["回復と強化でレーン戦を支えられる", "広範囲のCCで集団戦を始めたり守ったりできる"],
+    "weaknesses": ["自身の耐久力が低い", "主要CCが当てにくい"],
+    "traits": ["CC", "ENGAGE", "PEEL", "SQUISHY"]
+  },
+  "Milio": {
+    "difficulty": 4,
+    "class": ["Support"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["味方の射程を伸ばして安全な攻撃を支援できる", "範囲浄化で味方のCCを解除できる"],
+    "weaknesses": ["自身の耐久力が低い", "単独で敵を捕まえる力が低い"],
+    "traits": ["PEEL", "SCALING", "IMMOBILE", "SQUISHY"]
+  },
+  "Blitzcrank": {
+    "difficulty": 4,
+    "class": ["Tank", "Support"],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": ["長距離フックで敵を孤立させられる", "序盤から高いキルプレッシャーを持つ"],
+    "weaknesses": ["フックを外すと影響力が大きく落ちる", "継続的な遠距離ハラスに弱い"],
+    "traits": ["BURST", "CC", "ENGAGE", "ROAM"]
+  },
+  "Morgana": {
+    "difficulty": 1,
+    "class": ["Mage", "Support"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["長時間の拘束で敵を捕まえられる", "スペルシールドで味方をCCから守れる"],
+    "weaknesses": ["主要な拘束スキルが当てにくい", "集団戦でアルティメットを完遂しにくい"],
+    "traits": ["CC", "PEEL", "POKE", "IMMOBILE"]
+  },
+  "Zyra": {
+    "difficulty": 7,
+    "class": ["Mage", "Support"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["植物による継続的なハラスが強い", "広範囲CCで集団戦を制御できる"],
+    "weaknesses": ["自身の耐久力が低い", "移動スキルがなく接近されると弱い"],
+    "traits": ["DPS", "POKE", "CC", "IMMOBILE", "SQUISHY"]
+  },
+  "Karma": {
+    "difficulty": 5,
+    "class": ["Mage", "Support"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["序盤から強い遠距離ハラスを行える", "範囲シールドと加速で味方を支援できる"],
+    "weaknesses": ["終盤は火力の伸びが低い", "ハードCCの即時性に乏しい"],
+    "traits": ["POKE", "PEEL", "MOBILITY", "SIEGE"]
+  },
+  "Sona": {
+    "difficulty": 4,
+    "class": ["Support", "Mage"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["範囲回復と強化で集団戦を継続的に支援できる", "終盤に高い支援性能を発揮する"],
+    "weaknesses": ["自身の耐久力が非常に低い", "序盤のレーン戦で圧力を受けやすい"],
+    "traits": ["POKE", "PEEL", "SCALING", "SQUISHY", "WEAK_EARLY"]
+  },
+  "Yuumi": {
+    "difficulty": 2,
+    "class": ["Support", "Mage"],
+    "damageType": "AP",
+    "rangeType": "Ranged",
+    "strengths": ["味方に付着して安全に支援を続けられる", "シールドと回復で味方キャリーを強化できる"],
+    "weaknesses": ["単独行動時の生存力が非常に低い", "味方の性能と位置取りへの依存度が高い"],
+    "traits": ["POKE", "PEEL", "SCALING", "SQUISHY", "WEAK_EARLY"]
+  },
+  "Alistar": {
+    "difficulty": 7,
+    "class": ["Tank", "Support"],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": ["ノックアップとノックバックで集団戦を操作できる", "アルティメット中は高い耐久力を持つ"],
+    "weaknesses": ["コンボ後は影響力が下がる", "遠距離からのハラスに弱い"],
+    "traits": ["CC", "ENGAGE", "PEEL", "ROAM"]
+  },
+  "Taric": {
+    "difficulty": 3,
+    "class": ["Support", "Fighter"],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": ["範囲無敵で集団戦の大ダメージを防げる", "回復とスタンで前線を継続的に支援できる"],
+    "weaknesses": ["遠距離構成に接近しにくい", "アルティメット発動までに時間がかかる"],
+    "traits": ["CC", "PEEL", "SCALING", "IMMOBILE"]
+  },
+  "Pyke": {
+    "difficulty": 7,
+    "class": ["Support", "Assassin"],
+    "damageType": "AD",
+    "rangeType": "Melee",
+    "strengths": ["高い機動力とステルスでロームしやすい", "瀕死の敵を処刑して連続キルを狙える"],
+    "weaknesses": ["最大体力を増やせず耐久力が低い", "集団戦後半では敵を捕まえにくい"],
+    "traits": ["BURST", "CC", "ENGAGE", "MOBILITY", "ROAM"]
+  },
+  "TahmKench": {
+    "difficulty": 5,
+    "class": ["Support", "Tank"],
+    "damageType": "AP",
+    "rangeType": "Melee",
+    "strengths": ["味方を飲み込んで危険から救出できる", "高い耐久力とCCで前線を維持できる"],
+    "weaknesses": ["遠距離からの継続的なハラスに弱い", "素早く複数の敵を拘束するのが苦手"],
+    "traits": ["CC", "ENGAGE", "PEEL", "IMMOBILE"]
   }
 }
