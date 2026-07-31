@@ -116,13 +116,18 @@ export default function RecommendationSection({
           selectedRole,
           recommendation.champion,
         ).reasons;
+        const visibleSynergyReasons = synergyReasons.slice(0, 3);
+        const visibleTraitReasons = traitReasons.slice(
+          0,
+          3 - visibleSynergyReasons.length,
+        );
 
         return {
           ...recommendation,
           matchupReasons: [
-            ...traitReasons,
-            ...synergyReasons,
-          ].slice(0, 3),
+            ...visibleTraitReasons,
+            ...visibleSynergyReasons,
+          ],
         };
       });
 
