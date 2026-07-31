@@ -10,10 +10,9 @@ import DraftAnalysisSummary from "../components/DraftAnalysisSummary";
 import RecommendationSection from "../components/RecommendationSection";
 
 import { useDraftPersistence } from "../hooks/useDraftPersistence";
+import { ROLE_INDEX } from "../lib/role";
 
-import type {
-  DraftSnapshot,
-} from "../lib/draftShare";
+import type { DraftSnapshot } from "../lib/draftShare";
 
 import type {
   Champion,
@@ -120,6 +119,23 @@ export default function Home() {
     );
   }
 
+  function selectRecommendedChampion(
+    champion: Champion,
+  ) {
+    setAllyTeam(
+      (currentTeam) => {
+        const nextTeam =
+          [...currentTeam];
+
+        nextTeam[
+          ROLE_INDEX[selectedRole]
+        ] = champion;
+
+        return nextTeam;
+      },
+    );
+  }
+
   if (!isDraftLoaded) {
     return (
       <main className="flex min-h-screen items-center justify-center bg-slate-950 text-white">
@@ -196,6 +212,9 @@ export default function Home() {
           enemyBans={enemyBans}
           selectedRole={
             selectedRole
+          }
+          onSelectChampion={
+            selectRecommendedChampion
           }
         />
       </div>

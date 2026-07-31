@@ -4,19 +4,12 @@ import {
 } from "../data/championData";
 
 import { TRAITS } from "../data/championData/traits";
+import { ROLE_INDEX } from "./role";
 
 import type {
   Champion,
   Role,
 } from "../types/champion";
-
-const ROLE_INDEX: Record<Role, number> = {
-  TOP: 0,
-  JG: 1,
-  MID: 2,
-  ADC: 3,
-  SUP: 4,
-};
 
 export interface RoleOpponentAnalysis {
   opponent: Champion | null;

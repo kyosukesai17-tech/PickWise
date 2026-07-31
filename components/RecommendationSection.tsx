@@ -6,6 +6,7 @@ import ChampionCard from "./ChampionCard";
 
 import { analyzeTeam } from "../lib/analyzeTeam";
 import { recommend } from "../lib/recommend";
+import { ROLE_INDEX } from "../lib/role";
 
 import type {
   Champion,
@@ -18,6 +19,9 @@ type RecommendationSectionProps = {
   allyBans: (Champion | null)[];
   enemyBans: (Champion | null)[];
   selectedRole: Role;
+  onSelectChampion: (
+    champion: Champion,
+  ) => void;
 };
 
 type TeamNeed = {
@@ -31,9 +35,12 @@ export default function RecommendationSection({
   allyBans,
   enemyBans,
   selectedRole,
+  onSelectChampion,
 }: RecommendationSectionProps) {
-  const [includeTemporaryData, setIncludeTemporaryData] =
-    useState(true);
+  const [
+    includeTemporaryData,
+    setIncludeTemporaryData,
+  ] = useState(true);
 
   const analysis =
     analyzeTeam(allyTeam);
@@ -46,6 +53,11 @@ export default function RecommendationSection({
       enemyBans,
       selectedRole,
     );
+
+  const selectedAllyChampion =
+    allyTeam[
+      ROLE_INDEX[selectedRole]
+    ] ?? null;
 
   const teamNeeds: TeamNeed[] = [
     {
@@ -156,7 +168,9 @@ export default function RecommendationSection({
               type="button"
               role="switch"
               aria-label="仮データを含める"
-              aria-checked={includeTemporaryData}
+              aria-checked={
+                includeTemporaryData
+              }
               onClick={() =>
                 setIncludeTemporaryData(
                   (current) => !current,
@@ -190,7 +204,7 @@ export default function RecommendationSection({
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
+      <div className="flex flex-wrap items-center justify-between gap-3 text-sm">
         <p className="text-slate-400">
           表示対象
           <span className="ml-2 font-semibold text-sky-300">
@@ -208,6 +222,22 @@ export default function RecommendationSection({
           最大10件を表示
         </p>
       </div>
+
+      {selectedAllyChampion && (
+        <div className="rounded-lg border border-sky-500/30 bg-sky-500/10 px-4 py-3">
+          <p className="text-sm text-sky-200">
+            候補を選択すると、現在の味方
+            <span className="mx-1 font-semibold">
+              {selectedRole}
+            </span>
+            枠の
+            <span className="mx-1 font-semibold">
+              {selectedAllyChampion.name}
+            </span>
+            と置き換わります。
+          </p>
+        </div>
+      )}
 
       {filteredRecommendations.length === 0 ? (
         <div className="rounded-lg border border-slate-800 bg-slate-950/40 p-5">
@@ -233,7 +263,7 @@ export default function RecommendationSection({
                 }
                 className="rounded-lg border border-slate-700 bg-slate-800 p-4"
               >
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex flex-wrap items-start justify-between gap-4">
                   <div className="flex min-w-0 items-center gap-3">
                     <span className="w-8 shrink-0 text-center font-bold text-yellow-400">
                       {index === 0
@@ -269,9 +299,26 @@ export default function RecommendationSection({
                     </div>
                   </div>
 
-                  <span className="shrink-0 font-semibold text-yellow-400">
-                    {recommendation.score} pt
-                  </span>
+                  <div className="flex shrink-0 flex-col items-end gap-3">
+                    <span className="font-semibold text-yellow-400">
+                      {recommendation.score} pt
+                    </span>
+
+                    <button
+                      type="button"
+                      onClick={() =>
+                        onSelectChampion(
+                          recommendation
+                            .champion,
+                        )
+                      }
+                      className="rounded-lg border border-sky-500/50 bg-sky-500/10 px-3 py-2 text-sm font-semibold text-sky-300 transition hover:bg-sky-500/20"
+                    >
+                      {selectedAllyChampion
+                        ? `${selectedRole}を変更`
+                        : `${selectedRole}に設定`}
+                    </button>
+                  </div>
                 </div>
 
                 <div className="mt-4 border-t border-slate-700 pt-3">
