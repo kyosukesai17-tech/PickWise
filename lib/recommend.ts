@@ -1,9 +1,6 @@
-import {
-  championData,
-} from "../data/championData";
-
 import { getChampions } from "./getChampions";
 import { calculateScore } from "./calculateScore";
+import { getChampionDetail } from "./analyzeTraits";
 
 import type {
   Champion,
@@ -53,7 +50,7 @@ export function recommend(
     )
     .map((champion) => {
       const isDataRegistered =
-        championData[champion.id] !== undefined;
+        getChampionDetail(champion.id) !== undefined;
 
       return {
         champion,
