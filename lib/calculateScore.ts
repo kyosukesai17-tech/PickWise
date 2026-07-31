@@ -2,6 +2,10 @@ import { analyzeTeam } from "./analyzeTeam";
 import { analyzeEnemyTeam } from "./analyzeEnemyTeam";
 import { analyzeAllySynergy } from "./analyzeAllySynergy";
 import { analyzeRoleOpponent } from "./analyzeRoleOpponent";
+import {
+  analyzeTraits,
+  getChampionDetail,
+} from "./analyzeTraits";
 
 import {
   championData,
@@ -21,6 +25,8 @@ import type {
   Champion,
   Role,
 } from "../types/champion";
+
+const TRAIT_SCORE_WEIGHT = 0.2;
 
 export function calculateScore(
   allyTeam: (Champion | null)[],
@@ -437,6 +443,24 @@ export function calculateScore(
         SCORE.OPPONENT_WAVECLEAR,
       text: "対面のウェーブクリアに対応しやすい",
     });
+  }
+
+  const allyDetail = getChampionDetail(champion.id);
+
+  if (allyDetail) {
+    const traitScore = enemyTeam.reduce((total, enemyChampion) => {
+      if (!enemyChampion) {
+        return total;
+      }
+
+      const enemyDetail = getChampionDetail(enemyChampion.id);
+
+      return enemyDetail
+        ? total + analyzeTraits(enemyDetail, allyDetail)
+        : total;
+    }, 0);
+
+    score += traitScore * TRAIT_SCORE_WEIGHT;
   }
 
   return {
