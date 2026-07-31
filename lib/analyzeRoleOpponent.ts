@@ -1,9 +1,5 @@
-import {
-  championData,
-  defaultChampionData,
-} from "../data/championData";
-
-import { TRAITS } from "../data/championData/traits";
+import { getChampionDetail } from "./analyzeTraits";
+import { TRAITS } from "../src/constants/traits";
 import { ROLE_INDEX } from "./role";
 
 import type {
@@ -48,44 +44,54 @@ export function analyzeRoleOpponent(
     };
   }
 
-  const data =
-    championData[opponent.id] ??
-    defaultChampionData;
+  const detail = getChampionDetail(opponent.id);
+
+  if (!detail) {
+    return {
+      opponent,
+      hasOpponent: true,
+
+      isMelee: false,
+      isRanged: false,
+
+      isAssassin: false,
+      hasEngage: false,
+      hasPokeOrSiege: false,
+      hasCatch: false,
+      hasHighWaveClear: false,
+    };
+  }
 
   return {
     opponent,
     hasOpponent: true,
 
     isMelee:
-      data.attributes.range === "MELEE",
+      detail.rangeType === "Melee",
 
     isRanged:
-      data.attributes.range === "RANGED",
+      detail.rangeType === "Ranged",
 
     isAssassin:
-      data.traits.includes(
-        TRAITS.ASSASSIN,
-      ),
+      detail.archetypes.includes("ASSASSIN"),
 
     hasEngage:
-      data.traits.includes(
+      detail.traits.includes(
         TRAITS.ENGAGE,
       ),
 
     hasPokeOrSiege:
-      data.traits.includes(
+      detail.traits.includes(
         TRAITS.POKE,
       ) ||
-      data.traits.includes(
+      detail.traits.includes(
         TRAITS.SIEGE,
       ),
 
     hasCatch:
-      data.traits.includes(
-        TRAITS.CATCH,
-      ),
+      detail.archetypes.includes("CATCH"),
 
     hasHighWaveClear:
-      data.ratings.waveClear >= 4,
+      detail.ratings.waveClear >= 4,
   };
 }
