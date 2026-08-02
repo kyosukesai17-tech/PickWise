@@ -3,9 +3,11 @@
 import { useState } from "react";
 
 import ChampionCard from "./ChampionCard";
+import DraftMetricsDisplay from "./DraftMetricsDisplay";
 
 import { analyzeTeam } from "../lib/analyzeTeam";
 import { analyzeChampionSynergy } from "../lib/analyzeChampionSynergy";
+import { getChampionDetail } from "../lib/analyzeTraits";
 import { generateReason } from "../lib/generateReason";
 import {
   formatScoreModifier,
@@ -150,6 +152,9 @@ export default function RecommendationSection({
 
         return {
           ...recommendation,
+          draftMetrics: getChampionDetail(
+            recommendation.champion.id,
+          )?.draftMetrics,
           matchupReasons: selectRecommendationReasons({
             scoreReasons: recommendation.reasons,
             championSynergyReasons: championSynergy.reasons,
@@ -414,14 +419,13 @@ export default function RecommendationSection({
                     </div>
                   )}
 
-                  {recommendation.reasons.length > 0 && (
-                    <div
-                      className={
-                        recommendation.matchupReasons.length > 0
-                          ? "mt-3"
-                          : undefined
-                      }
-                    >
+                  <div
+                    className={
+                      recommendation.matchupReasons.length > 0
+                        ? "mt-3"
+                        : undefined
+                    }
+                  >
                       <button
                         type="button"
                         aria-expanded={expandedChampionIds.has(
@@ -453,8 +457,9 @@ export default function RecommendationSection({
                             スコア内訳
                           </p>
 
-                          <ul className="space-y-2">
-                            {recommendation.reasons.map(
+                          {recommendation.reasons.length > 0 ? (
+                            <ul className="space-y-2">
+                              {recommendation.reasons.map(
                               (
                                 reason,
                                 reasonIndex,
@@ -494,12 +499,20 @@ export default function RecommendationSection({
                                   </li>
                                 );
                               },
-                            )}
-                          </ul>
+                              )}
+                            </ul>
+                          ) : (
+                            <p className="text-xs text-slate-500">
+                              基本スコアのみで評価されています。
+                            </p>
+                          )}
+
+                          <DraftMetricsDisplay
+                            metrics={recommendation.draftMetrics}
+                          />
                         </div>
                       )}
-                    </div>
-                  )}
+                  </div>
                 </div>
               </article>
             ),
