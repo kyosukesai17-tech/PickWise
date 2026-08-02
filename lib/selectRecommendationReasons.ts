@@ -44,6 +44,7 @@ function priority(type: RecommendationReasonType): number {
   if (allyTypes.has(type)) return 5;
   if (
     type === REASON.TEAMFIGHT ||
+    type === REASON.ROAM ||
     type === REASON.BLIND_PICK
   ) {
     return 7;
