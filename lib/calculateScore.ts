@@ -1,4 +1,7 @@
-import { analyzeTeam } from "./analyzeTeam";
+import {
+  analyzeDamageBalance,
+  analyzeTeam,
+} from "./analyzeTeam";
 import { analyzeEnemyTeam } from "./analyzeEnemyTeam";
 import { analyzeAllySynergy } from "./analyzeAllySynergy";
 import { analyzeRoleOpponent } from "./analyzeRoleOpponent";
@@ -35,6 +38,12 @@ export function calculateScore(
 ) {
   const allyAnalysis =
     analyzeTeam(allyTeam);
+
+  const damageBalance =
+    analyzeDamageBalance(
+      allyTeam,
+      selectedRole,
+    );
 
   const enemyAnalysis =
     analyzeEnemyTeam(enemyTeam);
@@ -482,6 +491,32 @@ export function calculateScore(
         text: `${selectedRole}適性が${roleSuitabilityScore > 0 ? "高い" : "低い"}`,
       });
     }
+  }
+
+  if (detail && damageBalance.bias) {
+    const candidateDamageType = detail.damageType;
+    const isOppositeDamageType =
+      candidateDamageType !== "Mixed" &&
+      candidateDamageType !== damageBalance.bias;
+    const damageBalanceScore =
+      candidateDamageType === "Mixed"
+        ? SCORE.DAMAGE_BALANCE_MIXED
+        : isOppositeDamageType
+          ? SCORE.DAMAGE_BALANCE_PRIMARY
+          : SCORE.DAMAGE_BALANCE_SAME_TYPE_PENALTY;
+    const damageBalanceText =
+      candidateDamageType === "Mixed"
+        ? `味方の${damageBalance.bias}偏重をMixedダメージで緩和できる`
+        : isOppositeDamageType
+          ? `味方の${damageBalance.bias}偏重を${candidateDamageType}ダメージで補える`
+          : `味方の${damageBalance.bias}偏重をさらに強める`;
+
+    score += damageBalanceScore;
+    reasons.push({
+      type: REASON.DAMAGE_BALANCE,
+      score: damageBalanceScore,
+      text: damageBalanceText,
+    });
   }
 
   return {
