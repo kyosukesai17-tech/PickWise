@@ -46,6 +46,11 @@ export function calculateScore(
       selectedRole,
     );
 
+  const shouldApplyNeedApScores =
+    damageBalance.bias !== "AD";
+  const shouldApplyNeedAdScores =
+    damageBalance.bias !== "AP";
+
   const enemyAnalysis =
     analyzeEnemyTeam(enemyTeam);
 
@@ -150,6 +155,7 @@ export function calculateScore(
   }
 
   if (
+    shouldApplyNeedApScores &&
     allyAnalysis.needAP &&
     canDealAP
   ) {
@@ -171,6 +177,7 @@ export function calculateScore(
   }
 
   if (
+    shouldApplyNeedAdScores &&
     allyAnalysis.needAD &&
     canDealAD
   ) {
@@ -231,6 +238,7 @@ export function calculateScore(
 
   if (
     detail &&
+    shouldApplyNeedApScores &&
     allyAnalysis.needAP &&
     !canDealAP
   ) {
@@ -245,6 +253,7 @@ export function calculateScore(
 
   if (
     detail &&
+    shouldApplyNeedAdScores &&
     allyAnalysis.needAD &&
     !canDealAD
   ) {
