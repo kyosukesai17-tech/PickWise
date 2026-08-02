@@ -24,12 +24,6 @@ export function analyzeEnemyComposition(
   const hasEngage = candidate.traits.includes(TRAITS.ENGAGE);
   const hasTankKiller = candidate.traits.includes(TRAITS.TANK_KILLER);
   const hasDps = candidate.traits.includes(TRAITS.DPS);
-  const isSquishy =
-    candidate.traits.includes(TRAITS.SQUISHY) &&
-    !candidate.archetypes.includes("FRONTLINE");
-  const isImmobile =
-    candidate.traits.includes(TRAITS.IMMOBILE) &&
-    !hasMobility;
   const isFrontline = candidate.archetypes.includes("FRONTLINE");
   const isCarry = candidate.archetypes.includes("CARRY");
   let score = 0;
@@ -66,12 +60,6 @@ export function analyzeEnemyComposition(
       );
     }
 
-    if (isSquishy) {
-      addModifier(
-        SCORE.ENEMY_COMP_DIVE_SQUISHY,
-        "敵のDive構成に低耐久を狙われやすい",
-      );
-    }
   }
 
   if (enemyAnalysis.compositionTypes.includes("POKE")) {
@@ -89,12 +77,6 @@ export function analyzeEnemyComposition(
       );
     }
 
-    if (isImmobile) {
-      addModifier(
-        SCORE.ENEMY_COMP_POKE_IMMOBILE,
-        "敵のPoke構成に対して移動手段が少ない",
-      );
-    }
   }
 
   if (enemyAnalysis.compositionTypes.includes("FRONT_TO_BACK")) {
@@ -135,12 +117,6 @@ export function analyzeEnemyComposition(
       );
     }
 
-    if (isImmobile) {
-      addModifier(
-        SCORE.ENEMY_COMP_CATCH_IMMOBILE,
-        "敵のCatch構成に対して移動手段が少ない",
-      );
-    }
   }
 
   return { score, reasons };
