@@ -492,7 +492,18 @@ export function calculateScore(
         : total;
     }, 0);
 
-    score += traitScore * TRAIT_SCORE_WEIGHT;
+    const weightedTraitScore =
+      traitScore * TRAIT_SCORE_WEIGHT;
+
+    score += weightedTraitScore;
+
+    if (weightedTraitScore !== 0) {
+      reasons.push({
+        type: REASON.TRAIT_SCORE,
+        score: weightedTraitScore,
+        text: "Trait相性",
+      });
+    }
   }
 
   const championSynergy = analyzeChampionSynergy(
