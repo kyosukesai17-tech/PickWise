@@ -8,7 +8,7 @@ import type { Champion, Role } from "../types/champion";
 import type { RecommendationReason } from "../types/recommendation";
 
 const OBJECTIVE_NEED_THRESHOLD = 4;
-const MIN_OBJECTIVE_SAMPLE_SIZE = 2;
+const MIN_OBJECTIVE_SAMPLE_SIZE = 3;
 
 export type ObjectiveNeedAnalysis = {
   selectedCount: number;
