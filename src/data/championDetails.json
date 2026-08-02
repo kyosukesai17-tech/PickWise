@@ -13,7 +13,7 @@
       "waveClear": 4,
       "scaling": 3
     },
-    "archetypes": ["CATCH"],
+    "archetypes": ["ASSASSIN","CATCH"],
     "roleSuitability": {"MID":5}
   },
   "Viktor": {
@@ -319,7 +319,7 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["FRONTLINE"],
+    "archetypes": ["CATCH"],
     "roleSuitability": {"MID":5,"SUP":4}
   },
   "Zed": {
@@ -489,7 +489,7 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"],
+    "archetypes": ["CARRY"],
     "roleSuitability": {"ADC":5,"TOP":4}
   },
   "Xayah": {
@@ -1969,7 +1969,7 @@
       "waveClear": 1,
       "scaling": 5
     },
-    "archetypes": ["CARRY","CATCH"],
+    "archetypes": ["CATCH"],
     "roleSuitability": {"SUP":5}
   },
   "Belveth": {
@@ -2127,7 +2127,7 @@
       "waveClear": 3,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"],
+    "archetypes": ["FRONTLINE"],
     "roleSuitability": {"TOP":5,"MID":4}
   },
   "Corki": {
@@ -2538,7 +2538,7 @@
       "waveClear": 1,
       "scaling": 5
     },
-    "archetypes": ["CARRY"],
+    "archetypes": [],
     "roleSuitability": {"JG":5}
   },
   "Kalista": {
@@ -3070,7 +3070,7 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"],
+    "archetypes": ["CARRY"],
     "roleSuitability": {"ADC":5}
   },
   "Nunu": {
@@ -3793,7 +3793,7 @@
       "waveClear": 5,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN"],
+    "archetypes": ["CARRY","CATCH"],
     "roleSuitability": {"MID":5,"JG":4}
   },
   "Teemo": {
@@ -3919,7 +3919,7 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"],
+    "archetypes": ["CARRY"],
     "roleSuitability": {"TOP":5,"MID":4}
   },
   "TwistedFate": {
@@ -4328,7 +4328,7 @@
       "waveClear": 2,
       "scaling": 5
     },
-    "archetypes": ["CARRY"],
+    "archetypes": [],
     "roleSuitability": {"SUP":5,"MID":4}
   },
   "Zoe": {
