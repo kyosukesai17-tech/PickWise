@@ -8,7 +8,13 @@ import DraftMetricsDisplay from "./DraftMetricsDisplay";
 
 import { analyzeTeam } from "../lib/analyzeTeam";
 import { analyzeChampionSynergy } from "../lib/analyzeChampionSynergy";
+import { analyzeObjectiveNeed } from "../lib/analyzeObjectiveNeed";
+import { analyzePickPotentialNeed } from "../lib/analyzePickPotentialNeed";
+import { analyzeRoamNeed } from "../lib/analyzeRoamNeed";
+import { analyzeSideLaneNeed } from "../lib/analyzeSideLaneNeed";
 import { buildBasicDraftDiagnosis } from "../lib/buildBasicDraftDiagnosis";
+import { buildDraftMetricsDiagnosis } from "../lib/buildDraftMetricsDiagnosis";
+import { analyzeTeamfightNeed } from "../lib/analyzeTeamfightNeed";
 import { getChampionDetail } from "../lib/analyzeTraits";
 import { generateReason } from "../lib/generateReason";
 import {
@@ -88,8 +94,18 @@ export default function RecommendationSection({
   const hasSelectedAlly = allyTeam.some(
     (champion) => champion !== null,
   );
+  const draftMetricsDiagnosis = buildDraftMetricsDiagnosis({
+    teamfight: analyzeTeamfightNeed(allyTeam, selectedRole),
+    roam: analyzeRoamNeed(allyTeam, selectedRole),
+    sideLane: analyzeSideLaneNeed(allyTeam, selectedRole),
+    pickPotential: analyzePickPotentialNeed(allyTeam, selectedRole),
+    objective: analyzeObjectiveNeed(allyTeam, selectedRole),
+  });
   const diagnosisItems = hasSelectedAlly
-    ? buildBasicDraftDiagnosis(allyAnalysis)
+    ? [
+        ...buildBasicDraftDiagnosis(allyAnalysis),
+        ...draftMetricsDiagnosis,
+      ]
     : [];
 
   const selectedAllyChampion =
