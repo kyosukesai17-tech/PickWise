@@ -14,7 +14,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN","CATCH"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":3,"sideLane":3,"pickPotential":5,"objectiveControl":3}
   },
   "Viktor": {
     "difficulty": 9,
@@ -65,7 +66,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":5,"sideLane":2,"pickPotential":3,"objectiveControl":4}
   },
   "Veigar": {
     "difficulty": 7,
@@ -99,7 +101,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":3,"roam":1,"teamfight":5,"sideLane":2,"pickPotential":2,"objectiveControl":5}
   },
   "Ezreal": {
     "difficulty": 7,
@@ -116,7 +119,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":5,"roam":2,"teamfight":3,"sideLane":3,"pickPotential":2,"objectiveControl":4}
   },
   "Jhin": {
     "difficulty": 6,
@@ -150,7 +154,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":5,"sideLane":3,"pickPotential":1,"objectiveControl":5}
   },
   "Varus": {
     "difficulty": 2,
@@ -320,7 +325,8 @@
       "scaling": 5
     },
     "archetypes": ["CATCH"],
-    "roleSuitability": {"MID":5,"SUP":4}
+    "roleSuitability": {"MID":5,"SUP":4},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":4,"sideLane":1,"pickPotential":4,"objectiveControl":4}
   },
   "Zed": {
     "difficulty": 7,
@@ -337,7 +343,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":2,"roam":4,"teamfight":2,"sideLane":5,"pickPotential":4,"objectiveControl":2}
   },
   "Aphelios": {
     "difficulty": 10,
@@ -388,7 +395,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":4,"sideLane":3,"pickPotential":3,"objectiveControl":5}
   },
   "Draven": {
     "difficulty": 8,
@@ -473,7 +481,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":2,"roam":2,"teamfight":4,"sideLane":2,"pickPotential":3,"objectiveControl":4}
   },
   "Vayne": {
     "difficulty": 8,
@@ -524,7 +533,8 @@
       "scaling": 2
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":3,"sideLane":3,"pickPotential":5,"objectiveControl":4}
   },
   "JarvanIV": {
     "difficulty": 5,
@@ -626,7 +636,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":4,"sideLane":4,"pickPotential":5,"objectiveControl":4}
   },
   "Amumu": {
     "difficulty": 3,
@@ -643,7 +654,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"JG":5,"SUP":4}
+    "roleSuitability": {"JG":5,"SUP":4},
+    "draftMetrics": {"blindPick":3,"roam":3,"teamfight":5,"sideLane":1,"pickPotential":4,"objectiveControl":4}
   },
   "Kindred": {
     "difficulty": 4,
@@ -728,7 +740,8 @@
       "scaling": 5
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":5,"roam":2,"teamfight":5,"sideLane":2,"pickPotential":4,"objectiveControl":4}
   },
   "Garen": {
     "difficulty": 5,
@@ -762,7 +775,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY","ASSASSIN","CATCH"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":3,"roam":4,"teamfight":4,"sideLane":5,"pickPotential":5,"objectiveControl":3}
   },
   "Fiora": {
     "difficulty": 3,
@@ -779,7 +793,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":2,"roam":2,"teamfight":2,"sideLane":5,"pickPotential":2,"objectiveControl":3}
   },
   "Gwen": {
     "difficulty": 5,
@@ -2539,7 +2554,8 @@
       "scaling": 5
     },
     "archetypes": [],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":3,"roam":4,"teamfight":5,"sideLane":1,"pickPotential":3,"objectiveControl":4}
   },
   "Kalista": {
     "difficulty": 7,
@@ -2788,7 +2804,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":5,"sideLane":2,"pickPotential":5,"objectiveControl":4}
   },
   "Malzahar": {
     "difficulty": 6,
@@ -3040,7 +3057,8 @@
       "scaling": 2
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":2,"roam":5,"teamfight":2,"sideLane":3,"pickPotential":3,"objectiveControl":5}
   },
   "Nilah": {
     "difficulty": 10,
@@ -3413,7 +3431,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"TOP":5,"MID":4}
+    "roleSuitability": {"TOP":5,"MID":4},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":5,"sideLane":3,"pickPotential":3,"objectiveControl":5}
   },
   "Ryze": {
     "difficulty": 7,
@@ -3952,7 +3971,8 @@
       "scaling": 3
     },
     "archetypes": ["CARRY","CATCH"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":3,"sideLane":4,"pickPotential":5,"objectiveControl":3}
   },
   "Udyr": {
     "difficulty": 7,
