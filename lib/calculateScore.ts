@@ -21,6 +21,10 @@ import {
   analyzeSideLaneCandidate,
   analyzeSideLaneNeed,
 } from "./analyzeSideLaneNeed";
+import {
+  analyzePickPotentialCandidate,
+  analyzePickPotentialNeed,
+} from "./analyzePickPotentialNeed";
 import { clampTraitScore } from "./clampTraitScore";
 import {
   analyzeTraits,
@@ -69,6 +73,12 @@ export function calculateScore(
 
   const sideLaneNeed =
     analyzeSideLaneNeed(
+      allyTeam,
+      selectedRole,
+    );
+
+  const pickPotentialNeed =
+    analyzePickPotentialNeed(
       allyTeam,
       selectedRole,
     );
@@ -608,6 +618,17 @@ export function calculateScore(
 
   if (sideLaneAnalysis.reason) {
     reasons.push(sideLaneAnalysis.reason);
+  }
+
+  const pickPotentialAnalysis = analyzePickPotentialCandidate(
+    detail?.draftMetrics?.pickPotential,
+    pickPotentialNeed.needsPickPotential,
+  );
+
+  score += pickPotentialAnalysis.score;
+
+  if (pickPotentialAnalysis.reason) {
+    reasons.push(pickPotentialAnalysis.reason);
   }
 
   if (detail && damageBalance.bias) {
