@@ -1,3 +1,5 @@
+import type { RoleSuitabilityRating } from "../src/types/championDetail";
+
 export const SCORE = {
   BASE: 50,
 
@@ -51,3 +53,11 @@ export const SCORE = {
 
   OPPONENT_WAVECLEAR: 6,
 } as const;
+
+export const ROLE_SUITABILITY_SCORE = {
+  1: -15,
+  2: -8,
+  3: 0,
+  4: 5,
+  5: 10,
+} as const satisfies Record<RoleSuitabilityRating, number>;

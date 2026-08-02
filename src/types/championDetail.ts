@@ -1,6 +1,11 @@
 import type { Trait } from "../constants/traits";
+import type { Role } from "../../types/champion";
 
 export type Rating = 1 | 2 | 3 | 4 | 5;
+export type RoleSuitabilityRating = Rating;
+export type ChampionRoleSuitability = Partial<
+  Record<Role, RoleSuitabilityRating>
+>;
 
 export type ChampionArchetype =
   | "FRONTLINE"
@@ -23,4 +28,5 @@ export interface ChampionDetail {
     scaling: Rating;
   };
   archetypes: ChampionArchetype[];
+  roleSuitability: ChampionRoleSuitability;
 }
