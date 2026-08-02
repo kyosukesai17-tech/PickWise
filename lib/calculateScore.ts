@@ -519,6 +519,86 @@ export function calculateScore(
     });
   }
 
+  if (detail) {
+    const isSquishy =
+      detail.traits.includes(TRAITS.SQUISHY) &&
+      !isFrontline;
+    const isImmobile =
+      detail.traits.includes(TRAITS.IMMOBILE) &&
+      !detail.traits.includes(TRAITS.MOBILITY);
+    const isWeakEarly =
+      detail.traits.includes(TRAITS.WEAK_EARLY);
+    let candidateRiskScore = 0;
+
+    const addCandidateRisk = (
+      penalty: number,
+      text: string,
+    ) => {
+      const nextRiskScore = Math.max(
+        SCORE.CANDIDATE_RISK_MAX_PENALTY,
+        candidateRiskScore + penalty,
+      );
+      const appliedPenalty =
+        nextRiskScore - candidateRiskScore;
+
+      candidateRiskScore = nextRiskScore;
+
+      if (appliedPenalty < 0) {
+        reasons.push({
+          type: REASON.CANDIDATE_RISK,
+          score: appliedPenalty,
+          text,
+        });
+      }
+    };
+
+    if (
+      isSquishy &&
+      enemyAnalysis.enemyAssassinCount >= 2
+    ) {
+      addCandidateRisk(
+        SCORE.CANDIDATE_RISK_ASSASSIN,
+        "敵のアサシンが多く、低耐久を狙われやすい",
+      );
+    }
+
+    if (
+      isImmobile &&
+      enemyAnalysis.enemyEngageCount +
+        enemyAnalysis.enemyCatchCount >=
+        2
+    ) {
+      addCandidateRisk(
+        SCORE.CANDIDATE_RISK_ENGAGE,
+        "敵の捕獲・エンゲージが多く、移動手段の少なさを突かれやすい",
+      );
+    }
+
+    if (
+      isSquishy &&
+      enemyAnalysis.enemyCcScore >= 12
+    ) {
+      addCandidateRisk(
+        SCORE.CANDIDATE_RISK_HIGH_CC,
+        "敵のCCが多く、捕まると倒されやすい",
+      );
+    }
+
+    if (
+      isWeakEarly &&
+      enemyAnalysis.enemyAssassinCount +
+        enemyAnalysis.enemyEngageCount >=
+        3
+    ) {
+      addCandidateRisk(
+        SCORE.CANDIDATE_RISK_EARLY_PRESSURE,
+        "敵の序盤圧力が高く、成長前に崩されやすい",
+      );
+    }
+
+    score += candidateRiskScore;
+  }
+
   return {
     score,
     reasons,

@@ -10,6 +10,11 @@ export interface EnemyTeamAnalysis {
   meleeCount: number;
   rangedCount: number;
   frontlineCount: number;
+  enemyAssassinCount: number;
+  enemyEngageCount: number;
+  enemyCatchCount: number;
+  enemyPokeCount: number;
+  enemyCcScore: number;
 
   hasHeavyDive: boolean;
   isMeleeHeavy: boolean;
@@ -26,6 +31,11 @@ export function analyzeEnemyTeam(
   let meleeCount = 0;
   let rangedCount = 0;
   let frontlineCount = 0;
+  let enemyAssassinCount = 0;
+  let enemyEngageCount = 0;
+  let enemyCatchCount = 0;
+  let enemyPokeCount = 0;
+  let enemyCcScore = 0;
 
   for (const champion of team) {
     if (!champion) continue;
@@ -57,6 +67,24 @@ export function analyzeEnemyTeam(
     ) {
       frontlineCount++;
     }
+
+    if (detail.archetypes.includes("ASSASSIN")) {
+      enemyAssassinCount++;
+    }
+
+    if (detail.traits.includes(TRAITS.ENGAGE)) {
+      enemyEngageCount++;
+    }
+
+    if (detail.archetypes.includes("CATCH")) {
+      enemyCatchCount++;
+    }
+
+    if (detail.traits.includes(TRAITS.POKE)) {
+      enemyPokeCount++;
+    }
+
+    enemyCcScore += detail.ratings.cc;
   }
 
   return {
@@ -66,6 +94,11 @@ export function analyzeEnemyTeam(
     meleeCount,
     rangedCount,
     frontlineCount,
+    enemyAssassinCount,
+    enemyEngageCount,
+    enemyCatchCount,
+    enemyPokeCount,
+    enemyCcScore,
 
     hasHeavyDive:
       diveThreatCount >= 2,
