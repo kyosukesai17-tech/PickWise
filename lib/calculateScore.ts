@@ -3,6 +3,7 @@ import {
   analyzeTeam,
 } from "./analyzeTeam";
 import { analyzeEnemyTeam } from "./analyzeEnemyTeam";
+import { analyzeEnemyComposition } from "./analyzeEnemyComposition";
 import { analyzeAllySynergy } from "./analyzeAllySynergy";
 import { analyzeRoleOpponent } from "./analyzeRoleOpponent";
 import { analyzeChampionSynergy } from "./analyzeChampionSynergy";
@@ -597,6 +598,22 @@ export function calculateScore(
     }
 
     score += candidateRiskScore;
+  }
+
+  if (detail) {
+    const enemyComposition = analyzeEnemyComposition(
+      enemyAnalysis,
+      detail,
+    );
+
+    score += enemyComposition.score;
+    reasons.push(
+      ...enemyComposition.reasons.map((reason) => ({
+        type: REASON.ENEMY_COMPOSITION,
+        score: reason.score,
+        text: reason.text,
+      })),
+    );
   }
 
   return {
