@@ -3,9 +3,9 @@
 import { useState } from "react";
 
 import ChampionCard from "./ChampionCard";
+import DraftDiagnosis from "./DraftDiagnosis";
 import DraftMetricsDisplay from "./DraftMetricsDisplay";
 
-import { analyzeTeam } from "../lib/analyzeTeam";
 import { analyzeChampionSynergy } from "../lib/analyzeChampionSynergy";
 import { getChampionDetail } from "../lib/analyzeTraits";
 import { generateReason } from "../lib/generateReason";
@@ -25,6 +25,7 @@ import type {
   Champion,
   Role,
 } from "../types/champion";
+import type { DraftDiagnosisItem } from "./DraftDiagnosis";
 
 type RecommendationSectionProps = {
   allyTeam: (Champion | null)[];
@@ -37,10 +38,29 @@ type RecommendationSectionProps = {
   ) => void;
 };
 
-type TeamNeed = {
-  label: string;
-  needed: boolean;
-};
+// Temporary display data. A later PR will replace this with real diagnosis output.
+const DUMMY_DRAFT_DIAGNOSIS_ITEMS = [
+  {
+    id: "frontline-shortage",
+    label: "フロントライン不足",
+    status: "WARNING",
+  },
+  {
+    id: "ad-damage-shortage",
+    label: "ADダメージ不足",
+    status: "WARNING",
+  },
+  {
+    id: "low-roam",
+    label: "ローム性能が低め",
+    status: "CAUTION",
+  },
+  {
+    id: "teamfight-ready",
+    label: "集団戦性能は十分",
+    status: "GOOD",
+  },
+] as const satisfies readonly DraftDiagnosisItem[];
 
 export default function RecommendationSection({
   allyTeam,
@@ -78,9 +98,6 @@ export default function RecommendationSection({
     );
   };
 
-  const analysis =
-    analyzeTeam(allyTeam);
-
   const recommendations =
     recommend(
       allyTeam,
@@ -94,30 +111,6 @@ export default function RecommendationSection({
     allyTeam[
       ROLE_INDEX[selectedRole]
     ] ?? null;
-
-  const teamNeeds: TeamNeed[] = [
-    {
-      label: "APダメージ",
-      needed: analysis.needAP,
-    },
-    {
-      label: "ADダメージ",
-      needed: analysis.needAD,
-    },
-    {
-      label: "フロントライン",
-      needed: analysis.needTank,
-    },
-    {
-      label: "CC",
-      needed: analysis.needCC,
-    },
-  ];
-
-  const activeNeeds =
-    teamNeeds.filter(
-      (need) => need.needed,
-    );
 
   const normalizedSearchQuery =
     normalizeChampionSearchValue(searchQuery);
@@ -178,28 +171,7 @@ export default function RecommendationSection({
         </p>
       </div>
 
-      <div className="rounded-lg border border-slate-800 bg-slate-950/60 p-4">
-        <h3 className="mb-3 text-sm font-semibold text-slate-200">
-          味方構成の不足
-        </h3>
-
-        {activeNeeds.length === 0 ? (
-          <p className="text-sm text-emerald-400">
-            現在の基準では大きな不足はありません。
-          </p>
-        ) : (
-          <div className="flex flex-wrap gap-2">
-            {activeNeeds.map((need) => (
-              <span
-                key={need.label}
-                className="rounded-full border border-amber-500/40 bg-amber-500/10 px-3 py-1 text-sm text-amber-300"
-              >
-                {need.label}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
+      <DraftDiagnosis items={DUMMY_DRAFT_DIAGNOSIS_ITEMS} />
 
       <div className="rounded-lg border border-slate-800 bg-slate-950/40 p-4">
         <label
