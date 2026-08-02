@@ -6,7 +6,9 @@ import ChampionCard from "./ChampionCard";
 import DraftDiagnosis from "./DraftDiagnosis";
 import DraftMetricsDisplay from "./DraftMetricsDisplay";
 
+import { analyzeTeam } from "../lib/analyzeTeam";
 import { analyzeChampionSynergy } from "../lib/analyzeChampionSynergy";
+import { buildBasicDraftDiagnosis } from "../lib/buildBasicDraftDiagnosis";
 import { getChampionDetail } from "../lib/analyzeTraits";
 import { generateReason } from "../lib/generateReason";
 import {
@@ -25,7 +27,6 @@ import type {
   Champion,
   Role,
 } from "../types/champion";
-import type { DraftDiagnosisItem } from "./DraftDiagnosis";
 
 type RecommendationSectionProps = {
   allyTeam: (Champion | null)[];
@@ -37,30 +38,6 @@ type RecommendationSectionProps = {
     champion: Champion,
   ) => void;
 };
-
-// Temporary display data. A later PR will replace this with real diagnosis output.
-const DUMMY_DRAFT_DIAGNOSIS_ITEMS = [
-  {
-    id: "frontline-shortage",
-    label: "フロントライン不足",
-    status: "WARNING",
-  },
-  {
-    id: "ad-damage-shortage",
-    label: "ADダメージ不足",
-    status: "WARNING",
-  },
-  {
-    id: "low-roam",
-    label: "ローム性能が低め",
-    status: "CAUTION",
-  },
-  {
-    id: "teamfight-ready",
-    label: "集団戦性能は十分",
-    status: "GOOD",
-  },
-] as const satisfies readonly DraftDiagnosisItem[];
 
 export default function RecommendationSection({
   allyTeam,
@@ -106,6 +83,14 @@ export default function RecommendationSection({
       enemyBans,
       selectedRole,
     );
+
+  const allyAnalysis = analyzeTeam(allyTeam);
+  const hasSelectedAlly = allyTeam.some(
+    (champion) => champion !== null,
+  );
+  const diagnosisItems = hasSelectedAlly
+    ? buildBasicDraftDiagnosis(allyAnalysis)
+    : [];
 
   const selectedAllyChampion =
     allyTeam[
@@ -171,7 +156,7 @@ export default function RecommendationSection({
         </p>
       </div>
 
-      <DraftDiagnosis items={DUMMY_DRAFT_DIAGNOSIS_ITEMS} />
+      <DraftDiagnosis items={diagnosisItems} />
 
       <div className="rounded-lg border border-slate-800 bg-slate-950/40 p-4">
         <label

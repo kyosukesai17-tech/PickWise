@@ -1,11 +1,7 @@
-export type DiagnosisStatus = "WARNING" | "CAUTION" | "GOOD";
-
-export type DraftDiagnosisItem = Readonly<{
-  id: string;
-  label: string;
-  description?: string;
-  status: DiagnosisStatus;
-}>;
+import type {
+  DiagnosisStatus,
+  DraftDiagnosisItem,
+} from "../types/draftDiagnosis";
 
 type DraftDiagnosisProps = Readonly<{
   items: readonly DraftDiagnosisItem[];
