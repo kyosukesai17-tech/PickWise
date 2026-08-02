@@ -9,6 +9,10 @@ import { analyzeAllySynergy } from "./analyzeAllySynergy";
 import { analyzeRoleOpponent } from "./analyzeRoleOpponent";
 import { analyzeChampionSynergy } from "./analyzeChampionSynergy";
 import { analyzeBlindPick } from "./analyzeBlindPick";
+import {
+  analyzeTeamfightCandidate,
+  analyzeTeamfightNeed,
+} from "./analyzeTeamfightNeed";
 import { clampTraitScore } from "./clampTraitScore";
 import {
   analyzeTraits,
@@ -42,6 +46,12 @@ export function calculateScore(
 ) {
   const allyAnalysis =
     analyzeTeam(allyTeam);
+
+  const teamfightNeed =
+    analyzeTeamfightNeed(
+      allyTeam,
+      selectedRole,
+    );
 
   const damageBalance =
     analyzeDamageBalance(
@@ -545,6 +555,17 @@ export function calculateScore(
 
   if (blindPickAnalysis.reason) {
     reasons.push(blindPickAnalysis.reason);
+  }
+
+  const teamfightAnalysis = analyzeTeamfightCandidate(
+    detail?.draftMetrics?.teamfight,
+    teamfightNeed.needsTeamfight,
+  );
+
+  score += teamfightAnalysis.score;
+
+  if (teamfightAnalysis.reason) {
+    reasons.push(teamfightAnalysis.reason);
   }
 
   if (detail && damageBalance.bias) {
