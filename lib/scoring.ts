@@ -126,3 +126,11 @@ export const ROAM_SCORE = {
   4: 5,
   5: 10,
 } as const satisfies Record<DraftMetricRating, number>;
+
+export const SIDE_LANE_SCORE = {
+  1: -10,
+  2: -5,
+  3: 0,
+  4: 5,
+  5: 10,
+} as const satisfies Record<DraftMetricRating, number>;

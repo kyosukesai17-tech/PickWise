@@ -17,6 +17,10 @@ import {
   analyzeRoamCandidate,
   analyzeRoamNeed,
 } from "./analyzeRoamNeed";
+import {
+  analyzeSideLaneCandidate,
+  analyzeSideLaneNeed,
+} from "./analyzeSideLaneNeed";
 import { clampTraitScore } from "./clampTraitScore";
 import {
   analyzeTraits,
@@ -59,6 +63,12 @@ export function calculateScore(
 
   const roamNeed =
     analyzeRoamNeed(
+      allyTeam,
+      selectedRole,
+    );
+
+  const sideLaneNeed =
+    analyzeSideLaneNeed(
       allyTeam,
       selectedRole,
     );
@@ -587,6 +597,17 @@ export function calculateScore(
 
   if (roamAnalysis.reason) {
     reasons.push(roamAnalysis.reason);
+  }
+
+  const sideLaneAnalysis = analyzeSideLaneCandidate(
+    detail?.draftMetrics?.sideLane,
+    sideLaneNeed.needsSideLane,
+  );
+
+  score += sideLaneAnalysis.score;
+
+  if (sideLaneAnalysis.reason) {
+    reasons.push(sideLaneAnalysis.reason);
   }
 
   if (detail && damageBalance.bias) {
