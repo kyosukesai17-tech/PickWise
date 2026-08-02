@@ -8,6 +8,7 @@ import { analyzeCandidateRisks } from "./analyzeCandidateRisks";
 import { analyzeAllySynergy } from "./analyzeAllySynergy";
 import { analyzeRoleOpponent } from "./analyzeRoleOpponent";
 import { analyzeChampionSynergy } from "./analyzeChampionSynergy";
+import { analyzeBlindPick } from "./analyzeBlindPick";
 import { clampTraitScore } from "./clampTraitScore";
 import {
   analyzeTraits,
@@ -533,6 +534,17 @@ export function calculateScore(
         text: `${selectedRole}適性が${roleSuitabilityScore > 0 ? "高い" : "低い"}`,
       });
     }
+  }
+
+  const blindPickAnalysis = analyzeBlindPick(
+    detail?.draftMetrics?.blindPick,
+    roleOpponent.hasOpponent,
+  );
+
+  score += blindPickAnalysis.score;
+
+  if (blindPickAnalysis.reason) {
+    reasons.push(blindPickAnalysis.reason);
   }
 
   if (detail && damageBalance.bias) {
