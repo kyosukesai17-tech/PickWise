@@ -7,6 +7,10 @@ import ChampionCard from "./ChampionCard";
 import { analyzeTeam } from "../lib/analyzeTeam";
 import { analyzeChampionSynergy } from "../lib/analyzeChampionSynergy";
 import { generateReason } from "../lib/generateReason";
+import {
+  formatScoreModifier,
+  formatTotalScore,
+} from "../lib/formatScore";
 import { recommend } from "../lib/recommend";
 import { ROLE_INDEX } from "../lib/role";
 import { selectRecommendationReasons } from "../lib/selectRecommendationReasons";
@@ -326,7 +330,10 @@ export default function RecommendationSection({
 
                   <div className="flex shrink-0 flex-col items-end gap-3">
                     <span className="font-semibold text-yellow-400">
-                      {recommendation.score} pt
+                      {formatTotalScore(
+                        recommendation.score,
+                      )}{" "}
+                      pt
                     </span>
 
                     <button
@@ -394,10 +401,7 @@ export default function RecommendationSection({
                                     : "text-rose-400"
                                 }`}
                               >
-                                {isPositive
-                                  ? "+"
-                                  : "-"}
-                                {Math.abs(
+                                {formatScoreModifier(
                                   reason.score,
                                 )}
                               </span>
