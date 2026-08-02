@@ -3,6 +3,12 @@ import { TRAITS } from "../src/constants/traits";
 
 import type { Champion } from "../types/champion";
 
+export type EnemyCompositionType =
+  | "DIVE"
+  | "POKE"
+  | "FRONT_TO_BACK"
+  | "CATCH";
+
 export interface EnemyTeamAnalysis {
   selectedCount: number;
 
@@ -15,6 +21,8 @@ export interface EnemyTeamAnalysis {
   enemyCatchCount: number;
   enemyPokeCount: number;
   enemyCcScore: number;
+  enemyCarryCount: number;
+  compositionTypes: EnemyCompositionType[];
 
   hasHeavyDive: boolean;
   isMeleeHeavy: boolean;
@@ -36,6 +44,7 @@ export function analyzeEnemyTeam(
   let enemyCatchCount = 0;
   let enemyPokeCount = 0;
   let enemyCcScore = 0;
+  let enemyCarryCount = 0;
 
   for (const champion of team) {
     if (!champion) continue;
@@ -85,6 +94,28 @@ export function analyzeEnemyTeam(
     }
 
     enemyCcScore += detail.ratings.cc;
+
+    if (detail.archetypes.includes("CARRY")) {
+      enemyCarryCount++;
+    }
+  }
+
+  const compositionTypes: EnemyCompositionType[] = [];
+
+  if (enemyAssassinCount + enemyEngageCount >= 3) {
+    compositionTypes.push("DIVE");
+  }
+
+  if (enemyPokeCount >= 3) {
+    compositionTypes.push("POKE");
+  }
+
+  if (frontlineCount >= 2 && enemyCarryCount >= 2) {
+    compositionTypes.push("FRONT_TO_BACK");
+  }
+
+  if (enemyCatchCount >= 2 && enemyCcScore >= 12) {
+    compositionTypes.push("CATCH");
   }
 
   return {
@@ -99,6 +130,8 @@ export function analyzeEnemyTeam(
     enemyCatchCount,
     enemyPokeCount,
     enemyCcScore,
+    enemyCarryCount,
+    compositionTypes,
 
     hasHeavyDive:
       diveThreatCount >= 2,
