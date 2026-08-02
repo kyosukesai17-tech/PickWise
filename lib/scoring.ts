@@ -2,6 +2,7 @@ import type {
   DraftMetricRating,
   RoleSuitabilityRating,
 } from "../src/types/championDetail";
+import type { Role } from "../types/champion";
 
 export const SCORE = {
   BASE: 50,
@@ -142,3 +143,14 @@ export const PICK_POTENTIAL_SCORE = {
   4: 5,
   5: 10,
 } as const satisfies Record<DraftMetricRating, number>;
+
+export const OBJECTIVE_CONTROL_SCORE = {
+  TOP: { 1: -6, 2: -3, 3: 0, 4: 3, 5: 6 },
+  JG: { 1: -7, 2: -3, 3: 0, 4: 3, 5: 7 },
+  MID: { 1: -8, 2: -4, 3: 0, 4: 4, 5: 8 },
+  ADC: { 1: -10, 2: -5, 3: 0, 4: 5, 5: 10 },
+  SUP: { 1: -4, 2: -2, 3: 0, 4: 2, 5: 4 },
+} as const satisfies Record<
+  Role,
+  Record<DraftMetricRating, number>
+>;

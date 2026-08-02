@@ -25,6 +25,10 @@ import {
   analyzePickPotentialCandidate,
   analyzePickPotentialNeed,
 } from "./analyzePickPotentialNeed";
+import {
+  analyzeObjectiveCandidate,
+  analyzeObjectiveNeed,
+} from "./analyzeObjectiveNeed";
 import { clampTraitScore } from "./clampTraitScore";
 import {
   analyzeTraits,
@@ -79,6 +83,12 @@ export function calculateScore(
 
   const pickPotentialNeed =
     analyzePickPotentialNeed(
+      allyTeam,
+      selectedRole,
+    );
+
+  const objectiveNeed =
+    analyzeObjectiveNeed(
       allyTeam,
       selectedRole,
     );
@@ -629,6 +639,18 @@ export function calculateScore(
 
   if (pickPotentialAnalysis.reason) {
     reasons.push(pickPotentialAnalysis.reason);
+  }
+
+  const objectiveAnalysis = analyzeObjectiveCandidate(
+    detail?.draftMetrics?.objectiveControl,
+    selectedRole,
+    objectiveNeed.needsObjective,
+  );
+
+  score += objectiveAnalysis.score;
+
+  if (objectiveAnalysis.reason) {
+    reasons.push(objectiveAnalysis.reason);
   }
 
   if (detail && damageBalance.bias) {
