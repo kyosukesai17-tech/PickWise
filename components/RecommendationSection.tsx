@@ -10,6 +10,10 @@ import { analyzeChampionSynergy } from "../lib/analyzeChampionSynergy";
 import { getChampionDetail } from "../lib/analyzeTraits";
 import { generateReason } from "../lib/generateReason";
 import {
+  matchesChampionSearch,
+  normalizeChampionSearchValue,
+} from "../lib/championSearch";
+import {
   formatScoreModifier,
   formatTotalScore,
 } from "../lib/formatScore";
@@ -46,10 +50,7 @@ export default function RecommendationSection({
   selectedRole,
   onSelectChampion,
 }: RecommendationSectionProps) {
-  const [
-    includeTemporaryData,
-    setIncludeTemporaryData,
-  ] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
   const [
     expandedChampionIds,
     setExpandedChampionIds,
@@ -118,27 +119,28 @@ export default function RecommendationSection({
       (need) => need.needed,
     );
 
-  const registeredCount =
-    recommendations.filter(
-      (recommendation) =>
-        recommendation.isDataRegistered,
-    ).length;
-
-  const temporaryCount =
-    recommendations.length -
-    registeredCount;
-
-  const filteredRecommendations =
-    includeTemporaryData
-      ? recommendations
-      : recommendations.filter(
-          (recommendation) =>
-            recommendation.isDataRegistered,
-        );
+  const normalizedSearchQuery =
+    normalizeChampionSearchValue(searchQuery);
+  const isSearching = normalizedSearchQuery.length > 0;
+  const rankedRecommendations = recommendations.map(
+    (recommendation, index) => ({
+      ...recommendation,
+      rank: index + 1,
+    }),
+  );
+  const matchingRecommendations = isSearching
+    ? rankedRecommendations.filter((recommendation) =>
+        matchesChampionSearch(
+          recommendation.champion,
+          normalizedSearchQuery,
+        ),
+      )
+    : rankedRecommendations;
 
   const visibleRecommendations =
-    filteredRecommendations
-      .slice(0, 10)
+    (isSearching
+      ? matchingRecommendations
+      : matchingRecommendations.slice(0, 10))
       .map((recommendation) => {
         const traitReasons = generateReason(
           enemyTeam,
@@ -199,88 +201,58 @@ export default function RecommendationSection({
         )}
       </div>
 
-      <div className="space-y-4 rounded-lg border border-slate-800 bg-slate-950/40 p-4">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <h3 className="text-sm font-semibold text-slate-200">
-              仮データを含める
-            </h3>
+      <div className="rounded-lg border border-slate-800 bg-slate-950/40 p-4">
+        <label
+          htmlFor="recommendation-champion-search"
+          className="text-sm font-semibold text-slate-200"
+        >
+          チャンピオン検索
+        </label>
 
-            <p className="mt-1 text-xs text-slate-500">
-              未登録チャンピオンは初期データで評価されます。
-            </p>
-          </div>
+        <input
+          id="recommendation-champion-search"
+          type="search"
+          value={searchQuery}
+          onChange={(event) => setSearchQuery(event.target.value)}
+          placeholder="チャンピオン名で検索"
+          aria-describedby="recommendation-search-help"
+          className="mt-3 w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
+        />
 
-          <div className="flex items-center gap-3">
-            <span
-              className={`text-sm font-semibold ${
-                includeTemporaryData
-                  ? "text-sky-300"
-                  : "text-slate-500"
-              }`}
-            >
-              {includeTemporaryData
-                ? "ON"
-                : "OFF"}
-            </span>
-
-            <button
-              type="button"
-              role="switch"
-              aria-label="仮データを含める"
-              aria-checked={
-                includeTemporaryData
-              }
-              onClick={() =>
-                setIncludeTemporaryData(
-                  (current) => !current,
-                )
-              }
-              className={`relative h-7 w-12 rounded-full transition ${
-                includeTemporaryData
-                  ? "bg-sky-600"
-                  : "bg-slate-700"
-              }`}
-            >
-              <span
-                className={`absolute top-1 h-5 w-5 rounded-full bg-white shadow transition ${
-                  includeTemporaryData
-                    ? "left-6"
-                    : "left-1"
-                }`}
-              />
-            </button>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap gap-2 text-xs">
-          <span className="rounded-full border border-sky-500/40 bg-sky-500/10 px-2 py-1 text-sky-300">
-            登録済み {registeredCount}
-          </span>
-
-          <span className="rounded-full border border-amber-500/40 bg-amber-500/10 px-2 py-1 text-amber-300">
-            仮データ {temporaryCount}
-          </span>
-        </div>
+        <p
+          id="recommendation-search-help"
+          className="mt-2 text-xs text-slate-500"
+        >
+          上位10体にいない候補も検索して確認できます。
+        </p>
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-3 text-sm">
         <p className="text-slate-400">
-          表示対象
-          <span className="ml-2 font-semibold text-sky-300">
-            {filteredRecommendations.length}
-          </span>
-          <span className="mx-1 text-slate-600">
-            /
-          </span>
-          <span>
-            {recommendations.length}
-          </span>
+          {isSearching ? (
+            <>
+              検索結果
+              <span className="mx-1 font-semibold text-sky-300">
+                {matchingRecommendations.length}件
+              </span>
+              / 推薦候補{recommendations.length}体
+            </>
+          ) : (
+            <>
+              表示対象
+              <span className="mx-1 font-semibold text-sky-300">
+                {recommendations.length}
+              </span>
+              / {recommendations.length}
+            </>
+          )}
         </p>
 
-        <p className="text-xs text-slate-500">
-          最大10件を表示
-        </p>
+        {!isSearching && (
+          <p className="text-xs text-slate-500">
+            最大10件を表示
+          </p>
+        )}
       </div>
 
       {selectedAllyChampion && (
@@ -299,14 +271,12 @@ export default function RecommendationSection({
         </div>
       )}
 
-      {filteredRecommendations.length === 0 ? (
+      {visibleRecommendations.length === 0 ? (
         <div className="rounded-lg border border-slate-800 bg-slate-950/40 p-5">
           <p className="text-sm text-slate-300">
-            登録済みの候補がありません。
-          </p>
-
-          <p className="mt-1 text-sm text-slate-500">
-            仮データの表示をONにすると、未登録候補も表示できます。
+            {isSearching
+              ? "一致する推薦候補がありません"
+              : "推薦候補がありません"}
           </p>
         </div>
       ) : (
@@ -314,7 +284,6 @@ export default function RecommendationSection({
           {visibleRecommendations.map(
             (
               recommendation,
-              index,
             ) => (
               <article
                 key={
@@ -326,13 +295,13 @@ export default function RecommendationSection({
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div className="flex min-w-0 items-center gap-3">
                     <span className="w-8 shrink-0 text-center font-bold text-yellow-400">
-                      {index === 0
+                      {recommendation.rank === 1
                         ? "🥇"
-                        : index === 1
+                        : recommendation.rank === 2
                           ? "🥈"
-                          : index === 2
+                          : recommendation.rank === 3
                             ? "🥉"
-                            : `${index + 1}`}
+                            : `${recommendation.rank}位`}
                     </span>
 
                     <div className="space-y-2">
@@ -342,20 +311,6 @@ export default function RecommendationSection({
                             .champion
                         }
                       />
-
-                      <span
-                        className={`inline-block rounded-full border px-2 py-1 text-xs ${
-                          recommendation
-                            .isDataRegistered
-                            ? "border-sky-500/40 bg-sky-500/10 text-sky-300"
-                            : "border-amber-500/40 bg-amber-500/10 text-amber-300"
-                        }`}
-                      >
-                        {recommendation
-                          .isDataRegistered
-                          ? "登録済み"
-                          : "仮データ"}
-                      </span>
                     </div>
                   </div>
 
@@ -385,13 +340,6 @@ export default function RecommendationSection({
                 </div>
 
                 <div className="mt-4 border-t border-slate-700 pt-3">
-                  {!recommendation
-                    .isDataRegistered && (
-                    <p className="mb-3 rounded-md border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-sm text-amber-300">
-                      このチャンピオンは未登録のため、初期データで評価されています。
-                    </p>
-                  )}
-
                   {recommendation.matchupReasons.length > 0 && (
                     <div>
                       <p className="mb-2 text-xs font-semibold text-sky-300">
