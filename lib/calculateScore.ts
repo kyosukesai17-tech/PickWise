@@ -8,6 +8,7 @@ import { analyzeCandidateRisks } from "./analyzeCandidateRisks";
 import { analyzeAllySynergy } from "./analyzeAllySynergy";
 import { analyzeRoleOpponent } from "./analyzeRoleOpponent";
 import { analyzeChampionSynergy } from "./analyzeChampionSynergy";
+import { clampTraitScore } from "./clampTraitScore";
 import {
   analyzeTraits,
   getChampionDetail,
@@ -494,13 +495,15 @@ export function calculateScore(
 
     const weightedTraitScore =
       traitScore * TRAIT_SCORE_WEIGHT;
+    const appliedTraitScore =
+      clampTraitScore(weightedTraitScore);
 
-    score += weightedTraitScore;
+    score += appliedTraitScore;
 
-    if (weightedTraitScore !== 0) {
+    if (appliedTraitScore !== 0) {
       reasons.push({
         type: REASON.TRAIT_SCORE,
-        score: weightedTraitScore,
+        score: appliedTraitScore,
         text: "Trait相性",
       });
     }
