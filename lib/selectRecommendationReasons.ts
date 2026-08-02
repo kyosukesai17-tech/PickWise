@@ -47,6 +47,7 @@ function priority(type: RecommendationReasonType): number {
     type === REASON.ROAM ||
     type === REASON.SIDE_LANE ||
     type === REASON.PICK_POTENTIAL ||
+    type === REASON.OBJECTIVE_CONTROL ||
     type === REASON.BLIND_PICK
   ) {
     return 7;
