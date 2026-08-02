@@ -32,7 +32,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":5,"sideLane":3,"pickPotential":2,"objectiveControl":5}
   },
   "Syndra": {
     "difficulty": 8,
@@ -49,7 +50,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY","CATCH"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":4,"sideLane":2,"pickPotential":5,"objectiveControl":4}
   },
   "Orianna": {
     "difficulty": 7,
@@ -84,7 +86,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY","CATCH"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":5,"sideLane":2,"pickPotential":4,"objectiveControl":5}
   },
   "Jinx": {
     "difficulty": 6,
@@ -137,7 +140,8 @@
       "scaling": 3
     },
     "archetypes": ["CARRY","CATCH"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":4,"sideLane":2,"pickPotential":4,"objectiveControl":4}
   },
   "Sivir": {
     "difficulty": 4,
@@ -172,7 +176,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY","CATCH"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":5,"sideLane":2,"pickPotential":5,"objectiveControl":5}
   },
   "Akali": {
     "difficulty": 7,
@@ -189,7 +194,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"TOP":5,"MID":4}
+    "roleSuitability": {"TOP":5,"MID":4},
+    "draftMetrics": {"blindPick":2,"roam":4,"teamfight":3,"sideLane":5,"pickPotential":4,"objectiveControl":2}
   },
   "Annie": {
     "difficulty": 6,
@@ -206,7 +212,8 @@
       "scaling": 3
     },
     "archetypes": ["CATCH"],
-    "roleSuitability": {"MID":5,"SUP":4}
+    "roleSuitability": {"MID":5,"SUP":4},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":5,"sideLane":2,"pickPotential":5,"objectiveControl":4}
   },
   "AurelionSol": {
     "difficulty": 7,
@@ -223,7 +230,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":2,"roam":3,"teamfight":5,"sideLane":3,"pickPotential":3,"objectiveControl":5}
   },
   "Azir": {
     "difficulty": 9,
@@ -240,7 +248,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":5,"sideLane":4,"pickPotential":2,"objectiveControl":5}
   },
   "Ekko": {
     "difficulty": 8,
@@ -257,7 +266,8 @@
       "scaling": 4
     },
     "archetypes": ["ASSASSIN","CARRY"],
-    "roleSuitability": {"JG":5,"MID":4}
+    "roleSuitability": {"JG":5,"MID":4},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":4,"sideLane":5,"pickPotential":4,"objectiveControl":4}
   },
   "Fizz": {
     "difficulty": 6,
@@ -274,7 +284,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN","CATCH"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":2,"roam":4,"teamfight":3,"sideLane":4,"pickPotential":5,"objectiveControl":2}
   },
   "Kassadin": {
     "difficulty": 8,
@@ -291,7 +302,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":1,"roam":3,"teamfight":4,"sideLane":5,"pickPotential":3,"objectiveControl":3}
   },
   "Katarina": {
     "difficulty": 8,
@@ -308,7 +320,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":2,"roam":5,"teamfight":4,"sideLane":4,"pickPotential":3,"objectiveControl":2}
   },
   "Lux": {
     "difficulty": 5,
@@ -361,7 +374,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":2,"roam":1,"teamfight":5,"sideLane":2,"pickPotential":1,"objectiveControl":5}
   },
   "Ashe": {
     "difficulty": 4,
@@ -378,7 +392,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5,"SUP":4}
+    "roleSuitability": {"ADC":5,"SUP":4},
+    "draftMetrics": {"blindPick":5,"roam":3,"teamfight":5,"sideLane":2,"pickPotential":5,"objectiveControl":4}
   },
   "Caitlyn": {
     "difficulty": 6,
@@ -413,7 +428,8 @@
       "scaling": 2
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":2,"roam":2,"teamfight":3,"sideLane":4,"pickPotential":2,"objectiveControl":5}
   },
   "Kaisa": {
     "difficulty": 6,
@@ -430,7 +446,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":4,"sideLane":4,"pickPotential":3,"objectiveControl":5}
   },
   "Lucian": {
     "difficulty": 6,
@@ -447,7 +464,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"ADC":5,"MID":4}
+    "roleSuitability": {"ADC":5,"MID":4},
+    "draftMetrics": {"blindPick":3,"roam":3,"teamfight":3,"sideLane":4,"pickPotential":2,"objectiveControl":4}
   },
   "MissFortune": {
     "difficulty": 1,
@@ -464,7 +482,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":5,"sideLane":2,"pickPotential":2,"objectiveControl":4}
   },
   "Samira": {
     "difficulty": 6,
@@ -499,7 +518,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5,"TOP":4}
+    "roleSuitability": {"ADC":5,"TOP":4},
+    "draftMetrics": {"blindPick":2,"roam":2,"teamfight":3,"sideLane":5,"pickPotential":2,"objectiveControl":4}
   },
   "Xayah": {
     "difficulty": 5,
@@ -516,7 +536,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":5,"sideLane":3,"pickPotential":3,"objectiveControl":5}
   },
   "LeeSin": {
     "difficulty": 6,
@@ -551,7 +572,8 @@
       "scaling": 2
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":5,"roam":5,"teamfight":5,"sideLane":2,"pickPotential":5,"objectiveControl":4}
   },
   "Vi": {
     "difficulty": 4,
@@ -568,7 +590,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN","CATCH"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":4,"sideLane":2,"pickPotential":5,"objectiveControl":4}
   },
   "Sejuani": {
     "difficulty": 4,
@@ -585,7 +608,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE","CATCH"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":5,"sideLane":1,"pickPotential":5,"objectiveControl":4}
   },
   "Viego": {
     "difficulty": 5,
@@ -602,7 +626,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":3,"roam":4,"teamfight":4,"sideLane":4,"pickPotential":3,"objectiveControl":5}
   },
   "Elise": {
     "difficulty": 9,
@@ -619,7 +644,8 @@
       "scaling": 2
     },
     "archetypes": ["ASSASSIN","CATCH"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":3,"sideLane":3,"pickPotential":5,"objectiveControl":4}
   },
   "Nocturne": {
     "difficulty": 4,
@@ -672,7 +698,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":4,"sideLane":4,"pickPotential":3,"objectiveControl":5}
   },
   "Zac": {
     "difficulty": 8,
@@ -689,7 +716,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"JG":5,"TOP":4}
+    "roleSuitability": {"JG":5,"TOP":4},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":5,"sideLane":2,"pickPotential":5,"objectiveControl":4}
   },
   "Aatrox": {
     "difficulty": 4,
@@ -706,7 +734,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":4,"sideLane":4,"pickPotential":3,"objectiveControl":4}
   },
   "Darius": {
     "difficulty": 2,
@@ -723,7 +752,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":2,"roam":2,"teamfight":3,"sideLane":5,"pickPotential":3,"objectiveControl":3}
   },
   "Ornn": {
     "difficulty": 5,
@@ -758,7 +788,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":3,"sideLane":5,"pickPotential":2,"objectiveControl":3}
   },
   "Camille": {
     "difficulty": 4,
@@ -811,7 +842,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":2,"roam":2,"teamfight":4,"sideLane":5,"pickPotential":2,"objectiveControl":5}
   },
   "Renekton": {
     "difficulty": 3,
@@ -828,7 +860,8 @@
       "scaling": 2
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":3,"roam":3,"teamfight":4,"sideLane":4,"pickPotential":4,"objectiveControl":4}
   },
   "KSante": {
     "difficulty": 9,
@@ -845,7 +878,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":5,"sideLane":4,"pickPotential":4,"objectiveControl":4}
   },
   "Mordekaiser": {
     "difficulty": 4,
@@ -862,7 +896,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":4,"sideLane":5,"pickPotential":4,"objectiveControl":4}
   },
   "Thresh": {
     "difficulty": 7,
@@ -879,7 +914,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE","CATCH"],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":5,"roam":5,"teamfight":5,"sideLane":1,"pickPotential":5,"objectiveControl":4}
   },
   "Nautilus": {
     "difficulty": 6,
@@ -896,7 +932,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE","CATCH"],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":5,"sideLane":1,"pickPotential":5,"objectiveControl":4}
   },
   "Leona": {
     "difficulty": 4,
@@ -913,7 +950,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE","CATCH"],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":5,"sideLane":1,"pickPotential":5,"objectiveControl":4}
   },
   "Lulu": {
     "difficulty": 5,
@@ -930,7 +968,8 @@
       "scaling": 5
     },
     "archetypes": [],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":5,"sideLane":1,"pickPotential":3,"objectiveControl":4}
   },
   "Soraka": {
     "difficulty": 3,
@@ -947,7 +986,8 @@
       "scaling": 5
     },
     "archetypes": [],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":5,"sideLane":1,"pickPotential":1,"objectiveControl":4}
   },
   "Janna": {
     "difficulty": 7,
@@ -964,7 +1004,8 @@
       "scaling": 3
     },
     "archetypes": [],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":4,"roam":4,"teamfight":5,"sideLane":1,"pickPotential":3,"objectiveControl":4}
   },
   "Braum": {
     "difficulty": 4,
@@ -981,7 +1022,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":5,"sideLane":1,"pickPotential":4,"objectiveControl":4}
   },
   "Rakan": {
     "difficulty": 5,
@@ -998,7 +1040,8 @@
       "scaling": 3
     },
     "archetypes": ["CATCH"],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":5,"sideLane":1,"pickPotential":5,"objectiveControl":4}
   },
   "Nami": {
     "difficulty": 5,
@@ -1015,7 +1058,8 @@
       "scaling": 3
     },
     "archetypes": [],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":5,"sideLane":1,"pickPotential":4,"objectiveControl":4}
   },
   "Milio": {
     "difficulty": 4,
@@ -1032,7 +1076,8 @@
       "scaling": 5
     },
     "archetypes": [],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":5,"sideLane":1,"pickPotential":1,"objectiveControl":4}
   },
   "Blitzcrank": {
     "difficulty": 4,
@@ -1049,7 +1094,8 @@
       "scaling": 2
     },
     "archetypes": ["CATCH"],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":4,"sideLane":1,"pickPotential":5,"objectiveControl":3}
   },
   "Morgana": {
     "difficulty": 1,
@@ -1066,7 +1112,8 @@
       "scaling": 3
     },
     "archetypes": ["CATCH"],
-    "roleSuitability": {"SUP":5,"JG":4}
+    "roleSuitability": {"SUP":5,"JG":4},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":5,"sideLane":1,"pickPotential":4,"objectiveControl":5}
   },
   "Zyra": {
     "difficulty": 7,
@@ -1083,7 +1130,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY","CATCH"],
-    "roleSuitability": {"SUP":5,"JG":4}
+    "roleSuitability": {"SUP":5,"JG":4},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":5,"sideLane":1,"pickPotential":4,"objectiveControl":5}
   },
   "Karma": {
     "difficulty": 5,
@@ -1100,7 +1148,8 @@
       "scaling": 3
     },
     "archetypes": [],
-    "roleSuitability": {"SUP":5,"MID":4}
+    "roleSuitability": {"SUP":5,"MID":4},
+    "draftMetrics": {"blindPick":5,"roam":4,"teamfight":4,"sideLane":1,"pickPotential":3,"objectiveControl":5}
   },
   "Sona": {
     "difficulty": 4,
@@ -1117,7 +1166,8 @@
       "scaling": 5
     },
     "archetypes": [],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":5,"sideLane":1,"pickPotential":2,"objectiveControl":4}
   },
   "Yuumi": {
     "difficulty": 2,
@@ -1134,7 +1184,8 @@
       "scaling": 5
     },
     "archetypes": [],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":2,"roam":3,"teamfight":4,"sideLane":1,"pickPotential":1,"objectiveControl":3}
   },
   "Alistar": {
     "difficulty": 7,
@@ -1151,7 +1202,8 @@
       "scaling": 2
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":5,"sideLane":1,"pickPotential":5,"objectiveControl":4}
   },
   "Taric": {
     "difficulty": 3,
@@ -1168,7 +1220,8 @@
       "scaling": 5
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":5,"sideLane":1,"pickPotential":3,"objectiveControl":5}
   },
   "Pyke": {
     "difficulty": 7,
@@ -1185,7 +1238,8 @@
       "scaling": 2
     },
     "archetypes": ["ASSASSIN","CATCH"],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":2,"roam":5,"teamfight":3,"sideLane":2,"pickPotential":5,"objectiveControl":3}
   },
   "TahmKench": {
     "difficulty": 5,
@@ -1202,7 +1256,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE","CATCH"],
-    "roleSuitability": {"SUP":5,"TOP":4}
+    "roleSuitability": {"SUP":5,"TOP":4},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":4,"sideLane":3,"pickPotential":4,"objectiveControl":3}
   },
   "Yasuo": {
     "difficulty": 10,
@@ -1234,7 +1289,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"MID":5,"TOP":4}
+    "roleSuitability": {"MID":5,"TOP":4},
+    "draftMetrics": {"blindPick":2,"roam":3,"teamfight":4,"sideLane":5,"pickPotential":3,"objectiveControl":4}
   },
   "Yone": {
     "difficulty": 8,
@@ -1266,7 +1322,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"MID":5,"TOP":4}
+    "roleSuitability": {"MID":5,"TOP":4},
+    "draftMetrics": {"blindPick":2,"roam":3,"teamfight":4,"sideLane":5,"pickPotential":3,"objectiveControl":4}
   },
   "Jax": {
     "difficulty": 5,
@@ -1297,7 +1354,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"TOP":5,"JG":4}
+    "roleSuitability": {"TOP":5,"JG":4},
+    "draftMetrics": {"blindPick":3,"roam":3,"teamfight":3,"sideLane":5,"pickPotential":3,"objectiveControl":5}
   },
   "Riven": {
     "difficulty": 8,
@@ -1328,7 +1386,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":2,"roam":3,"teamfight":3,"sideLane":5,"pickPotential":3,"objectiveControl":3}
   },
   "Kayn": {
     "difficulty": 8,
@@ -1359,7 +1418,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":4,"sideLane":4,"pickPotential":4,"objectiveControl":4}
   },
   "Khazix": {
     "difficulty": 6,
@@ -1389,7 +1449,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":2,"sideLane":4,"pickPotential":5,"objectiveControl":4}
   },
   "Evelynn": {
     "difficulty": 10,
@@ -1420,7 +1481,8 @@
       "scaling": 5
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":2,"roam":5,"teamfight":3,"sideLane":3,"pickPotential":5,"objectiveControl":4}
   },
   "MasterYi": {
     "difficulty": 4,
@@ -1452,7 +1514,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":2,"roam":3,"teamfight":3,"sideLane":5,"pickPotential":2,"objectiveControl":5}
   },
   "Sylas": {
     "difficulty": 5,
@@ -1484,7 +1547,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":3,"roam":4,"teamfight":5,"sideLane":4,"pickPotential":4,"objectiveControl":4}
   },
   "Leblanc": {
     "difficulty": 9,
@@ -1516,7 +1580,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":3,"sideLane":4,"pickPotential":5,"objectiveControl":3}
   },
   "Talon": {
     "difficulty": 7,
@@ -1546,7 +1611,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"MID":5,"JG":4}
+    "roleSuitability": {"MID":5,"JG":4},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":3,"sideLane":4,"pickPotential":4,"objectiveControl":3}
   },
   "Vladimir": {
     "difficulty": 7,
@@ -1577,7 +1643,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"TOP":5,"MID":4}
+    "roleSuitability": {"TOP":5,"MID":4},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":5,"sideLane":4,"pickPotential":2,"objectiveControl":4}
   },
   "Irelia": {
     "difficulty": 5,
@@ -1609,7 +1676,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"TOP":5,"MID":4}
+    "roleSuitability": {"TOP":5,"MID":4},
+    "draftMetrics": {"blindPick":2,"roam":3,"teamfight":4,"sideLane":5,"pickPotential":4,"objectiveControl":4}
   },
   "Gangplank": {
     "difficulty": 9,
@@ -1640,7 +1708,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":2,"roam":2,"teamfight":4,"sideLane":5,"pickPotential":2,"objectiveControl":5}
   },
   "Jayce": {
     "difficulty": 7,
@@ -1671,7 +1740,8 @@
       "scaling": 3
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"TOP":5,"MID":4}
+    "roleSuitability": {"TOP":5,"MID":4},
+    "draftMetrics": {"blindPick":3,"roam":3,"teamfight":3,"sideLane":5,"pickPotential":2,"objectiveControl":5}
   },
   "Rengar": {
     "difficulty": 8,
@@ -1702,7 +1772,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"JG":5,"TOP":4}
+    "roleSuitability": {"JG":5,"TOP":4},
+    "draftMetrics": {"blindPick":2,"roam":5,"teamfight":2,"sideLane":5,"pickPotential":5,"objectiveControl":4}
   },
   "Shaco": {
     "difficulty": 9,
@@ -1733,7 +1804,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"JG":5,"SUP":4}
+    "roleSuitability": {"JG":5,"SUP":4},
+    "draftMetrics": {"blindPick":2,"roam":5,"teamfight":2,"sideLane":5,"pickPotential":4,"objectiveControl":4}
   },
   "Zeri": {
     "difficulty": 6,
@@ -1764,7 +1836,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":3,"roam":3,"teamfight":5,"sideLane":4,"pickPotential":2,"objectiveControl":5}
   },
   "Twitch": {
     "difficulty": 6,
@@ -1796,7 +1869,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":3,"roam":4,"teamfight":5,"sideLane":3,"pickPotential":4,"objectiveControl":5}
   },
   "KogMaw": {
     "difficulty": 6,
@@ -1828,7 +1902,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":2,"roam":1,"teamfight":5,"sideLane":2,"pickPotential":1,"objectiveControl":5}
   },
   "Akshan": {
     "difficulty": 7,
@@ -1860,7 +1935,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"TOP":5,"MID":4}
+    "roleSuitability": {"TOP":5,"MID":4},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":3,"sideLane":4,"pickPotential":4,"objectiveControl":3}
   },
   "Ambessa": {
     "difficulty": 10,
@@ -1891,7 +1967,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY","ASSASSIN"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":3,"roam":4,"teamfight":4,"sideLane":5,"pickPotential":4,"objectiveControl":4}
   },
   "Anivia": {
     "difficulty": 10,
@@ -1922,7 +1999,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":5,"sideLane":2,"pickPotential":4,"objectiveControl":5}
   },
   "Aurora": {
     "difficulty": 5,
@@ -1953,7 +2031,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"TOP":5,"MID":4}
+    "roleSuitability": {"TOP":5,"MID":4},
+    "draftMetrics": {"blindPick":3,"roam":4,"teamfight":5,"sideLane":4,"pickPotential":4,"objectiveControl":4}
   },
   "Bard": {
     "difficulty": 9,
@@ -1985,7 +2064,8 @@
       "scaling": 5
     },
     "archetypes": ["CATCH"],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":4,"sideLane":1,"pickPotential":5,"objectiveControl":4}
   },
   "Belveth": {
     "difficulty": 10,
@@ -2016,7 +2096,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":3,"roam":4,"teamfight":4,"sideLane":5,"pickPotential":2,"objectiveControl":5}
   },
   "Brand": {
     "difficulty": 4,
@@ -2048,7 +2129,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"MID":5,"JG":4,"SUP":4}
+    "roleSuitability": {"MID":5,"JG":4,"SUP":4},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":5,"sideLane":1,"pickPotential":3,"objectiveControl":5}
   },
   "Briar": {
     "difficulty": 3,
@@ -2080,7 +2162,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":4,"sideLane":4,"pickPotential":4,"objectiveControl":4}
   },
   "Cassiopeia": {
     "difficulty": 10,
@@ -2111,7 +2194,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":5,"sideLane":4,"pickPotential":4,"objectiveControl":5}
   },
   "Chogath": {
     "difficulty": 5,
@@ -2143,7 +2227,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"TOP":5,"MID":4}
+    "roleSuitability": {"TOP":5,"MID":4},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":4,"sideLane":3,"pickPotential":4,"objectiveControl":5}
   },
   "Corki": {
     "difficulty": 6,
@@ -2175,7 +2260,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"MID":5,"ADC":4}
+    "roleSuitability": {"MID":5,"ADC":4},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":4,"sideLane":4,"pickPotential":2,"objectiveControl":5}
   },
   "Diana": {
     "difficulty": 4,
@@ -2206,7 +2292,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"JG":5,"MID":4}
+    "roleSuitability": {"JG":5,"MID":4},
+    "draftMetrics": {"blindPick":3,"roam":4,"teamfight":5,"sideLane":3,"pickPotential":4,"objectiveControl":4}
   },
   "DrMundo": {
     "difficulty": 5,
@@ -2237,7 +2324,8 @@
       "scaling": 5
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":4,"sideLane":4,"pickPotential":2,"objectiveControl":4}
   },
   "Fiddlesticks": {
     "difficulty": 9,
@@ -2269,7 +2357,8 @@
       "scaling": 3
     },
     "archetypes": [],
-    "roleSuitability": {"JG":5,"SUP":4}
+    "roleSuitability": {"JG":5,"SUP":4},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":5,"sideLane":1,"pickPotential":5,"objectiveControl":5}
   },
   "Galio": {
     "difficulty": 5,
@@ -2301,7 +2390,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"MID":5,"SUP":4}
+    "roleSuitability": {"MID":5,"SUP":4},
+    "draftMetrics": {"blindPick":5,"roam":5,"teamfight":5,"sideLane":2,"pickPotential":5,"objectiveControl":4}
   },
   "Gnar": {
     "difficulty": 8,
@@ -2333,7 +2423,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":5,"sideLane":4,"pickPotential":3,"objectiveControl":4}
   },
   "Gragas": {
     "difficulty": 5,
@@ -2365,7 +2456,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE","CATCH"],
-    "roleSuitability": {"TOP":5,"JG":4,"MID":4}
+    "roleSuitability": {"TOP":5,"JG":4,"MID":4},
+    "draftMetrics": {"blindPick":5,"roam":4,"teamfight":5,"sideLane":3,"pickPotential":5,"objectiveControl":4}
   },
   "Graves": {
     "difficulty": 3,
@@ -2395,7 +2487,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":4,"roam":4,"teamfight":3,"sideLane":5,"pickPotential":2,"objectiveControl":5}
   },
   "Hecarim": {
     "difficulty": 6,
@@ -2427,7 +2520,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY","ASSASSIN"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":5,"sideLane":4,"pickPotential":4,"objectiveControl":4}
   },
   "Heimerdinger": {
     "difficulty": 8,
@@ -2459,7 +2553,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"TOP":5,"MID":4,"SUP":4}
+    "roleSuitability": {"TOP":5,"MID":4,"SUP":4},
+    "draftMetrics": {"blindPick":3,"roam":1,"teamfight":4,"sideLane":3,"pickPotential":2,"objectiveControl":5}
   },
   "Hwei": {
     "difficulty": 9,
@@ -2491,7 +2586,8 @@
       "scaling": 3
     },
     "archetypes": [],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":5,"sideLane":1,"pickPotential":4,"objectiveControl":5}
   },
   "Illaoi": {
     "difficulty": 4,
@@ -2522,7 +2618,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":2,"roam":1,"teamfight":3,"sideLane":5,"pickPotential":2,"objectiveControl":5}
   },
   "Ivern": {
     "difficulty": 7,
@@ -2585,7 +2682,8 @@
       "scaling": 2
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":2,"roam":3,"teamfight":4,"sideLane":3,"pickPotential":3,"objectiveControl":5}
   },
   "Karthus": {
     "difficulty": 7,
@@ -2616,7 +2714,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"JG":5,"MID":4}
+    "roleSuitability": {"JG":5,"MID":4},
+    "draftMetrics": {"blindPick":3,"roam":4,"teamfight":5,"sideLane":2,"pickPotential":1,"objectiveControl":5}
   },
   "Kayle": {
     "difficulty": 7,
@@ -2648,7 +2747,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":1,"roam":2,"teamfight":5,"sideLane":5,"pickPotential":1,"objectiveControl":5}
   },
   "Kennen": {
     "difficulty": 4,
@@ -2679,7 +2779,8 @@
       "scaling": 3
     },
     "archetypes": [],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":3,"roam":3,"teamfight":5,"sideLane":4,"pickPotential":4,"objectiveControl":4}
   },
   "Kled": {
     "difficulty": 7,
@@ -2710,7 +2811,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":4,"sideLane":5,"pickPotential":4,"objectiveControl":3}
   },
   "Lillia": {
     "difficulty": 8,
@@ -2742,7 +2844,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"JG":5,"TOP":4}
+    "roleSuitability": {"JG":5,"TOP":4},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":5,"sideLane":4,"pickPotential":4,"objectiveControl":5}
   },
   "Lissandra": {
     "difficulty": 6,
@@ -2772,7 +2875,8 @@
       "scaling": 3
     },
     "archetypes": ["CATCH"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":5,"roam":4,"teamfight":5,"sideLane":2,"pickPotential":5,"objectiveControl":4}
   },
   "Malphite": {
     "difficulty": 2,
@@ -2835,7 +2939,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY","CATCH"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":5,"roam":2,"teamfight":4,"sideLane":3,"pickPotential":5,"objectiveControl":5}
   },
   "Maokai": {
     "difficulty": 3,
@@ -2866,7 +2971,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE","CATCH"],
-    "roleSuitability": {"JG":5,"SUP":4}
+    "roleSuitability": {"JG":5,"SUP":4},
+    "draftMetrics": {"blindPick":5,"roam":5,"teamfight":5,"sideLane":1,"pickPotential":5,"objectiveControl":5}
   },
   "Mel": {
     "difficulty": 5,
@@ -2898,7 +3004,8 @@
       "scaling": 3
     },
     "archetypes": [],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":4,"sideLane":2,"pickPotential":3,"objectiveControl":5}
   },
   "MonkeyKing": {
     "difficulty": 3,
@@ -2930,7 +3037,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5,"JG":4}
+    "roleSuitability": {"TOP":5,"JG":4},
+    "draftMetrics": {"blindPick":4,"roam":4,"teamfight":5,"sideLane":4,"pickPotential":4,"objectiveControl":4}
   },
   "Naafiri": {
     "difficulty": 2,
@@ -2961,7 +3069,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"MID":5,"JG":4}
+    "roleSuitability": {"MID":5,"JG":4},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":3,"sideLane":5,"pickPotential":4,"objectiveControl":3}
   },
   "Nasus": {
     "difficulty": 6,
@@ -2993,7 +3102,8 @@
       "scaling": 5
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":2,"roam":1,"teamfight":3,"sideLane":5,"pickPotential":2,"objectiveControl":4}
   },
   "Neeko": {
     "difficulty": 5,
@@ -3025,7 +3135,8 @@
       "scaling": 3
     },
     "archetypes": ["CATCH"],
-    "roleSuitability": {"MID":5,"SUP":4}
+    "roleSuitability": {"MID":5,"SUP":4},
+    "draftMetrics": {"blindPick":4,"roam":4,"teamfight":5,"sideLane":2,"pickPotential":5,"objectiveControl":4}
   },
   "Nidalee": {
     "difficulty": 8,
@@ -3089,7 +3200,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":2,"roam":2,"teamfight":5,"sideLane":3,"pickPotential":3,"objectiveControl":5}
   },
   "Nunu": {
     "difficulty": 4,
@@ -3120,7 +3232,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":4,"sideLane":2,"pickPotential":5,"objectiveControl":5}
   },
   "Olaf": {
     "difficulty": 3,
@@ -3151,7 +3264,8 @@
       "scaling": 2
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5,"JG":4}
+    "roleSuitability": {"TOP":5,"JG":4},
+    "draftMetrics": {"blindPick":3,"roam":3,"teamfight":3,"sideLane":5,"pickPotential":2,"objectiveControl":4}
   },
   "Pantheon": {
     "difficulty": 4,
@@ -3182,7 +3296,8 @@
       "scaling": 2
     },
     "archetypes": ["ASSASSIN","CATCH"],
-    "roleSuitability": {"TOP":5,"JG":4,"SUP":4}
+    "roleSuitability": {"TOP":5,"JG":4,"SUP":4},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":4,"sideLane":4,"pickPotential":5,"objectiveControl":3}
   },
   "Poppy": {
     "difficulty": 6,
@@ -3213,7 +3328,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE","CATCH"],
-    "roleSuitability": {"TOP":5,"JG":4}
+    "roleSuitability": {"TOP":5,"JG":4},
+    "draftMetrics": {"blindPick":5,"roam":4,"teamfight":5,"sideLane":3,"pickPotential":5,"objectiveControl":4}
   },
   "Qiyana": {
     "difficulty": 8,
@@ -3244,7 +3360,8 @@
       "scaling": 3
     },
     "archetypes": ["ASSASSIN"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":2,"roam":5,"teamfight":4,"sideLane":4,"pickPotential":5,"objectiveControl":5}
   },
   "Quinn": {
     "difficulty": 5,
@@ -3276,7 +3393,8 @@
       "scaling": 3
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":2,"sideLane":5,"pickPotential":4,"objectiveControl":3}
   },
   "Rammus": {
     "difficulty": 5,
@@ -3306,7 +3424,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":5,"sideLane":2,"pickPotential":5,"objectiveControl":3}
   },
   "RekSai": {
     "difficulty": 3,
@@ -3337,7 +3456,8 @@
       "scaling": 2
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":3,"roam":5,"teamfight":3,"sideLane":3,"pickPotential":5,"objectiveControl":4}
   },
   "Rell": {
     "difficulty": 5,
@@ -3368,7 +3488,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE","CATCH"],
-    "roleSuitability": {"SUP":5,"JG":4}
+    "roleSuitability": {"SUP":5,"JG":4},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":5,"sideLane":1,"pickPotential":5,"objectiveControl":4}
   },
   "Renata": {
     "difficulty": 8,
@@ -3400,7 +3521,8 @@
       "scaling": 5
     },
     "archetypes": ["CATCH"],
-    "roleSuitability": {"SUP":5}
+    "roleSuitability": {"SUP":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":5,"sideLane":1,"pickPotential":5,"objectiveControl":5}
   },
   "Rumble": {
     "difficulty": 10,
@@ -3463,7 +3585,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":3,"roam":4,"teamfight":4,"sideLane":5,"pickPotential":4,"objectiveControl":4}
   },
   "Senna": {
     "difficulty": 7,
@@ -3495,7 +3618,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"SUP":5,"ADC":4}
+    "roleSuitability": {"SUP":5,"ADC":4},
+    "draftMetrics": {"blindPick":3,"roam":3,"teamfight":4,"sideLane":2,"pickPotential":3,"objectiveControl":4}
   },
   "Seraphine": {
     "difficulty": 5,
@@ -3527,7 +3651,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"SUP":5,"MID":4}
+    "roleSuitability": {"SUP":5,"MID":4},
+    "draftMetrics": {"blindPick":5,"roam":3,"teamfight":5,"sideLane":1,"pickPotential":5,"objectiveControl":5}
   },
   "Sett": {
     "difficulty": 2,
@@ -3559,7 +3684,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":5,"sideLane":4,"pickPotential":4,"objectiveControl":4}
   },
   "Shen": {
     "difficulty": 4,
@@ -3590,7 +3716,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":5,"sideLane":4,"pickPotential":4,"objectiveControl":3}
   },
   "Shyvana": {
     "difficulty": 4,
@@ -3622,7 +3749,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":3,"roam":3,"teamfight":4,"sideLane":4,"pickPotential":2,"objectiveControl":5}
   },
   "Singed": {
     "difficulty": 5,
@@ -3654,7 +3782,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":3,"roam":4,"teamfight":4,"sideLane":5,"pickPotential":4,"objectiveControl":4}
   },
   "Sion": {
     "difficulty": 5,
@@ -3686,7 +3815,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":5,"sideLane":4,"pickPotential":4,"objectiveControl":4}
   },
   "Skarner": {
     "difficulty": 5,
@@ -3717,7 +3847,8 @@
       "scaling": 3
     },
     "archetypes": ["FRONTLINE","CATCH"],
-    "roleSuitability": {"JG":5,"TOP":4}
+    "roleSuitability": {"JG":5,"TOP":4},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":5,"sideLane":3,"pickPotential":5,"objectiveControl":4}
   },
   "Smolder": {
     "difficulty": 6,
@@ -3749,7 +3880,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":2,"roam":1,"teamfight":5,"sideLane":2,"pickPotential":1,"objectiveControl":5}
   },
   "Swain": {
     "difficulty": 8,
@@ -3781,7 +3913,8 @@
       "scaling": 5
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"MID":5,"SUP":4}
+    "roleSuitability": {"MID":5,"SUP":4},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":5,"sideLane":2,"pickPotential":4,"objectiveControl":5}
   },
   "Taliyah": {
     "difficulty": 5,
@@ -3813,7 +3946,8 @@
       "scaling": 3
     },
     "archetypes": ["CARRY","CATCH"],
-    "roleSuitability": {"MID":5,"JG":4}
+    "roleSuitability": {"MID":5,"JG":4},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":5,"sideLane":3,"pickPotential":5,"objectiveControl":5}
   },
   "Teemo": {
     "difficulty": 6,
@@ -3845,7 +3979,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":3,"roam":3,"teamfight":2,"sideLane":5,"pickPotential":2,"objectiveControl":5}
   },
   "Tristana": {
     "difficulty": 4,
@@ -3877,7 +4012,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY","ASSASSIN"],
-    "roleSuitability": {"ADC":5,"MID":4}
+    "roleSuitability": {"ADC":5,"MID":4},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":4,"sideLane":5,"pickPotential":3,"objectiveControl":5}
   },
   "Trundle": {
     "difficulty": 5,
@@ -3908,7 +4044,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5,"JG":4}
+    "roleSuitability": {"TOP":5,"JG":4},
+    "draftMetrics": {"blindPick":4,"roam":3,"teamfight":3,"sideLane":5,"pickPotential":3,"objectiveControl":5}
   },
   "Tryndamere": {
     "difficulty": 5,
@@ -3939,7 +4076,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"TOP":5,"MID":4}
+    "roleSuitability": {"TOP":5,"MID":4},
+    "draftMetrics": {"blindPick":2,"roam":2,"teamfight":2,"sideLane":5,"pickPotential":2,"objectiveControl":4}
   },
   "TwistedFate": {
     "difficulty": 9,
@@ -4003,7 +4141,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"JG":5,"TOP":4}
+    "roleSuitability": {"JG":5,"TOP":4},
+    "draftMetrics": {"blindPick":5,"roam":4,"teamfight":4,"sideLane":5,"pickPotential":3,"objectiveControl":5}
   },
   "Urgot": {
     "difficulty": 8,
@@ -4035,7 +4174,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":4,"sideLane":4,"pickPotential":4,"objectiveControl":4}
   },
   "Velkoz": {
     "difficulty": 8,
@@ -4067,7 +4207,8 @@
       "scaling": 4
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"MID":5,"SUP":4}
+    "roleSuitability": {"MID":5,"SUP":4},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":4,"sideLane":1,"pickPotential":3,"objectiveControl":5}
   },
   "Vex": {
     "difficulty": 5,
@@ -4098,7 +4239,8 @@
       "scaling": 3
     },
     "archetypes": [],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":4,"roam":4,"teamfight":5,"sideLane":2,"pickPotential":5,"objectiveControl":4}
   },
   "Volibear": {
     "difficulty": 3,
@@ -4129,7 +4271,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5,"JG":4}
+    "roleSuitability": {"TOP":5,"JG":4},
+    "draftMetrics": {"blindPick":4,"roam":4,"teamfight":4,"sideLane":4,"pickPotential":4,"objectiveControl":5}
   },
   "Warwick": {
     "difficulty": 3,
@@ -4160,7 +4303,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY","CATCH"],
-    "roleSuitability": {"JG":5,"TOP":4}
+    "roleSuitability": {"JG":5,"TOP":4},
+    "draftMetrics": {"blindPick":4,"roam":5,"teamfight":4,"sideLane":4,"pickPotential":5,"objectiveControl":4}
   },
   "Xerath": {
     "difficulty": 8,
@@ -4192,7 +4336,8 @@
       "scaling": 3
     },
     "archetypes": [],
-    "roleSuitability": {"MID":5,"SUP":4}
+    "roleSuitability": {"MID":5,"SUP":4},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":4,"sideLane":1,"pickPotential":3,"objectiveControl":5}
   },
   "XinZhao": {
     "difficulty": 2,
@@ -4224,7 +4369,8 @@
       "scaling": 4
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"JG":5}
+    "roleSuitability": {"JG":5},
+    "draftMetrics": {"blindPick":4,"roam":4,"teamfight":4,"sideLane":3,"pickPotential":4,"objectiveControl":4}
   },
   "Yorick": {
     "difficulty": 6,
@@ -4255,7 +4401,8 @@
       "scaling": 5
     },
     "archetypes": ["FRONTLINE","CARRY"],
-    "roleSuitability": {"TOP":5}
+    "roleSuitability": {"TOP":5},
+    "draftMetrics": {"blindPick":2,"roam":1,"teamfight":2,"sideLane":5,"pickPotential":2,"objectiveControl":5}
   },
   "Yunara": {
     "difficulty": 4,
@@ -4286,7 +4433,8 @@
       "scaling": 5
     },
     "archetypes": ["CARRY"],
-    "roleSuitability": {"ADC":5}
+    "roleSuitability": {"ADC":5},
+    "draftMetrics": {"blindPick":3,"roam":2,"teamfight":4,"sideLane":3,"pickPotential":2,"objectiveControl":4}
   },
   "Ziggs": {
     "difficulty": 4,
@@ -4317,7 +4465,8 @@
       "scaling": 3
     },
     "archetypes": [],
-    "roleSuitability": {"MID":5,"ADC":4}
+    "roleSuitability": {"MID":5,"ADC":4},
+    "draftMetrics": {"blindPick":4,"roam":2,"teamfight":4,"sideLane":2,"pickPotential":2,"objectiveControl":5}
   },
   "Zilean": {
     "difficulty": 6,
@@ -4349,7 +4498,8 @@
       "scaling": 5
     },
     "archetypes": [],
-    "roleSuitability": {"SUP":5,"MID":4}
+    "roleSuitability": {"SUP":5,"MID":4},
+    "draftMetrics": {"blindPick":4,"roam":4,"teamfight":5,"sideLane":1,"pickPotential":4,"objectiveControl":4}
   },
   "Zoe": {
     "difficulty": 5,
@@ -4380,6 +4530,7 @@
       "scaling": 3
     },
     "archetypes": ["CATCH"],
-    "roleSuitability": {"MID":5}
+    "roleSuitability": {"MID":5},
+    "draftMetrics": {"blindPick":3,"roam":4,"teamfight":3,"sideLane":2,"pickPotential":5,"objectiveControl":4}
   }
 }
