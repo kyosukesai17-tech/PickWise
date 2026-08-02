@@ -45,6 +45,7 @@ function priority(type: RecommendationReasonType): number {
   if (
     type === REASON.TEAMFIGHT ||
     type === REASON.ROAM ||
+    type === REASON.SIDE_LANE ||
     type === REASON.BLIND_PICK
   ) {
     return 7;
