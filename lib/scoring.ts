@@ -157,3 +157,6 @@ export const OBJECTIVE_CONTROL_SCORE = {
 
 export const DRAFT_METRICS_MAX_BONUS = 25;
 export const DRAFT_METRICS_MAX_PENALTY = -20;
+
+export const PICK_CC_FAMILY_MAX_BONUS = 15;
+export const PICK_CC_FAMILY_MAX_PENALTY = -15;

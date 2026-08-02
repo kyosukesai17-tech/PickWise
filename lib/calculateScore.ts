@@ -30,6 +30,7 @@ import {
   analyzeObjectiveNeed,
 } from "./analyzeObjectiveNeed";
 import { applyDraftMetricsCap } from "./applyDraftMetricsCap";
+import { applyPickCcFamilyCap } from "./applyPickCcFamilyCap";
 import { clampTraitScore } from "./clampTraitScore";
 import {
   analyzeTraits,
@@ -190,6 +191,79 @@ export function calculateScore(
     enemyAnalysis.isRangedHeavy &&
     hasAssassinOrCatch;
 
+  const ccFamilyAdjustment =
+    detail && allyAnalysis.needCC && detail.ratings.cc >= 4
+      ? {
+          score: SCORE.NEED_CC,
+          reason: {
+            type: REASON.CC,
+            score: SCORE.NEED_CC,
+            text: "CCが豊富",
+          },
+        }
+      : detail && allyAnalysis.needCC && detail.ratings.cc <= 2
+        ? {
+            score: SCORE.MISSING_CC,
+            reason: {
+              type: REASON.CC,
+              score: SCORE.MISSING_CC,
+              text: "CC不足を解決しにくい",
+            },
+          }
+        : { score: 0 };
+
+  const blindPickAnalysis = analyzeBlindPick(
+    detail?.draftMetrics?.blindPick,
+    roleOpponent.hasOpponent,
+  );
+  const teamfightAnalysis = analyzeTeamfightCandidate(
+    detail?.draftMetrics?.teamfight,
+    teamfightNeed.needsTeamfight,
+  );
+  const roamAnalysis = analyzeRoamCandidate(
+    detail?.draftMetrics?.roam,
+    roamNeed.needsRoam,
+  );
+  const sideLaneAnalysis = analyzeSideLaneCandidate(
+    detail?.draftMetrics?.sideLane,
+    sideLaneNeed.needsSideLane,
+  );
+  const pickPotentialAnalysis = analyzePickPotentialCandidate(
+    detail?.draftMetrics?.pickPotential,
+    pickPotentialNeed.needsPickPotential,
+  );
+  const objectiveAnalysis = analyzeObjectiveCandidate(
+    detail?.draftMetrics?.objectiveControl,
+    selectedRole,
+    objectiveNeed.needsObjective,
+  );
+  const draftMetrics = applyDraftMetricsCap([
+    blindPickAnalysis,
+    teamfightAnalysis,
+    roamAnalysis,
+    sideLaneAnalysis,
+    pickPotentialAnalysis,
+    objectiveAnalysis,
+  ]);
+  // PickPotential uses its DraftMetrics-capped value before sharing a cap
+  // with the earlier CC shortage adjustment.
+  const appliedPickPotential = draftMetrics.reasons.find(
+    (reason) => reason.type === REASON.PICK_POTENTIAL,
+  );
+  const pickCcFamily = applyPickCcFamilyCap([
+    ccFamilyAdjustment,
+    {
+      score: appliedPickPotential?.score ?? 0,
+      reason: appliedPickPotential,
+    },
+  ]);
+  const appliedCcReason = pickCcFamily.reasons.find(
+    (reason) => reason.type === REASON.CC,
+  );
+  const appliedPickPotentialReason = pickCcFamily.reasons.find(
+    (reason) => reason.type === REASON.PICK_POTENTIAL,
+  );
+
   let score = SCORE.BASE;
 
   const reasons: RecommendationReason[] = [];
@@ -208,18 +282,9 @@ export function calculateScore(
     });
   }
 
-  if (
-    detail &&
-    allyAnalysis.needCC &&
-    detail.ratings.cc >= 4
-  ) {
-    score += SCORE.NEED_CC;
-
-    reasons.push({
-      type: REASON.CC,
-      score: SCORE.NEED_CC,
-      text: "CCが豊富",
-    });
+  if (appliedCcReason && appliedCcReason.score > 0) {
+    score += appliedCcReason.score;
+    reasons.push(appliedCcReason);
   }
 
   if (
@@ -290,18 +355,9 @@ export function calculateScore(
     });
   }
 
-  if (
-    detail &&
-    allyAnalysis.needCC &&
-    detail.ratings.cc <= 2
-  ) {
-    score += SCORE.MISSING_CC;
-
-    reasons.push({
-      type: REASON.CC,
-      score: SCORE.MISSING_CC,
-      text: "CC不足を解決しにくい",
-    });
+  if (appliedCcReason && appliedCcReason.score < 0) {
+    score += appliedCcReason.score;
+    reasons.push(appliedCcReason);
   }
 
   if (
@@ -587,48 +643,19 @@ export function calculateScore(
     }
   }
 
-  const blindPickAnalysis = analyzeBlindPick(
-    detail?.draftMetrics?.blindPick,
-    roleOpponent.hasOpponent,
+  const finalDraftReasons = draftMetrics.reasons.flatMap((reason) => {
+    if (reason.type !== REASON.PICK_POTENTIAL) {
+      return [reason];
+    }
+
+    return appliedPickPotentialReason ? [appliedPickPotentialReason] : [];
+  });
+
+  score += finalDraftReasons.reduce(
+    (total, reason) => total + reason.score,
+    0,
   );
-
-  const teamfightAnalysis = analyzeTeamfightCandidate(
-    detail?.draftMetrics?.teamfight,
-    teamfightNeed.needsTeamfight,
-  );
-
-  const roamAnalysis = analyzeRoamCandidate(
-    detail?.draftMetrics?.roam,
-    roamNeed.needsRoam,
-  );
-
-  const sideLaneAnalysis = analyzeSideLaneCandidate(
-    detail?.draftMetrics?.sideLane,
-    sideLaneNeed.needsSideLane,
-  );
-
-  const pickPotentialAnalysis = analyzePickPotentialCandidate(
-    detail?.draftMetrics?.pickPotential,
-    pickPotentialNeed.needsPickPotential,
-  );
-
-  const objectiveAnalysis = analyzeObjectiveCandidate(
-    detail?.draftMetrics?.objectiveControl,
-    selectedRole,
-    objectiveNeed.needsObjective,
-  );
-
-  const draftMetrics = applyDraftMetricsCap([
-    blindPickAnalysis,
-    teamfightAnalysis,
-    roamAnalysis,
-    sideLaneAnalysis,
-    pickPotentialAnalysis,
-    objectiveAnalysis,
-  ]);
-
-  score += draftMetrics.score;
-  reasons.push(...draftMetrics.reasons);
+  reasons.push(...finalDraftReasons);
 
   if (detail && damageBalance.bias) {
     const candidateDamageType = detail.damageType;
