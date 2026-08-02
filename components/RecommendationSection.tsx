@@ -48,6 +48,32 @@ export default function RecommendationSection({
     includeTemporaryData,
     setIncludeTemporaryData,
   ] = useState(true);
+  const [
+    expandedChampionIds,
+    setExpandedChampionIds,
+  ] = useState<Set<string>>(
+    () => new Set(),
+  );
+
+  const toggleScoreDetails = (
+    championId: string,
+  ) => {
+    setExpandedChampionIds(
+      (currentIds) => {
+        const nextIds = new Set(
+          currentIds,
+        );
+
+        if (nextIds.has(championId)) {
+          nextIds.delete(championId);
+        } else {
+          nextIds.add(championId);
+        }
+
+        return nextIds;
+      },
+    );
+  };
 
   const analysis =
     analyzeTeam(allyTeam);
@@ -361,59 +387,8 @@ export default function RecommendationSection({
                     </p>
                   )}
 
-                  {recommendation.reasons
-                    .length === 0 ? (
-                    <p className="text-sm text-slate-400">
-                      基本スコアのみで評価されています。
-                    </p>
-                  ) : (
-                    <ul className="space-y-2">
-                      {recommendation.reasons.map(
-                        (
-                          reason,
-                          reasonIndex,
-                        ) => {
-                          const isPositive =
-                            reason.score >= 0;
-
-                          return (
-                            <li
-                              key={`${reason.type}-${reasonIndex}`}
-                              className="flex items-start justify-between gap-3 text-sm"
-                            >
-                              <span
-                                className={
-                                  isPositive
-                                    ? "text-emerald-300"
-                                    : "text-rose-300"
-                                }
-                              >
-                                {isPositive
-                                  ? "＋"
-                                  : "−"}{" "}
-                                {reason.text}
-                              </span>
-
-                              <span
-                                className={`shrink-0 font-medium ${
-                                  isPositive
-                                    ? "text-emerald-400"
-                                    : "text-rose-400"
-                                }`}
-                              >
-                                {formatScoreModifier(
-                                  reason.score,
-                                )}
-                              </span>
-                            </li>
-                          );
-                        },
-                      )}
-                    </ul>
-                      )}
-
                   {recommendation.matchupReasons.length > 0 && (
-                    <div className="mt-3 border-t border-slate-700 pt-3">
+                    <div>
                       <p className="mb-2 text-xs font-semibold text-sky-300">
                         推薦理由
                       </p>
@@ -436,6 +411,93 @@ export default function RecommendationSection({
                           ),
                         )}
                       </ul>
+                    </div>
+                  )}
+
+                  {recommendation.reasons.length > 0 && (
+                    <div
+                      className={
+                        recommendation.matchupReasons.length > 0
+                          ? "mt-3"
+                          : undefined
+                      }
+                    >
+                      <button
+                        type="button"
+                        aria-expanded={expandedChampionIds.has(
+                          recommendation.champion.id,
+                        )}
+                        aria-controls={`score-details-${recommendation.champion.id}`}
+                        onClick={() =>
+                          toggleScoreDetails(
+                            recommendation.champion.id,
+                          )
+                        }
+                        className="rounded-md border border-slate-600 bg-slate-900/60 px-3 py-2 text-sm font-semibold text-slate-200 transition hover:border-sky-500/60 hover:text-sky-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
+                      >
+                        {expandedChampionIds.has(
+                          recommendation.champion.id,
+                        )
+                          ? "スコア詳細を閉じる ▲"
+                          : "スコア詳細を表示 ▼"}
+                      </button>
+
+                      {expandedChampionIds.has(
+                        recommendation.champion.id,
+                      ) && (
+                        <div
+                          id={`score-details-${recommendation.champion.id}`}
+                          className="mt-3 border-t border-slate-700 pt-3"
+                        >
+                          <p className="mb-2 text-xs font-semibold text-slate-300">
+                            スコア内訳
+                          </p>
+
+                          <ul className="space-y-2">
+                            {recommendation.reasons.map(
+                              (
+                                reason,
+                                reasonIndex,
+                              ) => {
+                                const isPositive =
+                                  reason.score >= 0;
+
+                                return (
+                                  <li
+                                    key={`${reason.type}-${reasonIndex}`}
+                                    className="flex items-start justify-between gap-3 text-sm"
+                                  >
+                                    <span
+                                      className={
+                                        isPositive
+                                          ? "text-emerald-300"
+                                          : "text-rose-300"
+                                      }
+                                    >
+                                      {isPositive
+                                        ? "＋"
+                                        : "−"}{" "}
+                                      {reason.text}
+                                    </span>
+
+                                    <span
+                                      className={`shrink-0 font-medium ${
+                                        isPositive
+                                          ? "text-emerald-400"
+                                          : "text-rose-400"
+                                      }`}
+                                    >
+                                      {formatScoreModifier(
+                                        reason.score,
+                                      )}
+                                    </span>
+                                  </li>
+                                );
+                              },
+                            )}
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
