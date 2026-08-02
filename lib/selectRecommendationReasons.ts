@@ -42,7 +42,8 @@ function priority(type: RecommendationReasonType): number {
   if (type === REASON.DAMAGE_BALANCE) return 3;
   if (opponentTypes.has(type)) return 4;
   if (allyTypes.has(type)) return 5;
-  if (type === REASON.ROLE_SUITABILITY) return 7;
+  if (type === REASON.BLIND_PICK) return 7;
+  if (type === REASON.ROLE_SUITABILITY) return 8;
   return 6;
 }
 

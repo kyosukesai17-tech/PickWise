@@ -1,4 +1,7 @@
-import type { RoleSuitabilityRating } from "../src/types/championDetail";
+import type {
+  DraftMetricRating,
+  RoleSuitabilityRating,
+} from "../src/types/championDetail";
 
 export const SCORE = {
   BASE: 50,
@@ -99,3 +102,11 @@ export const ROLE_SUITABILITY_SCORE = {
   4: 5,
   5: 10,
 } as const satisfies Record<RoleSuitabilityRating, number>;
+
+export const BLIND_PICK_SCORE = {
+  1: -10,
+  2: -5,
+  3: 0,
+  4: 5,
+  5: 10,
+} as const satisfies Record<DraftMetricRating, number>;
