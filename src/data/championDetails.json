@@ -13,7 +13,8 @@
       "waveClear": 4,
       "scaling": 3
     },
-    "archetypes": ["CATCH"]
+    "archetypes": ["CATCH"],
+    "roleSuitability": {"MID":5}
   },
   "Viktor": {
     "difficulty": 9,
@@ -29,7 +30,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"MID":5}
   },
   "Syndra": {
     "difficulty": 8,
@@ -45,7 +47,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY","CATCH"]
+    "archetypes": ["CARRY","CATCH"],
+    "roleSuitability": {"MID":5}
   },
   "Orianna": {
     "difficulty": 7,
@@ -61,7 +64,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"MID":5}
   },
   "Veigar": {
     "difficulty": 7,
@@ -77,7 +81,8 @@
       "waveClear": 3,
       "scaling": 5
     },
-    "archetypes": ["CARRY","CATCH"]
+    "archetypes": ["CARRY","CATCH"],
+    "roleSuitability": {"MID":5}
   },
   "Jinx": {
     "difficulty": 6,
@@ -93,7 +98,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "Ezreal": {
     "difficulty": 7,
@@ -109,7 +115,8 @@
       "waveClear": 2,
       "scaling": 4
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "Jhin": {
     "difficulty": 6,
@@ -125,7 +132,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["CARRY","CATCH"]
+    "archetypes": ["CARRY","CATCH"],
+    "roleSuitability": {"ADC":5}
   },
   "Sivir": {
     "difficulty": 4,
@@ -141,7 +149,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "Varus": {
     "difficulty": 2,
@@ -157,7 +166,8 @@
       "waveClear": 3,
       "scaling": 4
     },
-    "archetypes": ["CARRY","CATCH"]
+    "archetypes": ["CARRY","CATCH"],
+    "roleSuitability": {"ADC":5}
   },
   "Akali": {
     "difficulty": 7,
@@ -173,7 +183,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"TOP":5,"MID":4}
   },
   "Annie": {
     "difficulty": 6,
@@ -189,7 +200,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["CATCH"]
+    "archetypes": ["CATCH"],
+    "roleSuitability": {"MID":5,"SUP":4}
   },
   "AurelionSol": {
     "difficulty": 7,
@@ -205,7 +217,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"MID":5}
   },
   "Azir": {
     "difficulty": 9,
@@ -221,7 +234,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"MID":5}
   },
   "Ekko": {
     "difficulty": 8,
@@ -237,7 +251,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["ASSASSIN","CARRY"]
+    "archetypes": ["ASSASSIN","CARRY"],
+    "roleSuitability": {"JG":5,"MID":4}
   },
   "Fizz": {
     "difficulty": 6,
@@ -253,7 +268,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN","CATCH"]
+    "archetypes": ["ASSASSIN","CATCH"],
+    "roleSuitability": {"MID":5}
   },
   "Kassadin": {
     "difficulty": 8,
@@ -269,7 +285,8 @@
       "waveClear": 3,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"MID":5}
   },
   "Katarina": {
     "difficulty": 8,
@@ -285,7 +302,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"MID":5}
   },
   "Lux": {
     "difficulty": 5,
@@ -301,7 +319,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"MID":5,"SUP":4}
   },
   "Zed": {
     "difficulty": 7,
@@ -317,7 +336,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"MID":5}
   },
   "Aphelios": {
     "difficulty": 10,
@@ -333,7 +353,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "Ashe": {
     "difficulty": 4,
@@ -349,7 +370,8 @@
       "waveClear": 3,
       "scaling": 4
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5,"SUP":4}
   },
   "Caitlyn": {
     "difficulty": 6,
@@ -365,7 +387,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "Draven": {
     "difficulty": 8,
@@ -381,7 +404,8 @@
       "waveClear": 5,
       "scaling": 2
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "Kaisa": {
     "difficulty": 6,
@@ -397,7 +421,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "Lucian": {
     "difficulty": 6,
@@ -413,7 +438,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"ADC":5,"MID":4}
   },
   "MissFortune": {
     "difficulty": 1,
@@ -429,7 +455,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "Samira": {
     "difficulty": 6,
@@ -445,7 +472,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"ADC":5}
   },
   "Vayne": {
     "difficulty": 8,
@@ -461,7 +489,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"ADC":5,"TOP":4}
   },
   "Xayah": {
     "difficulty": 5,
@@ -477,7 +506,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "LeeSin": {
     "difficulty": 6,
@@ -493,7 +523,8 @@
       "waveClear": 3,
       "scaling": 2
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"JG":5}
   },
   "JarvanIV": {
     "difficulty": 5,
@@ -509,7 +540,8 @@
       "waveClear": 3,
       "scaling": 2
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"JG":5}
   },
   "Vi": {
     "difficulty": 4,
@@ -525,7 +557,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN","CATCH"]
+    "archetypes": ["ASSASSIN","CATCH"],
+    "roleSuitability": {"JG":5}
   },
   "Sejuani": {
     "difficulty": 4,
@@ -541,7 +574,8 @@
       "waveClear": 2,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE","CATCH"]
+    "archetypes": ["FRONTLINE","CATCH"],
+    "roleSuitability": {"JG":5}
   },
   "Viego": {
     "difficulty": 5,
@@ -557,7 +591,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"JG":5}
   },
   "Elise": {
     "difficulty": 9,
@@ -573,7 +608,8 @@
       "waveClear": 3,
       "scaling": 2
     },
-    "archetypes": ["ASSASSIN","CATCH"]
+    "archetypes": ["ASSASSIN","CATCH"],
+    "roleSuitability": {"JG":5}
   },
   "Nocturne": {
     "difficulty": 4,
@@ -589,7 +625,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"JG":5}
   },
   "Amumu": {
     "difficulty": 3,
@@ -605,7 +642,8 @@
       "waveClear": 3,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"JG":5,"SUP":4}
   },
   "Kindred": {
     "difficulty": 4,
@@ -621,7 +659,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"JG":5}
   },
   "Zac": {
     "difficulty": 8,
@@ -637,7 +676,8 @@
       "waveClear": 2,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"JG":5,"TOP":4}
   },
   "Aatrox": {
     "difficulty": 4,
@@ -653,7 +693,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Darius": {
     "difficulty": 2,
@@ -669,7 +710,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Ornn": {
     "difficulty": 5,
@@ -685,7 +727,8 @@
       "waveClear": 2,
       "scaling": 5
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"TOP":5}
   },
   "Garen": {
     "difficulty": 5,
@@ -701,7 +744,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Camille": {
     "difficulty": 4,
@@ -717,7 +761,8 @@
       "waveClear": 3,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN","CATCH"]
+    "archetypes": ["CARRY","ASSASSIN","CATCH"],
+    "roleSuitability": {"TOP":5}
   },
   "Fiora": {
     "difficulty": 3,
@@ -733,7 +778,8 @@
       "waveClear": 2,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Gwen": {
     "difficulty": 5,
@@ -749,7 +795,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Renekton": {
     "difficulty": 3,
@@ -765,7 +812,8 @@
       "waveClear": 3,
       "scaling": 2
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"TOP":5}
   },
   "KSante": {
     "difficulty": 9,
@@ -781,7 +829,8 @@
       "waveClear": 2,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"TOP":5}
   },
   "Mordekaiser": {
     "difficulty": 4,
@@ -797,7 +846,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Thresh": {
     "difficulty": 7,
@@ -813,7 +863,8 @@
       "waveClear": 1,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE","CATCH"]
+    "archetypes": ["FRONTLINE","CATCH"],
+    "roleSuitability": {"SUP":5}
   },
   "Nautilus": {
     "difficulty": 6,
@@ -829,7 +880,8 @@
       "waveClear": 1,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE","CATCH"]
+    "archetypes": ["FRONTLINE","CATCH"],
+    "roleSuitability": {"SUP":5}
   },
   "Leona": {
     "difficulty": 4,
@@ -845,7 +897,8 @@
       "waveClear": 1,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE","CATCH"]
+    "archetypes": ["FRONTLINE","CATCH"],
+    "roleSuitability": {"SUP":5}
   },
   "Lulu": {
     "difficulty": 5,
@@ -861,7 +914,8 @@
       "waveClear": 1,
       "scaling": 5
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"SUP":5}
   },
   "Soraka": {
     "difficulty": 3,
@@ -877,7 +931,8 @@
       "waveClear": 1,
       "scaling": 5
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"SUP":5}
   },
   "Janna": {
     "difficulty": 7,
@@ -893,7 +948,8 @@
       "waveClear": 1,
       "scaling": 3
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"SUP":5}
   },
   "Braum": {
     "difficulty": 4,
@@ -909,7 +965,8 @@
       "waveClear": 1,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"SUP":5}
   },
   "Rakan": {
     "difficulty": 5,
@@ -925,7 +982,8 @@
       "waveClear": 1,
       "scaling": 3
     },
-    "archetypes": ["CATCH"]
+    "archetypes": ["CATCH"],
+    "roleSuitability": {"SUP":5}
   },
   "Nami": {
     "difficulty": 5,
@@ -941,7 +999,8 @@
       "waveClear": 1,
       "scaling": 3
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"SUP":5}
   },
   "Milio": {
     "difficulty": 4,
@@ -957,7 +1016,8 @@
       "waveClear": 1,
       "scaling": 5
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"SUP":5}
   },
   "Blitzcrank": {
     "difficulty": 4,
@@ -973,7 +1033,8 @@
       "waveClear": 1,
       "scaling": 2
     },
-    "archetypes": ["CATCH"]
+    "archetypes": ["CATCH"],
+    "roleSuitability": {"SUP":5}
   },
   "Morgana": {
     "difficulty": 1,
@@ -989,7 +1050,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["CATCH"]
+    "archetypes": ["CATCH"],
+    "roleSuitability": {"SUP":5,"JG":4}
   },
   "Zyra": {
     "difficulty": 7,
@@ -1005,7 +1067,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["CARRY","CATCH"]
+    "archetypes": ["CARRY","CATCH"],
+    "roleSuitability": {"SUP":5,"JG":4}
   },
   "Karma": {
     "difficulty": 5,
@@ -1021,7 +1084,8 @@
       "waveClear": 5,
       "scaling": 3
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"SUP":5,"MID":4}
   },
   "Sona": {
     "difficulty": 4,
@@ -1037,7 +1101,8 @@
       "waveClear": 3,
       "scaling": 5
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"SUP":5}
   },
   "Yuumi": {
     "difficulty": 2,
@@ -1053,7 +1118,8 @@
       "waveClear": 1,
       "scaling": 5
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"SUP":5}
   },
   "Alistar": {
     "difficulty": 7,
@@ -1069,7 +1135,8 @@
       "waveClear": 1,
       "scaling": 2
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"SUP":5}
   },
   "Taric": {
     "difficulty": 3,
@@ -1085,7 +1152,8 @@
       "waveClear": 1,
       "scaling": 5
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"SUP":5}
   },
   "Pyke": {
     "difficulty": 7,
@@ -1101,7 +1169,8 @@
       "waveClear": 1,
       "scaling": 2
     },
-    "archetypes": ["ASSASSIN","CATCH"]
+    "archetypes": ["ASSASSIN","CATCH"],
+    "roleSuitability": {"SUP":5}
   },
   "TahmKench": {
     "difficulty": 5,
@@ -1117,7 +1186,8 @@
       "waveClear": 1,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE","CATCH"]
+    "archetypes": ["FRONTLINE","CATCH"],
+    "roleSuitability": {"SUP":5,"TOP":4}
   },
   "Yasuo": {
     "difficulty": 10,
@@ -1148,7 +1218,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"MID":5,"TOP":4}
   },
   "Yone": {
     "difficulty": 8,
@@ -1179,7 +1250,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"MID":5,"TOP":4}
   },
   "Jax": {
     "difficulty": 5,
@@ -1209,7 +1281,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"TOP":5,"JG":4}
   },
   "Riven": {
     "difficulty": 8,
@@ -1239,7 +1312,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"TOP":5}
   },
   "Kayn": {
     "difficulty": 8,
@@ -1269,7 +1343,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"JG":5}
   },
   "Khazix": {
     "difficulty": 6,
@@ -1298,7 +1373,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"JG":5}
   },
   "Evelynn": {
     "difficulty": 10,
@@ -1328,7 +1404,8 @@
       "waveClear": 3,
       "scaling": 5
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"JG":5}
   },
   "MasterYi": {
     "difficulty": 4,
@@ -1359,7 +1436,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"JG":5}
   },
   "Sylas": {
     "difficulty": 5,
@@ -1390,7 +1468,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"MID":5}
   },
   "Leblanc": {
     "difficulty": 9,
@@ -1421,7 +1500,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"MID":5}
   },
   "Talon": {
     "difficulty": 7,
@@ -1450,7 +1530,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"MID":5,"JG":4}
   },
   "Vladimir": {
     "difficulty": 7,
@@ -1480,7 +1561,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"TOP":5,"MID":4}
   },
   "Irelia": {
     "difficulty": 5,
@@ -1511,7 +1593,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"TOP":5,"MID":4}
   },
   "Gangplank": {
     "difficulty": 9,
@@ -1541,7 +1624,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Jayce": {
     "difficulty": 7,
@@ -1571,7 +1655,8 @@
       "waveClear": 5,
       "scaling": 3
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"TOP":5,"MID":4}
   },
   "Rengar": {
     "difficulty": 8,
@@ -1601,7 +1686,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"JG":5,"TOP":4}
   },
   "Shaco": {
     "difficulty": 9,
@@ -1631,7 +1717,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"JG":5,"SUP":4}
   },
   "Zeri": {
     "difficulty": 6,
@@ -1661,7 +1748,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "Twitch": {
     "difficulty": 6,
@@ -1692,7 +1780,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"ADC":5}
   },
   "KogMaw": {
     "difficulty": 6,
@@ -1723,7 +1812,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "Akshan": {
     "difficulty": 7,
@@ -1754,7 +1844,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"TOP":5,"MID":4}
   },
   "Ambessa": {
     "difficulty": 10,
@@ -1784,7 +1875,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY","ASSASSIN"]
+    "archetypes": ["FRONTLINE","CARRY","ASSASSIN"],
+    "roleSuitability": {"TOP":5}
   },
   "Anivia": {
     "difficulty": 10,
@@ -1814,7 +1906,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"MID":5}
   },
   "Aurora": {
     "difficulty": 5,
@@ -1844,7 +1937,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"TOP":5,"MID":4}
   },
   "Bard": {
     "difficulty": 9,
@@ -1875,7 +1969,8 @@
       "waveClear": 1,
       "scaling": 5
     },
-    "archetypes": ["CARRY","CATCH"]
+    "archetypes": ["CARRY","CATCH"],
+    "roleSuitability": {"SUP":5}
   },
   "Belveth": {
     "difficulty": 10,
@@ -1905,7 +2000,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"JG":5}
   },
   "Brand": {
     "difficulty": 4,
@@ -1936,7 +2032,8 @@
       "waveClear": 5,
       "scaling": 4
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"MID":5,"JG":4,"SUP":4}
   },
   "Briar": {
     "difficulty": 3,
@@ -1967,7 +2064,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"JG":5}
   },
   "Cassiopeia": {
     "difficulty": 10,
@@ -1997,7 +2095,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"MID":5}
   },
   "Chogath": {
     "difficulty": 5,
@@ -2028,7 +2127,8 @@
       "waveClear": 3,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5,"MID":4}
   },
   "Corki": {
     "difficulty": 6,
@@ -2059,7 +2159,8 @@
       "waveClear": 5,
       "scaling": 4
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"MID":5,"ADC":4}
   },
   "Diana": {
     "difficulty": 4,
@@ -2089,7 +2190,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"JG":5,"MID":4}
   },
   "DrMundo": {
     "difficulty": 5,
@@ -2119,7 +2221,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Fiddlesticks": {
     "difficulty": 9,
@@ -2150,7 +2253,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"JG":5,"SUP":4}
   },
   "Galio": {
     "difficulty": 5,
@@ -2181,7 +2285,8 @@
       "waveClear": 4,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"MID":5,"SUP":4}
   },
   "Gnar": {
     "difficulty": 8,
@@ -2212,7 +2317,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Gragas": {
     "difficulty": 5,
@@ -2243,7 +2349,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE","CATCH"]
+    "archetypes": ["FRONTLINE","CATCH"],
+    "roleSuitability": {"TOP":5,"JG":4,"MID":4}
   },
   "Graves": {
     "difficulty": 3,
@@ -2272,7 +2379,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"JG":5}
   },
   "Hecarim": {
     "difficulty": 6,
@@ -2303,7 +2411,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY","ASSASSIN"]
+    "archetypes": ["FRONTLINE","CARRY","ASSASSIN"],
+    "roleSuitability": {"JG":5}
   },
   "Heimerdinger": {
     "difficulty": 8,
@@ -2334,7 +2443,8 @@
       "waveClear": 5,
       "scaling": 4
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"TOP":5,"MID":4,"SUP":4}
   },
   "Hwei": {
     "difficulty": 9,
@@ -2365,7 +2475,8 @@
       "waveClear": 5,
       "scaling": 3
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"MID":5}
   },
   "Illaoi": {
     "difficulty": 4,
@@ -2395,7 +2506,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Ivern": {
     "difficulty": 7,
@@ -2426,7 +2538,8 @@
       "waveClear": 1,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"JG":5}
   },
   "Kalista": {
     "difficulty": 7,
@@ -2455,7 +2568,8 @@
       "waveClear": 4,
       "scaling": 2
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "Karthus": {
     "difficulty": 7,
@@ -2485,7 +2599,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"JG":5,"MID":4}
   },
   "Kayle": {
     "difficulty": 7,
@@ -2516,7 +2631,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Kennen": {
     "difficulty": 4,
@@ -2546,7 +2662,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"TOP":5}
   },
   "Kled": {
     "difficulty": 7,
@@ -2576,7 +2693,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Lillia": {
     "difficulty": 8,
@@ -2607,7 +2725,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"JG":5,"TOP":4}
   },
   "Lissandra": {
     "difficulty": 6,
@@ -2636,7 +2755,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["CATCH"]
+    "archetypes": ["CATCH"],
+    "roleSuitability": {"MID":5}
   },
   "Malphite": {
     "difficulty": 2,
@@ -2667,7 +2787,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"TOP":5}
   },
   "Malzahar": {
     "difficulty": 6,
@@ -2696,7 +2817,8 @@
       "waveClear": 5,
       "scaling": 4
     },
-    "archetypes": ["CARRY","CATCH"]
+    "archetypes": ["CARRY","CATCH"],
+    "roleSuitability": {"MID":5}
   },
   "Maokai": {
     "difficulty": 3,
@@ -2726,7 +2848,8 @@
       "waveClear": 2,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE","CATCH"]
+    "archetypes": ["FRONTLINE","CATCH"],
+    "roleSuitability": {"JG":5,"SUP":4}
   },
   "Mel": {
     "difficulty": 5,
@@ -2757,7 +2880,8 @@
       "waveClear": 5,
       "scaling": 3
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"MID":5}
   },
   "MonkeyKing": {
     "difficulty": 3,
@@ -2788,7 +2912,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5,"JG":4}
   },
   "Naafiri": {
     "difficulty": 2,
@@ -2818,7 +2943,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"MID":5,"JG":4}
   },
   "Nasus": {
     "difficulty": 6,
@@ -2849,7 +2975,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Neeko": {
     "difficulty": 5,
@@ -2880,7 +3007,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["CATCH"]
+    "archetypes": ["CATCH"],
+    "roleSuitability": {"MID":5,"SUP":4}
   },
   "Nidalee": {
     "difficulty": 8,
@@ -2911,7 +3039,8 @@
       "waveClear": 3,
       "scaling": 2
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"JG":5}
   },
   "Nilah": {
     "difficulty": 10,
@@ -2941,7 +3070,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"ADC":5}
   },
   "Nunu": {
     "difficulty": 4,
@@ -2971,7 +3101,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"JG":5}
   },
   "Olaf": {
     "difficulty": 3,
@@ -3001,7 +3132,8 @@
       "waveClear": 4,
       "scaling": 2
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5,"JG":4}
   },
   "Pantheon": {
     "difficulty": 4,
@@ -3031,7 +3163,8 @@
       "waveClear": 3,
       "scaling": 2
     },
-    "archetypes": ["ASSASSIN","CATCH"]
+    "archetypes": ["ASSASSIN","CATCH"],
+    "roleSuitability": {"TOP":5,"JG":4,"SUP":4}
   },
   "Poppy": {
     "difficulty": 6,
@@ -3061,7 +3194,8 @@
       "waveClear": 2,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE","CATCH"]
+    "archetypes": ["FRONTLINE","CATCH"],
+    "roleSuitability": {"TOP":5,"JG":4}
   },
   "Qiyana": {
     "difficulty": 8,
@@ -3091,7 +3225,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"MID":5}
   },
   "Quinn": {
     "difficulty": 5,
@@ -3122,7 +3257,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"TOP":5}
   },
   "Rammus": {
     "difficulty": 5,
@@ -3151,7 +3287,8 @@
       "waveClear": 2,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"JG":5}
   },
   "RekSai": {
     "difficulty": 3,
@@ -3181,7 +3318,8 @@
       "waveClear": 3,
       "scaling": 2
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"JG":5}
   },
   "Rell": {
     "difficulty": 5,
@@ -3211,7 +3349,8 @@
       "waveClear": 1,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE","CATCH"]
+    "archetypes": ["FRONTLINE","CATCH"],
+    "roleSuitability": {"SUP":5,"JG":4}
   },
   "Renata": {
     "difficulty": 8,
@@ -3242,7 +3381,8 @@
       "waveClear": 1,
       "scaling": 5
     },
-    "archetypes": ["CATCH"]
+    "archetypes": ["CATCH"],
+    "roleSuitability": {"SUP":5}
   },
   "Rumble": {
     "difficulty": 10,
@@ -3272,7 +3412,8 @@
       "waveClear": 5,
       "scaling": 4
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"TOP":5,"MID":4}
   },
   "Ryze": {
     "difficulty": 7,
@@ -3302,7 +3443,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"MID":5}
   },
   "Senna": {
     "difficulty": 7,
@@ -3333,7 +3475,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"SUP":5,"ADC":4}
   },
   "Seraphine": {
     "difficulty": 5,
@@ -3364,7 +3507,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"SUP":5,"MID":4}
   },
   "Sett": {
     "difficulty": 2,
@@ -3395,7 +3539,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Shen": {
     "difficulty": 4,
@@ -3425,7 +3570,8 @@
       "waveClear": 2,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"TOP":5}
   },
   "Shyvana": {
     "difficulty": 4,
@@ -3456,7 +3602,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"JG":5}
   },
   "Singed": {
     "difficulty": 5,
@@ -3487,7 +3634,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Sion": {
     "difficulty": 5,
@@ -3518,7 +3666,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE"]
+    "archetypes": ["FRONTLINE"],
+    "roleSuitability": {"TOP":5}
   },
   "Skarner": {
     "difficulty": 5,
@@ -3548,7 +3697,8 @@
       "waveClear": 2,
       "scaling": 3
     },
-    "archetypes": ["FRONTLINE","CATCH"]
+    "archetypes": ["FRONTLINE","CATCH"],
+    "roleSuitability": {"JG":5,"TOP":4}
   },
   "Smolder": {
     "difficulty": 6,
@@ -3579,7 +3729,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "Swain": {
     "difficulty": 8,
@@ -3610,7 +3761,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"MID":5,"SUP":4}
   },
   "Taliyah": {
     "difficulty": 5,
@@ -3641,7 +3793,8 @@
       "waveClear": 5,
       "scaling": 3
     },
-    "archetypes": ["ASSASSIN"]
+    "archetypes": ["ASSASSIN"],
+    "roleSuitability": {"MID":5,"JG":4}
   },
   "Teemo": {
     "difficulty": 6,
@@ -3672,7 +3825,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Tristana": {
     "difficulty": 4,
@@ -3703,7 +3857,8 @@
       "waveClear": 5,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"ADC":5,"MID":4}
   },
   "Trundle": {
     "difficulty": 5,
@@ -3733,7 +3888,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5,"JG":4}
   },
   "Tryndamere": {
     "difficulty": 5,
@@ -3763,7 +3919,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY","ASSASSIN"]
+    "archetypes": ["CARRY","ASSASSIN"],
+    "roleSuitability": {"TOP":5,"MID":4}
   },
   "TwistedFate": {
     "difficulty": 9,
@@ -3794,7 +3951,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["CARRY","CATCH"]
+    "archetypes": ["CARRY","CATCH"],
+    "roleSuitability": {"MID":5}
   },
   "Udyr": {
     "difficulty": 7,
@@ -3824,7 +3982,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"JG":5,"TOP":4}
   },
   "Urgot": {
     "difficulty": 8,
@@ -3855,7 +4014,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Velkoz": {
     "difficulty": 8,
@@ -3886,7 +4046,8 @@
       "waveClear": 3,
       "scaling": 4
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"MID":5,"SUP":4}
   },
   "Vex": {
     "difficulty": 5,
@@ -3916,7 +4077,8 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"MID":5}
   },
   "Volibear": {
     "difficulty": 3,
@@ -3946,7 +4108,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5,"JG":4}
   },
   "Warwick": {
     "difficulty": 3,
@@ -3976,7 +4139,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY","CATCH"]
+    "archetypes": ["FRONTLINE","CARRY","CATCH"],
+    "roleSuitability": {"JG":5,"TOP":4}
   },
   "Xerath": {
     "difficulty": 8,
@@ -4007,7 +4171,8 @@
       "waveClear": 5,
       "scaling": 3
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"MID":5,"SUP":4}
   },
   "XinZhao": {
     "difficulty": 2,
@@ -4038,7 +4203,8 @@
       "waveClear": 4,
       "scaling": 4
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"JG":5}
   },
   "Yorick": {
     "difficulty": 6,
@@ -4068,7 +4234,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["FRONTLINE","CARRY"]
+    "archetypes": ["FRONTLINE","CARRY"],
+    "roleSuitability": {"TOP":5}
   },
   "Yunara": {
     "difficulty": 4,
@@ -4098,7 +4265,8 @@
       "waveClear": 4,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"ADC":5}
   },
   "Ziggs": {
     "difficulty": 4,
@@ -4128,7 +4296,8 @@
       "waveClear": 5,
       "scaling": 3
     },
-    "archetypes": []
+    "archetypes": [],
+    "roleSuitability": {"MID":5,"ADC":4}
   },
   "Zilean": {
     "difficulty": 6,
@@ -4159,7 +4328,8 @@
       "waveClear": 2,
       "scaling": 5
     },
-    "archetypes": ["CARRY"]
+    "archetypes": ["CARRY"],
+    "roleSuitability": {"SUP":5,"MID":4}
   },
   "Zoe": {
     "difficulty": 5,
@@ -4189,6 +4359,7 @@
       "waveClear": 3,
       "scaling": 3
     },
-    "archetypes": ["CATCH"]
+    "archetypes": ["CATCH"],
+    "roleSuitability": {"MID":5}
   }
 }

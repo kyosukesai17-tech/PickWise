@@ -9,7 +9,10 @@ import {
 } from "./analyzeTraits";
 
 import { TRAITS } from "../src/constants/traits";
-import { SCORE } from "./scoring";
+import {
+  ROLE_SUITABILITY_SCORE,
+  SCORE,
+} from "./scoring";
 
 import { REASON } from "../types/recommendation";
 
@@ -462,6 +465,24 @@ export function calculateScore(
   );
 
   score += championSynergy.score;
+
+  const roleSuitability =
+    detail?.roleSuitability[selectedRole];
+
+  if (roleSuitability !== undefined) {
+    const roleSuitabilityScore =
+      ROLE_SUITABILITY_SCORE[roleSuitability];
+
+    score += roleSuitabilityScore;
+
+    if (roleSuitabilityScore !== 0) {
+      reasons.push({
+        type: REASON.ROLE_SUITABILITY,
+        score: roleSuitabilityScore,
+        text: `${selectedRole}適性が${roleSuitabilityScore > 0 ? "高い" : "低い"}`,
+      });
+    }
+  }
 
   return {
     score,
