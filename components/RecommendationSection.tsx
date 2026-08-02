@@ -9,6 +9,7 @@ import { analyzeChampionSynergy } from "../lib/analyzeChampionSynergy";
 import { generateReason } from "../lib/generateReason";
 import { recommend } from "../lib/recommend";
 import { ROLE_INDEX } from "../lib/role";
+import { selectRecommendationReasons } from "../lib/selectRecommendationReasons";
 
 import type {
   Champion,
@@ -111,23 +112,20 @@ export default function RecommendationSection({
           enemyTeam,
           recommendation.champion,
         );
-        const synergyReasons = analyzeChampionSynergy(
+        const championSynergy = analyzeChampionSynergy(
           allyTeam,
           selectedRole,
           recommendation.champion,
-        ).reasons;
-        const visibleSynergyReasons = synergyReasons.slice(0, 3);
-        const visibleTraitReasons = traitReasons.slice(
-          0,
-          3 - visibleSynergyReasons.length,
         );
 
         return {
           ...recommendation,
-          matchupReasons: [
-            ...visibleTraitReasons,
-            ...visibleSynergyReasons,
-          ],
+          matchupReasons: selectRecommendationReasons({
+            scoreReasons: recommendation.reasons,
+            championSynergyReasons: championSynergy.reasons,
+            championSynergyScore: championSynergy.score,
+            traitReasons,
+          }),
         };
       });
 
