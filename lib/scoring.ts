@@ -154,3 +154,6 @@ export const OBJECTIVE_CONTROL_SCORE = {
   Role,
   Record<DraftMetricRating, number>
 >;
+
+export const DRAFT_METRICS_MAX_BONUS = 25;
+export const DRAFT_METRICS_MAX_PENALTY = -20;

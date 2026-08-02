@@ -29,6 +29,7 @@ import {
   analyzeObjectiveCandidate,
   analyzeObjectiveNeed,
 } from "./analyzeObjectiveNeed";
+import { applyDraftMetricsCap } from "./applyDraftMetricsCap";
 import { clampTraitScore } from "./clampTraitScore";
 import {
   analyzeTraits,
@@ -591,55 +592,25 @@ export function calculateScore(
     roleOpponent.hasOpponent,
   );
 
-  score += blindPickAnalysis.score;
-
-  if (blindPickAnalysis.reason) {
-    reasons.push(blindPickAnalysis.reason);
-  }
-
   const teamfightAnalysis = analyzeTeamfightCandidate(
     detail?.draftMetrics?.teamfight,
     teamfightNeed.needsTeamfight,
   );
-
-  score += teamfightAnalysis.score;
-
-  if (teamfightAnalysis.reason) {
-    reasons.push(teamfightAnalysis.reason);
-  }
 
   const roamAnalysis = analyzeRoamCandidate(
     detail?.draftMetrics?.roam,
     roamNeed.needsRoam,
   );
 
-  score += roamAnalysis.score;
-
-  if (roamAnalysis.reason) {
-    reasons.push(roamAnalysis.reason);
-  }
-
   const sideLaneAnalysis = analyzeSideLaneCandidate(
     detail?.draftMetrics?.sideLane,
     sideLaneNeed.needsSideLane,
   );
 
-  score += sideLaneAnalysis.score;
-
-  if (sideLaneAnalysis.reason) {
-    reasons.push(sideLaneAnalysis.reason);
-  }
-
   const pickPotentialAnalysis = analyzePickPotentialCandidate(
     detail?.draftMetrics?.pickPotential,
     pickPotentialNeed.needsPickPotential,
   );
-
-  score += pickPotentialAnalysis.score;
-
-  if (pickPotentialAnalysis.reason) {
-    reasons.push(pickPotentialAnalysis.reason);
-  }
 
   const objectiveAnalysis = analyzeObjectiveCandidate(
     detail?.draftMetrics?.objectiveControl,
@@ -647,11 +618,17 @@ export function calculateScore(
     objectiveNeed.needsObjective,
   );
 
-  score += objectiveAnalysis.score;
+  const draftMetrics = applyDraftMetricsCap([
+    blindPickAnalysis,
+    teamfightAnalysis,
+    roamAnalysis,
+    sideLaneAnalysis,
+    pickPotentialAnalysis,
+    objectiveAnalysis,
+  ]);
 
-  if (objectiveAnalysis.reason) {
-    reasons.push(objectiveAnalysis.reason);
-  }
+  score += draftMetrics.score;
+  reasons.push(...draftMetrics.reasons);
 
   if (detail && damageBalance.bias) {
     const candidateDamageType = detail.damageType;
