@@ -60,6 +60,10 @@ function specificity(type: RecommendationReasonType): number {
 }
 
 function semanticKey(reason: ReasonCandidate): string {
+  if (reason.type === REASON.OPPONENT_ENGAGE) {
+    return "DIVE_PROTECTION";
+  }
+
   const normalized = reason.text
     .normalize("NFKC")
     .toLowerCase()

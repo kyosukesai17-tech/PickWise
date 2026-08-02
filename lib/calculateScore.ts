@@ -54,6 +54,13 @@ export function calculateScore(
   const enemyAnalysis =
     analyzeEnemyTeam(enemyTeam);
 
+  const hasDiveComposition =
+    enemyAnalysis.compositionTypes.includes("DIVE");
+  const hasPokeComposition =
+    enemyAnalysis.compositionTypes.includes("POKE");
+  const hasFrontToBackComposition =
+    enemyAnalysis.compositionTypes.includes("FRONT_TO_BACK");
+
   const allySynergy =
     analyzeAllySynergy(allyTeam);
 
@@ -121,6 +128,13 @@ export function calculateScore(
   const canDealAD =
     detail?.damageType === "AD" ||
     detail?.damageType === "Mixed";
+
+  const appliesVsMeleePoke =
+    enemyAnalysis.isMeleeHeavy &&
+    hasPokeOrSiege;
+  const appliesVsRangedCatch =
+    enemyAnalysis.isRangedHeavy &&
+    hasAssassinOrCatch;
 
   let score = SCORE.BASE;
 
@@ -267,6 +281,7 @@ export function calculateScore(
   }
 
   if (
+    !hasDiveComposition &&
     enemyAnalysis.hasHeavyDive &&
     hasPeel
   ) {
@@ -280,8 +295,7 @@ export function calculateScore(
   }
 
   if (
-    enemyAnalysis.isMeleeHeavy &&
-    hasPokeOrSiege
+    appliesVsMeleePoke
   ) {
     score += SCORE.VS_MELEE_POKE;
 
@@ -293,8 +307,7 @@ export function calculateScore(
   }
 
   if (
-    enemyAnalysis.isRangedHeavy &&
-    hasAssassinOrCatch
+    appliesVsRangedCatch
   ) {
     score += SCORE.VS_RANGED_CATCH;
 
@@ -306,6 +319,7 @@ export function calculateScore(
   }
 
   if (
+    !hasFrontToBackComposition &&
     enemyAnalysis.hasMultipleFrontlines &&
     hasCarry
   ) {
@@ -386,6 +400,7 @@ export function calculateScore(
   }
 
   if (
+    !hasPokeComposition &&
     roleOpponent.hasPokeOrSiege &&
     (hasEngage || hasCatch)
   ) {
@@ -416,6 +431,7 @@ export function calculateScore(
   }
 
   if (
+    !appliesVsMeleePoke &&
     roleOpponent.isMelee &&
     isRanged &&
     hasPokeOrSiege
@@ -432,6 +448,7 @@ export function calculateScore(
   }
 
   if (
+    !appliesVsRangedCatch &&
     roleOpponent.isRanged &&
     hasAssassinOrCatch
   ) {
