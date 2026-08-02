@@ -1,7 +1,17 @@
 import { getChampionDetail } from "./analyzeTraits";
 
-import type { TeamAnalysis } from "../data/championData/types";
 import type { Champion } from "../types/champion";
+
+export interface TeamAnalysis {
+  apCount: number;
+  adCount: number;
+  frontlineCount: number;
+  ccScore: number;
+  needAP: boolean;
+  needAD: boolean;
+  needTank: boolean;
+  needCC: boolean;
+}
 
 export function analyzeTeam(
   team: (Champion | null)[]
