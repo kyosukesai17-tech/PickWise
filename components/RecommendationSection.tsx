@@ -5,6 +5,7 @@ import { useState } from "react";
 import ChampionCard from "./ChampionCard";
 import DraftDiagnosis from "./DraftDiagnosis";
 import DraftMetricsDisplay from "./DraftMetricsDisplay";
+import RecommendationReasonGroups from "./RecommendationReasonGroups";
 
 import { analyzeTeam } from "../lib/analyzeTeam";
 import { analyzeAllyComposition } from "../lib/analyzeAllyComposition";
@@ -18,6 +19,7 @@ import { buildDraftMetricsDiagnosis } from "../lib/buildDraftMetricsDiagnosis";
 import { analyzeTeamfightNeed } from "../lib/analyzeTeamfightNeed";
 import { getChampionDetail } from "../lib/analyzeTraits";
 import { generateReason } from "../lib/generateReason";
+import { groupRecommendationReasons } from "../lib/groupRecommendationReasons";
 import {
   matchesChampionSearch,
   normalizeChampionSearchValue,
@@ -152,17 +154,20 @@ export default function RecommendationSection({
           recommendation.champion,
         );
 
+        const selectedReasons = selectRecommendationReasons({
+          scoreReasons: recommendation.reasons,
+          championSynergyReasons: championSynergy.reasons,
+          championSynergyScore: championSynergy.score,
+          traitReasons,
+        });
+
         return {
           ...recommendation,
           draftMetrics: getChampionDetail(
             recommendation.champion.id,
           )?.draftMetrics,
-          matchupReasons: selectRecommendationReasons({
-            scoreReasons: recommendation.reasons,
-            championSynergyReasons: championSynergy.reasons,
-            championSynergyScore: championSynergy.score,
-            traitReasons,
-          }),
+          matchupReasonGroups: groupRecommendationReasons(selectedReasons),
+          selectedReasonCount: selectedReasons.length,
         };
       });
 
@@ -322,36 +327,14 @@ export default function RecommendationSection({
                 </div>
 
                 <div className="mt-4 border-t border-slate-700 pt-3">
-                  {recommendation.matchupReasons.length > 0 && (
-                    <div>
-                      <p className="mb-2 text-xs font-semibold text-sky-300">
-                        推薦理由
-                      </p>
-
-                      <ul className="space-y-2">
-                        {recommendation.matchupReasons.map(
-                          (reason, reasonIndex) => (
-                            <li
-                              key={`${recommendation.champion.id}-trait-${reasonIndex}`}
-                              className="flex items-start gap-2 text-sm text-sky-200"
-                            >
-                              <span
-                                aria-hidden="true"
-                                className="text-sky-400"
-                              >
-                                •
-                              </span>
-                              <span>{reason}</span>
-                            </li>
-                          ),
-                        )}
-                      </ul>
-                    </div>
-                  )}
+                  <RecommendationReasonGroups
+                    championId={recommendation.champion.id}
+                    groups={recommendation.matchupReasonGroups}
+                  />
 
                   <div
                     className={
-                      recommendation.matchupReasons.length > 0
+                      recommendation.selectedReasonCount > 0
                         ? "mt-3"
                         : undefined
                     }
