@@ -4,6 +4,27 @@ import type { DraftDiagnosisItem } from "../types/draftDiagnosis";
 export function buildBasicDraftDiagnosis(
   analysis: TeamAnalysis,
 ): DraftDiagnosisItem[] {
+  const ccDiagnosis: DraftDiagnosisItem = analysis.needCC
+    ? analysis.ccScore < 7
+      ? {
+          id: "cc",
+          label: "CCが大きく不足",
+          description: "敵の行動を止める手段が大きく不足しています",
+          status: "WARNING",
+        }
+      : {
+          id: "cc",
+          label: "CCがやや不足",
+          description: "敵を止める手段に少し不安が残る構成です",
+          status: "CAUTION",
+        }
+    : {
+        id: "cc",
+        label: "CCは十分",
+        description: "敵を止める手段を確保できています",
+        status: "GOOD",
+      };
+
   return [
     analysis.needTank
       ? {
@@ -47,18 +68,6 @@ export function buildBasicDraftDiagnosis(
           description: "魔法ダメージ源を確保できています",
           status: "GOOD",
         },
-    analysis.needCC
-      ? {
-          id: "cc",
-          label: "CC不足",
-          description: "敵の行動を止める手段が不足しています",
-          status: "WARNING",
-        }
-      : {
-          id: "cc",
-          label: "CCは十分",
-          description: "敵を止める手段を確保できています",
-          status: "GOOD",
-        },
+    ccDiagnosis,
   ];
 }
