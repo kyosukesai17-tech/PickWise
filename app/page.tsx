@@ -17,6 +17,7 @@ import {
   getNextDraftTurn,
   getPreviousDraftTurn,
 } from "../lib/draftPickOrder";
+import { convertChampSelectSession } from "../lib/lcu/convertChampSelectSession";
 
 import type { DraftSnapshot } from "../lib/draftShare";
 
@@ -28,6 +29,7 @@ import type {
   DraftPhaseState,
   PlayerTeamSide,
 } from "../types/draftPhase";
+import type { LcuChampSelectSession } from "../types/lcu";
 
 const createEmptyTeam =
   (): (Champion | null)[] => [
@@ -159,6 +161,15 @@ export default function Home() {
     );
   }
 
+  function importLcuSession(
+    session: LcuChampSelectSession,
+  ) {
+    const convertedDraft = convertChampSelectSession(session);
+
+    setAllyTeam(convertedDraft.allyTeam);
+    setEnemyTeam(convertedDraft.enemyTeam);
+  }
+
   if (!isDraftLoaded) {
     return (
       <main className="flex min-h-screen items-center justify-center bg-slate-950 text-white">
@@ -213,7 +224,9 @@ export default function Home() {
           }
         />
 
-        <LcuConnectionStatus />
+        <LcuConnectionStatus
+          onSessionLoaded={importLcuSession}
+        />
 
         <DraftControls
           selectedRole={

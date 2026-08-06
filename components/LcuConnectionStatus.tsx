@@ -4,8 +4,13 @@ import { useState } from "react";
 
 import type {
   LcuChampSelectResponse,
+  LcuChampSelectSession,
   LcuFailureReason,
 } from "../types/lcu";
+
+type LcuConnectionStatusProps = Readonly<{
+  onSessionLoaded: (session: LcuChampSelectSession) => void;
+}>;
 
 const FAILURE_MESSAGES: Record<LcuFailureReason, string> = {
   LEAGUE_CLIENT_NOT_FOUND: "League of Legendsクライアントを起動してください",
@@ -16,7 +21,9 @@ const FAILURE_MESSAGES: Record<LcuFailureReason, string> = {
   UNKNOWN_ERROR: "接続確認中に問題が発生しました",
 };
 
-export default function LcuConnectionStatus() {
+export default function LcuConnectionStatus({
+  onSessionLoaded,
+}: LcuConnectionStatusProps) {
   const [result, setResult] = useState<LcuChampSelectResponse | null>(null);
   const [isChecking, setIsChecking] = useState(false);
   const [requestFailed, setRequestFailed] = useState(false);
@@ -38,7 +45,13 @@ export default function LcuConnectionStatus() {
         throw new Error("LCU status request failed");
       }
 
-      setResult(await response.json() as LcuChampSelectResponse);
+      const nextResult = await response.json() as LcuChampSelectResponse;
+
+      setResult(nextResult);
+
+      if (nextResult.connected && nextResult.inChampSelect && nextResult.session) {
+        onSessionLoaded(nextResult.session);
+      }
     } catch {
       setResult(null);
       setRequestFailed(true);
