@@ -8,22 +8,28 @@ import type {
   DraftPhaseState,
   PlayerTeamSide,
 } from "../types/draftPhase";
+import type { Role } from "../types/champion";
 
 type DraftPhaseControlProps = Readonly<{
   state: DraftPhaseState;
   playerTeamSide: PlayerTeamSide;
+  selectedRole: Role;
   onPlayerTeamSideChange: (side: PlayerTeamSide) => void;
+  onSelectedRoleChange: (role: Role) => void;
   onPrevious: () => void;
   onNext: () => void;
   onReset: () => void;
 }>;
 
 const TEAM_SIDES: readonly PlayerTeamSide[] = ["BLUE", "RED"];
+const PICK_ROLES: readonly Role[] = ["TOP", "JG", "MID", "ADC", "SUP"];
 
 export default function DraftPhaseControl({
   state,
   playerTeamSide,
+  selectedRole,
   onPlayerTeamSideChange,
+  onSelectedRoleChange,
   onPrevious,
   onNext,
   onReset,
@@ -90,6 +96,43 @@ export default function DraftPhaseControl({
           })}
         </div>
       </fieldset>
+
+      <div className="mt-5">
+        <p className="text-xs font-semibold text-slate-400">
+          今回Pickするロール
+        </p>
+        <p className="mt-1 text-xs text-slate-500">
+          {currentDraftTurn.side === "ENEMY"
+            ? "次の味方Pickに備えて確認するロールを選択します"
+            : "この手番で候補を確認したいロールを選択します"}
+        </p>
+
+        <div
+          role="group"
+          aria-label="今回Pickするロール"
+          className="mt-2 flex flex-wrap gap-2"
+        >
+          {PICK_ROLES.map((role) => {
+            const isSelected = selectedRole === role;
+
+            return (
+              <button
+                key={role}
+                type="button"
+                aria-pressed={isSelected}
+                onClick={() => onSelectedRoleChange(role)}
+                className={`min-w-14 rounded-md border px-3 py-2 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${
+                  isSelected
+                    ? "border-violet-400 bg-violet-500/20 text-violet-100"
+                    : "border-slate-700 bg-slate-950/40 text-slate-300 hover:border-slate-500"
+                }`}
+              >
+                {role}
+              </button>
+            );
+          })}
+        </div>
+      </div>
 
       <ol
         aria-label="標準Pick順"
