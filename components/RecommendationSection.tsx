@@ -100,6 +100,7 @@ export default function RecommendationSection({
     sideLane: analyzeSideLaneNeed(allyTeam, selectedRole),
     pickPotential: analyzePickPotentialNeed(allyTeam, selectedRole),
     objective: analyzeObjectiveNeed(allyTeam, selectedRole),
+    selectedRole,
   });
   const diagnosisItems = hasSelectedAlly
     ? [
