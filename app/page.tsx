@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import RoleSelector from "../components/RoleSelector";
 import DraftControls from "../components/DraftControls";
 import DraftPhaseControl from "../components/DraftPhaseControl";
+import LcuConnectionStatus from "../components/LcuConnectionStatus";
 import TeamInput from "../components/TeamInput";
 import DraftAnalysisSummary from "../components/DraftAnalysisSummary";
 import RecommendationSection from "../components/RecommendationSection";
@@ -211,6 +212,8 @@ export default function Home() {
             }))
           }
         />
+
+        <LcuConnectionStatus />
 
         <DraftControls
           selectedRole={
