@@ -36,8 +36,14 @@ import type {
   Champion,
   Role,
 } from "../types/champion";
+import type {
+  DraftPhaseState,
+  PlayerTeamSide,
+} from "../types/draftPhase";
 
 type RecommendationSectionProps = {
+  draftPhaseState: DraftPhaseState;
+  playerTeamSide: PlayerTeamSide;
   allyTeam: (Champion | null)[];
   enemyTeam: (Champion | null)[];
   allyBans: (Champion | null)[];
@@ -49,6 +55,8 @@ type RecommendationSectionProps = {
 };
 
 export default function RecommendationSection({
+  draftPhaseState,
+  playerTeamSide,
   allyTeam,
   enemyTeam,
   allyBans,
@@ -172,7 +180,12 @@ export default function RecommendationSection({
       });
 
   return (
-    <section className="space-y-5 rounded-xl border border-slate-800 bg-slate-900/50 p-6">
+    <section
+      data-draft-mode={draftPhaseState.mode}
+      data-draft-turn={draftPhaseState.currentTurn}
+      data-player-team-side={playerTeamSide}
+      className="space-y-5 rounded-xl border border-slate-800 bg-slate-900/50 p-6"
+    >
       <div>
         <h2 className="text-xl font-bold">
           おすすめ（{selectedRole}）

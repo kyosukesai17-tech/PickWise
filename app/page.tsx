@@ -5,12 +5,17 @@ import { useState } from "react";
 import Header from "../components/Header";
 import RoleSelector from "../components/RoleSelector";
 import DraftControls from "../components/DraftControls";
+import DraftPhaseControl from "../components/DraftPhaseControl";
 import TeamInput from "../components/TeamInput";
 import DraftAnalysisSummary from "../components/DraftAnalysisSummary";
 import RecommendationSection from "../components/RecommendationSection";
 
 import { useDraftPersistence } from "../hooks/useDraftPersistence";
 import { ROLE_INDEX } from "../lib/role";
+import {
+  getNextDraftTurn,
+  getPreviousDraftTurn,
+} from "../lib/draftPickOrder";
 
 import type { DraftSnapshot } from "../lib/draftShare";
 
@@ -18,6 +23,10 @@ import type {
   Champion,
   Role,
 } from "../types/champion";
+import type {
+  DraftPhaseState,
+  PlayerTeamSide,
+} from "../types/draftPhase";
 
 const createEmptyTeam =
   (): (Champion | null)[] => [
@@ -29,6 +38,19 @@ const createEmptyTeam =
   ];
 
 export default function Home() {
+  const [
+    draftPhaseState,
+    setDraftPhaseState,
+  ] = useState<DraftPhaseState>({
+    mode: "STANDARD_SOLO_QUEUE",
+    currentTurn: 1,
+  });
+
+  const [
+    playerTeamSide,
+    setPlayerTeamSide,
+  ] = useState<PlayerTeamSide>("BLUE");
+
   const [
     selectedRole,
     setSelectedRole,
@@ -164,6 +186,30 @@ export default function Home() {
           }
         />
 
+        <DraftPhaseControl
+          state={draftPhaseState}
+          playerTeamSide={playerTeamSide}
+          onPlayerTeamSideChange={setPlayerTeamSide}
+          onPrevious={() =>
+            setDraftPhaseState((currentState) => ({
+              ...currentState,
+              currentTurn: getPreviousDraftTurn(currentState.currentTurn),
+            }))
+          }
+          onNext={() =>
+            setDraftPhaseState((currentState) => ({
+              ...currentState,
+              currentTurn: getNextDraftTurn(currentState.currentTurn),
+            }))
+          }
+          onReset={() =>
+            setDraftPhaseState((currentState) => ({
+              ...currentState,
+              currentTurn: 1,
+            }))
+          }
+        />
+
         <DraftControls
           selectedRole={
             selectedRole
@@ -179,6 +225,8 @@ export default function Home() {
         />
 
         <TeamInput
+          draftPhaseState={draftPhaseState}
+          playerTeamSide={playerTeamSide}
           allyTeam={allyTeam}
           setAllyTeam={
             setAllyTeam
@@ -206,6 +254,8 @@ export default function Home() {
         />
 
         <RecommendationSection
+          draftPhaseState={draftPhaseState}
+          playerTeamSide={playerTeamSide}
           allyTeam={allyTeam}
           enemyTeam={enemyTeam}
           allyBans={allyBans}
