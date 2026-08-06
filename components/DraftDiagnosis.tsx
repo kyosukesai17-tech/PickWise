@@ -1,3 +1,6 @@
+import AllyCompositionDiagnosis from "./AllyCompositionDiagnosis";
+
+import type { AllyCompositionAnalysis } from "../lib/analyzeAllyComposition";
 import type {
   DiagnosisStatus,
   DraftDiagnosisItem,
@@ -5,6 +8,7 @@ import type {
 
 type DraftDiagnosisProps = Readonly<{
   items: readonly DraftDiagnosisItem[];
+  compositionAnalysis: AllyCompositionAnalysis;
 }>;
 
 const STATUS_PRESENTATION = {
@@ -37,6 +41,7 @@ const STATUS_PRESENTATION = {
 
 export default function DraftDiagnosis({
   items,
+  compositionAnalysis,
 }: DraftDiagnosisProps) {
   return (
     <section
@@ -49,6 +54,8 @@ export default function DraftDiagnosis({
       >
         現在のドラフト診断
       </h3>
+
+      <AllyCompositionDiagnosis analysis={compositionAnalysis} />
 
       {items.length === 0 ? (
         <p className="mt-3 text-sm text-slate-400">

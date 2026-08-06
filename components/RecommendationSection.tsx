@@ -7,6 +7,7 @@ import DraftDiagnosis from "./DraftDiagnosis";
 import DraftMetricsDisplay from "./DraftMetricsDisplay";
 
 import { analyzeTeam } from "../lib/analyzeTeam";
+import { analyzeAllyComposition } from "../lib/analyzeAllyComposition";
 import { analyzeChampionSynergy } from "../lib/analyzeChampionSynergy";
 import { analyzeObjectiveNeed } from "../lib/analyzeObjectiveNeed";
 import { analyzePickPotentialNeed } from "../lib/analyzePickPotentialNeed";
@@ -91,6 +92,10 @@ export default function RecommendationSection({
     );
 
   const allyAnalysis = analyzeTeam(allyTeam);
+  const allyCompositionAnalysis = analyzeAllyComposition(
+    allyTeam,
+    selectedRole,
+  );
   const hasSelectedAlly = allyTeam.some(
     (champion) => champion !== null,
   );
@@ -173,7 +178,10 @@ export default function RecommendationSection({
         </p>
       </div>
 
-      <DraftDiagnosis items={diagnosisItems} />
+      <DraftDiagnosis
+        items={diagnosisItems}
+        compositionAnalysis={allyCompositionAnalysis}
+      />
 
       <div className="rounded-lg border border-slate-800 bg-slate-950/40 p-4">
         <label
