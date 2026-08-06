@@ -110,7 +110,7 @@ export function selectRecommendationReasons({
   championSynergyReasons,
   championSynergyScore,
   traitReasons,
-}: ReasonSelectionInput): string[] {
+}: ReasonSelectionInput): RecommendationReason[] {
   const candidates: ReasonCandidate[] = [
     ...(championSynergyScore > 0
       ? championSynergyReasons.map((text) => ({
@@ -153,6 +153,5 @@ export function selectRecommendationReasons({
   );
 
   return [...primaryReasons, ...roleReasons]
-    .slice(0, MAX_REASONS)
-    .map((reason) => reason.text);
+    .slice(0, MAX_REASONS);
 }
