@@ -189,7 +189,9 @@ export default function Home() {
         <DraftPhaseControl
           state={draftPhaseState}
           playerTeamSide={playerTeamSide}
+          selectedRole={selectedRole}
           onPlayerTeamSideChange={setPlayerTeamSide}
+          onSelectedRoleChange={setSelectedRole}
           onPrevious={() =>
             setDraftPhaseState((currentState) => ({
               ...currentState,
