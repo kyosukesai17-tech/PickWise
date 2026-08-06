@@ -2,6 +2,10 @@
 
 import ChampionSearch from "./ChampionSearch";
 import type { Champion } from "../types/champion";
+import type {
+  DraftPhaseState,
+  PlayerTeamSide,
+} from "../types/draftPhase";
 
 const teamRoles = [
   { label: "TOP" },
@@ -24,6 +28,9 @@ type TeamPanelProps = {
 };
 
 type TeamInputProps = {
+  draftPhaseState: DraftPhaseState;
+  playerTeamSide: PlayerTeamSide;
+
   allyTeam: (Champion | null)[];
   setAllyTeam: React.Dispatch<React.SetStateAction<(Champion | null)[]>>;
 
@@ -104,6 +111,8 @@ function TeamPanel({
 }
 
 export default function TeamInput({
+  draftPhaseState,
+  playerTeamSide,
   allyTeam,
   setAllyTeam,
   enemyTeam,
@@ -124,7 +133,11 @@ export default function TeamInput({
   const selectedChampions = [...selectedPicks, ...selectedBans];
 
   return (
-    <section>
+    <section
+      data-draft-mode={draftPhaseState.mode}
+      data-draft-turn={draftPhaseState.currentTurn}
+      data-player-team-side={playerTeamSide}
+    >
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
         <TeamPanel
           title="味方チーム"
