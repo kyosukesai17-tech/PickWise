@@ -18,6 +18,7 @@ import { buildBasicDraftDiagnosis } from "../lib/buildBasicDraftDiagnosis";
 import { buildDraftMetricsDiagnosis } from "../lib/buildDraftMetricsDiagnosis";
 import { analyzeTeamfightNeed } from "../lib/analyzeTeamfightNeed";
 import { getChampionDetail } from "../lib/analyzeTraits";
+import { getDraftTurn } from "../lib/draftPickOrder";
 import { generateReason } from "../lib/generateReason";
 import { groupRecommendationReasons } from "../lib/groupRecommendationReasons";
 import {
@@ -99,6 +100,10 @@ export default function RecommendationSection({
       allyBans,
       enemyBans,
       selectedRole,
+      getDraftTurn(
+        draftPhaseState.currentTurn,
+        playerTeamSide,
+      ).side,
     );
 
   const allyAnalysis = analyzeTeam(allyTeam);

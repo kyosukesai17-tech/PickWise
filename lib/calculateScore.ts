@@ -53,6 +53,7 @@ import type {
   Champion,
   Role,
 } from "../types/champion";
+import type { DraftSide } from "../types/draftPhase";
 
 const TRAIT_SCORE_WEIGHT = 0.2;
 
@@ -61,6 +62,7 @@ export function calculateScore(
   enemyTeam: (Champion | null)[],
   selectedRole: Role,
   champion: Champion,
+  currentDraftSide: DraftSide,
 ) {
   const allyAnalysis =
     analyzeTeam(allyTeam);
@@ -214,7 +216,7 @@ export function calculateScore(
 
   const blindPickAnalysis = analyzeBlindPick(
     detail?.draftMetrics?.blindPick,
-    roleOpponent.hasOpponent,
+    currentDraftSide === "ALLY" && !roleOpponent.hasOpponent,
   );
   const teamfightAnalysis = analyzeTeamfightCandidate(
     detail?.draftMetrics?.teamfight,

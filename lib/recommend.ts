@@ -10,6 +10,7 @@ import type {
 import type {
   Recommendation,
 } from "../types/recommendation";
+import type { DraftSide } from "../types/draftPhase";
 
 export function recommend(
   allyTeam: (Champion | null)[],
@@ -17,6 +18,7 @@ export function recommend(
   allyBans: (Champion | null)[],
   enemyBans: (Champion | null)[],
   selectedRole: Role,
+  currentDraftSide: DraftSide,
 ): Recommendation[] {
   const unavailableChampionIds = [
     ...allyTeam,
@@ -60,6 +62,7 @@ export function recommend(
           enemyTeam,
           selectedRole,
           champion,
+          currentDraftSide,
         ),
 
         isDataRegistered,

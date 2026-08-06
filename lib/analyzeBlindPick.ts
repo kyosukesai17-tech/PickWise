@@ -22,9 +22,9 @@ const BLIND_PICK_REASON_TEXT: Record<
 
 export function analyzeBlindPick(
   blindPick: DraftMetricRating | undefined,
-  hasRoleOpponent: boolean,
+  shouldEvaluate: boolean,
 ): BlindPickAnalysis {
-  if (hasRoleOpponent || blindPick === undefined) {
+  if (!shouldEvaluate || blindPick === undefined) {
     return { score: 0 };
   }
 
