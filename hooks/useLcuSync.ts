@@ -12,7 +12,7 @@ import type {
   LcuChampSelectSession,
 } from "../types/lcu";
 
-const LCU_SYNC_INTERVAL_MS = 2_000;
+const LCU_SYNC_INTERVAL_MS = 1_000;
 
 type UseLcuSyncOptions = Readonly<{
   onSessionLoaded: (session: LcuChampSelectSession) => void;
