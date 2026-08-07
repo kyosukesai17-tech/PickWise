@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useLcuSync } from "../hooks/useLcuSync";
 
 import type {
-  LcuChampSelectResponse,
   LcuChampSelectSession,
   LcuFailureReason,
 } from "../types/lcu";
@@ -24,41 +23,19 @@ const FAILURE_MESSAGES: Record<LcuFailureReason, string> = {
 export default function LcuConnectionStatus({
   onSessionLoaded,
 }: LcuConnectionStatusProps) {
-  const [result, setResult] = useState<LcuChampSelectResponse | null>(null);
-  const [isChecking, setIsChecking] = useState(false);
-  const [requestFailed, setRequestFailed] = useState(false);
+  const {
+    autoSync,
+    setAutoSync,
+    result,
+    isChecking,
+    requestFailed,
+    lastUpdatedAt,
+    checkConnection,
+  } = useLcuSync({ onSessionLoaded });
 
-  async function checkConnection() {
-    if (isChecking) {
-      return;
-    }
-
-    setIsChecking(true);
-    setRequestFailed(false);
-
-    try {
-      const response = await fetch("/api/lcu/champ-select", {
-        cache: "no-store",
-      });
-
-      if (!response.ok) {
-        throw new Error("LCU status request failed");
-      }
-
-      const nextResult = await response.json() as LcuChampSelectResponse;
-
-      setResult(nextResult);
-
-      if (nextResult.connected && nextResult.inChampSelect && nextResult.session) {
-        onSessionLoaded(nextResult.session);
-      }
-    } catch {
-      setResult(null);
-      setRequestFailed(true);
-    } finally {
-      setIsChecking(false);
-    }
-  }
+  const lastUpdatedLabel = lastUpdatedAt?.toLocaleTimeString("ja-JP", {
+    hour12: false,
+  });
 
   const statusLabel = isChecking
     ? "確認中…"
@@ -82,7 +59,7 @@ export default function LcuConnectionStatus({
       aria-labelledby="lcu-connection-heading"
       className="rounded-xl border border-slate-800 bg-slate-900/50 p-4 sm:p-6"
     >
-      <div className="flex flex-wrap items-center justify-between gap-4">
+      <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <h2
             id="lcu-connection-heading"
@@ -98,15 +75,47 @@ export default function LcuConnectionStatus({
           </p>
         </div>
 
-        <button
-          type="button"
-          disabled={isChecking}
-          onClick={checkConnection}
-          className="rounded-md border border-sky-500/60 bg-sky-500/10 px-4 py-2 text-sm font-semibold text-sky-200 transition hover:bg-sky-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 disabled:cursor-not-allowed disabled:opacity-50"
-        >
-          {isChecking ? "確認中…" : "接続確認"}
-        </button>
+        <div className="flex flex-col items-end gap-3">
+          <button
+            type="button"
+            disabled={isChecking}
+            onClick={checkConnection}
+            className="rounded-md border border-sky-500/60 bg-sky-500/10 px-4 py-2 text-sm font-semibold text-sky-200 transition hover:bg-sky-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {isChecking ? "確認中…" : "接続確認"}
+          </button>
+
+          <div className="flex items-center gap-2" aria-label="Auto Sync">
+            <span className="text-sm font-medium text-slate-300">
+              Auto Sync
+            </span>
+            <button
+              type="button"
+              aria-pressed={autoSync}
+              onClick={() => setAutoSync(!autoSync)}
+              className={`rounded-md border px-3 py-1 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 ${
+                autoSync
+                  ? "border-emerald-500/60 bg-emerald-500/10 text-emerald-200"
+                  : "border-slate-700 bg-slate-950/60 text-slate-400"
+              }`}
+            >
+              {autoSync ? "ON" : "OFF"}
+            </button>
+          </div>
+
+          {lastUpdatedLabel && (
+            <p className="text-xs text-slate-500">
+              最後の更新 {lastUpdatedLabel}
+            </p>
+          )}
+        </div>
       </div>
+
+      {requestFailed && (
+        <p className="mt-3 text-sm text-amber-300" role="status">
+          最後の取得に失敗しました
+        </p>
+      )}
 
       {result?.inChampSelect && result.session && (
         <details className="mt-4 rounded-lg border border-slate-800 bg-slate-950/50 p-3">

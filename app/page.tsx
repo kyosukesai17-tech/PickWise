@@ -1,6 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import {
+  useCallback,
+  useState,
+} from "react";
 
 import Header from "../components/Header";
 import RoleSelector from "../components/RoleSelector";
@@ -39,6 +42,16 @@ const createEmptyTeam =
     null,
     null,
   ];
+
+function areTeamsEqual(
+  currentTeam: (Champion | null)[],
+  nextTeam: (Champion | null)[],
+) {
+  return currentTeam.length === nextTeam.length
+    && currentTeam.every(
+      (champion, index) => champion?.id === nextTeam[index]?.id,
+    );
+}
 
 export default function Home() {
   const [
@@ -161,14 +174,21 @@ export default function Home() {
     );
   }
 
-  function importLcuSession(
+  const importLcuSession = useCallback((
     session: LcuChampSelectSession,
-  ) {
+  ) => {
     const convertedDraft = convertChampSelectSession(session);
 
-    setAllyTeam(convertedDraft.allyTeam);
-    setEnemyTeam(convertedDraft.enemyTeam);
-  }
+    setAllyTeam((currentTeam) => areTeamsEqual(
+      currentTeam,
+      convertedDraft.allyTeam,
+    ) ? currentTeam : convertedDraft.allyTeam);
+
+    setEnemyTeam((currentTeam) => areTeamsEqual(
+      currentTeam,
+      convertedDraft.enemyTeam,
+    ) ? currentTeam : convertedDraft.enemyTeam);
+  }, []);
 
   if (!isDraftLoaded) {
     return (
