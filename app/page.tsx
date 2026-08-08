@@ -21,6 +21,7 @@ import {
   getPreviousDraftTurn,
 } from "../lib/draftPickOrder";
 import { convertChampSelectSession } from "../lib/lcu/convertChampSelectSession";
+import type { RoleResolutionSource } from "../lib/lcu/convertChampSelectSession";
 
 import type { DraftSnapshot } from "../lib/draftShare";
 
@@ -43,6 +44,14 @@ const createEmptyTeam =
     null,
   ];
 
+const createUnknownRoleSources = (): RoleResolutionSource[] => [
+  "UNKNOWN",
+  "UNKNOWN",
+  "UNKNOWN",
+  "UNKNOWN",
+  "UNKNOWN",
+];
+
 function areTeamsEqual(
   currentTeam: (Champion | null)[],
   nextTeam: (Champion | null)[],
@@ -50,6 +59,16 @@ function areTeamsEqual(
   return currentTeam.length === nextTeam.length
     && currentTeam.every(
       (champion, index) => champion?.id === nextTeam[index]?.id,
+    );
+}
+
+function areRoleSourcesEqual(
+  currentSources: RoleResolutionSource[],
+  nextSources: RoleResolutionSource[],
+) {
+  return currentSources.length === nextSources.length
+    && currentSources.every(
+      (source, index) => source === nextSources[index],
     );
 }
 
@@ -85,6 +104,16 @@ export default function Home() {
   ] = useState<
     (Champion | null)[]
   >(createEmptyTeam);
+
+  const [
+    allyRoleSources,
+    setAllyRoleSources,
+  ] = useState<RoleResolutionSource[]>(createUnknownRoleSources);
+
+  const [
+    enemyRoleSources,
+    setEnemyRoleSources,
+  ] = useState<RoleResolutionSource[]>(createUnknownRoleSources);
 
   const [
     allyBans,
@@ -124,6 +153,9 @@ export default function Home() {
       createEmptyTeam(),
     );
 
+    setAllyRoleSources(createUnknownRoleSources());
+    setEnemyRoleSources(createUnknownRoleSources());
+
     setAllyBans(
       createEmptyTeam(),
     );
@@ -147,6 +179,9 @@ export default function Home() {
     setEnemyTeam(
       draft.enemyTeam,
     );
+
+    setAllyRoleSources(createUnknownRoleSources());
+    setEnemyRoleSources(createUnknownRoleSources());
 
     setAllyBans(
       draft.allyBans,
@@ -188,6 +223,16 @@ export default function Home() {
       currentTeam,
       convertedDraft.enemyTeam,
     ) ? currentTeam : convertedDraft.enemyTeam);
+
+    setAllyRoleSources((currentSources) => areRoleSourcesEqual(
+      currentSources,
+      convertedDraft.allyRoleSources,
+    ) ? currentSources : convertedDraft.allyRoleSources);
+
+    setEnemyRoleSources((currentSources) => areRoleSourcesEqual(
+      currentSources,
+      convertedDraft.enemyRoleSources,
+    ) ? currentSources : convertedDraft.enemyRoleSources);
   }, []);
 
   if (!isDraftLoaded) {
@@ -281,6 +326,10 @@ export default function Home() {
           setEnemyBans={
             setEnemyBans
           }
+          allyRoleSources={allyRoleSources}
+          setAllyRoleSources={setAllyRoleSources}
+          enemyRoleSources={enemyRoleSources}
+          setEnemyRoleSources={setEnemyRoleSources}
         />
 
         <DraftAnalysisSummary

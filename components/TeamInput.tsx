@@ -6,6 +6,7 @@ import type {
   DraftPhaseState,
   PlayerTeamSide,
 } from "../types/draftPhase";
+import type { RoleResolutionSource } from "../lib/lcu/convertChampSelectSession";
 
 const teamRoles = [
   { label: "TOP" },
@@ -25,6 +26,9 @@ type TeamPanelProps = {
   setBans: React.Dispatch<React.SetStateAction<(Champion | null)[]>>;
 
   selectedChampions: Champion[];
+  roleSources: RoleResolutionSource[];
+  setRoleSources: React.Dispatch<React.SetStateAction<RoleResolutionSource[]>>;
+  showRoleSources?: boolean;
 };
 
 type TeamInputProps = {
@@ -42,6 +46,12 @@ type TeamInputProps = {
 
   enemyBans: (Champion | null)[];
   setEnemyBans: React.Dispatch<React.SetStateAction<(Champion | null)[]>>;
+
+  allyRoleSources: RoleResolutionSource[];
+  setAllyRoleSources: React.Dispatch<React.SetStateAction<RoleResolutionSource[]>>;
+
+  enemyRoleSources: RoleResolutionSource[];
+  setEnemyRoleSources: React.Dispatch<React.SetStateAction<RoleResolutionSource[]>>;
 };
 
 function TeamPanel({
@@ -51,6 +61,9 @@ function TeamPanel({
   bans,
   setBans,
   selectedChampions,
+  roleSources,
+  setRoleSources,
+  showRoleSources = false,
 }: TeamPanelProps) {
   return (
     <div className="rounded-xl border border-slate-800 bg-slate-900/50 p-4 sm:p-6">
@@ -69,6 +82,8 @@ function TeamPanel({
               <ChampionSearch
                 role={label}
                 value={team[index]}
+                roleSource={roleSources[index]}
+                showRoleSource={showRoleSources}
                 excludedChampions={selectedChampions.filter(
                   (champion) => champion.id !== team[index]?.id
                 )}
@@ -76,6 +91,12 @@ function TeamPanel({
                   const next = [...team];
                   next[index] = champion;
                   setTeam(next);
+
+                  setRoleSources((currentSources) => {
+                    const nextSources = [...currentSources];
+                    nextSources[index] = "UNKNOWN";
+                    return nextSources;
+                  });
                 }}
               />
             </li>
@@ -121,6 +142,10 @@ export default function TeamInput({
   setAllyBans,
   enemyBans,
   setEnemyBans,
+  allyRoleSources,
+  setAllyRoleSources,
+  enemyRoleSources,
+  setEnemyRoleSources,
 }: TeamInputProps) {
   const selectedPicks = [...allyTeam, ...enemyTeam].filter(
     (champion): champion is Champion => champion !== null
@@ -146,6 +171,8 @@ export default function TeamInput({
           bans={allyBans}
           setBans={setAllyBans}
           selectedChampions={selectedChampions}
+          roleSources={allyRoleSources}
+          setRoleSources={setAllyRoleSources}
         />
 
         <TeamPanel
@@ -155,6 +182,9 @@ export default function TeamInput({
           bans={enemyBans}
           setBans={setEnemyBans}
           selectedChampions={selectedChampions}
+          roleSources={enemyRoleSources}
+          setRoleSources={setEnemyRoleSources}
+          showRoleSources
         />
       </div>
     </section>
