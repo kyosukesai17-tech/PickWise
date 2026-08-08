@@ -12,11 +12,31 @@ export type LcuStatusResponse = Readonly<{
   reason?: LcuFailureReason;
 }>;
 
+export type LcuTeamMember = Readonly<{
+  cellId: number;
+  championId: number;
+  championPickIntent?: number;
+  assignedPosition?: string;
+  team?: number;
+}>;
+
+export type LcuChampSelectAction = Readonly<{
+  actorCellId?: number;
+  championId?: number;
+  completed?: boolean;
+  duration?: number;
+  id?: number;
+  isAllyAction?: boolean;
+  isInProgress?: boolean;
+  pickTurn?: number;
+  type?: string;
+}>;
+
 export type LcuChampSelectSession = Readonly<{
-  localPlayerCellId?: unknown;
-  myTeam?: unknown;
-  theirTeam?: unknown;
-  actions?: unknown;
+  localPlayerCellId?: number;
+  myTeam: readonly LcuTeamMember[];
+  theirTeam: readonly LcuTeamMember[];
+  actions: readonly (readonly LcuChampSelectAction[])[];
   bans?: unknown;
   timer?: unknown;
 }>;

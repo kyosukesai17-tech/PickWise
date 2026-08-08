@@ -1,7 +1,17 @@
 import { getChampions } from "../getChampions";
+import { ROLE_INDEX } from "../role";
+import {
+  inferChampionRoles,
+  inferEnemyRoles,
+  ROLE_ORDER,
+} from "./inferEnemyRoles";
+import { normalizeAssignedPosition } from "./normalizeAssignedPosition";
 
 import type { Champion } from "../../types/champion";
-import type { LcuChampSelectSession } from "../../types/lcu";
+import type {
+  LcuChampSelectSession,
+  LcuTeamMember,
+} from "../../types/lcu";
 
 const TEAM_SIZE = 5;
 const PICK_TURN_COUNT = 10;
@@ -9,8 +19,12 @@ const PICK_TURN_COUNT = 10;
 export type ConvertedDraftState = Readonly<{
   allyTeam: (Champion | null)[];
   enemyTeam: (Champion | null)[];
+  allyRoleSources: RoleResolutionSource[];
+  enemyRoleSources: RoleResolutionSource[];
   currentTurn: number | null;
 }>;
+
+export type RoleResolutionSource = "LCU" | "INFERRED" | "UNKNOWN";
 
 type UnknownRecord = Record<string, unknown>;
 
@@ -18,37 +32,89 @@ function isRecord(value: unknown): value is UnknownRecord {
   return typeof value === "object" && value !== null;
 }
 
-function getChampionId(value: unknown): number | null {
-  if (!isRecord(value)) {
-    return null;
-  }
-
-  const championId = value.championId;
-
-  return typeof championId === "number"
-    && Number.isInteger(championId)
-    && championId > 0
-    ? championId
+function getChampion(
+  member: LcuTeamMember,
+  championsByKey: ReadonlyMap<number, Champion>,
+): Champion | null {
+  return Number.isInteger(member.championId) && member.championId > 0
+    ? championsByKey.get(member.championId) ?? null
     : null;
 }
 
-function convertTeam(
-  team: unknown,
-  championsByKey: ReadonlyMap<number, Champion>,
-): (Champion | null)[] {
-  const members = Array.isArray(team) ? team.slice(0, TEAM_SIZE) : [];
-  const converted = members.map((member) => {
-    const championId = getChampionId(member);
+function createEmptyTeam(): (Champion | null)[] {
+  return Array<Champion | null>(TEAM_SIZE).fill(null);
+}
 
-    return championId === null
-      ? null
-      : championsByKey.get(championId) ?? null;
+function createUnknownSources(): RoleResolutionSource[] {
+  return Array<RoleResolutionSource>(TEAM_SIZE).fill("UNKNOWN");
+}
+
+function placeAssignments(
+  assignments: ReturnType<typeof inferChampionRoles>,
+  team: (Champion | null)[],
+  sources: RoleResolutionSource[],
+) {
+  assignments.forEach(({ champion, role }) => {
+    const roleIndex = ROLE_INDEX[role];
+
+    team[roleIndex] = champion;
+    sources[roleIndex] = "INFERRED";
+  });
+}
+
+function resolveAllyTeam(
+  members: readonly LcuTeamMember[],
+  championsByKey: ReadonlyMap<number, Champion>,
+) {
+  const team = createEmptyTeam();
+  const sources = createUnknownSources();
+  const remainingChampions: Champion[] = [];
+
+  members.slice(0, TEAM_SIZE).forEach((member) => {
+    const champion = getChampion(member, championsByKey);
+
+    if (!champion) {
+      return;
+    }
+
+    const role = normalizeAssignedPosition(member.assignedPosition);
+
+    if (role && team[ROLE_INDEX[role]] === null) {
+      team[ROLE_INDEX[role]] = champion;
+      sources[ROLE_INDEX[role]] = "LCU";
+      return;
+    }
+
+    remainingChampions.push(champion);
   });
 
-  return [
-    ...converted,
-    ...Array<Champion | null>(TEAM_SIZE - converted.length).fill(null),
-  ];
+  const availableRoles = ROLE_ORDER.filter(
+    (role) => team[ROLE_INDEX[role]] === null,
+  );
+
+  placeAssignments(
+    inferChampionRoles(remainingChampions, availableRoles),
+    team,
+    sources,
+  );
+
+  return { team, sources };
+}
+
+function resolveEnemyTeam(
+  members: readonly LcuTeamMember[],
+  championsByKey: ReadonlyMap<number, Champion>,
+) {
+  const team = createEmptyTeam();
+  const sources = createUnknownSources();
+  const champions = members
+    .slice(0, TEAM_SIZE)
+    .map((member) => getChampion(member, championsByKey))
+    .filter((champion): champion is Champion => champion !== null);
+
+  placeAssignments(inferEnemyRoles(champions), team, sources);
+
+  return { team, sources };
 }
 
 function getCurrentPickTurn(actions: unknown): number | null {
@@ -85,10 +151,14 @@ export function convertChampSelectSession(
   const championsByKey = new Map(
     getChampions().map((champion) => [Number(champion.key), champion]),
   );
+  const allyResolution = resolveAllyTeam(session.myTeam, championsByKey);
+  const enemyResolution = resolveEnemyTeam(session.theirTeam, championsByKey);
 
   return {
-    allyTeam: convertTeam(session.myTeam, championsByKey),
-    enemyTeam: convertTeam(session.theirTeam, championsByKey),
+    allyTeam: allyResolution.team,
+    enemyTeam: enemyResolution.team,
+    allyRoleSources: allyResolution.sources,
+    enemyRoleSources: enemyResolution.sources,
     currentTurn: getCurrentPickTurn(session.actions),
   };
 }
