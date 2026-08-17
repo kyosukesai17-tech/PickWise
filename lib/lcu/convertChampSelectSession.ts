@@ -5,6 +5,7 @@ import {
   inferEnemyRoles,
   ROLE_ORDER,
 } from "./inferEnemyRoles";
+import { hasSmite } from "./hasSmite";
 import { normalizeAssignedPosition } from "./normalizeAssignedPosition";
 
 import type { Champion } from "../../types/champion";
@@ -107,12 +108,15 @@ function resolveEnemyTeam(
 ) {
   const team = createEmptyTeam();
   const sources = createUnknownSources();
-  const champions = members
+  const candidates = members
     .slice(0, TEAM_SIZE)
-    .map((member) => getChampion(member, championsByKey))
-    .filter((champion): champion is Champion => champion !== null);
+    .flatMap((member) => {
+      const champion = getChampion(member, championsByKey);
 
-  placeAssignments(inferEnemyRoles(champions), team, sources);
+      return champion ? [{ champion, hasSmite: hasSmite(member) }] : [];
+    });
+
+  placeAssignments(inferEnemyRoles(candidates), team, sources);
 
   return { team, sources };
 }
