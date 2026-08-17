@@ -15,11 +15,6 @@ export type ChampionRoleAssignment = Readonly<{
   role: Role;
 }>;
 
-export type EnemyRoleCandidate = Readonly<{
-  champion: Champion;
-  hasSmite: boolean;
-}>;
-
 function getSuitability(champion: Champion, role: Role): number {
   return getChampionDetail(champion.id)?.roleSuitability[role] ?? 0;
 }
@@ -70,34 +65,7 @@ export function inferChampionRoles(
 }
 
 export function inferEnemyRoles(
-  candidates: readonly EnemyRoleCandidate[],
+  champions: readonly Champion[],
 ): ChampionRoleAssignment[] {
-  const smiteCandidates = candidates.filter((candidate) => candidate.hasSmite);
-
-  if (smiteCandidates.length !== 1) {
-    return inferChampionRoles(
-      candidates.map((candidate) => candidate.champion),
-      ROLE_ORDER,
-    );
-  }
-
-  const jungler = smiteCandidates[0];
-  const remainingChampions = candidates
-    .filter((candidate) => candidate !== jungler)
-    .map((candidate) => candidate.champion);
-  const remainingAssignments = inferChampionRoles(
-    remainingChampions,
-    ROLE_ORDER.filter((role) => role !== "JG"),
-  );
-  const remainingRoles = new Map(
-    remainingAssignments.map(({ champion, role }) => [champion, role]),
-  );
-
-  return candidates.map((candidate) => ({
-    champion: candidate.champion,
-    role:
-      candidate === jungler
-        ? "JG"
-        : remainingRoles.get(candidate.champion)!,
-  }));
+  return inferChampionRoles(champions, ROLE_ORDER);
 }

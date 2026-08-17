@@ -18,8 +18,6 @@ export type LcuTeamMember = Readonly<{
   championPickIntent?: number;
   assignedPosition?: string;
   team?: number;
-  spell1Id?: number;
-  spell2Id?: number;
 }>;
 
 export type LcuChampSelectAction = Readonly<{
