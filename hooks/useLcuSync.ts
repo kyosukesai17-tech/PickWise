@@ -15,7 +15,10 @@ import type {
 const LCU_SYNC_INTERVAL_MS = 1_000;
 
 type UseLcuSyncOptions = Readonly<{
-  onSessionLoaded: (session: LcuChampSelectSession) => void;
+  onSessionLoaded: (
+    session: LcuChampSelectSession,
+    recommendedPositions: LcuChampSelectResponse["recommendedPositions"],
+  ) => void;
 }>;
 
 type ActiveRequest = Readonly<{
@@ -66,7 +69,7 @@ export function useLcuSync({
       setLastUpdatedAt(new Date());
 
       if (nextResult.connected && nextResult.inChampSelect && nextResult.session) {
-        onSessionLoaded(nextResult.session);
+        onSessionLoaded(nextResult.session, nextResult.recommendedPositions);
       }
     } catch (error) {
       if (!(error instanceof DOMException && error.name === "AbortError")) {

@@ -5,10 +5,14 @@ import { useLcuSync } from "../hooks/useLcuSync";
 import type {
   LcuChampSelectSession,
   LcuFailureReason,
+  LcuRecommendedPositions,
 } from "../types/lcu";
 
 type LcuConnectionStatusProps = Readonly<{
-  onSessionLoaded: (session: LcuChampSelectSession) => void;
+  onSessionLoaded: (
+    session: LcuChampSelectSession,
+    recommendedPositions: LcuRecommendedPositions | undefined,
+  ) => void;
 }>;
 
 const FAILURE_MESSAGES: Record<LcuFailureReason, string> = {

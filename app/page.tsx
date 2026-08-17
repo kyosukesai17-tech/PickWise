@@ -33,7 +33,10 @@ import type {
   DraftPhaseState,
   PlayerTeamSide,
 } from "../types/draftPhase";
-import type { LcuChampSelectSession } from "../types/lcu";
+import type {
+  LcuChampSelectSession,
+  LcuRecommendedPositions,
+} from "../types/lcu";
 
 const createEmptyTeam =
   (): (Champion | null)[] => [
@@ -211,8 +214,12 @@ export default function Home() {
 
   const importLcuSession = useCallback((
     session: LcuChampSelectSession,
+    recommendedPositions?: LcuRecommendedPositions,
   ) => {
-    const convertedDraft = convertChampSelectSession(session);
+    const convertedDraft = convertChampSelectSession(
+      session,
+      recommendedPositions,
+    );
 
     setAllyTeam((currentTeam) => areTeamsEqual(
       currentTeam,

@@ -10,6 +10,7 @@ import { normalizeAssignedPosition } from "./normalizeAssignedPosition";
 import type { Champion } from "../../types/champion";
 import type {
   LcuChampSelectSession,
+  LcuRecommendedPositions,
   LcuTeamMember,
 } from "../../types/lcu";
 
@@ -104,6 +105,7 @@ function resolveAllyTeam(
 function resolveEnemyTeam(
   members: readonly LcuTeamMember[],
   championsByKey: ReadonlyMap<number, Champion>,
+  recommendedPositions?: LcuRecommendedPositions,
 ) {
   const team = createEmptyTeam();
   const sources = createUnknownSources();
@@ -112,7 +114,11 @@ function resolveEnemyTeam(
     .map((member) => getChampion(member, championsByKey))
     .filter((champion): champion is Champion => champion !== null);
 
-  placeAssignments(inferEnemyRoles(champions), team, sources);
+  placeAssignments(
+    inferEnemyRoles(champions, recommendedPositions),
+    team,
+    sources,
+  );
 
   return { team, sources };
 }
@@ -147,12 +153,17 @@ function getCurrentPickTurn(actions: unknown): number | null {
 
 export function convertChampSelectSession(
   session: LcuChampSelectSession,
+  recommendedPositions?: LcuRecommendedPositions,
 ): ConvertedDraftState {
   const championsByKey = new Map(
     getChampions().map((champion) => [Number(champion.key), champion]),
   );
   const allyResolution = resolveAllyTeam(session.myTeam, championsByKey);
-  const enemyResolution = resolveEnemyTeam(session.theirTeam, championsByKey);
+  const enemyResolution = resolveEnemyTeam(
+    session.theirTeam,
+    championsByKey,
+    recommendedPositions,
+  );
 
   return {
     allyTeam: allyResolution.team,

@@ -1,6 +1,9 @@
 import { findLeagueClient } from "../../../../lib/lcu/findLeagueClient";
 import { getChampSelectSession } from "../../../../lib/lcu/getChampSelectSession";
 import {
+  getRecommendedPositions,
+} from "../../../../lib/lcu/getRecommendedPositions";
+import {
   getLcuFailureReason,
   jsonNoStore,
 } from "../../../../lib/lcu/response";
@@ -23,12 +26,16 @@ export async function GET(): Promise<Response> {
   }
 
   try {
-    const session = await getChampSelectSession(detection.connection);
+    const [session, recommendedPositions] = await Promise.all([
+      getChampSelectSession(detection.connection),
+      getRecommendedPositions(detection.connection),
+    ]);
 
     return jsonNoStore({
       connected: true,
       inChampSelect: session !== null,
       session,
+      ...(recommendedPositions && { recommendedPositions }),
     } satisfies LcuChampSelectResponse);
   } catch (error) {
     return jsonNoStore({

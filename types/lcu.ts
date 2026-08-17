@@ -1,3 +1,5 @@
+import type { Role } from "./champion";
+
 export type LcuFailureReason =
   | "LEAGUE_CLIENT_NOT_FOUND"
   | "LOCKFILE_NOT_FOUND"
@@ -41,9 +43,14 @@ export type LcuChampSelectSession = Readonly<{
   timer?: unknown;
 }>;
 
+export type LcuRecommendedPositions = Readonly<
+  Record<string, readonly Role[]>
+>;
+
 export type LcuChampSelectResponse = Readonly<{
   connected: boolean;
   inChampSelect: boolean;
   session: LcuChampSelectSession | null;
+  recommendedPositions?: LcuRecommendedPositions;
   reason?: LcuFailureReason;
 }>;
