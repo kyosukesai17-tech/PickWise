@@ -129,6 +129,12 @@ function sanitizeTeam(team: unknown): LcuTeamMember[] {
       ...(getNumber(source.team) !== undefined && {
         team: getNumber(source.team),
       }),
+      ...(getNumber(source.spell1Id) !== undefined && {
+        spell1Id: getNumber(source.spell1Id),
+      }),
+      ...(getNumber(source.spell2Id) !== undefined && {
+        spell2Id: getNumber(source.spell2Id),
+      }),
     };
 
     return [sanitized];
