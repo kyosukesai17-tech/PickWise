@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "dataKind": "SYNTHETIC_TEST_FIXTURE",
+    "patch": "FIXTURE",
+    "region": "FIXTURE",
+    "rankBand": "FIXTURE",
+    "retrievedAt": null,
+    "createdAt": "2026-08-18T00:00:00+09:00",
+    "source": "Synthetic fixture for algorithm comparison only; no external statistics were used.",
+    "notForProduction": true
+  },
+  "champions": {
+    "Ekko": { "rolePickShare": { "JG": 0.92, "MID": 0.08 } },
+    "Pantheon": { "rolePickShare": { "TOP": 0.5, "JG": 0.05, "MID": 0.4, "SUP": 0.05 } },
+    "Gragas": { "rolePickShare": { "TOP": 0.3, "JG": 0.5, "MID": 0.2 } },
+    "Poppy": { "rolePickShare": { "TOP": 0.25, "JG": 0.7, "SUP": 0.05 } },
+    "Seraphine": { "rolePickShare": { "MID": 0.1, "ADC": 0.35, "SUP": 0.55 } },
+    "Lux": { "rolePickShare": { "MID": 0.65, "SUP": 0.35 } },
+    "Swain": { "rolePickShare": { "TOP": 0.05, "MID": 0.35, "ADC": 0.25, "SUP": 0.35 } },
+    "Brand": { "rolePickShare": { "JG": 0.2, "MID": 0.2, "SUP": 0.6 } },
+    "Morgana": { "rolePickShare": { "JG": 0.15, "MID": 0.05, "SUP": 0.8 } },
+    "Vayne": { "rolePickShare": { "TOP": 0.2, "ADC": 0.8 } }
+  }
+}
